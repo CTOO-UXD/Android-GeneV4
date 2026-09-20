@@ -1,0 +1,20 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Android
+local.properties
+*.iml
+.idea/
+captures/
+.cxx/
+
+# Upstream binary artifacts (sources tree is kept for token diffs)
+_upstream/*.aar
+_upstream/*.jar
+_upstream/*.zip
+_upstream/aar/
+
+# Local JDK used only for builds
+.jdk/

@@ -1,0 +1,17 @@
+GeneV4 Compose component library
+===================================
+
+This product includes a derivative of Android Jetpack Compose Material3 1.4.0.
+
+Copyright 2021 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0.
+Source: https://android.googlesource.com/platform/frameworks/support
+Release: https://developer.android.com/jetpack/androidx/releases/compose-material3#1.4.0
+
+Modifications from the original Work (phase 1):
+- Kotlin/Java package renamed from androidx.compose.material3 to com.genev4
+- Android resource namespace renamed to com.genev4
+- Built as a standalone Android library without depending on the
+  androidx.compose.material3 Maven artifact
+- Kotlin Multiplatform desktop/iOS/web targets from the original module are not shipped
