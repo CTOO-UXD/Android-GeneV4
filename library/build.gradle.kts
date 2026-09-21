@@ -1,3 +1,4 @@
+import org.gradle.plugins.signing.SigningExtension
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -7,7 +8,7 @@ plugins {
     alias(libs.plugins.maven.publish)
 }
 
-group = "com.genev4"
+group = "io.github.ctoo-uxd"
 version = libs.versions.libraryVersion.get()
 
 kotlin {
@@ -74,13 +75,13 @@ configurations.configureEach {
 }
 
 mavenPublishing {
-    coordinates("com.genev4", "library", libs.versions.libraryVersion.get())
+    coordinates("io.github.ctoo-uxd", "genev4", libs.versions.libraryVersion.get())
     publishToMavenCentral()
     pom {
         name.set("GeneV4")
         description.set("Android Jetpack Compose component library")
         inceptionYear.set("2026")
-        url.set(findProperty("POM_URL") as String? ?: "https://github.com/your-org/genev4")
+        url.set(findProperty("POM_URL") as String? ?: "https://github.com/CTOO-UXD/Android-GeneV4")
         licenses {
             license {
                 name.set("The Apache License, Version 2.0")
@@ -95,22 +96,67 @@ mavenPublishing {
             }
         }
         scm {
-            url.set(findProperty("POM_URL") as String? ?: "https://github.com/your-org/genev4")
+            url.set(findProperty("POM_URL") as String? ?: "https://github.com/CTOO-UXD/Android-GeneV4")
             connection.set(
                 findProperty("POM_SCM_CONNECTION") as String?
-                    ?: "scm:git:git://github.com/your-org/genev4.git",
+                    ?: "scm:git:git://github.com/CTOO-UXD/Android-GeneV4.git",
             )
             developerConnection.set(
                 findProperty("POM_SCM_DEV_CONNECTION") as String?
-                    ?: "scm:git:ssh://git@github.com/your-org/genev4.git",
+                    ?: "scm:git:ssh://git@github.com/CTOO-UXD/Android-GeneV4.git",
             )
         }
     }
 }
 
-if (!(findProperty("signingInMemoryKey") as String?).isNullOrBlank()) {
+fun gradleProp(name: String): String? {
+    val fromProject = (findProperty(name) as String?)?.trim()?.takeIf { it.isNotEmpty() }
+    val fromEnv = System.getenv("ORG_GRADLE_PROJECT_$name")?.trim()?.takeIf { it.isNotEmpty() }
+    return fromProject ?: fromEnv
+}
+
+fun unescapeSigningKey(raw: String): String {
+    return raw.replace("\\n", "\n").replace("\r", "").trim()
+}
+
+val signingKey = gradleProp("signingInMemoryKey")?.let(::unescapeSigningKey)
+val signingKeyId = gradleShortKeyId(gradleProp("signingInMemoryKeyId"))
+val signingPassword = gradleProp("signingInMemoryKeyPassword") ?: ""
+
+if (!signingKey.isNullOrBlank()) {
     mavenPublishing {
         signAllPublications()
+    }
+    // Configure the signatory after the maven-publish plugin applies signing.
+    // Calling this before sign() leaves Sign tasks with a null signatory
+    // ("Cannot perform signing task ... no configured signatory").
+    afterEvaluate {
+        val signing = extensions.getByType(SigningExtension::class.java)
+        if (signingKeyId.isNullOrBlank()) {
+            signing.useInMemoryPgpKeys(signingKey, signingPassword)
+        } else {
+            signing.useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
+        }
+    }
+    logger.lifecycle(
+        "GPG in-memory signing: keyLength={} keyId={} passwordSet={}",
+        signingKey.length,
+        signingKeyId ?: "(derived from key)",
+        signingPassword.isNotEmpty(),
+    )
+} else {
+    logger.warn(
+        "signingInMemoryKey is not visible to Gradle. Central publish will fail. " +
+            "Set ORG_GRADLE_PROJECT_signingInMemoryKey in this shell, then run gradlew --stop.",
+    )
+}
+
+fun gradleShortKeyId(raw: String?): String? {
+    val hex = raw?.trim()?.removePrefix("0x")?.removePrefix("0X") ?: return null
+    return when {
+        hex.length == 8 -> hex
+        hex.length == 16 && hex.all { it.isDigit() || it.lowercaseChar() in 'a'..'f' } -> hex.takeLast(8)
+        else -> hex
     }
 }
 

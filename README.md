@@ -1,6 +1,6 @@
 # GeneV4
 
-GeneV4 是一套 Android Jetpack Compose 组件库。包名：`com.genev4`。
+GeneV4 是一套 Android Jetpack Compose 组件库。包名：`com.genev4`。源码：[CTOO-UXD/Android-GeneV4](https://github.com/CTOO-UXD/Android-GeneV4)。
 
 业务工程依赖 `:library` 模块即可使用 `Button`、`TextField`、`Scaffold`、`MaterialTheme` 等组件。
 
@@ -39,7 +39,7 @@ import com.genev4.Text
 
 | 模块 | 说明 |
 |---|---|
-| `:library` | 发布用库。Maven 坐标：`com.genev4:library` |
+| `:library` | 发布用库。Maven 坐标：`io.github.ctoo-uxd:genev4` |
 | `:catalog` | 画廊 App，applicationId：`com.genev4.catalog` |
 
 ## 环境
@@ -63,7 +63,7 @@ gradlew.bat :catalog:assembleDebug
 Gradle（发布到 Maven Central 之后）：
 
 ```kotlin
-implementation("com.genev4:library:0.1.0")
+implementation("io.github.ctoo-uxd:genev4:0.1.0")
 ```
 
 本地源码则依赖工程模块：

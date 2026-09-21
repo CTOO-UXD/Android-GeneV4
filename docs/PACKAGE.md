@@ -4,7 +4,7 @@ Phase 1 forks [androidx.compose.material3:material3-android:1.4.0](https://devel
 
 | Upstream | This library |
 |---|---|
-| Maven `androidx.compose.material3:material3:1.4.0` | `com.genev4:library:0.1.0` (module `:library`) |
+| Maven `androidx.compose.material3:material3:1.4.0` | `io.github.ctoo-uxd:genev4:0.1.0` (module `:library`) |
 | `androidx.compose.material3.Button` | `com.genev4.Button` |
 | `androidx.compose.material3.MaterialTheme` | `com.genev4.MaterialTheme` |
 | `androidx.compose.material3.lightColorScheme` | `com.genev4.lightColorScheme` |

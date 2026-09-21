@@ -3,12 +3,36 @@
 build/
 **/build/
 
+# Kotlin incremental / session caches
+.kotlin/
+
 # Android
 local.properties
 *.iml
 .idea/
 captures/
 .cxx/
+.externalNativeBuild/
+
+# Installers and profiles (if built outside **/build/)
+*.apk
+*.aab
+*.ap_
+*.hprof
+
+# Signing keys — never commit
+*.jks
+*.keystore
+*.p12
+secrets.properties
+keystore.properties
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+*~
+*.swp
 
 # Upstream binary artifacts (sources tree is kept for token diffs)
 _upstream/*.aar

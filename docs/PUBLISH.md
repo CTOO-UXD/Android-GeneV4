@@ -1,66 +1,73 @@
 # 把 GeneV4 发给所有人用
 
-任何人只要写下面这一行就能用，需要发到 **Maven Central**：
+仓库：[CTOO-UXD/Android-GeneV4](https://github.com/CTOO-UXD/Android-GeneV4)
+
+没有 `genev4.com` 时，Maven 坐标用 GitHub 组织命名空间：
 
 ```kotlin
-implementation("com.genev4:library:0.1.0")
+implementation("io.github.ctoo-uxd:genev4:0.1.0")
 ```
 
-GitHub Packages 默认要登录才能拉，不适合「所有人」。JitPack 更快，但不是 Android 默认仓库。
+Kotlin 包名仍是 `com.genev4`，只有 Maven `groupId` 改成 `io.github.ctoo-uxd`。
 
-## 1. 准备公开仓库
+## 1. 在 Central 验证命名空间
 
-把本工程推到 GitHub（或 Gitee 对外镜像），把 `gradle.properties` 里的 `POM_URL` / `POM_SCM_*` 改成真实地址。
+1. 打开 [Namespaces](https://central.sonatype.com/publishing/namespaces)。
+2. `com.genev4` 可以不管，会一直 Pending。
+3. **Add Namespace**，填 `io.github.ctoo-uxd`。
+4. 页面会要你在 GitHub 建一个临时仓库（名字是一串验证码）。到 [CTOO-UXD](https://github.com/CTOO-UXD) 建同名空仓库，公开即可。
+5. 回到 Central 点 **Verify Namespace**。变成 Verified 后再发布。
 
-## 2. 注册 Maven Central
+若登录账号不是组织所有者，验证会失败，需要有权限在 `CTOO-UXD` 下建仓库的人操作。也可以改用你个人 GitHub 用户名：`io.github.你的用户名`（告诉我后改工程坐标）。
 
-1. 打开 [https://central.sonatype.com/](https://central.sonatype.com/) 注册。
-2. 申请命名空间 **`com.genev4`**。
-3. Central 会要求你证明拥有这个名字，一般是：
-   - 域名 `genev4.com` 的 DNS TXT 记录，或
-   - 对应 GitHub Organization。
+## 2. 生成 Token
 
-没有 `genev4.com`、也控不了这个 GitHub org 时，**不能用 `com.genev4`**。改用 `io.github.你的用户名`，同时把库的 `group` / `coordinates` 改成同一套。
+[User Token](https://central.sonatype.com/usertoken) → **Generate User Token**，保存 username / password。
 
 ## 3. GPG 签名
 
-Central 要求签名。本机生成密钥后，把私钥放到环境变量（不要写进仓库）：
-
 ```
-ORG_GRADLE_PROJECT_signingInMemoryKey=<私钥 ASCII>
-ORG_GRADLE_PROJECT_signingInMemoryKeyId=<短 ID>
-ORG_GRADLE_PROJECT_signingInMemoryKeyPassword=<口令>
-ORG_GRADLE_PROJECT_mavenCentralUsername=<Central 用户 Token>
-ORG_GRADLE_PROJECT_mavenCentralPassword=<Central 用户 Token>
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format LONG
+gpg --export-secret-keys --armor <密钥ID>
 ```
 
-用户名/密码在 Central 网站 **Generate User Token** 得到。
+不要写进仓库。Windows 上优先写用户级 `C:\Users\<你>\.gradle\gradle.properties`（Gradle daemon 经常读不到后来才设的环境变量；`setx` 还会把超长私钥截断到 1024 字符）：
+
+```
+mavenCentralUsername=<Token username>
+mavenCentralPassword=<Token password>
+signingInMemoryKey=<私钥 ASCII，换行写成 \n>
+signingInMemoryKeyId=<8 位密钥 ID>
+signingInMemoryKeyPassword=<GPG 口令>
+```
+
+改完环境变量或这份文件后先执行 `gradlew.bat --stop`，再发布。
 
 ## 4. 发布
 
-先发到本机，确认坐标没写错：
-
 ```
 gradlew.bat :library:publishToMavenLocal
-```
-
-业务工程加 `mavenLocal()` 后依赖 `com.genev4:library:0.1.0` 能编过即可。
-
-再发 Central（必须已配置签名和 Token）：
-
-```
 gradlew.bat :library:publishToMavenCentral
 ```
 
-到 [https://central.sonatype.com/](https://central.sonatype.com/) 里检查 Deployment，通过后约几十分钟同步到 `mavenCentral()`。之后任何人不用加额外仓库。
+到 [Publish](https://central.sonatype.com/publishing) 里确认 Deployment，通过后点 Publish。
 
 ## 5. 接入方
 
 ```kotlin
 repositories { mavenCentral() }
-implementation("com.genev4:library:0.1.0")
+implementation("io.github.ctoo-uxd:genev4:0.1.0")
 ```
 
-不要再依赖 `androidx.compose.material3`。Compose 相关依赖会随本库透传。
+## 6. 以后更新（不能覆盖旧版本）
 
-版本号改 `gradle/libs.versions.toml` 的 `libraryVersion`。
+Maven Central 上 `0.1.0` 一旦 PUBLISHED 就永久存在，改代码后必须升版本。
+
+1. 改 `gradle/libs.versions.toml` 里的 `libraryVersion`，例如 `0.1.0` → `0.1.1`（修 bug）或 `0.2.0`（有行为变化）。
+2. README / 本文档里的坐标版本一并改掉。
+3. 先本地验证：`gradlew.bat :library:publishToMavenLocal`
+4. 再上传：`gradlew.bat :library:publishToMavenCentral`
+5. 到 [Deployments](https://central.sonatype.com/publishing/deployments) 等 VALIDATED，点 Publish。等变成 PUBLISHED、`repo1.maven.org` 上能打开该版本，别人才拉得到。
+
+不要对同一个版本再跑一遍发布。Token 和 GPG 仍用本机用户环境变量或 `~/.gradle/gradle.properties`，不要写进仓库。
