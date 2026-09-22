@@ -48,5 +48,5 @@ MaterialTheme(colorScheme = brand) {
 
 ## 注意
 
-- 只使用 `com.genev4.MaterialTheme`，不要和 `androidx.compose.material3.MaterialTheme` 嵌套混用。
+- 使用 `com.genev4.MaterialTheme` 包裹业务 UI。
 - 组件默认色来自当前 `colorScheme`；个别组件可用 `colors = …Defaults.colors(...)` 微调，优先改主题而不是每个控件设死颜色。

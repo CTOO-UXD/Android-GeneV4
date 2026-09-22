@@ -7,9 +7,9 @@ const websiteRoot = path.resolve(fileURLToPath(new URL('.', import.meta.url)), '
 export default defineConfig({
   lang: 'zh-CN',
   title: 'GeneV4',
-  description: 'Android Jetpack Compose 组件库（Material3 API 语义）',
+  description: 'Android Jetpack Compose 组件库',
   srcDir: '../docs',
-  srcExclude: ['README.md', 'PUBLISH.md', 'PARITY.md', 'UPSTREAM.md'],
+  srcExclude: ['README.md', 'PUBLISH.md', 'PARITY.md', 'UPSTREAM.md', 'PACKAGE.md'],
   outDir: './.vitepress/dist',
   base: '/Android-GeneV4/',
   vite: {
@@ -39,8 +39,7 @@ export default defineConfig({
       {
         text: '0.1.0',
         items: [
-          { text: 'Maven Central', link: 'https://central.sonatype.com/artifact/io.github.ctoo-uxd/genev4' },
-          { text: '从 Material3 迁移', link: '/PACKAGE' }
+          { text: 'Maven Central', link: 'https://central.sonatype.com/artifact/io.github.ctoo-uxd/genev4' }
         ]
       }
     ],
@@ -49,23 +48,22 @@ export default defineConfig({
         text: '开始使用',
         items: [
           { text: '快速开始', link: '/getting-started' },
-          { text: '主题与颜色', link: '/theming' },
-          { text: '从 Material3 迁移', link: '/PACKAGE' }
+          { text: '主题与颜色', link: '/theming' }
         ]
       },
-        {
-          text: '组件',
-          items: [
-            { text: '概览', link: '/components/' },
-            { text: 'Button', link: '/components/button' },
-            { text: 'Card', link: '/components/card' },
-            { text: 'Dialog', link: '/components/dialog' },
-            { text: 'NavigationBar', link: '/components/navigation-bar' },
-            { text: 'Scaffold', link: '/components/scaffold' },
-            { text: 'Snackbar', link: '/components/snackbar' },
-            { text: 'TextField', link: '/components/text-field' }
-          ]
-        }
+      {
+        text: '组件',
+        items: [
+          { text: '概览', link: '/components/' },
+          { text: 'Button', link: '/components/button' },
+          { text: 'Card', link: '/components/card' },
+          { text: 'Dialog', link: '/components/dialog' },
+          { text: 'NavigationBar', link: '/components/navigation-bar' },
+          { text: 'Scaffold', link: '/components/scaffold' },
+          { text: 'Snackbar', link: '/components/snackbar' },
+          { text: 'TextField', link: '/components/text-field' }
+        ]
+      }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/CTOO-UXD/Android-GeneV4' }

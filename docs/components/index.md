@@ -1,6 +1,6 @@
 # 组件
 
-API 名称与 Material3 1.4.0 一致，包名为 `com.genev4`。下面按用途分组；每页含样式说明与可复制示例（无截图，样式以变体表 + 代码表达）。
+包名为 `com.genev4`。下面按用途分组；每页含样式说明与可复制示例（无截图，样式以变体表 + 代码表达）。
 
 先读 [快速开始](/getting-started)，保证界面包在 `MaterialTheme` 内。
 
@@ -9,7 +9,7 @@ API 名称与 Material3 1.4.0 一致，包名为 `com.genev4`。下面按用途�
 | 组件 | 说明 |
 |---|---|
 | [Button](/components/button) | 填充 / 色调 / 描边 / 文字 / 抬升；含禁用 |
-| IconButton / FAB | 见 catalog「图标按钮」「浮动按钮」；API 同 Material3 |
+| IconButton / FAB | 见 catalog「图标按钮」「浮动按钮」 |
 
 ## Communication
 
@@ -46,4 +46,4 @@ API 名称与 Material3 1.4.0 一致，包名为 `com.genev4`。下面按用途�
 |---|---|
 | [TextField](/components/text-field) | 填充 / 描边输入框；错误态 |
 
-未单独成页的组件：用法与官方 Material3 相同，把 `androidx.compose.material3` 换成 `com.genev4`；真机对照跑 `:catalog`。
+未单独成页的组件：用法见 IDE 悬停 / 源码 KDoc，或真机跑 `:catalog` 对照。

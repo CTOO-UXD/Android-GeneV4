@@ -73,7 +73,7 @@ implementation("io.github.ctoo-uxd:genev4:0.1.0")
 // 或本仓库：implementation(project(":library"))
 ```
 
-主题入口为 `com.genev4.MaterialTheme`，不要和官方 `androidx.compose.material3.MaterialTheme` 混用。
+主题入口为 `com.genev4.MaterialTheme`。
 
 维护者发版见 [docs/PUBLISH.md](docs/PUBLISH.md)。
 

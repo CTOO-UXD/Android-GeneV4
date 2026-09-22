@@ -1,6 +1,6 @@
 # 快速开始
 
-GeneV4 是 Android Jetpack Compose 组件库。公开 API 与 [Material3 1.4.0](https://developer.android.com/jetpack/androidx/releases/compose-material3#1.4.0) 同名，Kotlin 包名为 `com.genev4`。
+GeneV4 是 Android Jetpack Compose 组件库，Kotlin 包名为 `com.genev4`。
 
 Maven 坐标：`io.github.ctoo-uxd:genev4:0.1.0`  
 源码：[CTOO-UXD/Android-GeneV4](https://github.com/CTOO-UXD/Android-GeneV4)
@@ -27,7 +27,7 @@ implementation(project(":library"))
 
 ## 2. 包一层 MaterialTheme
 
-所有 GeneV4 组件必须放在 `com.genev4.MaterialTheme` 下。不要和 `androidx.compose.material3.MaterialTheme` 混在同一棵组合树里。
+所有 GeneV4 组件必须放在 `com.genev4.MaterialTheme` 下。
 
 ```kotlin
 import android.os.Bundle
@@ -73,8 +73,6 @@ import com.genev4.Scaffold
 import com.genev4.Text
 import com.genev4.TextField
 ```
-
-从官方 Material3 迁过来时，只改包名即可，见 [从 Material3 迁移](/PACKAGE)。
 
 ## 4. 接下来
 
