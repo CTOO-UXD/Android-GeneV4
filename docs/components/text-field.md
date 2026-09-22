@@ -1,10 +1,3 @@
----
-title: TextField
-parent: Components
-nav_order: 2
-permalink: /components/text-field/
----
-
 # TextField
 
 单行/多行文本输入。填充与描边是两种样式；错误态用 `isError`，不要换一个「红色输入框」组件。

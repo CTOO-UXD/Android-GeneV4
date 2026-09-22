@@ -1,10 +1,3 @@
----
-title: Snackbar
-parent: Components
-nav_order: 6
-permalink: /components/snackbar/
----
-
 # Snackbar
 
 底部短时提示，用于操作结果反馈（已保存、网络错误等）。通常配合 `SnackbarHost` + `Scaffold`。

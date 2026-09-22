@@ -1,9 +1,3 @@
----
-title: Theming
-nav_order: 4
-permalink: /theming/
----
-
 # 主题
 
 GeneV4 的颜色、字体、形状都通过 `MaterialTheme` 的 CompositionLocal 下发。业务页应包在主题内，用 `MaterialTheme.colorScheme` / `typography` / `shapes` 取 token，避免写死色值。

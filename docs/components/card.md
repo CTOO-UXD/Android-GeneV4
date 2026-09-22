@@ -1,10 +1,3 @@
----
-title: Card
-parent: Components
-nav_order: 7
-permalink: /components/card/
----
-
 # Card
 
 承载一块内容的容器。三种表面样式对应不同视觉权重。

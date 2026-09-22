@@ -1,8 +1,3 @@
----
-title: Publish
-nav_exclude: true
----
-
 # 把 GeneV4 发给所有人用
 
 仓库：[CTOO-UXD/Android-GeneV4](https://github.com/CTOO-UXD/Android-GeneV4)

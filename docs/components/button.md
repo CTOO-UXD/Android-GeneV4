@@ -1,10 +1,3 @@
----
-title: Button
-parent: Components
-nav_order: 1
-permalink: /components/button/
----
-
 # Button
 
 主操作按钮。按视觉权重选择变体；禁用用 `enabled = false`，不要另做一个灰色按钮组件。
@@ -38,7 +31,7 @@ OutlinedButton(onClick = { }) { Text("描边") }
 TextButton(onClick = { }) { Text("文字") }
 ```
 
-须包在 `MaterialTheme` 内，见 [快速开始]({% link getting-started.md %})。
+须包在 `MaterialTheme` 内，见 [快速开始](/getting-started)。
 
 ## API
 

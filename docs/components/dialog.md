@@ -1,10 +1,3 @@
----
-title: Dialog
-parent: Components
-nav_order: 5
-permalink: /components/dialog/
----
-
 # Dialog
 
 模态对话框。确认类场景用 `AlertDialog`；需要自定义布局时用带 `content` 的对话框变体（见源码）。

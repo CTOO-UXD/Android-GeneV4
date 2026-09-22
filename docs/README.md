@@ -1,9 +1,15 @@
 # GeneV4 docs（源文件）
 
-对外文档站发布后地址：
+对外文档站：**[https://ctoo-uxd.github.io/Android-GeneV4/](https://ctoo-uxd.github.io/Android-GeneV4/)**
 
-**[https://ctoo-uxd.github.io/Android-GeneV4/](https://ctoo-uxd.github.io/Android-GeneV4/)**
+正文 Markdown 在本目录；站点外观由仓库根目录 [`website/`](../website/)（VitePress）构建，经 GitHub Actions 发布。
 
-本目录由 GitHub Pages 从分支 `main` 的 `/docs` 构建（见 `_config.yml`）。入口页是 [`index.md`](index.md)，不要依赖本 `README.md` 作为站点首页。
+本地预览：
 
-开启方式：仓库 **Settings → Pages → Deploy from a branch → `main` → `/docs`**。
+```
+cd website
+npm install
+npm run docs:dev
+```
+
+开启 Pages：仓库 **Settings → Pages → Source → GitHub Actions**（不要再用 “Deploy from a branch /docs”）。

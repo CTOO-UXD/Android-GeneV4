@@ -1,10 +1,3 @@
----
-title: Scaffold
-parent: Components
-nav_order: 3
-permalink: /components/scaffold/
----
-
 # Scaffold
 
 页面骨架：顶栏、底栏、FAB、内容区。新页面优先用 `Scaffold`，再往 `content` 里放业务 UI。
@@ -61,7 +54,7 @@ fun ExampleScaffold() {
 }
 ```
 
-须包在 `MaterialTheme` 内。底部导航细节见 [NavigationBar]({% link components/navigation-bar.md %})。
+须包在 `MaterialTheme` 内。底部导航细节见 [NavigationBar](/components/navigation-bar)。
 
 ## API
 

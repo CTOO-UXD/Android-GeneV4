@@ -1,8 +1,3 @@
----
-title: Parity
-nav_exclude: true
----
-
 # Phase 1 parity gate
 
 First release is accepted only if all of the following hold.

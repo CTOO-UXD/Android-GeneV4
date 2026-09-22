@@ -2,7 +2,7 @@
 
 GeneV4 是一套 Android Jetpack Compose 组件库。包名：`com.genev4`。源码：[CTOO-UXD/Android-GeneV4](https://github.com/CTOO-UXD/Android-GeneV4)。
 
-**文档站：** [https://ctoo-uxd.github.io/Android-GeneV4/](https://ctoo-uxd.github.io/Android-GeneV4/)（需在仓库 Settings → Pages 选择 `main` / `/docs` 后生效）
+**文档站：** [https://ctoo-uxd.github.io/Android-GeneV4/](https://ctoo-uxd.github.io/Android-GeneV4/)
 
 业务工程依赖 `:library` 模块即可使用 `Button`、`TextField`、`Scaffold`、`MaterialTheme` 等组件。
 
@@ -20,7 +20,8 @@ import com.genev4.Text
 │       ├── commonMain/   组件、主题、设计 token
 │       └── androidMain/  Android 专用实现与资源
 ├── catalog/          组件画廊 App，用来预览和验收
-├── docs/             补充文档
+├── docs/             文档正文（Markdown）
+├── website/          VitePress 文档站（GitHub Pages）
 ├── scripts/          本机构建脚本
 ├── gradle/           依赖版本与 Gradle Wrapper
 ├── .jdk/             仓库自带 JDK 17（可选）
@@ -31,7 +32,8 @@ import com.genev4.Text
 |---|---|
 | `library/` | 组件实现。日常改组件、主题、资源都在这里。 |
 | `catalog/` | 可安装的演示应用。底栏第一页是组件总览，后两页是用组件搭好的完整页面。 |
-| `docs/` | 接入文档（快速开始、组件、主题）；维护者文档也在此。 |
+| `docs/` | 接入文档正文（快速开始、组件、主题）；维护者文档也在此。 |
+| `website/` | VitePress 配置与主题。本地 `npm run docs:dev`。 |
 | `scripts/` | `build.ps1` 等本机脚本。 |
 | `gradle/` | `libs.versions.toml` 锁依赖版本。 |
 
@@ -62,7 +64,9 @@ gradlew.bat :catalog:assembleDebug
 
 ## 接入
 
-完整说明见文档站：[https://ctoo-uxd.github.io/Android-GeneV4/](https://ctoo-uxd.github.io/Android-GeneV4/)（仓库内原文在 [docs/](docs/)）。
+完整说明见文档站：[https://ctoo-uxd.github.io/Android-GeneV4/](https://ctoo-uxd.github.io/Android-GeneV4/)（正文在 [docs/](docs/)，站点配置在 [website/](website/)）。
+
+本地预览：`cd website && npm install && npm run docs:dev`。发布用 GitHub Actions（`.github/workflows/docs.yml`）；仓库 **Settings → Pages → Source** 选 **GitHub Actions**。
 
 ```kotlin
 implementation("io.github.ctoo-uxd:genev4:0.1.0")

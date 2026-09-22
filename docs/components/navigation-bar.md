@@ -1,10 +1,3 @@
----
-title: NavigationBar
-parent: Components
-nav_order: 4
-permalink: /components/navigation-bar/
----
-
 # NavigationBar
 
 底部导航栏，通常放在 `Scaffold(bottomBar = { ... })` 里。每一项用 `NavigationBarItem`。

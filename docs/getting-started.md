@@ -1,9 +1,3 @@
----
-title: Getting started
-nav_order: 2
-permalink: /getting-started/
----
-
 # 快速开始
 
 GeneV4 是 Android Jetpack Compose 组件库。公开 API 与 [Material3 1.4.0](https://developer.android.com/jetpack/androidx/releases/compose-material3#1.4.0) 同名，Kotlin 包名为 `com.genev4`。
@@ -68,7 +62,7 @@ MaterialTheme(colorScheme = darkColorScheme()) {
 }
 ```
 
-更多主题说明见 [主题]({% link theming.md %})。
+更多主题说明见 [主题](/theming)。
 
 ## 3. Import
 
@@ -80,10 +74,10 @@ import com.genev4.Text
 import com.genev4.TextField
 ```
 
-从官方 Material3 迁过来时，只改包名即可，见 [从 Material3 迁移]({% link PACKAGE.md %})。
+从官方 Material3 迁过来时，只改包名即可，见 [从 Material3 迁移](/PACKAGE)。
 
 ## 4. 接下来
 
-- 按需查看 [组件索引]({% link components/index.md %})
+- 按需查看 [组件索引](/components/)
 - 真机/模拟器跑 `:catalog` 看完整画廊
 - 参数细节：IDE 悬停组件名，或打开 [源码目录](https://github.com/CTOO-UXD/Android-GeneV4/tree/main/library/src/commonMain/kotlin/com/genev4)
