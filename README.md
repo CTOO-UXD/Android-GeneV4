@@ -2,6 +2,8 @@
 
 GeneV4 是一套 Android Jetpack Compose 组件库。包名：`com.genev4`。源码：[CTOO-UXD/Android-GeneV4](https://github.com/CTOO-UXD/Android-GeneV4)。
 
+**文档站：** [https://ctoo-uxd.github.io/Android-GeneV4/](https://ctoo-uxd.github.io/Android-GeneV4/)（需在仓库 Settings → Pages 选择 `main` / `/docs` 后生效）
+
 业务工程依赖 `:library` 模块即可使用 `Button`、`TextField`、`Scaffold`、`MaterialTheme` 等组件。
 
 ```kotlin
@@ -29,7 +31,7 @@ import com.genev4.Text
 |---|---|
 | `library/` | 组件实现。日常改组件、主题、资源都在这里。 |
 | `catalog/` | 可安装的演示应用。底栏第一页是组件总览，后两页是用组件搭好的完整页面。 |
-| `docs/` | 包名、接入约定等文档。 |
+| `docs/` | 接入文档（快速开始、组件、主题）；维护者文档也在此。 |
 | `scripts/` | `build.ps1` 等本机脚本。 |
 | `gradle/` | `libs.versions.toml` 锁依赖版本。 |
 
@@ -60,21 +62,16 @@ gradlew.bat :catalog:assembleDebug
 
 ## 接入
 
-Gradle（发布到 Maven Central 之后）：
+完整说明见文档站：[https://ctoo-uxd.github.io/Android-GeneV4/](https://ctoo-uxd.github.io/Android-GeneV4/)（仓库内原文在 [docs/](docs/)）。
 
 ```kotlin
 implementation("io.github.ctoo-uxd:genev4:0.1.0")
+// 或本仓库：implementation(project(":library"))
 ```
 
-本地源码则依赖工程模块：
+主题入口为 `com.genev4.MaterialTheme`，不要和官方 `androidx.compose.material3.MaterialTheme` 混用。
 
-```kotlin
-implementation(project(":library"))
-```
-
-主题入口为 `com.genev4.MaterialTheme`，与组件配套使用，不要和其他主题体系混在同一棵组合树里。
-
-公开发布步骤见 [docs/PUBLISH.md](docs/PUBLISH.md)。
+维护者发版见 [docs/PUBLISH.md](docs/PUBLISH.md)。
 
 ## 许可证
 

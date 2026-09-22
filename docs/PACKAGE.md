@@ -1,4 +1,12 @@
-# Package and public API policy (phase 1)
+---
+title: Migrate from Material3
+nav_order: 5
+permalink: /migrate/
+---
+
+# 从 Material3 迁移
+
+接入与组件用法见 [快速开始]({% link getting-started.md %})、[组件索引]({% link components/index.md %})。
 
 Phase 1 forks [androidx.compose.material3:material3-android:1.4.0](https://developer.android.com/jetpack/androidx/releases/compose-material3#1.4.0) with **the same composable and type names**. Only the Java/Kotlin package changes.
 

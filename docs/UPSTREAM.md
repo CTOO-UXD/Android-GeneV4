@@ -1,3 +1,8 @@
+---
+title: Upstream
+nav_exclude: true
+---
+
 # Upstream pin
 
 This tree is a derivative of AndroidX Compose Material3 **1.4.0** (Android artifact).
