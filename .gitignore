@@ -43,10 +43,10 @@ _upstream/aar/
 # Local JDK used only for builds
 .jdk/
 
-# Docs site (VitePress)
+# Docs site
 website/node_modules/
-website/.vitepress/dist/
-website/.vitepress/cache/
+website/dist/
+website/.vitepress/
 
 # Paparazzi failure diffs (goldens in catalog/src/test/snapshots are committed)
 catalog/src/test/snapshots/images-failure/

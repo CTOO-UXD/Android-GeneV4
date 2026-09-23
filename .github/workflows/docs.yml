@@ -35,7 +35,7 @@ jobs:
           npm run docs:build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: website/.vitepress/dist
+          path: website/dist
 
   deploy:
     needs: build
