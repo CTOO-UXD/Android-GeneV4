@@ -2,17 +2,11 @@
 
 承载一块内容的容器。三种表面样式对应不同视觉权重。
 
-## 样式
+## Types
 
-| 变体 | Composable | 何时用 |
-|---|---|---|
-| 填充 | `Card` | 默认内容块 |
-| 抬升 | `ElevatedCard` | 需要阴影层次 |
-| 描边 | `OutlinedCard` | 轻边框、扁平 |
+![Card](/components/card.png)
 
-## 示例
-
-![组件效果](/components/card.png)
+## Usage
 
 ```kotlin
 import androidx.compose.foundation.layout.padding
@@ -35,6 +29,14 @@ OutlinedCard {
 ```
 
 可点击时使用带 `onClick` 的重载（见源码）。
+
+## Spec
+
+| 变体 | Composable | 何时用 |
+|---|---|---|
+| 填充 | `Card` | 默认内容块 |
+| 抬升 | `ElevatedCard` | 需要阴影层次 |
+| 描边 | `OutlinedCard` | 轻边框、扁平 |
 
 ## API
 

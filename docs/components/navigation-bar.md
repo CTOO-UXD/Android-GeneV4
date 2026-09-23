@@ -2,17 +2,11 @@
 
 底部导航栏，通常放在 `Scaffold(bottomBar = { ... })` 里。每一项用 `NavigationBarItem`。
 
-## 样式
+## Types
 
-| 状态 | 参数 | 说明 |
-|---|---|---|
-| 选中 | `selected = true` | 当前页 |
-| 未选中 | `selected = false` | 其他页 |
-| 图标 + 文案 | `icon`、`label` | 常规底栏项 |
+![NavigationBar](/components/navigation-bar.png)
 
-## 示例
-
-![组件效果](/components/navigation-bar.png)
+## Usage
 
 ```kotlin
 import androidx.compose.runtime.getValue
@@ -39,6 +33,14 @@ NavigationBar {
 ```
 
 完整用法见仓库 `catalog` 的 [`CatalogApp.kt`](https://github.com/CTOO-UXD/Android-GeneV4/blob/main/catalog/src/main/java/com/genev4/catalog/CatalogApp.kt)。
+
+## Spec
+
+| 状态 | 参数 | 说明 |
+|---|---|---|
+| 选中 | `selected = true` | 当前页 |
+| 未选中 | `selected = false` | 其他页 |
+| 图标 + 文案 | `icon`、`label` | 常规底栏项 |
 
 ## API
 

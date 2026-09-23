@@ -1,6 +1,14 @@
 import MarkdownIt from 'markdown-it'
+import { basePath } from '../nav'
 
 export type TocItem = { id: string; text: string; level: number }
+
+function assetUrl(src: string): string {
+  if (!src || src.startsWith('http') || src.startsWith('data:')) return src
+  if (src.startsWith(basePath)) return src
+  if (src.startsWith('/')) return `${basePath}${src.slice(1)}`
+  return `${basePath}${src}`
+}
 
 const md = new MarkdownIt({
   html: false,
@@ -15,9 +23,9 @@ const md = new MarkdownIt({
 
 md.renderer.rules.image = (tokens, idx) => {
   const token = tokens[idx]
-  const src = token.attrGet('src') || ''
-  const alt = token.content || '组件效果'
-  return `<figure class="demo-frame"><div class="demo-stage"><img src="${md.utils.escapeHtml(src)}" alt="${md.utils.escapeHtml(alt)}" loading="lazy" /></div><figcaption class="demo-caption">组件预览 · GeneV4 截图</figcaption></figure>`
+  const src = assetUrl(token.attrGet('src') || '')
+  const alt = token.content || 'Preview'
+  return `<figure class="demo-frame"><div class="demo-stage"><img src="${md.utils.escapeHtml(src)}" alt="${md.utils.escapeHtml(alt)}" loading="lazy" /></div></figure>`
 }
 
 function slugify(text: string): string {
@@ -28,7 +36,59 @@ function slugify(text: string): string {
     .replace(/\s+/g, '-')
 }
 
-export function renderMarkdown(source: string): { html: string; toc: TocItem[]; title: string } {
+/** Keep Types first; wrap demos. Avoid duplicate headings (md-it leaves empty <p> after figures). */
+function promoteDemos(html: string): string {
+  const cleaned = html.replace(/<p>\s*<\/p>/g, '')
+
+  // Already ordered: wrap existing Types + demos in place
+  if (/<h2 id="types">Types<\/h2>[\s\S]*?<figure class="demo-frame">/.test(cleaned)) {
+    return cleaned.replace(
+      /<h2 id="types">Types<\/h2>([\s\S]*?)(?=<h2\b|$)/,
+      (_m, body) =>
+        `<section class="types-block"><h2 id="types">Types</h2>${body.trim()}</section>`,
+    )
+  }
+
+  const demos: string[] = []
+  let withoutDemos = cleaned.replace(/<figure class="demo-frame">[\s\S]*?<\/figure>/g, (m) => {
+    demos.push(m)
+    return ''
+  })
+  if (!demos.length) return cleaned
+
+  withoutDemos = withoutDemos
+    .replace(/<p>\s*<\/p>/g, '')
+    .replace(/<h2 id="types">Types<\/h2>\s*/g, '')
+
+  const demoBlock = `<section class="types-block"><h2 id="types">Types</h2>${demos.join('')}</section>`
+
+  const h1End = withoutDemos.search(/<\/h1>/)
+  if (h1End < 0) return demoBlock + withoutDemos
+
+  const afterH1 = withoutDemos.slice(h1End + 5)
+  const nextH2 = afterH1.search(/<h2\b/)
+  if (nextH2 < 0) {
+    return withoutDemos.slice(0, h1End + 5) + afterH1 + demoBlock
+  }
+  const intro = afterH1.slice(0, nextH2)
+  const rest = afterH1.slice(nextH2)
+  return withoutDemos.slice(0, h1End + 5) + intro + demoBlock + rest
+}
+
+function injectDocLinks(html: string, sourceUrl: string): string {
+  const links = `<nav class="doc-links"><a href="${md.utils.escapeHtml(sourceUrl)}" target="_blank" rel="noopener">Source</a><a href="https://github.com/CTOO-UXD/Android-GeneV4" target="_blank" rel="noopener">Repository</a></nav>`
+  // Title → lede → links (material-web catalog order)
+  const matched = html.match(/<\/h1>(\s*<p>[\s\S]*?<\/p>)?/)
+  if (matched) {
+    return html.replace(matched[0], `${matched[0]}${links}`)
+  }
+  return html
+}
+
+export function renderMarkdown(
+  source: string,
+  opts: { promoteDemo?: boolean; sourceUrl?: string } = {},
+): { html: string; toc: TocItem[]; title: string } {
   const toc: TocItem[] = []
   let title = ''
   const tokens = md.parse(source, {})
@@ -46,5 +106,19 @@ export function renderMarkdown(source: string): { html: string; toc: TocItem[]; 
     }
   }
 
-  return { html: md.renderer.render(tokens, md.options, {}), toc, title }
+  let html = md.renderer.render(tokens, md.options, {})
+  if (opts.promoteDemo) {
+    html = promoteDemos(html)
+    if (opts.sourceUrl) html = injectDocLinks(html, opts.sourceUrl)
+    const rebuilt: TocItem[] = [{ id: 'types', text: 'Types', level: 2 }]
+    const re = /<h2 id="([^"]+)">([^<]+)<\/h2>/g
+    let m: RegExpExecArray | null
+    while ((m = re.exec(html))) {
+      if (m[1] === 'types') continue
+      rebuilt.push({ id: m[1], text: m[2], level: 2 })
+    }
+    return { html, toc: rebuilt, title }
+  }
+
+  return { html, toc, title }
 }

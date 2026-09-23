@@ -2,18 +2,11 @@
 
 单行/多行文本输入。填充与描边是两种样式；错误态用 `isError`，不要换一个「红色输入框」组件。
 
-## 样式
+## Types
 
-| 变体 | Composable | 何时用 |
-|---|---|---|
-| 填充 | `TextField` | 表单主输入 |
-| 描边 | `OutlinedTextField` | 更轻的边框样式 |
-| 错误 | `isError = true` + `supportingText` | 校验失败 |
-| 密码 | `SecureTextField` / `OutlinedSecureTextField` | 密文输入 |
+![TextField](/components/text-field.png)
 
-## 示例
-
-![组件效果](/components/text-field.png)
+## Usage
 
 ```kotlin
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -49,6 +42,15 @@ OutlinedTextField(
 ```
 
 须包在 `MaterialTheme` 内。
+
+## Spec
+
+| 变体 | Composable | 何时用 |
+|---|---|---|
+| 填充 | `TextField` | 表单主输入 |
+| 描边 | `OutlinedTextField` | 更轻的边框样式 |
+| 错误 | `isError = true` + `supportingText` | 校验失败 |
+| 密码 | `SecureTextField` / `OutlinedSecureTextField` | 密文输入 |
 
 ## API
 

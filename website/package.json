@@ -8,6 +8,7 @@
     "docs:preview": "vite preview"
   },
   "dependencies": {
+    "@material/material-color-utilities": "^0.2.7",
     "@material/web": "^2.2.0",
     "lit": "^3.2.1",
     "markdown-it": "^14.1.0"

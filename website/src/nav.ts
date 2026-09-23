@@ -5,16 +5,16 @@ export const basePath = '/Android-GeneV4/'
 
 export const navGroups: NavGroup[] = [
   {
-    title: '开始使用',
+    title: 'Get started',
     items: [
-      { title: '快速开始', path: '/getting-started' },
-      { title: '主题与颜色', path: '/theming' },
+      { title: '快速开始', en: 'Quick start', path: '/getting-started' },
+      { title: '主题与颜色', en: 'Theming', path: '/theming' },
     ],
   },
   {
-    title: '组件',
+    title: 'Components',
     items: [
-      { title: '概览', path: '/components/' },
+      { title: '概览', en: 'Overview', path: '/components/' },
       { title: '按钮', en: 'Button', path: '/components/button' },
       { title: '卡片', en: 'Card', path: '/components/card' },
       { title: '对话框', en: 'Dialog', path: '/components/dialog' },
@@ -37,6 +37,24 @@ export const docFiles: Record<string, string> = {
   '/components/scaffold': 'components/scaffold.md',
   '/components/snackbar': 'components/snackbar.md',
   '/components/text-field': 'components/text-field.md',
+}
+
+/** GitHub source for component catalog pages (material-web style “Source” link). */
+export const componentSource: Record<string, string> = {
+  '/components/button':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Button.kt',
+  '/components/card':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Card.kt',
+  '/components/dialog':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/AlertDialog.kt',
+  '/components/navigation-bar':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/NavigationBar.kt',
+  '/components/scaffold':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Scaffold.kt',
+  '/components/snackbar':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Snackbar.kt',
+  '/components/text-field':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/TextField.kt',
 }
 
 export function normalizePath(pathname: string): string {

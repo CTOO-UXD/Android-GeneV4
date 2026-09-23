@@ -2,19 +2,11 @@
 
 模态对话框。确认类场景用 `AlertDialog`；需要自定义布局时用带 `content` 的对话框变体（见源码）。
 
-## 样式
+## Types
 
-| 元素 | 参数 | 说明 |
-|---|---|---|
-| 标题 | `title` | 简短标题 |
-| 正文 | `text` | 说明文案 |
-| 确认 | `confirmButton` | 主操作，常用 `TextButton` |
-| 取消 | `dismissButton` | 次要操作 |
-| 关闭 | `onDismissRequest` | 点外部 / 返回 |
+![Dialog](/components/dialog.png)
 
-## 示例
-
-![组件效果](/components/dialog.png)
+## Usage
 
 ```kotlin
 import androidx.compose.runtime.getValue
@@ -43,6 +35,16 @@ if (open) {
 ```
 
 须包在 `MaterialTheme` 内。
+
+## Spec
+
+| 元素 | 参数 | 说明 |
+|---|---|---|
+| 标题 | `title` | 简短标题 |
+| 正文 | `text` | 说明文案 |
+| 确认 | `confirmButton` | 主操作，常用 `TextButton` |
+| 取消 | `dismissButton` | 次要操作 |
+| 关闭 | `onDismissRequest` | 点外部 / 返回 |
 
 ## API
 

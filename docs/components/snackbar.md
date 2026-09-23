@@ -2,17 +2,11 @@
 
 底部短时提示，用于操作结果反馈（已保存、网络错误等）。通常配合 `SnackbarHost` + `Scaffold`。
 
-## 样式
+## Types
 
-| 用法 | 说明 |
-|---|---|
-| 仅文案 | 短消息 |
-| 带操作 | `actionLabel` / action 内容（如「撤销」） |
-| 挂到 Scaffold | `snackbarHost = { SnackbarHost(hostState) }` |
+![Snackbar](/components/snackbar.png)
 
-## 示例
-
-![组件效果](/components/snackbar.png)
+## Usage
 
 ```kotlin
 import androidx.compose.runtime.remember
@@ -46,6 +40,14 @@ Scaffold(
     }
 }
 ```
+
+## Spec
+
+| 用法 | 说明 |
+|---|---|
+| 仅文案 | 短消息 |
+| 带操作 | `actionLabel` / action 内容（如「撤销」） |
+| 挂到 Scaffold | `snackbarHost = { SnackbarHost(hostState) }` |
 
 ## API
 

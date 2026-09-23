@@ -2,18 +2,11 @@
 
 页面骨架：顶栏、底栏、FAB、内容区。新页面优先用 `Scaffold`，再往 `content` 里放业务 UI。
 
-## 样式 / 槽位
+## Types
 
-| 槽位 | 参数 | 说明 |
-|---|---|---|
-| 顶栏 | `topBar` | `TopAppBar` 等 |
-| 底栏 | `bottomBar` | `NavigationBar` 等 |
-| FAB | `floatingActionButton` | `FloatingActionButton` 等 |
-| 内容 | `content: (PaddingValues) -> Unit` | **必须**使用传入的 `PaddingValues`，避免被栏遮挡 |
+![Scaffold](/components/scaffold.png)
 
-## 示例
-
-![组件效果](/components/scaffold.png)
+## Usage
 
 ```kotlin
 import androidx.compose.foundation.layout.padding
@@ -57,6 +50,15 @@ fun ExampleScaffold() {
 ```
 
 须包在 `MaterialTheme` 内。底部导航细节见 [NavigationBar](/components/navigation-bar)。
+
+## Spec
+
+| 槽位 | 参数 | 说明 |
+|---|---|---|
+| 顶栏 | `topBar` | `TopAppBar` 等 |
+| 底栏 | `bottomBar` | `NavigationBar` 等 |
+| FAB | `floatingActionButton` | `FloatingActionButton` 等 |
+| 内容 | `content: (PaddingValues) -> Unit` | **必须**使用传入的 `PaddingValues`，避免被栏遮挡 |
 
 ## API
 

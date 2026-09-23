@@ -1,5 +1,5 @@
 import { LitElement, css, html, nothing } from 'lit'
-import { customElement, property, state } from 'lit/decorators.js'
+import { customElement, state } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 import '@material/web/list/list.js'
 import '@material/web/list/list-item.js'
@@ -7,9 +7,7 @@ import '@material/web/iconbutton/icon-button.js'
 import '@material/web/icon/icon.js'
 import '@material/web/button/filled-button.js'
 import '@material/web/button/outlined-button.js'
-import '@material/web/button/text-button.js'
-import '@material/web/divider/divider.js'
-import { basePath, docFiles, href, navGroups, normalizePath, type NavItem } from './nav'
+import { basePath, componentSource, docFiles, href, navGroups, normalizePath, type NavItem } from './nav'
 import { renderMarkdown, type TocItem } from './lib/markdown'
 
 const modules = import.meta.glob('@docs/**/*.md', {
@@ -33,6 +31,7 @@ function resolveDoc(path: string): string | null {
 export class Genev4App extends LitElement {
   @state() private path = '/'
   @state() private drawer = false
+  @state() private themeOpen = false
 
   connectedCallback() {
     super.connectedCallback()
@@ -61,6 +60,8 @@ export class Genev4App extends LitElement {
     this.path = next
     this.drawer = false
     window.scrollTo({ top: 0 })
+    const pane = this.renderRoot?.querySelector('.pane.content-pane .scroll-wrapper')
+    if (pane instanceof HTMLElement) pane.scrollTop = 0
   }
 
   private onContentClick = (event: Event) => {
@@ -95,73 +96,57 @@ export class Genev4App extends LitElement {
         @click=${(e: Event) => this.go(item.path, e)}
       >
         <div slot="headline">${label}</div>
-        ${item.en ? html`<div slot="supporting-text">${item.title}</div>` : nothing}
       </md-list-item>
     `
   }
 
   private renderHome() {
     document.title = 'GeneV4'
+    const comps = navGroups
+      .find((g) => g.title === 'Components')!
+      .items.filter((i) => i.path !== '/components/' && i.en)
+
     return html`
-      <section class="hero card">
+      <section class="hero">
         <div>
-          <p class="eyebrow md-typescale-label-large">Android Jetpack Compose</p>
-          <h1>GeneV4</h1>
+          <p class="eyebrow">Jetpack Compose · Android</p>
+          <h1 class="display">GeneV4</h1>
           <p class="lede">
-            面向业务工程的 Compose 组件库。统一包名 <code>com.genev4</code>，主题先行，常用控件开箱即用。
+            Compose 组件库。浏览 Types 截图与可复制 Usage；站点外壳对齐 Material Web catalog，画面来自 Paparazzi 金标。
           </p>
           <div class="actions">
             <md-filled-button href=${href('/getting-started')} @click=${(e: Event) => this.go('/getting-started', e)}>
-              快速开始
+              Quick start
             </md-filled-button>
-            <md-outlined-button href=${href('/components/')} @click=${(e: Event) => this.go('/components/', e)}>
-              浏览组件
+            <md-outlined-button href=${href('/components/button')} @click=${(e: Event) => this.go('/components/button', e)}>
+              Browse components
             </md-outlined-button>
-            <md-text-button href="https://github.com/CTOO-UXD/Android-GeneV4" target="_blank" rel="noopener">
-              GitHub
-            </md-text-button>
           </div>
         </div>
-        <div class="hero-demo" aria-hidden="true">
-          <div class="demo-box">
-            <md-filled-button>填充</md-filled-button>
-            <md-outlined-button>描边</md-outlined-button>
-            <md-text-button>文字</md-text-button>
-          </div>
-          <p class="hint">站点外壳使用 Material Web；下方组件页预览为 GeneV4 真机截图。</p>
-        </div>
+        <a class="hero-shot" href=${href('/components/button')} @click=${(e: Event) => this.go('/components/button', e)}>
+          <img src=${href('components/button.png')} alt="Button" />
+        </a>
       </section>
 
-      <section class="strip">
-        <article class="card soft">
-          <h2>Maven Central</h2>
-          <p><code>io.github.ctoo-uxd:genev4:0.1.0</code></p>
-        </article>
-        <article class="card soft">
-          <h2>主题入口</h2>
-          <p><code>com.genev4.MaterialTheme</code></p>
-        </article>
-        <article class="card soft">
-          <h2>真机画廊</h2>
-          <p>仓库 <code>:catalog</code> 模块可安装预览</p>
-        </article>
-      </section>
-
-      <section class="card catalog">
+      <section class="catalog">
         <h2>Components</h2>
-        <p class="lede">按页面查阅变体说明、预览与可复制示例。</p>
+        <p class="catalog-lede">点进任意组件：先看 Types，再复制 Usage。</p>
         <div class="grid">
-          ${navGroups
-            .find((g) => g.title === '组件')!
-            .items.filter((i) => i.path !== '/components/')
-            .map(
-              (item) => html`
-                <a class="tile" href=${href(item.path)} @click=${(e: Event) => this.go(item.path, e)}>
-                  <strong>${item.en}</strong>
-                  <span>${item.title}</span>
-                </a>
-              `,
-            )}
+          ${comps.map(
+            (item) => html`
+              <a class="tile" href=${href(item.path)} @click=${(e: Event) => this.go(item.path, e)}>
+                <div class="tile-shot">
+                  <img
+                    src=${href(`components/${item.path.split('/').pop()}.png`)}
+                    alt=${item.en || item.title}
+                    loading="lazy"
+                  />
+                </div>
+                <strong>${item.en}</strong>
+                <span>${item.title}</span>
+              </a>
+            `,
+          )}
         </div>
       </section>
     `
@@ -171,37 +156,46 @@ export class Genev4App extends LitElement {
     const source = resolveDoc(this.path)
     if (!source) {
       document.title = 'GeneV4'
-      return html`<div class="card doc"><p>未找到文档。</p></div>`
+      return { title: '', toc: [] as TocItem[], body: html`<p>未找到文档。</p>` }
     }
-    const { html: body, toc, title } = renderMarkdown(source)
+    const isComponent =
+      this.path.startsWith('/components/') && this.path !== '/components/'
+    const { html: body, toc, title } = renderMarkdown(source, {
+      promoteDemo: isComponent,
+      sourceUrl: componentSource[this.path],
+    })
     document.title = title ? `${title} · GeneV4` : 'GeneV4'
-    return html`
-      <article class="card doc" @click=${this.onContentClick}>${unsafeHTML(body)}</article>
-      ${toc.length
-        ? html`
-            <aside class="toc">
-              <p class="toc-title">On this page</p>
-              <div class="toc-rail">
-                ${toc.map(
-                  (item: TocItem) => html`
-                    <a class=${item.level > 2 ? 'deep' : ''} href="#${item.id}">${item.text}</a>
-                  `,
-                )}
-              </div>
-            </aside>
-          `
-        : nothing}
-    `
+    return {
+      title,
+      toc,
+      body: html`
+        <div class="doc ${isComponent ? 'doc--component' : ''}" @click=${this.onContentClick}>
+          ${unsafeHTML(body)}
+        </div>
+      `,
+    }
   }
 
   render() {
     const home = this.path === '/'
+    const doc = home ? null : this.renderDoc()
+    const hasToc = !!(doc && doc.toc.length)
+
     return html`
       <header class="topbar">
-        <a class="brand" href=${href('')} @click=${(e: Event) => this.go('/', e)}>
-          <img src=${href('logo.svg')} width="28" height="28" alt="" />
-          <span>GeneV4</span>
-        </a>
+        <div class="topbar-start">
+          ${home
+            ? nothing
+            : html`
+                <md-icon-button class="menu-btn" aria-label="菜单" @click=${() => (this.drawer = !this.drawer)}>
+                  <md-icon>${this.drawer ? 'menu_open' : 'menu'}</md-icon>
+                </md-icon-button>
+              `}
+          <a class="brand" href=${href('')} @click=${(e: Event) => this.go('/', e)}>
+            <img src=${href('logo.svg')} width="28" height="28" alt="" />
+            <span>GeneV4</span>
+          </a>
+        </div>
         <div class="top-actions">
           <md-icon-button
             href="https://github.com/CTOO-UXD/Android-GeneV4"
@@ -211,65 +205,121 @@ export class Genev4App extends LitElement {
           >
             <md-icon>code</md-icon>
           </md-icon-button>
-          ${home
-            ? nothing
-            : html`
-                <md-icon-button class="menu" aria-label="菜单" @click=${() => (this.drawer = !this.drawer)}>
-                  <md-icon>menu</md-icon>
-                </md-icon-button>
-              `}
+          <md-icon-button
+            aria-label="Theme"
+            aria-expanded=${this.themeOpen ? 'true' : 'false'}
+            @click=${() => {
+              this.themeOpen = !this.themeOpen
+              if (this.themeOpen) this.drawer = false
+            }}
+          >
+            <md-icon>palette</md-icon>
+          </md-icon-button>
         </div>
+        <theme-changer
+          .open=${this.themeOpen}
+          @close=${() => (this.themeOpen = false)}
+        ></theme-changer>
       </header>
 
-      <div class="layout ${home ? 'home' : ''}">
+      <div class="body ${home ? 'home' : ''} ${this.drawer ? 'drawer-open' : ''}">
         ${home
           ? nothing
           : html`
-              <aside class="sidenav ${this.drawer ? 'open' : ''}">
-                ${navGroups.map(
-                  (group, index) => html`
-                    ${index > 0 ? html`<md-divider></md-divider>` : nothing}
-                    <p class="group-title">${group.title}</p>
-                    <md-list>${group.items.map((item) => this.renderNavItem(item))}</md-list>
-                  `,
-                )}
+              <div class="spacer" aria-hidden="true"></div>
+              <aside class="sidenav">
+                <div class="scroll-wrapper">
+                  ${navGroups.map(
+                    (group) => html`
+                      <p class="group-title">${group.title}</p>
+                      <md-list class="nav">
+                        ${group.items.map((item) => this.renderNavItem(item))}
+                      </md-list>
+                    `,
+                  )}
+                </div>
               </aside>
-              ${this.drawer ? html`<div class="scrim" @click=${() => (this.drawer = false)}></div>` : nothing}
+              <div class="scrim" @click=${() => (this.drawer = false)}></div>
             `}
 
-        <main class="main">${home ? this.renderHome() : this.renderDoc()}</main>
+        <div class="panes ${hasToc ? 'has-toc' : ''}">
+          ${hasToc
+            ? html`
+                <aside class="pane toc">
+                  <div class="scroll-wrapper">
+                    <p class="toc-label">On this page</p>
+                    <h2 class="toc-title">${doc!.title}</h2>
+                    <nav class="toc-nav">
+                      ${doc!.toc.map(
+                        (item: TocItem) => html`
+                          <a class=${item.level > 2 ? 'deep' : ''} href="#${item.id}">${item.text}</a>
+                        `,
+                      )}
+                    </nav>
+                  </div>
+                </aside>
+              `
+            : nothing}
+
+          <div class="pane content-pane">
+            <div class="scroll-wrapper">
+              <div class="content-inner">${home ? this.renderHome() : doc!.body}</div>
+            </div>
+          </div>
+        </div>
       </div>
     `
   }
 
   static styles = css`
     :host {
-      display: block;
-      min-height: 100vh;
-      background: var(--gv-canvas);
+      display: flex;
+      flex-direction: column;
+      min-height: 100dvh;
+      background: var(--md-sys-color-surface-container);
       color: var(--md-sys-color-on-surface);
+      --_drawer-width: var(--catalog-drawer-width);
+      --_toc-pane-width: var(--catalog-toc-width);
+      --_pane-margin-inline-end: var(--catalog-spacing-l);
+      --_pane-margin-inline-start: 0px;
+      --_pane-margin-block-end: var(--catalog-spacing-l);
     }
 
+    /* —— top app bar (material-web catalog) —— */
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
-      height: var(--gv-header);
+      z-index: 12;
+      height: var(--catalog-top-app-bar-height);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 12px 0 20px;
-      background: var(--gv-surface);
-      border-bottom: 1px solid color-mix(in srgb, var(--md-sys-color-outline) 24%, transparent);
+      padding: var(--catalog-spacing-m) var(--catalog-spacing-l);
+      background: var(--md-sys-color-surface-container);
+      color: var(--md-sys-color-on-surface);
+      box-sizing: border-box;
+    }
+
+    .topbar-start {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      min-width: 0;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      color: var(--md-sys-color-primary);
+      font-size: max(var(--catalog-title-l-font-size), 22px);
       font-weight: 500;
-      font-size: 1.125rem;
-      letter-spacing: 0.01em;
+      text-decoration: none;
+      padding-inline: 12px;
+    }
+
+    .brand:hover {
+      text-decoration: none;
     }
 
     .brand img {
@@ -281,98 +331,227 @@ export class Genev4App extends LitElement {
       align-items: center;
     }
 
-    .layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      max-width: 1480px;
-      margin: 0 auto;
-      padding: 16px 12px 48px;
-    }
-
-    .layout.home {
-      max-width: 1100px;
-    }
-
-    .sidenav {
+    .menu-btn {
       display: none;
     }
 
-    .sidenav md-list {
-      background: transparent;
+    /* —— body / drawer shell —— */
+    .body {
+      display: flex;
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .body.home {
+      --_pane-margin-inline-start: var(--catalog-spacing-xl);
+    }
+
+    .spacer,
+    .sidenav {
+      min-width: var(--_drawer-width);
+      max-width: var(--_drawer-width);
+    }
+
+    /* material-web nav-drawer: spacer min-width animates across the 1500px breakpoint */
+    .spacer {
+      flex-shrink: 0;
+      position: relative;
+      transition: min-width 0.5s cubic-bezier(0.3, 0, 0, 1);
+    }
+
+    .sidenav {
+      position: fixed;
+      inset: var(--catalog-top-app-bar-height) 0 0 0;
+      z-index: 12;
+      background: var(--md-sys-color-surface-container);
+      overflow: hidden;
+      transform: translateX(0);
+      transition: transform 0.5s cubic-bezier(0.3, 0, 0, 1);
+    }
+
+    .sidenav .scroll-wrapper {
+      overflow-y: auto;
+      max-height: 100%;
+      padding-block: var(--catalog-spacing-m);
+      padding-inline-end: var(--catalog-spacing-s);
+    }
+
+    md-list.nav {
       --md-list-container-color: transparent;
-    }
-
-    .sidenav md-list-item {
-      margin: 2px 8px;
-      border-radius: 999px;
-      --md-list-item-container-shape: 999px;
-      --md-list-item-label-text-weight: 500;
-    }
-
-    .sidenav md-list-item.active {
-      background: var(--md-sys-color-surface-container-highest);
+      background: transparent;
+      display: block;
+      margin-inline: var(--catalog-spacing-m);
+      min-width: unset;
     }
 
     .group-title {
-      margin: 18px 24px 4px;
-      font-size: 0.7rem;
+      margin: var(--catalog-spacing-xl) var(--catalog-spacing-l) var(--catalog-spacing-m);
+      font-size: var(--catalog-headline-s-font-size);
       font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--md-sys-color-on-surface-variant);
+      color: var(--md-sys-color-on-surface);
     }
 
-    md-divider {
-      margin: 12px 16px;
+    .sidenav .scroll-wrapper > .group-title:first-child {
+      margin-block-start: var(--catalog-spacing-s);
     }
 
-    .main {
+    md-list.nav md-list-item {
+      margin-block: var(--catalog-spacing-m);
+      display: block;
+      border-radius: var(--catalog-shape-xl);
+      --md-list-item-container-shape: var(--catalog-shape-xl);
+      --md-focus-ring-shape: var(--catalog-shape-xl);
+    }
+
+    .group-title + md-list.nav md-list-item:first-of-type {
+      margin-block-start: 0;
+    }
+
+    md-list.nav md-list-item.active {
+      background-color: var(--md-sys-color-surface-container-highest);
+    }
+
+    /* —— panes (content + toc) —— */
+    .panes {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      gap: var(--_pane-margin-inline-end);
+      margin-inline: var(--_pane-margin-inline-start) var(--_pane-margin-inline-end);
+      margin-block-end: var(--_pane-margin-block-end);
+      width: 100%;
+      max-width: calc(
+        100% - var(--_drawer-width) - var(--_pane-margin-inline-start) - var(--_pane-margin-inline-end)
+      );
       min-width: 0;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 16px;
-      align-items: start;
+      /* emphasized easing — same as material-web catalog nav-drawer */
+      transition: 0.5s cubic-bezier(0.3, 0, 0, 1);
+      transition-property: margin, height, border-radius, max-width, width;
     }
 
-    .card {
-      background: var(--gv-surface);
-      border-radius: var(--gv-radius-xl);
-      padding: 32px 24px 40px;
+    .body.home .panes {
+      max-width: calc(100% - var(--_pane-margin-inline-start) - var(--_pane-margin-inline-end));
     }
 
-    .card.soft {
-      padding: 20px 22px;
+    .pane {
+      box-sizing: border-box;
+      overflow: hidden;
+      background-color: var(--md-sys-color-surface);
+      border-radius: var(--catalog-shape-xl);
+      height: calc(
+        100dvh - var(--catalog-top-app-bar-height) - var(--_pane-margin-block-end)
+      );
+      transition: 0.5s cubic-bezier(0.3, 0, 0, 1);
+      transition-property: margin, height, border-radius, max-width, width;
     }
 
+    .pane.content-pane {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .pane.toc {
+      width: var(--_toc-pane-width);
+      max-width: var(--_toc-pane-width);
+      flex-shrink: 0;
+      opacity: 1;
+      transition:
+        0.5s cubic-bezier(0.3, 0, 0, 1),
+        opacity 0.35s cubic-bezier(0.3, 0, 0, 1);
+      transition-property: margin, height, border-radius, max-width, width, opacity;
+    }
+
+    .pane .scroll-wrapper {
+      overflow-y: auto;
+      max-height: 100%;
+      border-radius: inherit;
+      box-sizing: border-box;
+      padding-block: var(--catalog-spacing-xl);
+    }
+
+    .pane.toc .scroll-wrapper {
+      padding-inline: var(--catalog-spacing-xl);
+    }
+
+    .content-inner {
+      display: block;
+      width: 100%;
+      max-width: min(100%, var(--catalog-content-max));
+      margin-inline: auto;
+      padding-inline: var(--catalog-spacing-xl);
+      box-sizing: border-box;
+    }
+
+    .toc-label {
+      margin: 0;
+      font-size: var(--catalog-label-s-font-size);
+      color: var(--md-sys-color-on-surface-variant);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+
+    .toc-title {
+      margin: var(--catalog-spacing-s) 0 var(--catalog-spacing-m);
+      font-size: var(--catalog-headline-s-font-size);
+      font-weight: 700;
+    }
+
+    .toc-nav {
+      display: flex;
+      flex-direction: column;
+      gap: var(--catalog-spacing-m);
+    }
+
+    .toc-nav a {
+      color: var(--md-sys-color-on-surface-variant);
+      font-size: var(--catalog-body-m-font-size);
+      text-decoration: none;
+      line-height: 1.35;
+    }
+
+    .toc-nav a.deep {
+      padding-inline-start: var(--catalog-spacing-xl);
+      list-style: circle;
+    }
+
+    .toc-nav a:hover {
+      color: var(--md-sys-color-primary);
+      text-decoration: underline;
+    }
+
+    .scrim {
+      display: none;
+    }
+
+    /* —— home —— */
     .hero {
       display: grid;
-      gap: 28px;
+      gap: var(--catalog-spacing-xl);
+      margin-block-end: 48px;
     }
 
     .eyebrow {
       margin: 0 0 8px;
-      color: var(--md-sys-color-on-surface-variant);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-size: 0.75rem;
+      color: var(--md-sys-color-primary);
+      font-size: var(--catalog-title-m-font-size);
       font-weight: 500;
     }
 
-    h1 {
+    .display {
       margin: 0;
-      font-size: clamp(2.6rem, 7vw, 3.8rem);
+      font-size: clamp(2.8rem, 8vw, var(--catalog-display-xl-font-size));
       line-height: 1.05;
-      letter-spacing: -0.03em;
-      font-weight: 700;
+      font-weight: 400;
+      letter-spacing: -0.02em;
     }
 
-    .lede {
+    .lede,
+    .catalog-lede {
       margin: 14px 0 0;
       max-width: 36rem;
       color: var(--md-sys-color-on-surface-variant);
-      line-height: 1.65;
-      font-size: 1.05rem;
+      line-height: 1.6;
     }
 
     .actions {
@@ -382,184 +561,226 @@ export class Genev4App extends LitElement {
       margin-top: 28px;
     }
 
-    .hero-demo {
+    .hero-shot {
       display: grid;
-      gap: 12px;
-      align-content: center;
+      place-items: center;
+      padding: 28px;
+      border-radius: var(--catalog-image-border-radius);
+      border: 1px solid var(--md-sys-color-outline);
+      background: var(--md-sys-color-surface);
+      min-height: 180px;
+      text-decoration: none;
     }
 
-    .demo-box {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      padding: 28px 20px;
-      border-radius: 16px;
-      border: 1px solid var(--md-sys-color-outline-variant);
-      background: var(--md-sys-color-surface-container-low);
+    .hero-shot img {
+      max-width: min(100%, 420px);
+      height: auto;
     }
 
-    .hint {
-      margin: 0;
-      font-size: 0.82rem;
-      color: var(--md-sys-color-on-surface-variant);
-      text-align: center;
-    }
-
-    .strip {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .strip h2,
     .catalog h2 {
-      margin: 0 0 6px;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-
-    .strip p {
       margin: 0;
-      color: var(--md-sys-color-on-surface-variant);
-    }
-
-    .catalog {
-      margin-top: 16px;
-    }
-
-    .catalog .lede {
-      margin-top: 6px;
-      font-size: 0.98rem;
+      font-size: var(--catalog-headline-s-font-size);
     }
 
     .grid {
       margin-top: 22px;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: 12px;
     }
 
     .tile {
       display: grid;
-      gap: 4px;
-      padding: 18px 16px;
-      border-radius: 16px;
+      gap: 8px;
+      padding: 12px;
+      border-radius: var(--catalog-shape-l);
       background: var(--md-sys-color-surface-container-low);
+      color: inherit;
+      text-decoration: none;
     }
 
     .tile:hover {
       background: var(--md-sys-color-surface-container-high);
+      text-decoration: none;
+    }
+
+    .tile-shot {
+      display: grid;
+      place-items: center;
+      min-height: 88px;
+      padding: 12px;
+      border-radius: var(--catalog-shape-m);
+      background: var(--md-sys-color-surface);
+      border: 1px solid var(--md-sys-color-outline-variant);
+    }
+
+    .tile-shot img {
+      max-width: 100%;
+      max-height: 64px;
+      object-fit: contain;
     }
 
     .tile span {
       color: var(--md-sys-color-on-surface-variant);
-      font-size: 0.88rem;
+      font-size: var(--catalog-body-m-font-size);
     }
 
-    .doc {
-      max-width: 820px;
-      justify-self: stretch;
-    }
-
+    /* —— markdown / doc (md-layout.css aligned) —— */
     .doc :is(h1) {
-      margin: 0 0 10px;
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      letter-spacing: -0.03em;
+      margin: 0 0 12px;
+      font-size: clamp(2.4rem, 5vw, 3.25rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
       line-height: 1.1;
     }
 
+    .doc :is(h1 + p) {
+      margin: 0;
+      max-width: 42rem;
+      color: var(--md-sys-color-on-surface-variant);
+      line-height: 1.6;
+    }
+
+    .doc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin: 16px 0 28px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .doc-links a {
+      color: var(--md-sys-color-primary);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .doc-links a:hover {
+      text-decoration: underline;
+    }
+
     .doc :is(h2) {
-      margin: 44px 0 14px;
-      font-size: 1.5rem;
-      letter-spacing: -0.02em;
+      margin: 48px 0 16px;
+      font-size: var(--catalog-title-l-font-size);
+      font-weight: 700;
+    }
+
+    .doc--component .types-block h2 {
+      margin-top: 8px;
     }
 
     .doc :is(h3) {
       margin: 28px 0 10px;
-      font-size: 1.1rem;
+      font-size: var(--catalog-title-m-font-size);
+      font-weight: 700;
     }
 
     .doc :is(p, li) {
       color: var(--md-sys-color-on-surface-variant);
-      line-height: 1.7;
+      line-height: 1.65;
     }
 
     .doc a {
       color: var(--md-sys-color-primary);
-      text-decoration: underline;
-      text-underline-offset: 2px;
     }
 
     .doc table {
       width: 100%;
-      border-collapse: collapse;
-      margin: 8px 0 24px;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 16px 0 28px;
+      font-size: var(--catalog-body-m-font-size);
       overflow: hidden;
-      border-radius: 12px;
-      border: 1px solid color-mix(in srgb, var(--md-sys-color-outline) 25%, transparent);
     }
 
     .doc th,
     .doc td {
-      padding: 12px 14px;
+      padding: 8px 16px;
       text-align: left;
-      border-bottom: 1px solid color-mix(in srgb, var(--md-sys-color-outline) 18%, transparent);
+      vertical-align: top;
+      border-block-start: 1px solid var(--md-sys-color-outline-variant);
+      border-inline-start: 1px solid var(--md-sys-color-outline-variant);
+    }
+
+    .doc tr td:last-of-type,
+    .doc tr th:last-of-type {
+      border-inline-end: 1px solid var(--md-sys-color-outline-variant);
+    }
+
+    .doc tr:last-of-type td {
+      border-block-end: 1px solid var(--md-sys-color-outline-variant);
     }
 
     .doc th {
-      background: var(--md-sys-color-surface-container-low);
+      background: var(--md-sys-color-surface-container);
+      color: var(--md-sys-color-on-surface);
+      font-weight: 500;
+      font-size: 1.05em;
+    }
+
+    .doc tr:first-child th:first-child {
+      border-start-start-radius: var(--catalog-shape-xl);
+    }
+
+    .doc tr:first-child th:last-child {
+      border-start-end-radius: var(--catalog-shape-xl);
+    }
+
+    .doc tr:last-child td:first-child {
+      border-end-start-radius: var(--catalog-shape-xl);
+    }
+
+    .doc tr:last-child td:last-child {
+      border-end-end-radius: var(--catalog-shape-xl);
+    }
+
+    .doc :not(pre) > code {
+      display: inline-flex;
+      font-family: 'Roboto Mono', ui-monospace, monospace;
+      font-size: 0.88em;
+      padding: 4px;
+      border-radius: 8px;
+      background: var(--md-sys-color-surface-variant);
       color: var(--md-sys-color-on-surface);
     }
 
-    .doc tr:last-child td {
-      border-bottom: 0;
+    .doc .types-block {
+      margin: 0 0 8px;
     }
 
-    .doc :not(pre) > code,
-    .hero code,
-    .strip code {
-      font-family: 'Roboto Mono', ui-monospace, monospace;
-      font-size: 0.88em;
-      padding: 0.12em 0.38em;
-      border-radius: 6px;
-      background: var(--md-sys-color-surface-container);
-    }
-
+    /* Preview area — screenshots only; framed like catalog figures */
     .doc .demo-frame {
-      margin: 12px 0 28px;
-      border: 1px solid var(--md-sys-color-outline-variant);
-      border-radius: 16px;
+      margin: 0 0 8px;
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: var(--catalog-image-border-radius);
       overflow: hidden;
-      background: var(--gv-surface);
+      background: var(--md-sys-color-surface);
     }
 
     .doc .demo-stage {
       display: grid;
       place-items: center;
-      padding: 36px 24px;
-      min-height: 160px;
-      background: var(--md-sys-color-surface-container-low);
+      padding: 28px;
+      min-height: 200px;
+      background: var(--md-sys-color-surface);
+    }
+
+    .doc--component .demo-stage {
+      min-height: 240px;
+      padding: 40px 28px;
     }
 
     .doc .demo-stage img {
-      max-width: min(100%, 520px);
+      max-width: min(100%, 640px);
       height: auto;
     }
 
-    .doc .demo-caption {
-      margin: 0;
-      padding: 10px 16px;
-      border-top: 1px solid color-mix(in srgb, var(--md-sys-color-outline) 20%, transparent);
-      font-size: 0.78rem;
-      color: var(--md-sys-color-on-surface-variant);
-    }
-
     .doc .code-panel {
-      margin: 0 0 28px;
-      border-radius: 12px;
+      margin: 12px 0 28px;
+      border-radius: var(--catalog-shape-l);
       overflow: hidden;
-      background: var(--md-sys-color-surface-container);
+      background: var(--md-sys-color-surface-container-low);
     }
 
     .doc .code-toolbar {
@@ -570,7 +791,7 @@ export class Genev4App extends LitElement {
     }
 
     .doc .code-lang {
-      font-size: 0.72rem;
+      font-size: var(--catalog-label-s-font-size);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--md-sys-color-on-surface-variant);
@@ -586,124 +807,122 @@ export class Genev4App extends LitElement {
       font-family: 'Roboto Mono', ui-monospace, monospace;
     }
 
-    .toc {
-      display: none;
+    /* —— responsive (material-web: collapse drawer ≤1500, hide toc ≤900) —— */
+    @media (max-width: 900px) {
+      .pane.toc {
+        width: 0;
+        max-width: 0;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+        overflow: hidden;
+        border: 0;
+      }
     }
 
-    .toc-title {
-      margin: 0 0 12px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--md-sys-color-on-surface-variant);
-    }
+    @media (max-width: 1500px) {
+      .menu-btn {
+        display: inline-flex;
+      }
 
-    .toc-rail {
-      border-left: 1px solid var(--md-sys-color-outline-variant);
-    }
+      .spacer {
+        min-width: 0;
+      }
 
-    .toc a {
-      display: block;
-      padding: 7px 0 7px 14px;
-      margin-left: -1px;
-      border-left: 2px solid transparent;
-      color: var(--md-sys-color-on-surface-variant);
-      font-size: 0.86rem;
-      line-height: 1.35;
-    }
+      .panes {
+        max-width: calc(100% - var(--_pane-margin-inline-start) - var(--_pane-margin-inline-end));
+      }
 
-    .toc a.deep {
-      padding-left: 24px;
-      font-size: 0.8rem;
-    }
+      :host {
+        --_pane-margin-inline-start: var(--catalog-spacing-xl);
+      }
 
-    .toc a:hover {
-      color: var(--md-sys-color-on-surface);
-      border-left-color: var(--md-sys-color-outline);
-    }
+      .sidenav {
+        transform: translateX(-100%);
+        border-radius: 0 var(--catalog-shape-xl) var(--catalog-shape-xl) 0;
+        width: var(--_drawer-width);
+        max-width: var(--_drawer-width);
+      }
 
-    .scrim {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.32);
-      z-index: 25;
-    }
+      .sidenav .scroll-wrapper {
+        opacity: 0;
+        transition: opacity 0.3s cubic-bezier(0.3, 0, 0, 1);
+      }
 
-    .menu {
-      display: inline-flex;
-    }
+      .drawer-open .sidenav {
+        transform: translateX(0);
+      }
 
-    @media (max-width: 959px) {
-      .sidenav.open {
+      .drawer-open .sidenav .scroll-wrapper {
+        opacity: 1;
+      }
+
+      .scrim {
         display: block;
         position: fixed;
-        z-index: 30;
-        inset: 0 auto 0 0;
-        width: min(86vw, 320px);
-        background: var(--gv-canvas);
-        padding: 12px 0 24px;
-        overflow: auto;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        inset: 0;
+        z-index: 11;
+        background: rgba(0, 0, 0, 0.32);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.15s linear;
+      }
+
+      .drawer-open .scrim {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    @media (min-width: 1501px) {
+      .menu-btn {
+        display: none;
+      }
+
+      .sidenav {
+        transform: none;
+      }
+
+      .sidenav .scroll-wrapper {
+        opacity: 1;
       }
     }
 
     @media (min-width: 960px) {
-      .menu {
-        display: none;
-      }
-
-      .layout {
-        grid-template-columns: var(--gv-side) minmax(0, 1fr);
-        gap: 8px;
-        padding: 20px 24px 64px;
-      }
-
-      .layout.home {
-        grid-template-columns: 1fr;
-      }
-
-      .sidenav {
-        display: block;
-        position: sticky;
-        top: calc(var(--gv-header) + 12px);
-        max-height: calc(100vh - var(--gv-header) - 24px);
-        overflow: auto;
-        padding-bottom: 24px;
-      }
-
-      .card {
-        padding: 48px 52px 56px;
-      }
-
       .hero {
-        grid-template-columns: 1.15fr 0.85fr;
+        grid-template-columns: 1.05fr 0.95fr;
         align-items: center;
       }
 
-      .strip {
-        grid-template-columns: repeat(3, 1fr);
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
+    }
 
+    @media (min-width: 1200px) {
       .grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
       }
     }
 
-    @media (min-width: 1200px) {
-      .main {
-        grid-template-columns: minmax(0, 1fr) var(--gv-toc);
+    @media (max-width: 600px) {
+      .pane {
+        border-end-start-radius: 0;
+        border-end-end-radius: 0;
       }
 
-      .layout.home .main {
-        grid-template-columns: 1fr;
+      :host {
+        --_pane-margin-block-end: 0px;
+        --_pane-margin-inline-start: 0px;
+        --_pane-margin-inline-end: 0px;
       }
+    }
 
-      .toc {
-        display: block;
-        position: sticky;
-        top: calc(var(--gv-header) + 28px);
-        padding-top: 18px;
+    @media (pointer: fine) {
+      .pane .scroll-wrapper {
+        scrollbar-color: var(--md-sys-color-primary) transparent;
+        scrollbar-width: thin;
       }
     }
   `
