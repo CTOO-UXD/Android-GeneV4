@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.paparazzi)
 }
 
 android {
@@ -59,4 +60,26 @@ dependencies {
     implementation(libs.compose.material.icons)
     implementation(libs.lifecycle.runtime.ktx)
     debugImplementation(libs.compose.ui.tooling)
+}
+
+// Copy Paparazzi goldens into the VitePress public folder for the docs site.
+val docsScreenshotsDir = rootProject.layout.projectDirectory.dir("website/public/components")
+
+tasks.register<Copy>("copyDocsScreenshots") {
+    group = "documentation"
+    description = "Copy Paparazzi PNGs into website/public/components for VitePress"
+    from(layout.projectDirectory.dir("src/test/snapshots/images"))
+    into(docsScreenshotsDir)
+    include("*.png")
+    // com.genev4.catalog_DocsSnapshots_button_button.png → button.png
+    rename { fileName ->
+        val match = Regex("""DocsSnapshots_[^_]+_(.+)\.png""").find(fileName)
+        if (match != null) "${match.groupValues[1]}.png" else fileName
+    }
+}
+
+afterEvaluate {
+    listOf("recordPaparazziDebug", "verifyPaparazziDebug", "cleanRecordPaparazziDebug").forEach { taskName ->
+        tasks.findByName(taskName)?.finalizedBy("copyDocsScreenshots")
+    }
 }

@@ -12,6 +12,8 @@
 
 ## 示例
 
+![组件效果](/components/navigation-bar.png)
+
 ```kotlin
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf

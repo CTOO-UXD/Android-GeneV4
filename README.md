@@ -31,7 +31,7 @@ import com.genev4.Text
 | 路径 | 作用 |
 |---|---|
 | `library/` | 组件实现。日常改组件、主题、资源都在这里。 |
-| `catalog/` | 可安装的演示应用。底栏第一页是组件总览，后两页是用组件搭好的完整页面。 |
+| `catalog/` | 可安装的演示应用；文档截图用例也在此（Paparazzi）。 |
 | `docs/` | 接入文档正文（快速开始、组件、主题）；维护者文档也在此。 |
 | `website/` | VitePress 配置与主题。本地 `npm run docs:dev`。 |
 | `scripts/` | `build.ps1` 等本机脚本。 |

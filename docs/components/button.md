@@ -15,6 +15,8 @@
 
 ## 示例
 
+![组件效果](/components/button.png)
+
 ```kotlin
 import com.genev4.Button
 import com.genev4.ElevatedButton

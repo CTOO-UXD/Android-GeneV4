@@ -47,3 +47,6 @@ _upstream/aar/
 website/node_modules/
 website/.vitepress/dist/
 website/.vitepress/cache/
+
+# Paparazzi failure diffs (goldens in catalog/src/test/snapshots are committed)
+catalog/src/test/snapshots/images-failure/

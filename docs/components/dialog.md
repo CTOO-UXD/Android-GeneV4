@@ -14,6 +14,8 @@
 
 ## 示例
 
+![组件效果](/components/dialog.png)
+
 ```kotlin
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

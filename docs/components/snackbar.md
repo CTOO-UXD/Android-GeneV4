@@ -12,6 +12,8 @@
 
 ## 示例
 
+![组件效果](/components/snackbar.png)
+
 ```kotlin
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope

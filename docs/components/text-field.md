@@ -13,6 +13,8 @@
 
 ## 示例
 
+![组件效果](/components/text-field.png)
+
 ```kotlin
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.getValue

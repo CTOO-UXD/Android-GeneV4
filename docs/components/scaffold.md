@@ -13,6 +13,8 @@
 
 ## 示例
 
+![组件效果](/components/scaffold.png)
+
 ```kotlin
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
