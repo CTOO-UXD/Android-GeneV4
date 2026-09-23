@@ -34,7 +34,7 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: gradle
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@v4
       - name: Verify component screenshots
         run: ./gradlew :catalog:verifyPaparazziDebug :catalog:copyDocsScreenshots --no-daemon
       - uses: actions/setup-node@v4
