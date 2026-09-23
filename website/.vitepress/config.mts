@@ -10,6 +10,9 @@ export default defineConfig({
   description: 'Android Jetpack Compose 组件库',
   srcDir: '../docs',
   srcExclude: ['README.md', 'PUBLISH.md', 'PARITY.md', 'UPSTREAM.md', 'PACKAGE.md'],
+  // Markdown lives in ../docs; public assets must sit next to that tree or absolute
+  // image paths like /components/button.png fail to resolve during build.
+  publicDir: path.resolve(websiteRoot, '../docs/public'),
   outDir: './.vitepress/dist',
   base: '/Android-GeneV4/',
   vite: {

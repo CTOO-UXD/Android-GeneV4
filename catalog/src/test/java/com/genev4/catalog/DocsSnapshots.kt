@@ -16,7 +16,7 @@ import org.junit.Test
 
 /**
  * Renders real GeneV4 composables for the documentation site.
- * Run: `gradlew :catalog:recordPaparazziDebug` then images land in website/public/components/.
+ * Run: `gradlew :catalog:recordPaparazziDebug` then images land in docs/public/components/.
  * Opening the catalog App does **not** take screenshots.
  */
 class DocsSnapshots {

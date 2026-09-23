@@ -21,7 +21,7 @@ npm run docs:dev
 gradlew.bat :catalog:recordPaparazziDebug
 ```
 
-图在 `catalog/src/test/snapshots/images/`，并复制到 `website/public/components/`。外观变了先 record，再提交 PNG。
+图在 `catalog/src/test/snapshots/images/`，并复制到 `docs/public/components/`。外观变了先 record，再提交 PNG。
 
 文档站 CI 只构建 VitePress（使用已提交的 PNG）。本机校验截图：
 

@@ -62,12 +62,12 @@ dependencies {
     debugImplementation(libs.compose.ui.tooling)
 }
 
-// Copy Paparazzi goldens into the VitePress public folder for the docs site.
-val docsScreenshotsDir = rootProject.layout.projectDirectory.dir("website/public/components")
+// Copy Paparazzi goldens into docs/public for VitePress (srcDir is ../docs).
+val docsScreenshotsDir = rootProject.layout.projectDirectory.dir("docs/public/components")
 
 tasks.register<Copy>("copyDocsScreenshots") {
     group = "documentation"
-    description = "Copy Paparazzi PNGs into website/public/components for VitePress"
+    description = "Copy Paparazzi PNGs into docs/public/components for VitePress"
     from(layout.projectDirectory.dir("src/test/snapshots/images"))
     into(docsScreenshotsDir)
     include("*.png")
