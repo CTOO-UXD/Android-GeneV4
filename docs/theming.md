@@ -34,7 +34,7 @@ import com.genev4.MaterialTheme
 import com.genev4.lightColorScheme
 
 val brand = lightColorScheme(
-    primary = Color(0xFF6750A4),
+    primary = Color(0xFF6C43C6),
     onPrimary = Color(0xFFFFFFFF),
     // 按需覆盖 secondary、error、surface 等
 )

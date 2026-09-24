@@ -13,8 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// VERSION: v0_210
-// GENERATED CODE - DO NOT MODIFY BY HAND
+// Gene4.0 — Dark role → palette tone (same mapping; hex from updated PaletteTokens).
 
 package com.genev4.tokens
 

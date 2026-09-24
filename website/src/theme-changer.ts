@@ -33,7 +33,7 @@ export class ThemeChanger extends LitElement {
   @property({ type: Boolean, reflect: true }) open = false
 
   @state() private selectedColorMode: ColorMode = 'light'
-  @state() private hexColor = '#6750a4'
+  @state() private hexColor = '#6c43c6'
   @state() private hue = 0
   @state() private chroma = 0
   @state() private tone = 0

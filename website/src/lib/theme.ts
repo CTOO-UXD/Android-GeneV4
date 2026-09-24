@@ -1,7 +1,7 @@
 import { applyMaterialTheme, themeFromSourceColor } from './material-color-helpers'
 
-/** Default GeneV4 purple seed (Material baseline primary). */
-export const DEFAULT_SEED = '#6750a4'
+/** Default GeneV4 primary (Figma Color Guidance Schemes/Primary). */
+export const DEFAULT_SEED = '#6c43c6'
 
 export type ColorMode = 'light' | 'dark' | 'auto'
 

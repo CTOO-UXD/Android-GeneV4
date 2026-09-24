@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// VERSION: v0_210
-// GENERATED CODE - DO NOT MODIFY BY HAND
+// Gene4.0 Color Guidance — Light Schemes role → palette tone.
+// Surface / Background = Neutral100 (Schemes white); Neutral98 is Palettes #FBF9F7.
 
 package com.genev4.tokens
 
 internal object ColorLightTokens {
-    val Background = PaletteTokens.Neutral98
+    val Background = PaletteTokens.Neutral100
     val Error = PaletteTokens.Error40
     val ErrorContainer = PaletteTokens.Error90
     val InverseOnSurface = PaletteTokens.Neutral95

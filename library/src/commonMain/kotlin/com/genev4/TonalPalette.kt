@@ -218,7 +218,7 @@ internal val BaselineTonalPalette =
         tertiary0 = PaletteTokens.Tertiary0,
 
         // Currently unused baseline palette values
-        neutralVariant98 = Color.Unspecified,
+        neutralVariant98 = PaletteTokens.NeutralVariant98,
         neutralVariant96 = Color.Unspecified,
         neutralVariant94 = Color.Unspecified,
         neutralVariant92 = Color.Unspecified,
