@@ -31,6 +31,11 @@ export function getCurrentSeedColor(): string {
   return localStorage.getItem('seed-color') ?? DEFAULT_SEED
 }
 
+/** Current stringified Material theme CSS from localStorage (for copy). */
+export function getCurrentThemeString(): string | null {
+  return localStorage.getItem('material-theme')
+}
+
 export function saveColorMode(mode: ColorMode) {
   localStorage.setItem('color-mode', mode)
 }
