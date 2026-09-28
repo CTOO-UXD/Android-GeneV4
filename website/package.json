@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "docs:dev": "vite",
-    "docs:build": "vite build",
+    "tokens:sync": "node scripts/sync-tokens-from-kotlin.mjs",
+    "docs:dev": "npm run tokens:sync && vite",
+    "docs:build": "npm run tokens:sync && vite build",
     "docs:preview": "vite preview"
   },
   "dependencies": {

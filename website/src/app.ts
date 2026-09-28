@@ -378,6 +378,12 @@ export class Genev4App extends LitElement {
       max-height: 100%;
       padding-block: var(--catalog-spacing-m);
       padding-inline-end: var(--catalog-spacing-s);
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .sidenav .scroll-wrapper::-webkit-scrollbar {
+      display: none;
     }
 
     md-list.nav {
@@ -924,10 +930,19 @@ export class Genev4App extends LitElement {
     }
 
     @media (pointer: fine) {
-      .pane .scroll-wrapper {
+      .pane.toc .scroll-wrapper {
         scrollbar-color: var(--md-sys-color-primary) transparent;
         scrollbar-width: thin;
       }
+    }
+
+    .pane.content-pane .scroll-wrapper {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .pane.content-pane .scroll-wrapper::-webkit-scrollbar {
+      display: none;
     }
   `
 }

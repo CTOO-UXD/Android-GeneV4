@@ -19,7 +19,7 @@
 package com.genev4.tokens
 
 internal object ColorLightTokens {
-    val Background = PaletteTokens.Neutral100
+    val Background = PaletteTokens.Neutral99
     val Error = PaletteTokens.Error40
     val ErrorContainer = PaletteTokens.Error90
     val InverseOnSurface = PaletteTokens.Neutral95

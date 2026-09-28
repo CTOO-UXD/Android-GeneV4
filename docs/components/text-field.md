@@ -15,7 +15,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.foundation.text.input.rememberTextFieldState
+import com.genev4.OutlinedSecureTextField
 import com.genev4.OutlinedTextField
+import com.genev4.SecureTextField
 import com.genev4.Text
 import com.genev4.TextField
 
@@ -37,6 +40,17 @@ OutlinedTextField(
     supportingText = {
         if (outlined == "error") Text("校验失败提示")
     },
+    modifier = Modifier.fillMaxWidth(),
+)
+
+SecureTextField(
+    state = rememberTextFieldState(),
+    label = { Text("密码") },
+    modifier = Modifier.fillMaxWidth(),
+)
+OutlinedSecureTextField(
+    state = rememberTextFieldState(),
+    label = { Text("描边密码") },
     modifier = Modifier.fillMaxWidth(),
 )
 ```

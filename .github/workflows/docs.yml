@@ -6,6 +6,7 @@ on:
     paths:
       - 'docs/**'
       - 'website/**'
+      - 'library/src/commonMain/kotlin/com/genev4/tokens/**'
       - '.github/workflows/docs.yml'
   workflow_dispatch:
 

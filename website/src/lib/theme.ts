@@ -1,23 +1,31 @@
 import { clearThemeString } from './apply-theme-string'
 import { applyMaterialTheme, themeFromSourceColor } from './material-color-helpers'
 
-/** Default GeneV4 primary (Figma Color Guidance Schemes/Primary). */
+/** Default GeneV4 primary — keep in sync with ColorLightTokens.Primary / PaletteTokens.Primary40. */
 export const DEFAULT_SEED = '#6c43c6'
 
 export type ColorMode = 'light' | 'dark' | 'auto'
 
-function isDefaultLight(color: string, isDark: boolean) {
-  return !isDark && color.toLowerCase() === DEFAULT_SEED.toLowerCase()
+/** Library light/dark CSS in tokens.css; only custom seeds use MCU. */
+function isLibraryDefault(color: string) {
+  return color.toLowerCase() === DEFAULT_SEED.toLowerCase()
 }
 
 function applyThemeFromColor(color: string, isDark: boolean) {
-  if (isDefaultLight(color, isDark)) {
+  if (isLibraryDefault(color)) {
     clearThemeString(document)
   } else {
     applyMaterialTheme(document, themeFromSourceColor(color, isDark))
   }
   document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
   document.documentElement.dataset.colorScheme = isDark ? 'dark' : 'light'
+  const surface =
+    getComputedStyle(document.documentElement)
+      .getPropertyValue('--md-sys-color-surface-container')
+      .trim() || undefined
+  if (surface) {
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', surface)
+  }
   window.dispatchEvent(new Event('theme-changed'))
 }
 
@@ -69,16 +77,14 @@ export function changeColorAndMode(color: string, mode: ColorMode) {
   saveColorMode(mode)
 }
 
-/** Apply saved theme, or generate default. Call early to avoid FOUC. */
+/** Apply saved theme, or library tokens.css defaults. Call early to avoid FOUC. */
 export function initTheme() {
   const saved = localStorage.getItem('material-theme')
   const mode = getCurrentMode()
   const seed = getCurrentSeedColor()
 
-  // Prefer regenerating from seed so tokens stay in sync with MCU version
   applyThemeFromColor(seed, isModeDark(mode, false))
   if (!saved) {
-    // ensure seed persisted for next visit
     saveSeedColor(seed)
     saveColorMode(mode)
   }

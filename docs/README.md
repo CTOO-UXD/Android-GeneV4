@@ -4,6 +4,8 @@
 
 正文 Markdown 在本目录；站点为 [`website/`](../website/) 下的 **Lit + Material Web** 外壳（导航 / 按钮 / 列表等用 `@material/web`），组件效果仍用 Paparazzi 截图，经 GitHub Actions 发布。
 
+官网默认配色从库里的 `PaletteTokens` / `ColorLightTokens` / `ColorDarkTokens` 生成（`website` 下 `npm run tokens:sync`），不要在 `global.css` 手写 `--md-sys-color-*`。
+
 本地预览：
 
 ```
