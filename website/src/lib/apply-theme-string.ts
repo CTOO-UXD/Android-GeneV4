@@ -26,3 +26,13 @@ export function applyThemeString(
   sheet.replaceSync(themeString)
   localStorage.setItem(ssName, themeString)
 }
+
+/** Drop the injected theme sheet so stylesheet defaults (global.css) apply. */
+export function clearThemeString(doc: DocumentOrShadowRoot, ssName = 'material-theme') {
+  const sheet = (globalThis as WithStylesheet)[ssName]
+  if (sheet) {
+    doc.adoptedStyleSheets = doc.adoptedStyleSheets.filter((item) => item !== sheet)
+    delete (globalThis as WithStylesheet)[ssName]
+  }
+  localStorage.removeItem(ssName)
+}

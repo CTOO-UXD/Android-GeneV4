@@ -1,3 +1,4 @@
+import { clearThemeString } from './apply-theme-string'
 import { applyMaterialTheme, themeFromSourceColor } from './material-color-helpers'
 
 /** Default GeneV4 primary (Figma Color Guidance Schemes/Primary). */
@@ -5,8 +6,16 @@ export const DEFAULT_SEED = '#6c43c6'
 
 export type ColorMode = 'light' | 'dark' | 'auto'
 
+function isDefaultLight(color: string, isDark: boolean) {
+  return !isDark && color.toLowerCase() === DEFAULT_SEED.toLowerCase()
+}
+
 function applyThemeFromColor(color: string, isDark: boolean) {
-  applyMaterialTheme(document, themeFromSourceColor(color, isDark))
+  if (isDefaultLight(color, isDark)) {
+    clearThemeString(document)
+  } else {
+    applyMaterialTheme(document, themeFromSourceColor(color, isDark))
+  }
   document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
   document.documentElement.dataset.colorScheme = isDark ? 'dark' : 'light'
   window.dispatchEvent(new Event('theme-changed'))
