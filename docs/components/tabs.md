@@ -21,7 +21,7 @@ PrimaryTabRow(selectedTabIndex = 0) {
 }
 ```
 
-须包在 `MaterialTheme` 内。次级标签换成 `SecondaryTabRow`。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。次级标签换成 `SecondaryTabRow`。
 
 ## Spec
 

@@ -17,7 +17,7 @@ import com.genev4.rememberDatePickerState
 DatePicker(state = rememberDatePickerState())
 ```
 
-须包在 `MaterialTheme` 内。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。
 
 ## Spec
 

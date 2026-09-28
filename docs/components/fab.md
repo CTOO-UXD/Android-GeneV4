@@ -21,7 +21,7 @@ LargeFloatingActionButton(onClick = { }) { Text("大") }
 ExtendedFloatingActionButton(onClick = { }) { Text("扩展") }
 ```
 
-须包在 `MaterialTheme` 内。通常放在 `Scaffold` 的 `floatingActionButton`。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。通常放在 `Scaffold` 的 `floatingActionButton`。
 
 ## Spec
 

@@ -22,7 +22,7 @@ Switch(checked = true, onCheckedChange = { })
 RadioButton(selected = true, onClick = { })
 ```
 
-须包在 `MaterialTheme` 内。禁用时把回调设为 `null` 并传 `enabled = false`。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。禁用时把回调设为 `null` 并传 `enabled = false`。
 
 ## Spec
 

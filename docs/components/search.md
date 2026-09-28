@@ -25,7 +25,7 @@ DockedSearchBar(
 ) { }
 ```
 
-须包在 `MaterialTheme` 内。`active = true` 时展开结果。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。`active = true` 时展开结果。
 
 ## Spec
 

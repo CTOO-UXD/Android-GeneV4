@@ -28,7 +28,7 @@ SingleChoiceSegmentedButtonRow {
 }
 ```
 
-须包在 `MaterialTheme` 内。多选换成 `MultiChoiceSegmentedButtonRow`，按钮参数用 `checked` / `onCheckedChange`。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。多选换成 `MultiChoiceSegmentedButtonRow`，按钮参数用 `checked` / `onCheckedChange`。
 
 ## Spec
 

@@ -41,7 +41,7 @@ ExposedDropdownMenuBox(expanded = true, onExpandedChange = { }) {
 }
 ```
 
-须包在 `MaterialTheme` 内。菜单一般锚在触发它的按钮上。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。菜单一般锚在触发它的按钮上。
 
 ## Spec
 

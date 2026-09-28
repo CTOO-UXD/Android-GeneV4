@@ -35,7 +35,7 @@ HorizontalMultiBrowseCarousel(
 }
 ```
 
-须包在 `MaterialTheme` 内。`maskClip` 在轮播项作用域里。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。`maskClip` 在轮播项作用域里。
 
 ## Spec
 

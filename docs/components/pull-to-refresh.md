@@ -22,7 +22,7 @@ PullToRefreshBox(
 }
 ```
 
-须包在 `MaterialTheme` 内。内容需要能滚动，下拉才会触发。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。内容需要能滚动，下拉才会触发。
 
 ## Spec
 

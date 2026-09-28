@@ -25,7 +25,7 @@ NavigationRail(windowInsets = WindowInsets(0.dp)) {
 }
 ```
 
-须包在 `MaterialTheme` 内。短底栏用 `ShortNavigationBar` + `ShortNavigationBarItem`。常驻抽屉用 `PermanentDrawerSheet` + `NavigationDrawerItem`。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。短底栏用 `ShortNavigationBar` + `ShortNavigationBarItem`。常驻抽屉用 `PermanentDrawerSheet` + `NavigationDrawerItem`。
 
 ## Spec
 

@@ -24,7 +24,7 @@ OutlinedButton(onClick = { }) { Text("描边") }
 TextButton(onClick = { }) { Text("文字") }
 ```
 
-须包在 `MaterialTheme` 内，见 [快速开始](/getting-started)。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。
 
 ## Spec
 

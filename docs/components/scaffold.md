@@ -49,7 +49,7 @@ fun ExampleScaffold() {
 }
 ```
 
-须包在 `MaterialTheme` 内。底部导航细节见 [NavigationBar](/components/navigation-bar)。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。底部导航细节见 [NavigationBar](/components/navigation-bar)。
 
 ## Spec
 

@@ -22,7 +22,7 @@ LinearProgressIndicator(progress = { 0.4f }, modifier = Modifier.fillMaxWidth())
 CircularProgressIndicator(progress = { 0.4f })
 ```
 
-须包在 `MaterialTheme` 内。不传 `progress` 的进度条是不确定态。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。不传 `progress` 的进度条是不确定态。
 
 ## Spec
 

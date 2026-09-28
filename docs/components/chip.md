@@ -27,7 +27,7 @@ SuggestionChip(onClick = { }, label = { Text("建议") })
 ElevatedSuggestionChip(onClick = { }, label = { Text("抬升建议") })
 ```
 
-须包在 `MaterialTheme` 内。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。
 
 ## Spec
 

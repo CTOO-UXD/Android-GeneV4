@@ -25,7 +25,7 @@ ModalBottomSheet(
 }
 ```
 
-须包在 `MaterialTheme` 内。关掉时在 `onDismissRequest` 里把控制显示的状态设为 false。
+页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。关掉时在 `onDismissRequest` 里把控制显示的状态设为 false。
 
 ## Spec
 
