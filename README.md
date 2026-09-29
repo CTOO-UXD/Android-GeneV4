@@ -69,7 +69,7 @@ gradlew.bat :catalog:assembleDebug
 本地预览：`cd website && npm install && npm run docs:dev`。发布用 GitHub Actions（`.github/workflows/docs.yml`）；仓库 **Settings → Pages → Source** 选 **GitHub Actions**。
 
 ```kotlin
-implementation("io.github.ctoo-uxd:genev4:0.1.0")
+implementation("io.github.ctoo-uxd:genev4:0.2.0")
 // 或本仓库：implementation(project(":library"))
 ```
 

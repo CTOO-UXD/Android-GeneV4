@@ -5,7 +5,7 @@
 没有 `genev4.com` 时，Maven 坐标用 GitHub 组织命名空间：
 
 ```kotlin
-implementation("io.github.ctoo-uxd:genev4:0.1.0")
+implementation("io.github.ctoo-uxd:genev4:0.2.0")
 ```
 
 Kotlin 包名仍是 `com.genev4`，只有 Maven `groupId` 改成 `io.github.ctoo-uxd`。
@@ -57,14 +57,14 @@ gradlew.bat :library:publishToMavenCentral
 
 ```kotlin
 repositories { mavenCentral() }
-implementation("io.github.ctoo-uxd:genev4:0.1.0")
+implementation("io.github.ctoo-uxd:genev4:0.2.0")
 ```
 
 ## 6. 以后更新（不能覆盖旧版本）
 
-Maven Central 上 `0.1.0` 一旦 PUBLISHED 就永久存在，改代码后必须升版本。
+Maven Central 上 版本 一旦 PUBLISHED 就永久存在，改代码后必须升版本。
 
-1. 改 `gradle/libs.versions.toml` 里的 `libraryVersion`，例如 `0.1.0` → `0.1.1`（修 bug）或 `0.2.0`（有行为变化）。
+1. 改 `gradle/libs.versions.toml` 里的 `libraryVersion`
 2. README / 本文档里的坐标版本一并改掉。
 3. 先本地验证：`gradlew.bat :library:publishToMavenLocal`
 4. 再上传：`gradlew.bat :library:publishToMavenCentral`

@@ -2,7 +2,7 @@
 
 GeneV4 是 Android Jetpack Compose 组件库，Kotlin 包名为 `com.genev4`。
 
-Maven 坐标：`io.github.ctoo-uxd:genev4:0.1.0`  
+Maven 坐标：`io.github.ctoo-uxd:genev4:0.2.0`  
 源码：[CTOO-UXD/Android-GeneV4](https://github.com/CTOO-UXD/Android-GeneV4)
 
 ## 1. 添加依赖
@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.ctoo-uxd:genev4:0.1.0")
+    implementation("io.github.ctoo-uxd:genev4:0.2.0")
 }
 ```
 
