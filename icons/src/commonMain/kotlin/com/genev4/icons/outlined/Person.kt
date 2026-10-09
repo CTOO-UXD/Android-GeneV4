@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Person: ImageVector
+    get() {
+        if (_person != null) {
+            return _person!!
+        }
+        _person =
+            materialIcon(name = "Outlined.Person") {
+            addPath(
+                pathData = PathParser().parsePathString("M11.9999 9.5C13.6568 9.5 14.9999 8.15685 14.9999 6.5C14.9999 4.84315 13.6568 3.5 11.9999 3.5C10.3431 3.5 8.99995 4.84315 8.99995 6.5C8.99995 8.15685 10.3431 9.5 11.9999 9.5ZM9.01435 12.8332C9.88138 12.6195 10.871 12.5 11.9999 12.5C13.1289 12.5 14.1185 12.6195 14.9855 12.8332C19.085 13.8436 20.4449 16.9599 20.8476 19.5083C21.02 20.5993 20.1045 21.5 18.9999 21.5H4.99995C3.89538 21.5 2.9799 20.5993 3.15231 19.5083C3.55503 16.9599 4.91487 13.8436 9.01435 12.8332ZM9.32442 10.7247C10.0981 11.2157 11.0158 11.5 11.9999 11.5C12.9841 11.5 13.9018 11.2157 14.6755 10.7247C16.0726 9.83798 16.9999 8.27728 16.9999 6.5C16.9999 3.73858 14.7614 1.5 11.9999 1.5C9.23852 1.5 6.99995 3.73858 6.99995 6.5C6.99995 8.27728 7.92725 9.83798 9.32442 10.7247ZM4.99678 19.4997C4.99681 19.4997 4.99732 19.4997 4.99828 19.5L4.99678 19.4997ZM5.18407 19.5C5.41592 18.3024 5.89105 17.1329 6.76043 16.2482C7.66088 15.3319 9.20068 14.5 11.9999 14.5C14.7992 14.5 16.339 15.3319 17.2395 16.2482C18.1088 17.1329 18.584 18.3024 18.8158 19.5H5.18407Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _person!!
+    }
+
+private var _person: ImageVector? = null

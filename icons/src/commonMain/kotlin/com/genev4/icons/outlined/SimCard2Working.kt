@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.SimCard2Working: ImageVector
+    get() {
+        if (_simCard2Working != null) {
+            return _simCard2Working!!
+        }
+        _simCard2Working =
+            materialIcon(name = "Outlined.SimCard2Working") {
+            addPath(
+                pathData = PathParser().parsePathString("M16 2C18.2091 2 20 3.79086 20 6V18C20 20.2091 18.2091 22 16 22H8C5.79086 22 4 20.2091 4 18V7L9 2H16ZM16 4H9.829L6 7.829V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V6C18 4.89543 17.1046 4 16 4ZM9.7785 14.5C10.0546 14.5 10.2785 14.7239 10.2785 15C10.2785 15.06 10.2677 15.1194 10.2467 15.1756L9.23408 17.8758C9.1856 18.0051 9.0415 18.0706 8.91222 18.0221C8.84461 17.9967 8.79127 17.9434 8.76592 17.8758L7.75334 15.1756C7.65638 14.917 7.78738 14.6288 8.04594 14.5318C8.10208 14.5108 8.16154 14.5 8.2215 14.5H9.7785ZM14.335 10.168C14.8703 10.168 15.3397 10.2615 15.743 10.4485C16.1463 10.6355 16.4617 10.8995 16.689 11.2405C16.9163 11.5815 17.03 11.983 17.03 12.445C17.03 12.863 16.9457 13.2553 16.777 13.622C16.6083 13.9887 16.2893 14.4067 15.82 14.876L14.148 16.548H17.261V18H11.794V16.845L14.588 14.04C14.8813 13.7393 15.0793 13.4808 15.182 13.2645C15.2847 13.0482 15.336 12.8337 15.336 12.621C15.336 12.313 15.2388 12.0765 15.0445 11.9115C14.8502 11.7465 14.5623 11.664 14.181 11.664C13.8657 11.664 13.5797 11.7282 13.323 11.8565C13.0663 11.9848 12.8537 12.1773 12.685 12.434L11.464 11.598C11.75 11.1507 12.1405 10.8005 12.6355 10.5475C13.1305 10.2945 13.697 10.168 14.335 10.168ZM9.08778 9.47792C9.15539 9.50327 9.20873 9.55661 9.23408 9.62422L10.2467 12.3244C10.3436 12.583 10.2126 12.8712 9.95406 12.9682C9.89792 12.9892 9.83846 13 9.7785 13H8.2215C7.94536 13 7.7215 12.7761 7.7215 12.5C7.7215 12.44 7.73228 12.3806 7.75334 12.3244L8.76592 9.62422C8.8144 9.49494 8.9585 9.42944 9.08778 9.47792Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _simCard2Working!!
+    }
+
+private var _simCard2Working: ImageVector? = null

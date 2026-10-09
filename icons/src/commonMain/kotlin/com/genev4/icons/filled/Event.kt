@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Event: ImageVector
+    get() {
+        if (_event != null) {
+            return _event!!
+        }
+        _event =
+            materialIcon(name = "Filled.Event") {
+            addPath(
+                pathData = PathParser().parsePathString("M8.99951 1.99902H6.99951V5.99902H8.99951V1.99902Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M16.9995 1.99902H14.9995V5.99902H16.9995V1.99902Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M3.99951 3.99902H5.99951V5.99902C5.99951 6.55131 6.44723 6.99902 6.99951 6.99902H8.99951C9.5518 6.99902 9.99951 6.55131 9.99951 5.99902V3.99902H13.9995V5.99902C13.9995 6.55131 14.4472 6.99902 14.9995 6.99902H16.9995C17.5518 6.99902 17.9995 6.55131 17.9995 5.99902V3.99902H19.9995C21.1041 3.99902 21.9995 4.89445 21.9995 5.99902V17.999C21.9995 19.1036 21.1041 19.999 19.9995 19.999H3.99951C2.89494 19.999 1.99951 19.1036 1.99951 17.999V5.99902C1.99951 4.89445 2.89494 3.99902 3.99951 3.99902ZM15.4995 15.999C16.8802 15.999 17.9995 14.8797 17.9995 13.499C17.9995 12.1183 16.8802 10.999 15.4995 10.999C14.1188 10.999 12.9995 12.1183 12.9995 13.499C12.9995 14.8797 14.1188 15.999 15.4995 15.999Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _event!!
+    }
+
+private var _event: ImageVector? = null

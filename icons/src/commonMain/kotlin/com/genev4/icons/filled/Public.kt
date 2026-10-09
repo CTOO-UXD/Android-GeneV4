@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Public: ImageVector
+    get() {
+        if (_public != null) {
+            return _public!!
+        }
+        _public =
+            materialIcon(name = "Filled.Public") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM11.9999 20C14.3393 20 16.444 18.9959 17.9069 17.3953C17.6506 16.5863 16.8937 16 15.9999 16H14.9999V13C14.9999 12.4477 14.5522 12 13.9999 12H7.99994V10H9.99994C10.5522 10 10.9999 9.55228 10.9999 9V7H12.9999C14.1045 7 14.9999 6.10457 14.9999 5V4.58152C14.0735 4.20651 13.0608 4 11.9999 4C8.19964 4 5.01824 6.64986 4.20264 10.2027L8.99994 15V16C8.99994 17.1046 9.89537 18 10.9999 18V19.9381C11.3275 19.979 11.6613 20 11.9999 20Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _public!!
+    }
+
+private var _public: ImageVector? = null

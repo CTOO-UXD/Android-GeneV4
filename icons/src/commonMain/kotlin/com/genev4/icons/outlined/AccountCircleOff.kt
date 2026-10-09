@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.AccountCircleOff: ImageVector
+    get() {
+        if (_accountCircleOff != null) {
+            return _accountCircleOff!!
+        }
+        _accountCircleOff =
+            materialIcon(name = "Outlined.AccountCircleOff") {
+            addPath(
+                pathData = PathParser().parsePathString("M22.0002 11.9994C22.0002 14.0376 21.3905 15.9333 20.3434 17.5142L18.8926 16.0634C19.5964 14.8723 20.0002 13.483 20.0002 11.9994C20.0002 7.58111 16.4185 3.99939 12.0002 3.99939C10.5166 3.99939 9.12728 4.40326 7.93625 5.10706L6.4854 3.65621C8.06628 2.60915 9.96204 1.99939 12.0002 1.99939C17.5231 1.99939 22.0002 6.47654 22.0002 11.9994Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M17.5151 20.3426L20.4855 23.313L21.8997 21.8988L2.10074 2.09982L0.686523 3.51404L3.65705 6.48457C2.60999 8.06544 2.00023 9.96121 2.00023 11.9994C2.00023 17.5222 6.47738 21.9994 12.0002 21.9994C14.0384 21.9994 15.9342 21.3896 17.5151 20.3426ZM14.64 17.4676L16.0642 18.8917C14.8732 19.5955 13.4839 19.9994 12.0002 19.9994C10.4543 19.9994 9.01076 19.5609 7.78724 18.8015C7.93218 18.5737 8.10037 18.3629 8.29448 18.174C8.90099 17.5837 9.97144 16.9994 12.0003 16.9994C13.1648 16.9994 14.0135 17.1919 14.64 17.4676ZM12.1731 15.0006C12.1159 14.9998 12.0583 14.9994 12.0003 14.9994C10.9554 14.9994 10.0641 15.131 9.3042 15.361C7.84688 15.8022 6.87291 16.6054 6.22645 17.5369C4.8476 16.0996 4.00023 14.1484 4.00023 11.9994C4.00023 10.5158 4.4041 9.12645 5.10789 7.93541L8.11115 10.9387C8.33482 11.8681 8.88305 12.6712 9.62922 13.2212C10.0509 13.5321 10.5357 13.7621 11.061 13.8885L12.1731 15.0006Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M14.0003 9.99939C14.0003 10.3385 13.9159 10.6579 13.7669 10.9377L15.2125 12.3833C15.7074 11.7176 16.0003 10.8927 16.0003 9.99939C16.0003 7.79025 14.2094 5.99939 12.0003 5.99939C11.107 5.99939 10.2821 6.29221 9.6163 6.78711L11.0619 8.23272C11.3417 8.08379 11.6611 7.99939 12.0003 7.99939C13.1048 7.99939 14.0003 8.89482 14.0003 9.99939Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _accountCircleOff!!
+    }
+
+private var _accountCircleOff: ImageVector? = null

@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.AiHospital: ImageVector
+    get() {
+        if (_aiHospital != null) {
+            return _aiHospital!!
+        }
+        _aiHospital =
+            materialIcon(name = "AiFilled.AiHospital") {
+            addPath(
+                pathData = PathParser().parsePathString("M22 18.525C22 18.5949 21.9599 18.7546 21.7697 18.8146L20.7883 19.0842C19.9371 19.3138 19.2961 19.9529 19.0658 20.8017L18.8054 21.7603C18.7454 21.98 18.5751 22 18.495 22C18.4149 22 18.2446 21.98 18.1845 21.7603L17.9242 20.7917C17.6938 19.9529 17.0429 19.3138 16.2017 19.0842L15.2303 18.8245C15.02 18.7646 15 18.5849 15 18.515C15 18.4351 15.02 18.2553 15.2303 18.1954L16.2117 17.9358C17.0529 17.6961 17.6938 17.0571 17.9242 16.2183L18.2046 15.1997C18.2747 15.03 18.4349 15 18.495 15C18.5551 15 18.7253 15.02 18.7854 15.1797L19.0658 16.2083C19.2961 17.0471 19.9471 17.6862 20.7883 17.9258L21.7897 18.2054C21.99 18.2853 22 18.465 22 18.525Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M19 3C20.1046 3 21 3.89543 21 5V16.9414C20.5149 16.7816 20.1582 16.4128 20.0293 15.9434L19.75 14.917L19.7383 14.8711L19.7217 14.8281L19.6602 14.6895C19.5022 14.3838 19.2511 14.2047 19.0381 14.1123C18.8714 14.0401 18.7148 14.013 18.5977 14.0039L18.4951 14C18.2362 14 17.5707 14.1149 17.2803 14.8184L17.2568 14.875L17.2402 14.9346L16.96 15.9531C16.8238 16.449 16.4477 16.828 15.9365 16.9736L14.9746 17.2285L14.9658 17.2314L14.9561 17.2334C14.5693 17.3436 14.2936 17.5983 14.1426 17.8994C14.0112 18.1614 14 18.4052 14 18.5146C14 18.6296 14.0143 18.8705 14.1465 19.1289C14.2974 19.4237 14.5705 19.6762 14.9561 19.7861L14.9639 19.7881L14.9717 19.791L15.9385 20.0479V20.0488C16.4261 20.182 16.7927 20.5372 16.9404 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19ZM20.4453 20.3789C20.4203 20.4051 20.3945 20.4303 20.3682 20.4551C20.3929 20.4286 20.4186 20.4033 20.4453 20.3789ZM16.3672 17.8867L16.2119 17.9355C16.3171 17.9056 16.4191 17.8692 16.5176 17.8271C16.4682 17.8482 16.4183 17.8686 16.3672 17.8867ZM17.5029 17.0674L17.4033 17.1875C17.4456 17.1393 17.4851 17.0887 17.5234 17.0371C17.5162 17.0469 17.5104 17.0577 17.5029 17.0674ZM17.6533 16.8428C17.6423 16.8611 17.6316 16.8795 17.6201 16.8975C17.6316 16.8795 17.6423 16.8611 17.6533 16.8428ZM11 11H8.5V13H11V15.5H13V13H15.5V11H13V8.5H11V11Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _aiHospital!!
+    }
+
+private var _aiHospital: ImageVector? = null

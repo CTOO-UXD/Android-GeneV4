@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.AppBadging: ImageVector
+    get() {
+        if (_appBadging != null) {
+            return _appBadging!!
+        }
+        _appBadging =
+            materialIcon(name = "Outlined.AppBadging") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 1.99939C12.8971 1.99939 13.7666 2.11752 14.5938 2.33907C14.0653 2.83105 13.6436 3.43611 13.367 4.11572C12.9228 4.03924 12.466 3.99939 12 3.99939C7.58172 3.99939 4 7.58111 4 11.9994C4 16.4177 7.58172 19.9994 12 19.9994C16.4183 19.9994 20 16.4177 20 11.9994C20 11.5333 19.9602 11.0766 19.8837 10.6324C20.5633 10.3558 21.1683 9.93405 21.6603 9.40559C21.8819 10.2328 22 11.1023 22 11.9994C22 17.5222 17.5228 21.9994 12 21.9994C6.47715 21.9994 2 17.5222 2 11.9994C2 6.47654 6.47715 1.99939 12 1.99939Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M15.2923 4.70609C15.6066 4.04929 16.1528 3.52467 16.8249 3.23827C17.1858 3.08449 17.583 2.99939 18 2.99939C19.6569 2.99939 21 4.34254 21 5.99939C21 6.41644 20.9149 6.81361 20.7611 7.17448C20.4747 7.84658 19.9501 8.3928 19.2933 8.70708C18.9017 8.89446 18.4631 8.99939 18 8.99939C16.3431 8.99939 15 7.65624 15 5.99939C15 5.53629 15.1049 5.0977 15.2923 4.70609Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _appBadging!!
+    }
+
+private var _appBadging: ImageVector? = null

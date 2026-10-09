@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Nfc: ImageVector
+    get() {
+        if (_nfc != null) {
+            return _nfc!!
+        }
+        _nfc =
+            materialIcon(name = "Filled.Nfc") {
+            addPath(
+                pathData = PathParser().parsePathString("M3 7C3 4.79086 4.79086 3 7 3H10.8611C13.3574 4.10038 15.1001 6.59668 15.1001 9.5V10.6411V16.3272L11.0001 12.2272V14.7728L13.8273 17.6C14.9612 18.7339 16.9001 17.9308 16.9001 16.3272V10.6411V9.5C16.9001 6.93538 15.8153 4.62411 14.0796 3H17C19.2091 3 21 4.79086 21 7V17C21 19.2091 19.2091 21 17 21H13.1389C10.6426 19.8996 8.89992 17.4033 8.89992 14.5V13.3589L8.89992 7.67279L13 11.7728V9.22724L10.1727 6.4C9.03878 5.26607 7.09992 6.06916 7.09992 7.67279L7.09992 13.3589V14.5C7.09992 17.0646 8.18468 19.3759 9.9204 21H7C4.79086 21 3 19.2091 3 17V7Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _nfc!!
+    }
+
+private var _nfc: ImageVector? = null

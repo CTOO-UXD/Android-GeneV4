@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Equalizer: ImageVector
+    get() {
+        if (_equalizer != null) {
+            return _equalizer!!
+        }
+        _equalizer =
+            materialIcon(name = "AiFilled.Equalizer") {
+            addPath(
+                pathData = PathParser().parsePathString("M19.9999 8.18V2H17.9999V8.18C17.4208 8.3902 16.9204 8.77363 16.5668 9.27817C16.2131 9.7827 16.0234 10.3839 16.0234 11C16.0234 11.6161 16.2131 12.2173 16.5668 12.7218C16.9204 13.2264 17.4208 13.6098 17.9999 13.82V22H19.9999V13.82C20.5791 13.6098 21.0795 13.2264 21.4331 12.7218C21.7867 12.2173 21.9764 11.6161 21.9764 11C21.9764 10.3839 21.7867 9.7827 21.4331 9.27817C21.0795 8.77363 20.5791 8.3902 19.9999 8.18ZM12.9999 14.18V2H10.9999V14.18C10.4208 14.3902 9.92037 14.7736 9.56676 15.2782C9.21314 15.7827 9.02344 16.3839 9.02344 17C9.02344 17.6161 9.21314 18.2173 9.56676 18.7218C9.92037 19.2264 10.4208 19.6098 10.9999 19.82V22H12.9999V19.82C13.5791 19.6098 14.0795 19.2264 14.4331 18.7218C14.7867 18.2173 14.9764 17.6161 14.9764 17C14.9764 16.3839 14.7867 15.7827 14.4331 15.2782C14.0795 14.7736 13.5791 14.3902 12.9999 14.18ZM5.99991 6.18V2H3.99991V6.18C3.42076 6.3902 2.92037 6.77363 2.56676 7.27817C2.21314 7.7827 2.02344 8.38388 2.02344 9C2.02344 9.61612 2.21314 10.2173 2.56676 10.7218C2.92037 11.2264 3.42076 11.6098 3.99991 11.82V22H5.99991V11.82C6.57907 11.6098 7.07945 11.2264 7.43307 10.7218C7.78669 10.2173 7.97639 9.61612 7.97639 9C7.97639 8.38388 7.78669 7.7827 7.43307 7.27817C7.07945 6.77363 6.57907 6.3902 5.99991 6.18Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _equalizer!!
+    }
+
+private var _equalizer: ImageVector? = null

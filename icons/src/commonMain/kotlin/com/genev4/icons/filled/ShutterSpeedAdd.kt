@@ -1,0 +1,72 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.ShutterSpeedAdd: ImageVector
+    get() {
+        if (_shutterSpeedAdd != null) {
+            return _shutterSpeedAdd!!
+        }
+        _shutterSpeedAdd =
+            materialIcon(name = "Filled.ShutterSpeedAdd") {
+            addPath(
+                pathData = PathParser().parsePathString("M15.0001 3H9.00012V1H15.0001V3Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M13.0957 7.10032L10.2672 11.9994L8.17547 8.37638C9.58091 7.21106 11.3932 6.78571 13.0957 7.10032Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M16.2426 8.75736C16.8976 9.41236 17.3695 10.1811 17.6584 11.0001H11.9989L14.0919 7.37491C14.8764 7.6661 15.6122 8.12692 16.2426 8.75736Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M7.75736 17.2426C8.38732 17.8726 9.12252 18.3332 9.90636 18.6244L11.9989 15.0001H6.34169C6.6305 15.8189 7.10239 16.5877 7.75736 17.2426Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M10.2676 14.0001L7.43914 9.10101C6.24868 10.4905 5.79679 12.2953 6.08345 14.0001H10.2676Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M17.9166 12.0001H13.7317L15.1272 14.4172C15.931 13.7373 16.9159 13.265 17.9994 13.0831C18.0044 12.7208 17.9768 12.3582 17.9166 12.0001Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M14.3966 15.1517L13.7313 13.9994L10.9024 18.8993C11.5952 19.0276 12.3062 19.0333 13.0007 18.9164C13.0202 17.4844 13.5415 16.1736 14.3966 15.1517Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M10.3765 19.8102C11.2596 20.0198 12.1755 20.0558 13.0699 19.9182C13.1751 20.6027 13.3958 21.249 13.7117 21.8366C10.8773 22.383 7.83087 21.5588 5.63604 19.364C2.12132 15.8492 2.12132 10.1508 5.63604 6.63604C8.91169 3.36039 14.0841 3.13758 17.6178 5.96762L19.0708 4.51465L20.485 5.92886L19.0321 7.3818C20.4186 9.11282 21.0724 11.2371 20.9936 13.3391C20.3699 13.1195 19.6989 13 19 13C19 12.6658 18.9762 12.3315 18.9286 12.0001C18.8802 11.6629 18.8073 11.3286 18.7096 11.0001C18.3888 9.9203 17.8022 8.9027 16.9497 8.05025C14.2161 5.31658 9.78392 5.31658 7.05025 8.05025C4.31658 10.7839 4.31658 15.2161 7.05025 17.9497C7.74292 18.6424 8.54464 19.1596 9.40015 19.5012C9.71907 19.6286 10.0455 19.7316 10.3765 19.8102Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M18.0001 23V20H15.0001V18H18.0001V15H20.0001V18H23.0001V20H20.0001V23H18.0001Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _shutterSpeedAdd!!
+    }
+
+private var _shutterSpeedAdd: ImageVector? = null

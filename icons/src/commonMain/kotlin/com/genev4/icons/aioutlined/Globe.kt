@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Globe: ImageVector
+    get() {
+        if (_globe != null) {
+            return _globe!!
+        }
+        _globe =
+            materialIcon(name = "AiOutlined.Globe") {
+            addPath(
+                pathData = PathParser().parsePathString("M13.0003 21.0004H18.0003V23.0004H6.00032V21.0004H11.0003V19.951C7.70689 19.624 4.88351 17.6991 3.31641 14.9626L5.05319 13.9701C6.43208 16.378 9.02674 18.0004 12.0003 18.0004C16.4186 18.0004 20.0003 14.4186 20.0003 10.0003C20.0003 7.02674 18.378 4.43208 15.9701 3.05319L16.9626 1.31641C19.9724 3.04002 22.0003 6.28334 22.0003 10.0003C22.0003 15.1857 18.0536 19.4493 13.0003 19.951V21.0004ZM12.0003 17.0004C8.13433 17.0004 5.00032 13.8663 5.00032 10.0003C5.00032 6.13433 8.13433 3.00032 12.0003 3.00032C15.8663 3.00032 19.0003 6.13433 19.0003 10.0003C19.0003 13.8663 15.8663 17.0004 12.0003 17.0004ZM12.0003 15.0004C14.7617 15.0004 17.0003 12.7618 17.0003 10.0003C17.0003 7.2389 14.7617 5.00032 12.0003 5.00032C9.2389 5.00032 7.00032 7.2389 7.00032 10.0003C7.00032 12.7618 9.2389 15.0004 12.0003 15.0004Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _globe!!
+    }
+
+private var _globe: ImageVector? = null

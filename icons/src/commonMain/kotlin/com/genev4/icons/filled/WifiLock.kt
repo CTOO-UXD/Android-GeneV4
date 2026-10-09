@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.WifiLock: ImageVector
+    get() {
+        if (_wifiLock != null) {
+            return _wifiLock!!
+        }
+        _wifiLock =
+            materialIcon(name = "Filled.WifiLock") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 18C12 18.691 12.1168 19.3548 12.3318 19.9726C12.2239 19.9906 12.113 20 12 20C11.5679 20 11.1678 19.863 10.8408 19.63L1.0188 8.02216C3.98111 5.51307 7.81388 4 12 4C16.1862 4 20.019 5.51307 22.9813 8.02216L19.4634 12.1797C18.995 12.0623 18.5048 12 18 12C14.6863 12 12 14.6863 12 18Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M20.5 16.5C20.5 15.1193 19.3807 14 18 14C16.6193 14 15.5 15.1193 15.5 16.5L15.4999 17.6339C15.201 17.8068 15 18.1299 15 18.5V21C15 21.5523 15.4477 22 16 22H20C20.5523 22 21 21.5523 21 21V18.5C21 18.1303 20.7994 17.8075 20.5011 17.6344L20.5 16.5ZM17 16.5C17 15.9477 17.4477 15.5 18 15.5L18.1166 15.5067C18.614 15.5645 19 15.9872 19 16.5V17.5H17V16.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _wifiLock!!
+    }
+
+private var _wifiLock: ImageVector? = null

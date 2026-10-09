@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.BlurMedium: ImageVector
+    get() {
+        if (_blurMedium != null) {
+            return _blurMedium!!
+        }
+        _blurMedium =
+            materialIcon(name = "Outlined.BlurMedium") {
+            addPath(
+                pathData = PathParser().parsePathString("M10.9996 14.9995H8C7.44772 14.9995 7 15.4472 7 15.9995C7 16.5518 7.44772 16.9995 8 16.9995H15C17.7614 16.9995 20 14.7609 20 11.9995C20 9.23809 17.7614 6.99951 15 6.99951H5C4.44772 6.99951 4 7.44723 4 7.99951C4 8.5518 4.44772 8.99951 5 8.99951H10.9996C10.5629 9.58092 10.25 10.2606 10.1 10.9995H5.5C4.94772 10.9995 4.5 11.4472 4.5 11.9995C4.5 12.5518 4.94772 12.9995 5.5 12.9995H10.1C10.25 13.7384 10.5629 14.4181 10.9996 14.9995ZM15 8.99951C13.3431 8.99951 12 10.3427 12 11.9995C12 13.6564 13.3431 14.9995 15 14.9995C16.6569 14.9995 18 13.6564 18 11.9995C18 10.3427 16.6569 8.99951 15 8.99951Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M3.98999 15.9995C3.98999 15.4472 4.43771 14.9995 4.98999 14.9995H5.01C5.56228 14.9995 6.01 15.4472 6.01 15.9995C6.01 16.5518 5.56228 16.9995 5.01 16.9995H4.98999C4.43771 16.9995 3.98999 16.5518 3.98999 15.9995Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _blurMedium!!
+    }
+
+private var _blurMedium: ImageVector? = null

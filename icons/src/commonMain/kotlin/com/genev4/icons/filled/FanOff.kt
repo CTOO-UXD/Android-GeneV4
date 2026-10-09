@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.FanOff: ImageVector
+    get() {
+        if (_fanOff != null) {
+            return _fanOff!!
+        }
+        _fanOff =
+            materialIcon(name = "Filled.FanOff") {
+            addPath(
+                pathData = PathParser().parsePathString("M19.7627 4.23572C19.6101 4.08316 19.4437 3.94507 19.2656 3.82323C17.675 2.73488 15.5032 3.14209 14.4149 4.73275L11.4534 9.061C11.2888 9.09046 11.1262 9.13373 10.9674 9.19082L6.23914 6.92343C6.0446 6.83014 5.84181 6.75508 5.6334 6.69924C3.77172 6.20041 1.85815 7.30521 1.35931 9.16689C1.30347 9.3753 1.26708 9.58844 1.2506 9.80357C1.10339 11.7253 2.54192 13.4025 4.46364 13.5497L9.69288 13.9503C9.74659 14.0137 9.80336 14.0754 9.86318 14.1352C9.923 14.195 9.98471 14.2518 10.0481 14.3055L10.4487 19.5348C10.4652 19.7499 10.5016 19.963 10.5574 20.1714C11.0563 22.0331 12.9698 23.1379 14.8315 22.6391C15.0399 22.5832 15.2427 22.5082 15.4372 22.4149C17.1751 21.5815 17.9083 19.4971 17.075 17.7592L14.8076 13.031C14.8647 12.8722 14.9079 12.7096 14.9374 12.5449L19.2656 9.58351C19.4437 9.46167 19.6101 9.32358 19.7627 9.17101C21.1255 7.80817 21.1255 5.59857 19.7627 4.23572ZM12.2619 12.9749C12.4192 12.9296 12.5676 12.845 12.6916 12.721C13.082 12.3306 13.0821 11.6978 12.692 11.3072L12.6912 11.3064C12.3006 10.9163 11.6678 10.9164 11.2774 11.3068C11.1534 11.4308 11.0688 11.5792 11.0235 11.7365L11.0141 11.7718C10.9323 12.101 11.0201 12.4637 11.2774 12.721C11.5347 12.9783 11.8974 13.0661 12.2266 12.9843L12.2619 12.9749Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _fanOff!!
+    }
+
+private var _fanOff: ImageVector? = null

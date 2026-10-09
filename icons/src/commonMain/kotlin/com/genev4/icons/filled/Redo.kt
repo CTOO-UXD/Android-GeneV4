@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Redo: ImageVector
+    get() {
+        if (_redo != null) {
+            return _redo!!
+        }
+        _redo =
+            materialIcon(name = "Filled.Redo") {
+            addPath(
+                pathData = PathParser().parsePathString("M15.878 3.05078L20.1213 7.29272C20.5118 7.68324 20.5118 8.3164 20.1213 8.70693L15.8773 12.9496L14.4631 11.5354L16.999 8.99978L9.5 8.99982C7.15889 8.99982 5.23533 10.7876 5.02004 13.0724L5.0049 13.288L5 13.4998C5 15.9851 7.01472 17.9998 9.5 17.9998L18 17.9998V19.9998L9.5 19.9998C5.98819 19.9998 3.12685 17.2148 3.0041 13.733L3 13.4998C3 9.90997 5.91015 6.99982 9.5 6.99982L16.999 6.99978L14.4638 4.46499L15.878 3.05078Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _redo!!
+    }
+
+private var _redo: ImageVector? = null

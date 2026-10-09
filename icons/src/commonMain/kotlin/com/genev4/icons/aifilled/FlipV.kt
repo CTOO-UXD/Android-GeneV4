@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.FlipV: ImageVector
+    get() {
+        if (_flipV != null) {
+            return _flipV!!
+        }
+        _flipV =
+            materialIcon(name = "AiFilled.FlipV") {
+            addPath(
+                pathData = PathParser().parsePathString("M2.29 11.29L7.29 6.29C7.43062 6.15124 7.6092 6.05725 7.80319 6.01987C7.99718 5.9825 8.19789 6.00342 8.38 6.08C8.56262 6.15502 8.71895 6.28242 8.82928 6.44614C8.93961 6.60986 8.99901 6.80257 9 7V17C8.99901 17.1974 8.93961 17.3901 8.82928 17.5539C8.71895 17.7176 8.56262 17.845 8.38 17.92C8.26132 17.976 8.13118 18.0034 8 18C7.86839 18.0008 7.73793 17.9755 7.61609 17.9258C7.49426 17.876 7.38344 17.8027 7.29 17.71L2.29 12.71C2.19627 12.617 2.12188 12.5064 2.07111 12.3846C2.02034 12.2627 1.9942 12.132 1.9942 12C1.9942 11.868 2.02034 11.7373 2.07111 11.6154C2.12188 11.4936 2.19627 11.383 2.29 11.29ZM7 14.59V9.41L4.41 12L7 14.59ZM12 2C12.2652 2 12.5196 2.10536 12.7071 2.29289C12.8946 2.48043 13 2.73478 13 3V21C13 21.2652 12.8946 21.5196 12.7071 21.7071C12.5196 21.8946 12.2652 22 12 22C11.7348 22 11.4804 21.8946 11.2929 21.7071C11.1054 21.5196 11 21.2652 11 21V3C11 2.73478 11.1054 2.48043 11.2929 2.29289C11.4804 2.10536 11.7348 2 12 2Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M16.7041 6.29014L21.7041 11.2901C21.7979 11.3831 21.8723 11.4937 21.923 11.6156C21.9738 11.7374 21.9999 11.8681 21.9999 12.0001C21.9999 12.1322 21.9738 12.2629 21.923 12.3847C21.8723 12.5066 21.7979 12.6172 21.7041 12.7101L16.7041 17.7101C16.6107 17.8028 16.4999 17.8761 16.378 17.9259C16.2562 17.9757 16.1257 18.0009 15.9941 18.0001C15.863 18.0035 15.7328 17.9761 15.6141 17.9201C15.4315 17.8451 15.2752 17.7177 15.1649 17.554C15.0545 17.3903 14.9951 17.1976 14.9941 17.0001V7.00014C14.9951 6.80271 15.0545 6.61 15.1649 6.44628C15.2752 6.28256 15.4315 6.15516 15.6141 6.08014C15.7963 6.00356 15.997 5.98264 16.191 6.02001C16.3849 6.05739 16.5635 6.15138 16.7041 6.29014Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _flipV!!
+    }
+
+private var _flipV: ImageVector? = null

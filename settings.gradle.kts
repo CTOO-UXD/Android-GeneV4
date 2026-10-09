@@ -23,4 +23,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "genev4"
 include(":library")
+include(":icons")
 include(":catalog")

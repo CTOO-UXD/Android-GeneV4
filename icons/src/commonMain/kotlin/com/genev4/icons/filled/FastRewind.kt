@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.FastRewind: ImageVector
+    get() {
+        if (_fastRewind != null) {
+            return _fastRewind!!
+        }
+        _fastRewind =
+            materialIcon(name = "Filled.FastRewind") {
+            addPath(
+                pathData = PathParser().parsePathString("M22 8.64289V15.3562C22 16.9344 20.2577 17.8908 18.9262 17.0435L13.6515 13.6869C12.4165 12.901 12.4165 11.0981 13.6515 10.3122L18.9262 6.95557C20.2577 6.10828 22 7.06471 22 8.64289Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M11.27 8.64289V15.3562C11.27 16.9344 9.52772 17.8908 8.19627 17.0435L2.92153 13.6869C1.68653 12.901 1.68653 11.0981 2.92153 10.3122L8.19627 6.95557C9.52772 6.10828 11.27 7.06471 11.27 8.64289Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _fastRewind!!
+    }
+
+private var _fastRewind: ImageVector? = null

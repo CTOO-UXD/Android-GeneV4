@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Fire: ImageVector
+    get() {
+        if (_fire != null) {
+            return _fire!!
+        }
+        _fire =
+            materialIcon(name = "Filled.Fire") {
+            addPath(
+                pathData = PathParser().parsePathString("M16.0208 21.1309C18.8396 19.8844 21.0439 17.3996 21.0439 14.3496C21.0439 11.6609 19.9999 9.14874 18.601 6.66188C18.3588 8.5674 18.1166 9.13259 17.7444 9.65325C16.3873 4.83795 12.8463 2.75104 8.75001 1.13831C9.55303 4.54244 8.02135 6.60549 6.49254 8.66468C5.25803 10.3275 4.02539 11.9877 4.02539 14.3496C4.02539 17.9012 6.3233 20.6864 9.51973 21.6424C9.12502 21.0852 8.8955 20.3947 8.89551 19.6156C8.89553 16.6642 9.98449 15.3584 12.2497 12.642L12.2499 12.6417C12.4788 12.3672 12.7198 12.0782 12.9728 11.7717C12.9728 13.7205 13.915 15.1288 14.78 16.4218L14.7801 16.4218C15.3801 17.3187 15.943 18.1601 16.1285 19.0879C16.2913 19.9019 16.2339 20.5789 16.0208 21.1309Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _fire!!
+    }
+
+private var _fire: ImageVector? = null

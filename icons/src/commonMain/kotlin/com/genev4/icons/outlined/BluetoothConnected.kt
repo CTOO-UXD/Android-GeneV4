@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.BluetoothConnected: ImageVector
+    get() {
+        if (_bluetoothConnected != null) {
+            return _bluetoothConnected!!
+        }
+        _bluetoothConnected =
+            materialIcon(name = "Outlined.BluetoothConnected") {
+            addPath(
+                pathData = PathParser().parsePathString("M19.5 13.5C20.3284 13.5 21 12.8284 21 12C21 11.1716 20.3284 10.5 19.5 10.5C18.6716 10.5 18 11.1716 18 12C18 12.8284 18.6716 13.5 19.5 13.5ZM12 2L17.7 7.7L13.4 12L17.7 16.3L12 22H11V14.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L11 9.6V2H12ZM13 14.4V18.15L14.9 16.3L13 14.4ZM4.5 10.5C5.32843 10.5 6 11.1716 6 12C6 12.8284 5.32843 13.5 4.5 13.5C3.67157 13.5 3 12.8284 3 12C3 11.1716 3.67157 10.5 4.5 10.5ZM13 5.85V9.6L14.9 7.7L13 5.85Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _bluetoothConnected!!
+    }
+
+private var _bluetoothConnected: ImageVector? = null

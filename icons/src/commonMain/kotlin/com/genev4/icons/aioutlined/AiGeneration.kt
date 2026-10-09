@@ -1,0 +1,52 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.AiGeneration: ImageVector
+    get() {
+        if (_aiGeneration != null) {
+            return _aiGeneration!!
+        }
+        _aiGeneration =
+            materialIcon(name = "AiOutlined.AiGeneration") {
+            addPath(
+                pathData = PathParser().parsePathString("M22 5.01427C22 5.05421 21.9771 5.14551 21.8684 5.17974L21.3076 5.33381C20.8212 5.46505 20.4549 5.83024 20.3233 6.31526L20.1745 6.86305C20.1402 6.98859 20.0429 7 19.9971 7C19.9514 7 19.8541 6.98859 19.8197 6.86305L19.671 6.30956C19.5393 5.83024 19.1674 5.46505 18.6867 5.33381L18.1316 5.18545C18.0114 5.15121 18 5.0485 18 5.00856C18 4.96291 18.0114 4.8602 18.1316 4.82596L18.6924 4.6776C19.1731 4.54066 19.5393 4.17546 19.671 3.69615L19.8312 3.11412C19.8712 3.01712 19.9628 3 19.9971 3C20.0315 3 20.1288 3.01141 20.1631 3.10271L20.3233 3.69044C20.4549 4.16976 20.8269 4.53495 21.3076 4.6719L21.8798 4.83167C21.9943 4.87732 22 4.98003 22 5.01427Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M15.167 7.67969V7.68164C15.7236 9.7083 17.2967 11.2419 19.3027 11.8135L19.3076 11.8145L20.0127 12.0107L19.3115 12.2041C17.2691 12.7568 15.7206 14.3016 15.167 16.3418L14.9912 16.9844L14.8145 16.3242L14.8125 16.3184C14.2562 14.293 12.6827 12.7545 10.667 12.2041L10.6621 12.2021L9.98535 12.0205L10.6797 11.8379L10.6885 11.8359L10.6973 11.833C12.7094 11.2597 14.2575 9.72232 14.8125 7.70215L14.9932 7.04297L15.167 7.67969Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M6 12L3 12").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M9 9L6 9").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M9 15L4 15").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _aiGeneration!!
+    }
+
+private var _aiGeneration: ImageVector? = null

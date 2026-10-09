@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.WeatherPartlySunnyThunderstorms: ImageVector
+    get() {
+        if (_weatherPartlySunnyThunderstorms != null) {
+            return _weatherPartlySunnyThunderstorms!!
+        }
+        _weatherPartlySunnyThunderstorms =
+            materialIcon(name = "Outlined.WeatherPartlySunnyThunderstorms") {
+            addPath(
+                pathData = PathParser().parsePathString("M18.6342 9.60812C19.1694 9.0663 19.4998 8.32173 19.4998 7.5C19.4998 5.84315 18.1566 4.5 16.4998 4.5C15.5289 4.5 14.6657 4.96124 14.1174 5.67656C13.4935 5.39101 12.8235 5.18853 12.1216 5.08329C12.9736 3.54297 14.6149 2.5 16.4998 2.5C19.2612 2.5 21.4998 4.73858 21.4998 7.5C21.4998 8.75727 21.0357 9.90616 20.2696 10.7847C19.7971 10.3063 19.2448 9.90695 18.6342 9.60812ZM14.7498 12.903L14.3704 11.5512C13.9569 10.0776 12.6017 9 11 9C9.63808 9 8.45423 9.77748 7.87457 10.922L7.37386 11.9107L6.2701 12.0103C4.99816 12.1251 4 13.1971 4 14.5C4 15.8807 5.11929 17 6.5 17H7.08856C6.5919 17.4994 6.3935 18.2251 6.57032 18.9101C6.57813 18.9403 6.58663 18.9703 6.59578 19H6.5C4.01472 19 2 16.9853 2 14.5C2 12.1528 3.79705 10.2253 6.09035 10.0184C6.99732 8.22756 8.85531 7 11 7C13.5215 7 15.6466 8.69677 16.296 11.0108C18.3669 11.1623 20 12.8904 20 15C20 17.2091 18.2091 19 16 19H15.3572C15.508 18.63 15.5471 18.2171 15.4583 17.8144C15.3916 17.512 15.2571 17.2347 15.0704 17H16C17.1046 17 18 16.1046 18 15C18 13.9461 17.1836 13.0811 16.1501 13.0055L14.7498 12.903ZM12.5017 14.6343L8.50683 18.4102L10.4563 18.912L9.66658 21.9468L13.5052 18.245L11.6473 17.6019L12.5017 14.6343Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _weatherPartlySunnyThunderstorms!!
+    }
+
+private var _weatherPartlySunnyThunderstorms: ImageVector? = null

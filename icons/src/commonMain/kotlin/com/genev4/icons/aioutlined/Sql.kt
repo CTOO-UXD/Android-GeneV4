@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Sql: ImageVector
+    get() {
+        if (_sql != null) {
+            return _sql!!
+        }
+        _sql =
+            materialIcon(name = "AiOutlined.Sql") {
+            addPath(
+                pathData = PathParser().parsePathString("M4.22222 12.0001C4.22222 12.3484 4.73446 12.9539 5.92274 13.548C7.46006 14.3167 9.64086 14.7779 12 14.7779C14.3591 14.7779 16.5399 14.3167 18.0772 13.548C19.2656 12.9539 19.7778 12.3484 19.7778 12.0001V9.58758C17.9444 10.7204 15.1414 11.4446 12 11.4446C8.85859 11.4446 6.05551 10.7204 4.22222 9.58758V12.0001ZM19.7778 15.1431C17.9444 16.2759 15.1414 17.0001 12 17.0001C8.85859 17.0001 6.05551 16.2759 4.22222 15.1431V17.5557C4.22222 17.9039 4.73446 18.5095 5.92274 19.1036C7.46006 19.8722 9.64086 20.3335 12 20.3335C14.3591 20.3335 16.5399 19.8722 18.0772 19.1036C19.2656 18.5095 19.7778 17.9039 19.7778 17.5557V15.1431ZM2 17.5557V6.44458C2 3.68316 6.47716 1.44458 12 1.44458C17.5229 1.44458 22 3.68316 22 6.44458V17.5557C22 20.3171 17.5229 22.5557 12 22.5557C6.47716 22.5557 2 20.3171 2 17.5557ZM12 9.22236C14.3591 9.22236 16.5399 8.76116 18.0772 7.9925C19.2656 7.39836 19.7778 6.79282 19.7778 6.44458C19.7778 6.09634 19.2656 5.4908 18.0772 4.89666C16.5399 4.128 14.3591 3.6668 12 3.6668C9.64086 3.6668 7.46006 4.128 5.92274 4.89666C4.73446 5.4908 4.22222 6.09634 4.22222 6.44458C4.22222 6.79282 4.73446 7.39836 5.92274 7.9925C7.46006 8.76116 9.64086 9.22236 12 9.22236Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _sql!!
+    }
+
+private var _sql: ImageVector? = null

@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.MotoBatwingAlt: ImageVector
+    get() {
+        if (_motoBatwingAlt != null) {
+            return _motoBatwingAlt!!
+        }
+        _motoBatwingAlt =
+            materialIcon(name = "Filled.MotoBatwingAlt") {
+            addPath(
+                pathData = PathParser().parsePathString("M12.001 14.191L12.024 14.173L14.511 5.73L17.796 16.523H17.184C17.184 16.523 16.77 14.663 16.101 13.54C15.741 12.929 15.181 12.429 14.432 12.443C13.903 12.453 13.448 12.748 12.873 13.554C12.531 14.038 12 15.269 12 15.269C12 15.269 11.471 14.038 11.13 13.554C10.556 12.749 10.098 12.454 9.573 12.443C8.823 12.429 8.259 12.93 7.897 13.54C7.225 14.663 6.813 16.523 6.813 16.523H6.204L9.496 5.73L11.981 14.173L12.001 14.191Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M13.0224 21.9484C12.6863 21.9825 12.3452 22 12 22C11.4061 22 10.8242 21.9482 10.2588 21.8489C5.89463 21.0827 2.50499 17.4866 2.05163 13.0224C2.01749 12.6863 2 12.3452 2 12C2 11.5834 2.02548 11.1727 2.07497 10.7694C2.64048 6.16121 6.34078 2.52252 10.9776 2.05163C11.3137 2.01749 11.6548 2 12 2C12.6029 2 13.1934 2.05336 13.7669 2.15561C18.1187 2.93146 21.4959 6.52219 21.9484 10.9776C21.9825 11.3137 22 11.6548 22 12C22 12.5939 21.9482 13.1758 21.8489 13.7412C21.0827 18.1054 17.4866 21.495 13.0224 21.9484ZM20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C7.30558 20.5 3.5 16.6944 3.5 12C3.5 7.30558 7.30558 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _motoBatwingAlt!!
+    }
+
+private var _motoBatwingAlt: ImageVector? = null

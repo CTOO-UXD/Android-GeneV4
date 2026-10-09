@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Bitcoin: ImageVector
+    get() {
+        if (_bitcoin != null) {
+            return _bitcoin!!
+        }
+        _bitcoin =
+            materialIcon(name = "AiOutlined.Bitcoin") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 1C9.82441 1 7.69767 1.64514 5.88873 2.85383C4.07979 4.06253 2.66989 5.78049 1.83733 7.79048C1.00477 9.80047 0.786929 12.0122 1.21137 14.146C1.6358 16.2798 2.68345 18.2398 4.22183 19.7782C5.76021 21.3166 7.72022 22.3642 9.85401 22.7886C11.9878 23.2131 14.1995 22.9952 16.2095 22.1627C18.2195 21.3301 19.9375 19.9202 21.1462 18.1113C22.3549 16.3023 23 14.1756 23 12C23 9.08262 21.8411 6.28473 19.7782 4.22183C17.7153 2.15893 14.9174 1 12 1ZM12 21C10.22 21 8.47992 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89471 5.63604 5.63604C6.89472 4.37737 8.49836 3.5202 10.2442 3.17293C11.99 2.82567 13.7996 3.0039 15.4442 3.68508C17.0887 4.36627 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C21 14.3869 20.0518 16.6761 18.364 18.364C16.6761 20.0518 14.387 21 12 21Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M11 7H12V5.5H14V7C14.7956 7 15.5585 7.3163 16.1211 7.87891C16.6837 8.44152 17 9.20435 17 10C16.9983 10.7386 16.7245 11.4509 16.2305 12C16.7245 12.5491 16.9983 13.2614 17 14C17 14.7956 16.6837 15.5585 16.1211 16.1211C15.5585 16.6837 14.7956 17 14 17V18.5H12V17H11V18.5H9V17H7.5V15H9V9H7.5V7H9V5.5H11V7ZM11 13V15H14C14.2652 15 14.5195 14.8946 14.707 14.707C14.8946 14.5195 15 14.2652 15 14C15 13.7348 14.8946 13.4805 14.707 13.293C14.5195 13.1054 14.2652 13 14 13H11ZM11 9V11H14C14.2652 11 14.5195 10.8946 14.707 10.707C14.8946 10.5195 15 10.2652 15 10C15 9.73478 14.8946 9.4805 14.707 9.29297C14.5195 9.10543 14.2652 9 14 9H11Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _bitcoin!!
+    }
+
+private var _bitcoin: ImageVector? = null

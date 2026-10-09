@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Idea: ImageVector
+    get() {
+        if (_idea != null) {
+            return _idea!!
+        }
+        _idea =
+            materialIcon(name = "AiFilled.Idea") {
+            addPath(
+                pathData = PathParser().parsePathString("M9.7998 18.6C9.1948 18.6 8.67707 18.3848 8.2466 17.9543C7.81614 17.5238 7.60054 17.0057 7.5998 16.4V15.025C6.5548 14.31 5.74374 13.3933 5.1666 12.275C4.58947 11.1567 4.30054 9.965 4.2998 8.7C4.2998 6.555 5.04707 4.7356 6.5416 3.2418C8.03614 1.748 9.85554 1.00073 11.9998 1C14.1441 0.999267 15.9638 1.74653 17.4591 3.2418C18.9544 4.73707 19.7013 6.55647 19.6998 8.7C19.6998 9.965 19.4109 11.1523 18.833 12.2618C18.2551 13.3713 17.4441 14.2924 16.3998 15.025V16.4C16.3998 17.005 16.1846 17.5231 15.7541 17.9543C15.3236 18.3855 14.8055 18.6007 14.1998 18.6H9.7998ZM9.7998 23C9.48814 23 9.22707 22.8944 9.0166 22.6832C8.80614 22.472 8.70054 22.2109 8.6998 21.9V20.8H15.2998V21.9C15.2998 22.2117 15.1942 22.4731 14.983 22.6843C14.7718 22.8955 14.5107 23.0007 14.1998 23H9.7998Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _idea!!
+    }
+
+private var _idea: ImageVector? = null

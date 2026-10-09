@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.SummarizeTextTrue: ImageVector
+    get() {
+        if (_summarizeTextTrue != null) {
+            return _summarizeTextTrue!!
+        }
+        _summarizeTextTrue =
+            materialIcon(name = "Outlined.SummarizeTextTrue") {
+            addPath(
+                pathData = PathParser().parsePathString("M5 7V11H3V7C3 4.79086 4.79086 3 7 3H11V5H7C5.89543 5 5 5.89543 5 7ZM3 13H5V17C5 18.1046 5.89543 19 7 19H9V21H7C4.79086 21 3 19.2091 3 17V13ZM21 11H19V7C19 5.89543 18.1046 5 17 5H13V3H17C19.2091 3 21 4.79086 21 7V11ZM17 11H7V9H17V11ZM11 15H7V13H11V15ZM15.6448 18.6257C15.9993 18.7816 16.2824 19.0647 16.4382 19.4192L17.4283 21.6713C17.5637 21.9794 18.0008 21.9794 18.1362 21.6713L19.1262 19.4192C19.2821 19.0647 19.5652 18.7816 19.9197 18.6257L22.1718 17.6357C22.4799 17.5003 22.4799 17.0632 22.1718 16.9278L19.9197 15.9378C19.5652 15.7819 19.2821 15.4988 19.1262 15.1443L18.1362 12.8922C18.0008 12.5841 17.5637 12.5841 17.4283 12.8922L16.4382 15.1443C16.2824 15.4988 15.9993 15.7819 15.6448 15.9378L13.3927 16.9278C13.0846 17.0632 13.0846 17.5003 13.3927 17.6357L15.6448 18.6257Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _summarizeTextTrue!!
+    }
+
+private var _summarizeTextTrue: ImageVector? = null

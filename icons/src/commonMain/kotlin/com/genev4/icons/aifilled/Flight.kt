@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Flight: ImageVector
+    get() {
+        if (_flight != null) {
+            return _flight!!
+        }
+        _flight =
+            materialIcon(name = "AiFilled.Flight") {
+            addPath(
+                pathData = PathParser().parsePathString("M21.9998 5.08008C22.0007 4.4703 21.8205 3.87399 21.4821 3.36671C21.1437 2.85943 20.6624 2.464 20.0991 2.23054C19.5357 1.99707 18.9158 1.93607 18.3178 2.05526C17.7198 2.17446 17.1706 2.46848 16.7398 2.90008L13.9298 5.71008L7.43982 3.55008C7.26702 3.49577 7.08273 3.48941 6.9066 3.53168C6.73048 3.57395 6.56914 3.66326 6.43982 3.79008L4.05982 6.15008C3.94705 6.26416 3.86337 6.40369 3.81586 6.5569C3.76835 6.71011 3.75839 6.8725 3.78683 7.03037C3.81526 7.18824 3.88126 7.33695 3.97924 7.46395C4.07723 7.59095 4.20433 7.69252 4.34982 7.76008L9.52982 10.1101L6.92982 12.7101L5.21982 11.8501C5.03519 11.7502 4.8238 11.7109 4.6156 11.7378C4.4074 11.7647 4.21295 11.8565 4.05982 12.0001L2.28982 13.8101C2.10357 13.9974 1.99902 14.2509 1.99902 14.5151C1.99902 14.7793 2.10357 15.0327 2.28982 15.2201L8.77982 21.7101C8.96718 21.8963 9.22063 22.0009 9.48482 22.0009C9.749 22.0009 10.0025 21.8963 10.1898 21.7101L11.9998 19.9401C12.1499 19.7915 12.2491 19.5993 12.2832 19.3909C12.3174 19.1826 12.2847 18.9687 12.1898 18.7801L11.3298 17.0701L13.9298 14.4701L16.2798 19.6501C16.3474 19.7956 16.4489 19.9227 16.5759 20.0207C16.7029 20.1186 16.8517 20.1846 17.0095 20.2131C17.1674 20.2415 17.3298 20.2315 17.483 20.184C17.6362 20.1365 17.7757 20.0528 17.8898 19.9401L20.2498 17.5801C20.3766 17.4508 20.4659 17.2894 20.5082 17.1133C20.5505 16.9372 20.5441 16.7529 20.4898 16.5801L18.3298 10.0901L21.0998 7.26008C21.387 6.97464 21.6145 6.63488 21.7691 6.26059C21.9236 5.88631 22.002 5.485 21.9998 5.08008Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _flight!!
+    }
+
+private var _flight: ImageVector? = null

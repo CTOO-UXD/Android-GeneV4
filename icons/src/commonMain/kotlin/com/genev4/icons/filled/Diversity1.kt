@@ -1,0 +1,62 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Diversity1: ImageVector
+    get() {
+        if (_diversity1 != null) {
+            return _diversity1!!
+        }
+        _diversity1 =
+            materialIcon(name = "Filled.Diversity1") {
+            addPath(
+                pathData = PathParser().parsePathString("M5.01758 10.4996C5.27393 6.8669 8.30211 3.99951 12 3.99951C15.6979 3.99951 18.7261 6.8669 18.9824 10.4996L19 10.4995C19.7432 10.4995 20.4324 10.7312 20.9991 11.1263C20.9997 11.0841 21 11.0418 21 10.9995C21 6.02895 16.9706 1.99951 12 1.99951C7.02944 1.99951 3 6.02895 3 10.9995C3 11.0418 3.00029 11.0841 3.00087 11.1262C3.56762 10.7312 4.25675 10.4995 4.99998 10.4995L5.01758 10.4996Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M5 15.9995C6.10457 15.9995 7 15.1041 7 13.9995C7 12.8949 6.10457 11.9995 5 11.9995C3.89543 11.9995 3 12.8949 3 13.9995C3 15.1041 3.89543 15.9995 5 15.9995Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M5 16.9995C1.44444 16.9995 1 20.3328 1 21.9995H4.92093C4.65055 21.5052 4.53273 20.9088 4.65316 20.2412C4.82915 19.2657 5.20292 18.1174 5.98113 17.0956C5.68375 17.0332 5.35761 16.9995 5 16.9995Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M19.3468 20.2412C19.4672 20.9088 19.3494 21.5052 19.079 21.9995H23C23 20.3328 22.5556 16.9995 19 16.9995C18.6424 16.9995 18.3162 17.0332 18.0188 17.0956C18.797 18.1174 19.1708 19.2657 19.3468 20.2412Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M21 13.9995C21 15.1041 20.1046 15.9995 19 15.9995C17.8954 15.9995 17 15.1041 17 13.9995C17 12.8949 17.8954 11.9995 19 11.9995C20.1046 11.9995 21 12.8949 21 13.9995Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M14.7501 11.9995C14.7501 13.5183 13.5188 14.7495 12.0001 14.7495C10.4813 14.7495 9.25006 13.5183 9.25006 11.9995C9.25006 10.4807 10.4813 9.24951 12.0001 9.24951C13.5188 9.24951 14.7501 10.4807 14.7501 11.9995Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M7.50004 21.9995C6.67161 21.9995 5.98232 21.3227 6.1294 20.5075C6.49568 18.4772 7.80257 15.9995 12 15.9995C16.1975 15.9995 17.5044 18.4772 17.8707 20.5075C18.0178 21.3227 17.3285 21.9995 16.5 21.9995H7.50004Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _diversity1!!
+    }
+
+private var _diversity1: ImageVector? = null

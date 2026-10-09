@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.GuideAmpTutorial: ImageVector
+    get() {
+        if (_guideAmpTutorial != null) {
+            return _guideAmpTutorial!!
+        }
+        _guideAmpTutorial =
+            materialIcon(name = "Filled.GuideAmpTutorial") {
+            addPath(
+                pathData = PathParser().parsePathString("M3 7C3 4.79086 4.79086 3 7 3H17C19.2091 3 21 4.79086 21 7V11.8842L16.05 8.9298C13.3838 7.33847 10 9.25952 10 12.3645V19.6431C10 20.1271 10.0822 20.5824 10.2311 21H7C4.79086 21 3 19.2091 3 17V7ZM21.1226 17.7211C22.4226 16.9452 22.4226 15.0622 21.1226 14.2863L15.025 10.647C13.6919 9.85137 12 10.8119 12 12.3644V19.643C12 21.1955 13.6919 22.156 15.025 21.3603L21.1226 17.7211Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _guideAmpTutorial!!
+    }
+
+private var _guideAmpTutorial: ImageVector? = null

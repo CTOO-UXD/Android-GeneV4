@@ -1,0 +1,47 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Gametime: ImageVector
+    get() {
+        if (_gametime != null) {
+            return _gametime!!
+        }
+        _gametime =
+            materialIcon(name = "Outlined.Gametime") {
+            addPath(
+                pathData = PathParser().parsePathString("M16.5002 10.5C17.0525 10.5 17.5002 10.0523 17.5002 9.5C17.5002 8.94771 17.0525 8.5 16.5002 8.5C15.9479 8.5 15.5002 8.94771 15.5002 9.5C15.5002 10.0523 15.9479 10.5 16.5002 10.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M15.5002 11.5C15.5002 12.0523 15.0525 12.5 14.5002 12.5C13.9479 12.5 13.5002 12.0523 13.5002 11.5C13.5002 10.9477 13.9479 10.5 14.5002 10.5C15.0525 10.5 15.5002 10.9477 15.5002 11.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M7.75018 8.5C7.75018 8.22386 7.97404 8 8.25018 8H8.75018C9.02633 8 9.25018 8.22386 9.25018 8.5V9.75H10.5002C10.7763 9.75 11.0002 9.97386 11.0002 10.25V10.75C11.0002 11.0261 10.7763 11.25 10.5002 11.25H9.25018V12.5C9.25018 12.7761 9.02633 13 8.75018 13H8.25018C7.97404 13 7.75018 12.7761 7.75018 12.5V11.25H6.50018C6.22404 11.25 6.00018 11.0261 6.00018 10.75V10.25C6.00018 9.97386 6.22404 9.75 6.50018 9.75H7.75018V8.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M8.50019 5C5.46264 5 3.00022 7.46247 3.00022 10.5001L2.67228 15.9109C2.48696 18.9685 6.46369 20.3053 8.16287 17.7566L9.33385 16.0002H14.6664L15.8374 17.7567C17.5366 20.3053 21.5133 18.9685 21.328 15.911L21.0001 10.5011V10.5001C21.0001 7.46247 18.5377 5 15.5002 5H8.50019ZM4.6686 16.0319L5.00021 10.5606V10.5001C5.00021 8.56706 6.5672 7.00003 8.50019 7.00003H15.5002C17.4331 7.00003 19.0001 8.56706 19.0001 10.5001V10.5616L19.3317 16.032C19.3935 17.0511 18.0679 17.4967 17.5015 16.6472L15.7367 14.0001H8.26352L6.4988 16.6471C5.93242 17.4967 4.60683 17.0511 4.6686 16.0319Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _gametime!!
+    }
+
+private var _gametime: ImageVector? = null

@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.AiChat: ImageVector
+    get() {
+        if (_aiChat != null) {
+            return _aiChat!!
+        }
+        _aiChat =
+            materialIcon(name = "AiOutlined.AiChat") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 1.99994C12.8632 1.99994 13.701 2.10971 14.5 2.31537L14 4.2519C13.3608 4.08738 12.6906 3.99995 12 3.99995C7.58174 3.99995 4.00002 7.5817 4 12C4 13.3344 4.3255 14.6174 4.93945 15.7656L5.28906 16.4189L4.63379 19.3662L7.58105 18.7109L8.23438 19.0605C9.38255 19.6745 10.6656 20 12 20C16.4183 20 20 16.4183 20 12C20 11.6771 19.9805 11.3587 19.9434 11.0459L21.9297 10.8095C21.976 11.1999 22 11.5972 22 12C22 17.5228 17.5228 22 12 22C10.2975 22 8.69425 21.5746 7.29102 20.8242L2 22L3.17578 16.709C2.42541 15.3057 2 13.7025 2 12C2.00002 6.47712 6.47717 1.99994 12 1.99994ZM19.5293 1.31928C19.7058 0.893497 20.2942 0.893484 20.4707 1.31928L20.7236 1.93061C21.1555 2.97341 21.9615 3.80612 22.9746 4.25678L23.6914 4.57612C24.1022 4.7588 24.1022 5.35633 23.6914 5.53901L22.9326 5.8769C21.945 6.31618 21.1534 7.11941 20.7139 8.12788L20.4668 8.69331C20.2863 9.10745 19.7136 9.10745 19.5332 8.69331L19.2861 8.12788C18.8466 7.1194 18.0551 6.31618 17.0674 5.8769L16.3076 5.53901C15.8974 5.35616 15.8974 4.75893 16.3076 4.57612L17.0254 4.25678C18.0384 3.80612 18.8445 2.97341 19.2764 1.93061L19.5293 1.31928Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _aiChat!!
+    }
+
+private var _aiChat: ImageVector? = null

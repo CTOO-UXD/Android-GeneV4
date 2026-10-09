@@ -1,0 +1,52 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Dumbbell: ImageVector
+    get() {
+        if (_dumbbell != null) {
+            return _dumbbell!!
+        }
+        _dumbbell =
+            materialIcon(name = "AiOutlined.Dumbbell") {
+            addPath(
+                pathData = PathParser().parsePathString("M6 6.7998C5.99995 6.76737 5.98663 6.70723 5.90527 6.63672C5.8217 6.56434 5.68169 6.5 5.5 6.5C5.31833 6.5 5.17831 6.56434 5.09473 6.63672C5.01336 6.70724 5.00005 6.76738 5 6.7998V17.2002C5.00005 17.2326 5.01336 17.2928 5.09473 17.3633C5.17831 17.4357 5.31833 17.5 5.5 17.5C5.68169 17.5 5.8217 17.4357 5.90527 17.3633C5.98663 17.2928 5.99995 17.2326 6 17.2002V6.7998ZM8 17.2002C7.99988 18.5999 6.74156 19.5 5.5 19.5C4.25848 19.5 3.00012 18.5999 3 17.2002V6.7998C3.00012 5.40014 4.25847 4.5 5.5 4.5C6.74156 4.5 7.99988 5.40015 8 6.7998V17.2002Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M19 6.7998C18.9999 6.76737 18.9866 6.70723 18.9053 6.63672C18.8217 6.56434 18.6817 6.5 18.5 6.5C18.3183 6.5 18.1783 6.56434 18.0947 6.63672C18.0134 6.70723 18.0001 6.76737 18 6.7998V17.2002C18.0001 17.2326 18.0134 17.2928 18.0947 17.3633C18.1783 17.4357 18.3183 17.5 18.5 17.5C18.6817 17.5 18.8217 17.4357 18.9053 17.3633C18.9866 17.2928 18.9999 17.2326 19 17.2002V6.7998ZM21 17.2002C20.9999 18.5999 19.7416 19.5 18.5 19.5C17.2584 19.5 16.0001 18.5999 16 17.2002V6.7998C16.0001 5.40015 17.2584 4.5 18.5 4.5C19.7416 4.5 20.9999 5.40015 21 6.7998V17.2002Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M3 9.33301C2.99991 9.2819 2.97894 9.21099 2.89648 9.1377C2.81202 9.06262 2.6746 9 2.5 9C2.3254 9 2.18798 9.06262 2.10352 9.1377C2.02106 9.21099 2.00009 9.2819 2 9.33301V14.667C2.00009 14.7181 2.02106 14.789 2.10352 14.8623C2.18798 14.9374 2.3254 15 2.5 15C2.6746 15 2.81202 14.9374 2.89648 14.8623C2.97894 14.789 2.99991 14.7181 3 14.667V9.33301ZM5 14.667C4.9998 16.063 3.76663 17 2.5 17C1.23337 17 0.000201598 16.063 0 14.667V9.33301C0.000201598 7.93704 1.23337 7 2.5 7C3.76663 7 4.9998 7.93704 5 9.33301V14.667Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M22 9.33301C21.9999 9.28189 21.9789 9.21098 21.8965 9.1377C21.812 9.06263 21.6746 9 21.5 9C21.3254 9 21.188 9.06263 21.1035 9.1377C21.0211 9.21098 21.0001 9.28189 21 9.33301V14.667C21.0001 14.7181 21.0211 14.789 21.1035 14.8623C21.188 14.9374 21.3254 15 21.5 15C21.6746 15 21.812 14.9374 21.8965 14.8623C21.9789 14.789 21.9999 14.7181 22 14.667V9.33301ZM24 14.667C23.9998 16.0629 22.7667 17 21.5 17C20.2333 17 19.0002 16.0629 19 14.667V9.33301C19.0002 7.93705 20.2333 7 21.5 7C22.7667 7 23.9998 7.93705 24 9.33301V14.667Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M17 14.5C17.5523 14.5 18 14.0523 18 13.5V10.5C18 9.94772 17.5523 9.5 17 9.5H7C6.44772 9.5 6 9.94772 6 10.5V13.5C6 14.0523 6.44772 14.5 7 14.5H17ZM8 11.5H16V12.5H8V11.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _dumbbell!!
+    }
+
+private var _dumbbell: ImageVector? = null

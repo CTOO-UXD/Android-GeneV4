@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.AppShortcut: ImageVector
+    get() {
+        if (_appShortcut != null) {
+            return _appShortcut!!
+        }
+        _appShortcut =
+            materialIcon(name = "Filled.AppShortcut") {
+            addPath(
+                pathData = PathParser().parsePathString("M5 3.99963C5 2.89506 5.89543 1.99963 7 1.99963H17C18.1046 1.99963 19 2.89506 19 3.99963V7.87349L18.6927 7.56615L18.064 6.93517C17.9494 6.82012 17.818 6.72558 17.6756 6.65392C17.1127 6.36861 16.4074 6.46121 15.9369 6.93171L13.3676 9.50098H12C10.067 9.50098 8.5 11.068 8.5 13.001V16.001C8.5 16.8294 9.17157 17.501 10 17.501H12C12.8284 17.501 13.5 16.8294 13.5 16.001V14.621L14.4522 15.5731C14.4756 15.6001 14.5001 15.6264 14.5255 15.6518L15.9412 17.0646C16.5275 17.6498 17.4773 17.6489 18.0625 17.0625L19 16.1232V19.9996C19 21.1042 18.1046 21.9996 17 21.9996H7C5.89543 21.9996 5 21.1042 5 19.9996V3.99963Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M20.2905 11.2952L17.0014 7.99384L15.5845 9.40541L17.1742 11.001H12C10.8954 11.001 10 11.8964 10 13.001V16.001H12V13.001H17.1712L15.5852 14.5901L17.0008 16.0029L20.2898 12.7074C20.6792 12.3173 20.6795 11.6856 20.2905 11.2952Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _appShortcut!!
+    }
+
+private var _appShortcut: ImageVector? = null

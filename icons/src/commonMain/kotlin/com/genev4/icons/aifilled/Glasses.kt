@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Glasses: ImageVector
+    get() {
+        if (_glasses != null) {
+            return _glasses!!
+        }
+        _glasses =
+            materialIcon(name = "AiFilled.Glasses") {
+            addPath(
+                pathData = PathParser().parsePathString("M2.62351 11.3854C2.6643 9.80737 2.75611 8.54329 2.96269 7.49072C3.3094 5.72413 3.95997 4.65771 5.26199 3.77314L4.10225 2C2.2676 3.24642 1.34985 4.84373 0.912391 7.07276C0.499905 9.17453 0.499947 11.9258 0.500001 15.5446V15.6719C0.500001 18.6141 2.84033 21 5.72727 21C8.61422 21 10.9545 18.6148 10.9545 15.6725C10.9545 15.3807 10.9314 15.0937 10.8868 14.8138C11.2323 14.6802 11.6071 14.607 12 14.607C12.3929 14.607 12.7678 14.6802 13.1132 14.8138C13.0686 15.0937 13.0455 15.3807 13.0455 15.6725C13.0455 18.6148 15.3858 21 18.2727 21C21.1596 21 23.5 18.6148 23.5 15.6725V15.5446C23.5001 11.9258 23.5001 9.17455 23.0877 7.07279C22.6504 4.84383 21.7328 3.2465 19.8984 2.00005L18.7386 3.77309C20.0403 4.65762 20.6908 5.72403 21.0374 7.49068C21.2439 8.54326 21.3357 9.80737 21.3765 11.3854C20.5085 10.7316 19.435 10.345 18.2727 10.345C16.4135 10.345 14.7827 11.3339 13.8562 12.822C13.2788 12.5985 12.6529 12.476 12 12.476C11.3471 12.476 10.7212 12.5985 10.1438 12.822C9.21735 11.3339 7.58652 10.345 5.72727 10.345C4.56509 10.345 3.4915 10.7316 2.62351 11.3854Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _glasses!!
+    }
+
+private var _glasses: ImageVector? = null

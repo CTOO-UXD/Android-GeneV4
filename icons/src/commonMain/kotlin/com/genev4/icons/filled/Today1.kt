@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Today1: ImageVector
+    get() {
+        if (_today1 != null) {
+            return _today1!!
+        }
+        _today1 =
+            materialIcon(name = "Filled.Today1") {
+            addPath(
+                pathData = PathParser().parsePathString("M15 4H9V3H7V4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4H17V3H15V4ZM9.6958 8.80017C10.5149 8.81343 11.162 9.02558 11.6369 9.43662C12.0361 9.78137 12.2358 10.2156 12.2358 10.7394C12.2358 11.1371 12.1497 11.4587 11.9776 11.704C11.895 11.8233 11.8193 11.9145 11.7505 11.9775C11.6817 12.0404 11.575 12.1217 11.4304 12.2211C11.7402 12.3736 11.9914 12.5857 12.1841 12.8576C12.3769 13.1294 12.4732 13.4476 12.4732 13.8122C12.4732 14.3095 12.3528 14.7073 12.1119 15.0056C11.8641 15.3172 11.5543 15.5525 11.1826 15.7117C10.7352 15.9039 10.2637 16 9.76808 16H9.70613C8.69427 15.9868 7.81665 15.7382 7.07324 15.2542L7.67209 14.0211C8.05068 14.2664 8.3828 14.4305 8.66846 14.5133C8.95412 14.5962 9.26215 14.641 9.59255 14.6476H9.63385C9.97802 14.6476 10.2568 14.5879 10.4702 14.4686C10.7318 14.3227 10.8694 14.1106 10.8832 13.8321C10.897 13.5404 10.8109 13.315 10.6251 13.1559C10.4323 12.9902 10.0675 12.904 9.5306 12.8973H8.90078V11.8034H9.3241C9.76464 11.8101 10.1157 11.7073 10.3773 11.4952C10.57 11.3427 10.6664 11.1338 10.6664 10.8686C10.6664 10.5968 10.5769 10.388 10.3979 10.2421C10.1983 10.0698 9.93672 9.98357 9.6132 9.98357C9.01435 9.98357 8.51875 10.1526 8.1264 10.4907L7.41397 9.61562C7.91645 9.06536 8.66674 8.79354 9.66483 8.80017H9.6958ZM16.0732 8.80005V16H14.4316V10.1372H13.3732V8.80005H16.0732Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _today1!!
+    }
+
+private var _today1: ImageVector? = null

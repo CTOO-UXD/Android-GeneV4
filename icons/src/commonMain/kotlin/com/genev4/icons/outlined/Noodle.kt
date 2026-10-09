@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Noodle: ImageVector
+    get() {
+        if (_noodle != null) {
+            return _noodle!!
+        }
+        _noodle =
+            materialIcon(name = "Outlined.Noodle") {
+            addPath(
+                pathData = PathParser().parsePathString("M20.5275 2.59961L20.7421 4.58806L13.8358 5.33345C14.062 5.80037 14.3681 6.13847 14.7969 6.46477L14.9843 6.60228L15.4223 6.90735C16.8151 7.88605 17.3186 8.96144 16.9379 10.9999H19.5604C20.665 10.9999 21.5604 11.8954 21.5604 12.9999C21.5604 13.1316 21.5474 13.263 21.5216 13.3922L20.3216 19.3922C20.1346 20.327 19.3138 20.9999 18.3604 20.9999H5.63961C4.68625 20.9999 3.86542 20.327 3.67845 19.3922L2.47845 13.3922C2.26182 12.309 2.96426 11.2554 4.04738 11.0388C4.17652 11.0129 4.3079 10.9999 4.43961 10.9999H6.60165C6.42207 10.5005 6.11599 10.0781 5.65619 9.61427L4.98734 8.977C4.11773 8.14472 3.64823 7.41398 3.57236 6.44115L2.63819 6.54197L2.42358 4.55352L20.5275 2.59961ZM5.56632 6.22595C5.5923 6.63788 5.78067 6.94563 6.23162 7.39671L6.87612 8.0093C7.83868 8.93209 8.43329 9.82123 8.67668 10.9999H11.0585C11.009 10.6912 10.8349 10.4378 10.5245 10.1286L10.3119 9.92769L10.1897 9.81695C9.96221 9.61109 9.62172 9.30294 9.48 9.1657C8.54869 8.2638 7.93566 7.31838 7.58769 6.00779L5.56632 6.22595ZM9.60813 5.78972C9.86245 6.56436 10.2606 7.13748 10.8713 7.72897L11.7759 8.55656C12.5788 9.31421 13.0194 10.0676 13.0656 10.9999H14.8957C15.2473 9.54874 15.115 9.16 14.3777 8.61918L13.6994 8.14126C13.6608 8.11289 13.6233 8.08487 13.5859 8.05641C12.7337 7.40802 12.144 6.65401 11.7715 5.55624L9.60813 5.78972ZM4.43961 12.9999H19.5604L18.3604 18.9999H5.63961L4.43961 12.9999Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _noodle!!
+    }
+
+private var _noodle: ImageVector? = null

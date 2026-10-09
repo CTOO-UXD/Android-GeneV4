@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.PrivacyCenterPrc: ImageVector
+    get() {
+        if (_privacyCenterPrc != null) {
+            return _privacyCenterPrc!!
+        }
+        _privacyCenterPrc =
+            materialIcon(name = "Outlined.PrivacyCenterPrc") {
+            addPath(
+                pathData = PathParser().parsePathString("M5.28249 18.2175C1.5725 14.5075 1.5725 8.49247 5.28249 4.78249C8.99247 1.0725 15.0075 1.0725 18.7175 4.78249C22.4275 8.49247 22.4275 14.5075 18.7175 18.2175C16.8625 20.0725 14.4313 21 12 21V22.5208C12 23.4117 10.9229 23.8579 10.2929 23.2279L5.28249 18.2175ZM10 20.1066V19H12C13.9225 19 15.8384 18.2682 17.3033 16.8033C20.2322 13.8744 20.2322 9.12563 17.3033 6.1967C14.3744 3.26777 9.62563 3.26777 6.6967 6.1967C3.76777 9.12563 3.76777 13.8744 6.6967 16.8033L10 20.1066ZM14 10C14 10.7403 13.5978 11.3866 13 11.7324V15H11V11.7324C10.4022 11.3866 10 10.7403 10 10C10 8.89543 10.8954 8 12 8C13.1046 8 14 8.89543 14 10Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _privacyCenterPrc!!
+    }
+
+private var _privacyCenterPrc: ImageVector? = null

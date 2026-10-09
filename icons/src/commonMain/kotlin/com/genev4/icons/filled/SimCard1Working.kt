@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.SimCard1Working: ImageVector
+    get() {
+        if (_simCard1Working != null) {
+            return _simCard1Working!!
+        }
+        _simCard1Working =
+            materialIcon(name = "Filled.SimCard1Working") {
+            addPath(
+                pathData = PathParser().parsePathString("M16 2C18.2091 2 20 3.79086 20 6V18C20 20.2091 18.2091 22 16 22H8C5.79086 22 4 20.2091 4 18V7L9 2H16ZM8.22168 14.5C8.16172 14.5 8.10204 14.5112 8.0459 14.5322C7.78742 14.6292 7.65599 14.9173 7.75293 15.1758L8.76562 17.876C8.79099 17.9435 8.84454 17.9971 8.91211 18.0225C9.04134 18.0709 9.18588 18.0052 9.23438 17.876L10.2471 15.1758C10.2681 15.1196 10.2783 15.0599 10.2783 15C10.2783 14.7239 10.0545 14.5 9.77832 14.5H8.22168ZM13.3389 10.2998V11.7305H14.417V18H16.0889V10.2998H13.3389ZM9.08789 9.47754C8.95864 9.42907 8.81413 9.49479 8.76562 9.62402L7.75293 12.3242C7.73188 12.3804 7.72168 12.44 7.72168 12.5C7.72169 12.7761 7.94554 13 8.22168 13H9.77832C9.83828 13 9.89796 12.9888 9.9541 12.9678C10.2125 12.8707 10.344 12.5827 10.2471 12.3242L9.23438 9.62402C9.20902 9.55645 9.15547 9.50289 9.08789 9.47754Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _simCard1Working!!
+    }
+
+private var _simCard1Working: ImageVector? = null

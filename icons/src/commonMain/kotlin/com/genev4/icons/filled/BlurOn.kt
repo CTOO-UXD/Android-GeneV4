@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.BlurOn: ImageVector
+    get() {
+        if (_blurOn != null) {
+            return _blurOn!!
+        }
+        _blurOn =
+            materialIcon(name = "Filled.BlurOn") {
+            addPath(
+                pathData = PathParser().parsePathString("M10 1.5C10 1.77614 9.77614 2 9.5 2C9.22386 2 9 1.77614 9 1.5C9 1.22386 9.22386 1 9.5 1C9.77614 1 10 1.22386 10 1.5ZM11 9.5C11 10.3284 10.3284 11 9.5 11C8.67157 11 8 10.3284 8 9.5C8 8.67157 8.67157 8 9.5 8C10.3284 8 11 8.67157 11 9.5ZM6 9.5C6 10.0523 5.55228 10.5 5 10.5C4.44772 10.5 4 10.0523 4 9.5C4 8.94772 4.44772 8.5 5 8.5C5.55228 8.5 6 8.94772 6 9.5ZM1.5 10C1.77614 10 2 9.77614 2 9.5C2 9.22386 1.77614 9 1.5 9C1.22386 9 1 9.22386 1 9.5C1 9.77614 1.22386 10 1.5 10ZM9.5 23C9.77614 23 10 22.7761 10 22.5C10 22.2239 9.77614 22 9.5 22C9.22386 22 9 22.2239 9 22.5C9 22.7761 9.22386 23 9.5 23ZM6 5C6 5.55228 5.55228 6 5 6C4.44772 6 4 5.55228 4 5C4 4.44772 4.44772 4 5 4C5.55228 4 6 4.44772 6 5ZM5 20C5.55228 20 6 19.5523 6 19C6 18.4477 5.55228 18 5 18C4.44772 18 4 18.4477 4 19C4 19.5523 4.44772 20 5 20ZM10.5 19C10.5 19.5523 10.0523 20 9.5 20C8.94772 20 8.5 19.5523 8.5 19C8.5 18.4477 8.94772 18 9.5 18C10.0523 18 10.5 18.4477 10.5 19ZM9.5 6C10.0523 6 10.5 5.55228 10.5 5C10.5 4.44772 10.0523 4 9.5 4C8.94772 4 8.5 4.44772 8.5 5C8.5 5.55228 8.94772 6 9.5 6ZM6 14.5C6 15.0523 5.55228 15.5 5 15.5C4.44772 15.5 4 15.0523 4 14.5C4 13.9477 4.44772 13.5 5 13.5C5.55228 13.5 6 13.9477 6 14.5ZM1.5 15C1.77614 15 2 14.7761 2 14.5C2 14.2239 1.77614 14 1.5 14C1.22386 14 1 14.2239 1 14.5C1 14.7761 1.22386 15 1.5 15ZM11 14.5C11 15.3284 10.3284 16 9.5 16C8.67157 16 8 15.3284 8 14.5C8 13.6716 8.67157 13 9.5 13C10.3284 13 11 13.6716 11 14.5ZM22 12C22 6.47715 17.5228 2 12 2V4C12 9.34375 12 7.58172 12 12C12 16.4183 12 15 12 20V22C17.5228 22 22 17.5228 22 12Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _blurOn!!
+    }
+
+private var _blurOn: ImageVector? = null

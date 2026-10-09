@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.PhoneDisabled: ImageVector
+    get() {
+        if (_phoneDisabled != null) {
+            return _phoneDisabled!!
+        }
+        _phoneDisabled =
+            materialIcon(name = "Filled.PhoneDisabled") {
+            addPath(
+                pathData = PathParser().parsePathString("M17.8519 15.0232L16.4308 13.6022C17.1014 12.7758 17.6913 11.8812 18.1883 10.9305L15.3458 8.30781C14.8223 7.82479 14.5952 7.09978 14.7496 6.40441L15.2351 4.21778C15.3974 3.48678 15.9544 2.90768 16.6786 2.71712L19.8621 1.87934C20.0037 1.8421 20.1495 1.82324 20.2959 1.82324C21.2372 1.82324 22.0002 2.58631 22.0002 3.52761L21.9945 3.98509C21.9869 4.28917 21.9718 4.59145 21.9493 4.89187L21.9047 5.39381L21.8524 5.84545L21.7891 6.29344L21.7436 6.57366L21.7102 6.76313L21.6145 7.25204C21.5565 7.52737 21.4923 7.8003 21.4221 8.07053L21.4055 8.1336L21.2234 8.77494C20.9906 9.54013 20.7081 10.2837 20.3799 11.0018L20.2756 11.2259L20.1217 11.5426L19.9619 11.8558C19.8784 12.0154 19.7926 12.1737 19.7045 12.3305L19.4435 12.7798C18.9697 13.5689 18.4372 14.3188 17.8519 15.0232Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M13.5433 16.3714L0.686523 3.51465L2.10074 2.10043L21.8997 21.8994L20.4855 23.3136L14.971 17.7991C14.1825 18.4061 13.3423 18.9492 12.4581 19.4208L12.08 19.6167L11.6318 19.8344L11.2816 19.9941L10.8167 20.1921L10.1299 20.457L9.94522 20.5227L9.57245 20.6485L9.089 20.7982L8.62817 20.9271L8.15531 21.0457L7.77387 21.1314L7.30389 21.2251L6.86501 21.3009L6.43797 21.3639L5.9078 21.4277L5.50662 21.4655L4.96623 21.5021L4.56162 21.519C4.37519 21.5247 4.18805 21.5276 4.00023 21.5276C3.88263 21.5206 3.766 21.5019 3.65207 21.4719C2.69752 21.2207 2.12739 20.2432 2.37865 19.2886L3.18994 16.2064C3.3805 15.4825 3.95941 14.9256 4.6902 14.7632L6.87684 14.2773C7.57231 14.1227 8.29749 14.3498 8.78061 14.8734L11.4031 17.7157C12.1534 17.3234 12.8688 16.8733 13.5433 16.3714Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _phoneDisabled!!
+    }
+
+private var _phoneDisabled: ImageVector? = null

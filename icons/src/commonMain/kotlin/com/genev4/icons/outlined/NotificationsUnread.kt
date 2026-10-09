@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.NotificationsUnread: ImageVector
+    get() {
+        if (_notificationsUnread != null) {
+            return _notificationsUnread!!
+        }
+        _notificationsUnread =
+            materialIcon(name = "Outlined.NotificationsUnread") {
+            addPath(
+                pathData = PathParser().parsePathString("M12.0001 1C12.7046 1 13.2956 1.48561 13.4567 2.14033C13.8152 2.21088 14.1645 2.307 14.5028 2.42672C14.0043 2.91469 13.6074 3.50613 13.3471 4.16631C12.9158 4.05768 12.4646 4 12.0001 4C9.0349 4 6.61772 6.34657 6.50406 9.31391L6.49208 10.0025C6.42205 12.1976 5.8969 14.3512 4.95331 16.3279L4.86731 16.5H19.1313L19.0445 16.3241C18.2394 14.6377 17.7399 12.8249 17.5678 10.9816C17.7103 10.9938 17.8545 11 18.0001 11C18.5436 11 19.0668 10.9133 19.5567 10.753C19.7296 12.659 20.2966 14.5133 21.2269 16.1963L21.6802 17.0163C21.9473 17.4997 21.772 18.1081 21.2887 18.3752C21.1406 18.4571 20.9742 18.5 20.805 18.5H3.19531C2.64303 18.5 2.19531 18.0523 2.19531 17.5C2.19531 17.3308 2.23824 17.1644 2.32007 17.0163L2.77271 16.1968C3.83449 14.2746 4.4232 12.1294 4.49309 9.9387L4.50014 9.5C4.50014 5.85581 7.09919 2.81867 10.5448 2.14111C10.7041 1.4861 11.2953 1 12.0001 1Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M14.5001 20C14.5001 21.3807 13.3808 22.5 12.0001 22.5C10.6194 22.5 9.50014 21.3807 9.50014 20H14.5001Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M18.0001 9C19.657 9 21.0001 7.65685 21.0001 6C21.0001 4.34315 19.657 3 18.0001 3C16.3433 3 15.0001 4.34315 15.0001 6C15.0001 7.65685 16.3433 9 18.0001 9Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _notificationsUnread!!
+    }
+
+private var _notificationsUnread: ImageVector? = null

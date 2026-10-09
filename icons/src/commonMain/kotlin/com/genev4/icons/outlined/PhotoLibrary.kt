@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.PhotoLibrary: ImageVector
+    get() {
+        if (_photoLibrary != null) {
+            return _photoLibrary!!
+        }
+        _photoLibrary =
+            materialIcon(name = "Outlined.PhotoLibrary") {
+            addPath(
+                pathData = PathParser().parsePathString("M19 3C20.1046 3 21 3.89543 21 5V16C21 17.1046 20.1046 18 19 18H10.3211C10.2433 18.0092 10.1646 18.0139 10.0854 18.0139H9.06976V18H8C6.89543 18 6 17.1046 6 16V5C6 3.89543 6.89543 3 8 3H19ZM12.9281 16H19V15.9289L16 12.9289L12.9281 16ZM19 13.1005L17.4142 11.5147C16.6332 10.7337 15.3668 10.7337 14.5858 11.5147L10.0993 16H8V5H19V13.1005ZM5 17V7H3V17C3 19.2091 4.79086 21 7 21H19V19H7C5.89543 19 5 18.1046 5 17ZM12 7.5C12 8.32843 11.3284 9 10.5 9C9.67157 9 9 8.32843 9 7.5C9 6.67157 9.67157 6 10.5 6C11.3284 6 12 6.67157 12 7.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _photoLibrary!!
+    }
+
+private var _photoLibrary: ImageVector? = null

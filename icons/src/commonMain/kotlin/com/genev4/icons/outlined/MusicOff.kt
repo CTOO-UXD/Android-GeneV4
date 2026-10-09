@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.MusicOff: ImageVector
+    get() {
+        if (_musicOff != null) {
+            return _musicOff!!
+        }
+        _musicOff =
+            materialIcon(name = "Outlined.MusicOff") {
+            addPath(
+                pathData = PathParser().parsePathString("M12.0007 12.0006V12.0005L14.0002 14V14.0002L21.1925 21.1925L19.7783 22.6067L14.0002 16.8286V17C14.0002 19.4853 11.9855 21.5 9.50024 21.5C7.01496 21.5 5.00024 19.4853 5.00024 17C5.00024 14.5147 7.01496 12.5 9.50024 12.5C9.55875 12.5 9.617 12.5011 9.67496 12.5033L1.39355 4.22192L2.80777 2.80771L12.0007 12.0006ZM14.0002 5.286V11.1716L12.0006 9.17189L12.0002 2.5L19.0002 3.5V6L14.0002 5.286ZM9.50024 14.5C8.11953 14.5 7.00024 15.6193 7.00024 17C7.00024 18.3807 8.11953 19.5 9.50024 19.5C10.881 19.5 12.0002 18.3807 12.0002 17C12.0002 15.6193 10.881 14.5 9.50024 14.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _musicOff!!
+    }
+
+private var _musicOff: ImageVector? = null

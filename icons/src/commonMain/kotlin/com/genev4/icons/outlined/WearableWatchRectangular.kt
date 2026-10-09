@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.WearableWatchRectangular: ImageVector
+    get() {
+        if (_wearableWatchRectangular != null) {
+            return _wearableWatchRectangular!!
+        }
+        _wearableWatchRectangular =
+            materialIcon(name = "Outlined.WearableWatchRectangular") {
+            addPath(
+                pathData = PathParser().parsePathString("M9.78078 2C9.32191 2 8.92193 2.3123 8.81063 2.75746L8.49201 4.03195C8.65837 4.01087 8.82792 4 9 4H15C15.1721 4 15.3416 4.01087 15.508 4.03195L15.1894 2.75746C15.0781 2.3123 14.6781 2 14.2192 2H9.78078ZM15.7753 18.8989C17.0564 18.5571 18 17.3888 18 16V8C18 6.61124 17.0564 5.44288 15.7753 5.10114C15.528 5.03517 15.2681 5 15 5H9C8.7319 5 8.47202 5.03517 8.22472 5.10114C6.94364 5.44288 6 6.61124 6 8V16C6 17.3888 6.94364 18.5571 8.22472 18.8989C8.47202 18.9648 8.7319 19 9 19H15C15.2681 19 15.528 18.9648 15.7753 18.8989ZM8.49201 19.968C8.65837 19.9891 8.82792 20 9 20H15C15.1721 20 15.3416 19.9891 15.508 19.968L15.1894 21.2425C15.0781 21.6877 14.6781 22 14.2192 22H9.78078C9.32191 22 8.92193 21.6877 8.81063 21.2425L8.49201 19.968ZM9 7H15C15.5523 7 16 7.44772 16 8V16C16 16.5523 15.5523 17 15 17H9C8.44772 17 8 16.5523 8 16V8C8 7.44772 8.44772 7 9 7Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _wearableWatchRectangular!!
+    }
+
+private var _wearableWatchRectangular: ImageVector? = null

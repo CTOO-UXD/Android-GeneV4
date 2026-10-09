@@ -1,0 +1,57 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.HandWaving: ImageVector
+    get() {
+        if (_handWaving != null) {
+            return _handWaving!!
+        }
+        _handWaving =
+            materialIcon(name = "Outlined.HandWaving") {
+            addPath(
+                pathData = PathParser().parsePathString("M1 6.99951C1 3.6858 3.68629 0.999512 7 0.999512V2.49951C4.51472 2.49951 2.5 4.51423 2.5 6.99951H1Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M23 16.9995H21.5C21.5 19.4848 19.4853 21.4995 17 21.4995V22.9995C20.3137 22.9995 23 20.3132 23 16.9995Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M15.1823 3.16106C14.7918 2.77053 14.1586 2.77053 13.7681 3.16106L7.05014 9.879L8.11071 10.9393C9.08723 11.9156 9.08732 13.4987 8.11093 14.4751L7.50984 15.0762C7.11932 15.4667 7.11932 16.0998 7.50984 16.4904C7.90037 16.8809 8.53353 16.8809 8.92406 16.4904L9.52514 15.8893C11.163 14.2514 11.2744 11.6651 9.85928 9.89829L15.1823 4.57527C15.5728 4.18475 15.5728 3.55158 15.1823 3.16106Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M18.0107 4.57527C18.4012 4.18475 19.0344 4.18475 19.4249 4.57527C19.8155 4.9658 19.8155 5.59896 19.4249 5.98948L12.7074 12.707L11.2932 11.2928L18.0107 4.57527Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M21.8995 14.8287C22.29 14.4382 22.29 13.805 21.8995 13.4145C21.509 13.024 20.8758 13.024 20.4853 13.4145L15.5355 18.3642C14.1131 19.7867 12.1954 20.412 10.3375 20.2405C6.9941 19.9012 4.08814 16.8038 4.08814 13.4168C4.08814 11.107 5.31715 8.49026 7.54591 5.8426C7.90157 5.42008 7.84738 4.78924 7.42486 4.43357C7.00235 4.07791 6.37151 4.1321 6.01584 4.55461C3.51114 7.53009 2.08813 10.5598 2.08813 13.4168C2.08814 15.8481 3.20392 18.1359 4.92895 19.7785C6.39378 21.2433 8.26023 22.0617 10.1741 22.2341C10.4282 22.2587 10.6846 22.2712 10.9425 22.2712C10.9678 22.2712 10.9929 22.2703 11.017 22.2677C13.1664 22.2482 15.3098 21.4184 16.9498 19.7785L21.8995 14.8287Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M21.5463 8.1108C21.1557 7.72028 20.5226 7.72028 20.132 8.1108L14.1216 14.1212L15.5359 15.5354L21.5463 9.52502C21.9368 9.13449 21.9368 8.50133 21.5463 8.1108Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _handWaving!!
+    }
+
+private var _handWaving: ImageVector? = null

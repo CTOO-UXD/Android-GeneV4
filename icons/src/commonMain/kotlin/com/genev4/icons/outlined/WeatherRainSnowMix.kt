@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.WeatherRainSnowMix: ImageVector
+    get() {
+        if (_weatherRainSnowMix != null) {
+            return _weatherRainSnowMix!!
+        }
+        _weatherRainSnowMix =
+            materialIcon(name = "Outlined.WeatherRainSnowMix") {
+            addPath(
+                pathData = PathParser().parsePathString("M16.5941 9.03652L16.9456 10.3724L18.3194 10.5166C19.8251 10.6747 21 11.9515 21 13.5C21 14.5114 20.4995 15.406 19.7326 15.9494C20.0168 16.2506 20.1993 16.6311 20.2577 17.0374C20.4189 17.2523 20.5378 17.5007 20.6022 17.7704C22.0401 16.8922 23 15.3082 23 13.5C23 10.917 21.0414 8.79146 18.5283 8.52757C17.7669 5.63399 15.1326 3.5 12 3.5C9.23508 3.5 6.85843 5.16241 5.81506 7.54223C3.10073 7.87942 1 10.1944 1 13C1 15.4572 2.61134 17.538 4.83499 18.2435L5.88747 16.4466C4.24652 16.1569 3 14.724 3 13C3 11.2161 4.33636 9.74129 6.06161 9.52698L7.19013 9.38679L7.64675 8.34529C8.38282 6.6664 10.0574 5.5 12 5.5C14.2017 5.5 16.0581 6.99972 16.5941 9.03652ZM15.6567 16.5V16.5273V17.1923V17.3226V17.3644V17.5272V17.5283V17.5292V17.5293L14.7426 16.615L14.7426 16.6151L14.7425 16.615L14.7409 16.6166L14.6567 16.7008L14.3688 16.9887L14.1216 17.236L14.0376 17.3199L14.0354 17.3221L14.2427 17.5293L14.7129 17.9996L14.8331 18.1197L14.9487 18.2353H14.9486L14.7858 18.2355L14.6139 18.2356L13.9495 18.2361L13.6567 18.2363V18.2366V18.3577V18.5H13.6568V19.2364L14.9498 19.2354L14.0355 20.1506L14.7426 20.8577L15.6568 19.9424V21.2364H16.6568V19.9434L17.571 20.8577L18.2781 20.1506L17.3638 19.2364H18.6568V18.2364H18.6567V18.2363H18.3636H17.6991H17.5277H17.364H17.3638H17.3637H17.3629L18.2781 17.3222L17.571 16.615L17.571 16.6151L17.571 16.615L17.3627 16.823L16.8928 17.2925L16.772 17.4132L16.6568 17.5282V16.2364H15.6568V16.5H15.6567ZM6.19775 19.874L8.70996 15.585L10.4357 16.5958L7.92351 20.8848L6.19775 19.874ZM9.57504 20.0312L12.0291 15.6717L13.7719 16.6527L11.3179 21.0122L9.57504 20.0312Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _weatherRainSnowMix!!
+    }
+
+private var _weatherRainSnowMix: ImageVector? = null

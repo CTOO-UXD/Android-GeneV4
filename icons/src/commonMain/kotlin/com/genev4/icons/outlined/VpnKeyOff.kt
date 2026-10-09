@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.VpnKeyOff: ImageVector
+    get() {
+        if (_vpnKeyOff != null) {
+            return _vpnKeyOff!!
+        }
+        _vpnKeyOff =
+            materialIcon(name = "Outlined.VpnKeyOff") {
+            addPath(
+                pathData = PathParser().parsePathString("M9.51867 14.46C10.1045 15.0458 10.1045 15.9955 9.51867 16.5813C8.93288 17.1671 7.98313 17.1671 7.39735 16.5813C6.81156 15.9955 6.81156 15.0458 7.39735 14.46C7.98313 13.8742 8.93288 13.8742 9.51867 14.46Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M14.2527 17.0809L19.7783 22.6066L21.1925 21.1924L2.80777 2.80762L1.39355 4.22183L6.89716 9.72544C5.91486 9.9891 4.98646 10.5064 4.21561 11.2772C1.87247 13.6203 1.87247 17.4193 4.21561 19.7625C6.55876 22.1056 10.3577 22.1056 12.7009 19.7625C13.4717 18.9916 13.989 18.0632 14.2527 17.0809ZM12.4513 15.2796L8.6985 11.5268C7.59364 11.4606 6.47074 11.8505 5.62982 12.6914C4.06773 14.2535 4.06773 16.7862 5.62982 18.3483C7.19192 19.9104 9.72458 19.9104 11.2867 18.3483C12.1276 17.5073 12.5175 16.3844 12.4513 15.2796Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M15.5246 12.6962L15.8829 12.3379L16.2364 12.6914C17.0175 13.4725 18.2838 13.4725 19.0649 12.6914L20.4791 11.2772C21.2597 10.4965 21.2601 9.23101 20.4802 8.44987L20.1255 8.09522L20.4802 7.74057C21.2601 6.95943 21.2597 5.69392 20.4791 4.91324L19.0649 3.49902C18.2838 2.71798 17.0175 2.71797 16.2364 3.49902L11.2819 8.45353L12.6961 9.86774L17.6506 4.91324L19.0649 6.32745L17.2971 8.09522L19.0649 9.86298L17.6506 11.2772L15.8829 9.50943L14.1104 11.282L15.5246 12.6962Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _vpnKeyOff!!
+    }
+
+private var _vpnKeyOff: ImageVector? = null

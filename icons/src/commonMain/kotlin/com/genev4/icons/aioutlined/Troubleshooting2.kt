@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Troubleshooting2: ImageVector
+    get() {
+        if (_troubleshooting2 != null) {
+            return _troubleshooting2!!
+        }
+        _troubleshooting2 =
+            materialIcon(name = "AiOutlined.Troubleshooting2") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.4667 2 14.8542 2.3 16.1625 2.9C17.4708 3.5 18.6 4.35 19.55 5.45L12 13V4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20C13.15 20 14.25 19.7625 15.3 19.2875C16.35 18.8125 17.25 18.1333 18 17.25V20C17.1167 20.6333 16.1667 21.125 15.15 21.475C14.1333 21.825 13.0833 22 12 22ZM20 18V10H22V18H20ZM21 22C20.7167 22 20.4792 21.9042 20.2875 21.7125C20.0958 21.5208 20 21.2833 20 21C20 20.7167 20.0958 20.4792 20.2875 20.2875C20.4792 20.0958 20.7167 20 21 20C21.2833 20 21.5208 20.0958 21.7125 20.2875C21.9042 20.4792 22 20.7167 22 21C22 21.2833 21.9042 21.5208 21.7125 21.7125C21.5208 21.9042 21.2833 22 21 22Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _troubleshooting2!!
+    }
+
+private var _troubleshooting2: ImageVector? = null

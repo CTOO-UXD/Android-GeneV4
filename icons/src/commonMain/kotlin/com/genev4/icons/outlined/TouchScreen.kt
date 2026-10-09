@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.TouchScreen: ImageVector
+    get() {
+        if (_touchScreen != null) {
+            return _touchScreen!!
+        }
+        _touchScreen =
+            materialIcon(name = "Outlined.TouchScreen") {
+            addPath(
+                pathData = PathParser().parsePathString("M14.477 20.048L14.5705 20.0129L14.8665 19.8882L15.1166 19.7696L15.3227 19.6627L15.5297 19.5469L15.7254 19.4274L15.8909 19.3199L16.0623 19.2013L16.3302 19.0008L16.537 18.831C16.6784 18.7105 16.8161 18.5834 16.9497 18.4497L17.1055 18.2889C18.2804 17.0368 18.9999 15.3525 18.9999 13.5V10C18.9999 9.48716 19.386 9.06449 19.8833 9.00673L19.9999 9C20.5522 9 20.9999 9.44772 20.9999 10V13.5C20.9999 16.1601 19.8459 18.5507 18.0111 20.1983L17.7256 20.4446L17.5983 20.5473C17.1779 20.8827 16.7339 21.1747 16.2727 21.4234L16.0568 21.536L15.8345 21.6443L15.6336 21.7363L15.3731 21.8455C14.4476 22.2209 13.4449 22.4461 12.3956 22.4915L11.9999 22.5C9.6895 22.4902 7.37369 21.6004 5.59413 19.8195C3.3264 17.2564 2.60936 14.8507 2.50129 10.525C2.48849 10.0123 2.86385 9.58012 3.35959 9.50995L3.47601 9.50031C4.02812 9.48652 4.48688 9.92291 4.50067 10.475L4.52689 11.2293C4.68183 14.6346 5.30838 16.4785 7.05018 18.4498C8.41701 19.8166 10.2085 20.5 11.9999 20.5C12.2092 20.5 12.4162 20.4908 12.6207 20.4728C12.8136 20.4555 13.0061 20.4305 13.1975 20.3974L13.4431 20.3504L13.537 20.33L13.6843 20.2954C13.8401 20.257 13.9948 20.2131 14.1481 20.1638L14.477 20.048ZM7.99995 1.5C8.55223 1.5 8.99995 1.94772 8.99995 2.5V14H6.99995V2.5C6.99995 1.98716 7.38599 1.56449 7.88333 1.50673L7.99995 1.5ZM11.9999 7C12.5522 7 12.9999 7.44772 12.9999 8V12.5H10.9999V8C10.9999 7.48716 11.386 7.06449 11.8833 7.00673L11.9999 7ZM15.9999 8C16.5522 8 16.9999 8.44772 16.9999 9V12.5H14.9999V9C14.9999 8.48716 15.386 8.06449 15.8833 8.00673L15.9999 8Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _touchScreen!!
+    }
+
+private var _touchScreen: ImageVector? = null

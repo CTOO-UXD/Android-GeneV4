@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.FeatureSearch: ImageVector
+    get() {
+        if (_featureSearch != null) {
+            return _featureSearch!!
+        }
+        _featureSearch =
+            materialIcon(name = "Outlined.FeatureSearch") {
+            addPath(
+                pathData = PathParser().parsePathString("M16 11.9995C17.0191 11.9995 17.967 11.6946 18.7574 11.1711L21.293 13.7067L22.7072 12.2925L20.1716 9.7569C20.6951 8.96647 21 8.01859 21 6.99951C21 4.23809 18.7614 1.99951 16 1.99951C13.2386 1.99951 11 4.23809 11 6.99951C11 9.76094 13.2386 11.9995 16 11.9995ZM16 9.99951C17.6569 9.99951 19 8.65637 19 6.99951C19 5.34266 17.6569 3.99951 16 3.99951C14.3431 3.99951 13 5.34266 13 6.99951C13 8.65637 14.3431 9.99951 16 9.99951Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M6 3.99951H9.67363C9.37829 4.62122 9.1719 5.29337 9.07089 5.99951H6C4.89543 5.99951 4 6.89494 4 7.99951V17.9995C4 19.1041 4.89543 19.9995 6 19.9995H16C17.1046 19.9995 18 19.1041 18 17.9995V13.7091C18.1186 13.6738 18.2359 13.6354 18.3519 13.594L20 15.2422V17.9995C20 20.2087 18.2091 21.9995 16 21.9995H6C3.79086 21.9995 2 20.2087 2 17.9995V7.99951C2 5.79037 3.79086 3.99951 6 3.99951Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _featureSearch!!
+    }
+
+private var _featureSearch: ImageVector? = null

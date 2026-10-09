@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.VideocamOff: ImageVector
+    get() {
+        if (_videocamOff != null) {
+            return _videocamOff!!
+        }
+        _videocamOff =
+            materialIcon(name = "Outlined.VideocamOff") {
+            addPath(
+                pathData = PathParser().parsePathString("M6.999 6.9999L21.1924 21.1924L19.7782 22.6066L16.9381 19.7668C16.6583 19.9157 16.339 20 16 20H3C1.89543 20 1 19.1046 1 18V7.00001C1 6.14238 1.53981 5.41084 2.29819 5.12661L1.3934 4.22183L2.80761 2.80762L6.999 6.9999ZM4.171 6.99962L3 7.00001V18L15.172 17.9996L8.171 10.9996L5 11V9.00001L6.171 8.99962L4.171 6.99962ZM16 5.00001C17.1046 5.00001 18 5.89544 18 7.00001V9.22601L21.5211 7.30665C22.006 7.04219 22.6134 7.22085 22.8779 7.7057C22.958 7.85258 23 8.01723 23 8.18455V16.8155C23 17.3677 22.5523 17.8155 22 17.8155C21.8327 17.8155 21.668 17.7735 21.5211 17.6934L19.32 16.4919L16 13.1719V7.00001L9.827 6.9999L7.827 4.9999L16 5.00001ZM21 9.86801L18 11.503V13.493L21 15.131V9.86801Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _videocamOff!!
+    }
+
+private var _videocamOff: ImageVector? = null

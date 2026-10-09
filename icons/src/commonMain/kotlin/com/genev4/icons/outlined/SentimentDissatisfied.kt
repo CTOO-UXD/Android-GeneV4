@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.SentimentDissatisfied: ImageVector
+    get() {
+        if (_sentimentDissatisfied != null) {
+            return _sentimentDissatisfied!!
+        }
+        _sentimentDissatisfied =
+            materialIcon(name = "Outlined.SentimentDissatisfied") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4182 7.58174 20 12 20C16.4182 20 20 16.4182 20 12C20 7.58174 16.4182 4 12 4ZM12 13.1608C13.6083 13.1608 15.1564 13.6075 16.5165 14.4417C16.6918 14.5492 16.8637 14.663 17.0317 14.7827L15.8708 16.4114C15.7403 16.3183 15.6069 16.23 15.4708 16.1465C14.422 15.5033 13.2351 15.1608 12 15.1608C10.7707 15.1608 9.58913 15.5001 8.54387 16.1375C8.40351 16.2232 8.26591 16.314 8.13133 16.4098L6.97109 14.7808C7.14428 14.6574 7.32152 14.5404 7.5025 14.4301C8.8581 13.6033 10.3993 13.1608 12 13.1608ZM8 7.99998C8.55228 7.99998 9 8.67155 9 9.49998C9 10.3284 8.55228 11 8 11C7.44771 11 7 10.3284 7 9.49998C7 8.67155 7.44771 7.99998 8 7.99998ZM16 7.99998C16.5523 7.99998 17 8.67155 17 9.49998C17 10.3284 16.5523 11 16 11C15.4478 11 15 10.3284 15 9.49998C15 8.67155 15.4478 7.99998 16 7.99998Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _sentimentDissatisfied!!
+    }
+
+private var _sentimentDissatisfied: ImageVector? = null

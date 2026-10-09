@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.SimSetting: ImageVector
+    get() {
+        if (_simSetting != null) {
+            return _simSetting!!
+        }
+        _simSetting =
+            materialIcon(name = "Outlined.SimSetting") {
+            addPath(
+                pathData = PathParser().parsePathString("M19.1352 13.6519C19.0111 14.3058 19.1941 14.9098 19.6552 15.1761C20.1171 15.4428 20.7331 15.2982 21.2373 14.8632L21.1961 14.8188C21.7487 15.3663 22.1397 16.0399 22.349 16.7651C21.7128 16.982 21.275 17.4452 21.275 17.9816C21.275 18.5224 21.7203 18.9889 22.3633 19.2043L22.3775 19.1614C22.2784 19.5384 22.1275 19.909 21.9229 20.2633C21.7371 20.5852 21.5175 20.8754 21.2711 21.1321C20.7598 20.6713 20.1271 20.5146 19.6552 20.787C19.1803 21.0612 19.0005 21.6936 19.1462 22.3686L19.208 22.3544C18.4715 22.5556 17.6836 22.5697 16.922 22.3765C17.0715 21.6973 16.892 21.062 16.4157 20.787C15.977 20.5338 15.3995 20.6514 14.9106 21.0363L14.79 21.138L14.6745 21.0163C14.2049 20.4929 13.8714 19.8717 13.6888 19.2091C14.3427 18.9972 14.7959 18.5272 14.7959 17.9816C14.7959 17.4407 14.3506 16.9742 13.7076 16.7588L13.702 16.774L13.741 16.6405C13.8369 16.3413 13.9662 16.0474 14.1299 15.764C14.3262 15.424 14.5601 15.1194 14.8234 14.8523C15.3301 15.2964 15.9509 15.4444 16.4157 15.1761C16.8771 14.9097 17.06 14.305 16.9363 13.6517L16.8448 13.6731C17.5828 13.4713 18.3723 13.4575 19.1352 13.6519ZM16 2C18.2091 2 20 3.79086 20 6L20.0007 12.3417C19.3749 12.1204 18.7015 12 18 12V6C18 4.89543 17.1046 4 16 4H9.829L6 7.829V18C6 19.1046 6.89543 20 8 20L12.3417 20.0007C12.6052 20.746 13.0118 21.4238 13.5286 22.0009L8 22C5.79086 22 4 20.2091 4 18V7L9 2H16ZM18.0264 16.3939C17.1318 16.3939 16.4067 17.1191 16.4067 18.0136C16.4067 18.9082 17.1318 19.6334 18.0264 19.6334C18.921 19.6334 19.6462 18.9082 19.6462 18.0136C19.6462 17.1191 18.921 16.3939 18.0264 16.3939Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _simSetting!!
+    }
+
+private var _simSetting: ImageVector? = null

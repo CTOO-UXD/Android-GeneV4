@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.ForumPrc: ImageVector
+    get() {
+        if (_forumPrc != null) {
+            return _forumPrc!!
+        }
+        _forumPrc =
+            materialIcon(name = "Filled.ForumPrc") {
+            addPath(
+                pathData = PathParser().parsePathString("M8.71663 3.69543C3.98013 3.69543 1 7.43679 1 11.0626C1 14.8351 2.40575 17.5137 6.79888 19.9733L7.04756 20.1089L7.63056 20.4109C7.77945 20.4863 7.94122 20.5672 8.11586 20.6536C8.17264 20.6814 8.23507 20.6957 8.29829 20.6954C8.52512 20.6944 8.70816 20.5096 8.70711 20.2828L8.70542 19.8952L8.70944 19.1611C8.71093 19.0433 8.71283 18.9278 8.71514 18.8146C13.9036 18.8146 16.4907 15.0948 16.4907 11.039C16.4907 6.98328 13.4531 3.69543 8.71663 3.69543ZM17.5667 17.6724C16.6648 17.6724 15.8744 17.5124 15.1956 17.2283C15.6734 16.7221 16.0826 16.1527 16.4175 15.5305C16.7648 15.6236 17.1485 15.6724 17.5667 15.6724L19.5199 15.672L19.5675 15.6324C20.5777 14.7404 20.9614 13.7781 20.9972 12.4184L21 12.2004C21 10.5585 19.6568 9.10371 17.7699 9.00533L17.5657 9.00004C17.4613 9.00004 17.3588 9.00322 17.2582 9.0095C17.0963 8.32465 16.8523 7.6777 16.5347 7.07796C16.8638 7.02674 17.2079 7.00004 17.5657 7.00004C20.9013 7.00004 23 9.64099 23 12.2004C23 14.8633 22.01 16.7541 18.9162 18.4903L18.7411 18.586L18.3305 18.7992L17.9888 18.9705C17.9488 18.9901 17.9048 19.0002 17.8603 19C17.7005 18.9993 17.5716 18.8689 17.5724 18.7088L17.5736 18.4352C17.5739 18.1664 17.5716 17.9122 17.5667 17.6724Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _forumPrc!!
+    }
+
+private var _forumPrc: ImageVector? = null

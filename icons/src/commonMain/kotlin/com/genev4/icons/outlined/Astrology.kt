@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Astrology: ImageVector
+    get() {
+        if (_astrology != null) {
+            return _astrology!!
+        }
+        _astrology =
+            materialIcon(name = "Outlined.Astrology") {
+            addPath(
+                pathData = PathParser().parsePathString("M19 1C21.2091 1 23 2.79086 23 5C23 7.01681 21.5072 8.6838 19.5664 8.95898L18.8643 15.2764C20.1194 15.8082 21 17.0511 21 18.5C21 20.433 19.433 22 17.5 22C15.567 22 14 20.433 14 18.5C14 18.1268 14.0578 17.767 14.166 17.4297L9.7666 14.4199C9.27062 14.7826 8.66151 15 8 15C7.87428 15 7.75057 14.9906 7.62891 14.9756L6.15723 17.9189C6.67788 18.4585 7 19.191 7 20C7 21.6569 5.65685 23 4 23C2.34315 23 1 21.6569 1 20C1 18.3431 2.34315 17 4 17C4.12498 17 4.24817 17.0076 4.36914 17.0225L5.84082 14.0791C5.3213 13.5397 5 12.808 5 12C5 10.3431 6.34315 9 8 9C8.69668 9 9.33649 9.23927 9.8457 9.6377L15.1953 6.23438C15.0692 5.8455 15 5.43089 15 5C15 2.79086 16.7909 1 19 1ZM4 19C3.44772 19 3 19.4477 3 20C3 20.5523 3.44772 21 4 21C4.55228 21 5 20.5523 5 20C5 19.4477 4.55228 19 4 19ZM17.5 17C16.6716 17 16 17.6716 16 18.5C16 19.3284 16.6716 20 17.5 20C18.3284 20 19 19.3284 19 18.5C19 17.6716 18.3284 17 17.5 17ZM10.9209 11.3252C10.9708 11.5423 11 11.7677 11 12C11 12.2664 10.9616 12.5237 10.8965 12.7695L15.2959 15.7803C15.7441 15.4166 16.2844 15.1621 16.876 15.0557L17.5791 8.73828C17.0893 8.55199 16.6454 8.27331 16.2695 7.92188L10.9209 11.3252ZM8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13C8.55228 13 9 12.5523 9 12C9 11.4477 8.55228 11 8 11ZM19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M3 1C4.10457 1 5 1.89543 5 3C5 4.10457 4.10457 5 3 5C1.89543 5 1 4.10457 1 3C1 1.89543 1.89543 1 3 1Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _astrology!!
+    }
+
+private var _astrology: ImageVector? = null

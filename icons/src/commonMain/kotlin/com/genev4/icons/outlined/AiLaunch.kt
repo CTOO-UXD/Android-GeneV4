@@ -1,0 +1,47 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.AiLaunch: ImageVector
+    get() {
+        if (_aiLaunch != null) {
+            return _aiLaunch!!
+        }
+        _aiLaunch =
+            materialIcon(name = "Outlined.AiLaunch") {
+            addPath(
+                pathData = PathParser().parsePathString("M18 10V6.19028C16.4596 7.64901 15.5 9.71293 15.5 12C15.5 15.1619 17.3348 17.8973 20 19.1961V21.3701C16.2046 19.9518 13.5 16.293 13.5 12C13.5 9.27373 14.591 6.80317 16.3588 5H13V3H19C19.5523 3 20 3.44772 20 4V10H18Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M8.46045 5.30766L9.02014 6.62769C9.08737 6.78625 9.21391 6.91225 9.37276 6.97879L10.6903 7.53076C10.8779 7.60934 11 7.79285 11 7.99623C11 8.19886 10.8788 8.38184 10.6922 8.4609L9.37089 9.02081C9.21317 9.08764 9.08762 9.21316 9.02075 9.37086L8.46045 10.6923C8.38137 10.8789 8.19841 11 7.99582 11C7.7924 11 7.60887 10.8779 7.53031 10.6902L6.9788 9.37294C6.91225 9.21398 6.78618 9.08736 6.62751 9.02013L5.30777 8.4609C5.12119 8.38184 5 8.19886 5 7.99623C5 7.79285 5.12208 7.60934 5.30967 7.53076L6.62563 6.97947C6.78543 6.91252 6.9125 6.78542 6.97941 6.62561L7.53031 5.30977C7.60887 5.12213 7.7924 5 7.99582 5C8.19841 5 8.38137 5.12115 8.46045 5.30766Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M5.34285 11.2321L5.67042 12.051C5.72124 12.1781 5.82191 12.2788 5.94896 12.3296L6.76788 12.6572C6.90807 12.7132 7 12.849 7 13C7 13.151 6.90807 13.2868 6.76788 13.3428L5.94896 13.6704C5.82191 13.7212 5.72124 13.8219 5.67042 13.949L5.34285 14.7679C5.28677 14.9081 5.15099 15 5 15C4.84901 15 4.71323 14.9081 4.65715 14.7679L4.32958 13.949C4.27876 13.8219 4.17809 13.7212 4.05104 13.6704L3.23212 13.3428C3.09193 13.2868 3 13.151 3 13C3 12.849 3.09193 12.7132 3.23212 12.6572L4.05104 12.3296C4.17809 12.2788 4.27876 12.1781 4.32958 12.051L4.65715 11.2321C4.71323 11.0919 4.84901 11 5 11C5.15099 11 5.28677 11.0919 5.34285 11.2321Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M9.02014 16.6277L8.46045 15.3077C8.38137 15.1211 8.19841 15 7.99582 15C7.7924 15 7.60887 15.1221 7.53031 15.3098L6.97941 16.6256C6.9125 16.7854 6.78543 16.9125 6.62563 16.9795L5.30967 17.5308C5.12208 17.6093 5 17.7929 5 17.9962C5 18.1989 5.12119 18.3818 5.30777 18.4609L6.62751 19.0201C6.78618 19.0874 6.91225 19.214 6.9788 19.3729L7.53031 20.6902C7.60887 20.8779 7.7924 21 7.99582 21C8.19841 21 8.38137 20.8789 8.46045 20.6923L9.02075 19.3709C9.08762 19.2132 9.21317 19.0876 9.37089 19.0208L10.6922 18.4609C10.8788 18.3818 11 18.1989 11 17.9962C11 17.7929 10.8779 17.6093 10.6903 17.5308L9.37276 16.9788C9.21391 16.9122 9.08737 16.7862 9.02014 16.6277Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _aiLaunch!!
+    }
+
+private var _aiLaunch: ImageVector? = null

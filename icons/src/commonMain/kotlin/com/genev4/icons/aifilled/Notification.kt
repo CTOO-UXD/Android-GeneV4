@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Notification: ImageVector
+    get() {
+        if (_notification != null) {
+            return _notification!!
+        }
+        _notification =
+            materialIcon(name = "AiFilled.Notification") {
+            addPath(
+                pathData = PathParser().parsePathString("M19.5294 18.3186L19.9059 18.8205C20.0618 19.0284 20.0196 19.3234 19.8117 19.4794C19.7303 19.5404 19.6312 19.5735 19.5294 19.5735H4.47059C4.21069 19.5735 4 19.3627 4 19.1029C4 19.001 4.03303 18.9019 4.09412 18.8205L4.47059 18.3186V10.1617C4.47059 6.00335 7.84161 2.63232 12 2.63232C16.1584 2.63232 19.5294 6.00335 19.5294 10.1617V18.3186ZM9.64705 20.5146H14.3529C14.3529 21.8141 13.2995 22.8676 12 22.8676C10.7005 22.8676 9.64705 21.8141 9.64705 20.5146Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _notification!!
+    }
+
+private var _notification: ImageVector? = null

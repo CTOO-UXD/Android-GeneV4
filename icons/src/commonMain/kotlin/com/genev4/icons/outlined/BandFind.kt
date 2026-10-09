@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.BandFind: ImageVector
+    get() {
+        if (_bandFind != null) {
+            return _bandFind!!
+        }
+        _bandFind =
+            materialIcon(name = "Outlined.BandFind") {
+            addPath(
+                pathData = PathParser().parsePathString("M13.9677 1.42447L17.8742 3.31994C17.8742 3.31994 16.9338 3.64688 16.0468 4.12739C15.1598 4.60791 14.9161 5.27509 14.9161 5.27509L10.7184 3.01072C10.7184 3.01072 11.3489 2.34965 12.2496 1.98832C13.1503 1.62699 13.9677 1.42447 13.9677 1.42447ZM13.0623 7.69619L9.59816 5.69619C9.11986 5.42005 8.50827 5.58392 8.23213 6.06222L4.98027 11.6946C4.70413 12.1729 4.868 12.7845 5.34629 13.0606L8.81039 15.0606C9.2184 15.2962 9.7234 15.2116 10.0344 14.8847C9.95328 15.6097 10.016 16.3477 10.2227 17.0526C9.4461 17.3002 8.57193 17.2324 7.81039 16.7927L4.34629 14.7927C2.91142 13.9643 2.41979 12.1295 3.24822 10.6946L6.50008 5.06222C7.32851 3.62734 9.16328 3.13571 10.5982 3.96414L14.0623 5.96414C15.4794 6.7823 15.9764 8.58203 15.1905 10.0087C14.1682 10.066 13.1589 10.4072 12.2908 11.0324L13.4283 9.06222C13.7044 8.58392 13.5406 7.97233 13.0623 7.69619ZM7.53686 17.974L3.30495 15.5557C3.30495 15.5557 2.77699 16.3855 2.49909 17.0862C2.22119 17.787 2.073 18.412 2.073 18.412L6.31213 21.2067C6.31213 21.2067 6.53285 20.3044 6.83624 19.362C7.13964 18.4197 7.53686 17.974 7.53686 17.974ZM17.975 13.0251C19.0961 14.1463 19.2977 15.8388 18.5795 17.1654L20.7071 19.2929L19.293 20.7071L17.1652 18.5796C15.8387 19.2975 14.1463 19.096 13.0252 17.9749C11.6584 16.608 11.6584 14.392 13.0252 13.0251C14.3921 11.6583 16.6081 11.6583 17.975 13.0251ZM16.5608 16.5607C17.1465 15.9749 17.1465 15.0251 16.5608 14.4393C15.975 13.8536 15.0252 13.8536 14.4394 14.4393C13.8537 15.0251 13.8537 15.9749 14.4394 16.5607C15.0252 17.1464 15.975 17.1464 16.5608 16.5607Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _bandFind!!
+    }
+
+private var _bandFind: ImageVector? = null

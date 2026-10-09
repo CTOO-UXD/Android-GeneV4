@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Performance: ImageVector
+    get() {
+        if (_performance != null) {
+            return _performance!!
+        }
+        _performance =
+            materialIcon(name = "Outlined.Performance") {
+            addPath(
+                pathData = PathParser().parsePathString("M18.9369 12.7973C20.8252 14.6164 22 17.171 22 20H20C20 18.0398 19.295 16.2443 18.1247 14.8531L18.9369 12.7973ZM12 10C12.9562 10 13.881 10.1343 14.7567 10.3848L13.3808 12.1188C12.9323 12.0407 12.4709 12 12 12C7.58172 12 4 15.5818 4 20H2C2 14.4772 6.47715 10 12 10ZM19.9916 6.14333C20.2348 6.28371 20.3264 6.5893 20.2005 6.84027L13.6 19.9992H10.269L19.2836 6.31091C19.438 6.07642 19.7485 6.00294 19.9916 6.14333ZM7.27442 2.56412C7.39242 2.61469 7.48645 2.70872 7.53703 2.82673L8.27147 4.54041C8.32204 4.65842 8.41607 4.75245 8.53408 4.80302L10.2478 5.53746C10.5016 5.64624 10.6192 5.94018 10.5104 6.19399C10.4598 6.312 10.3658 6.40603 10.2478 6.45661L8.53408 7.19104C8.41607 7.24162 8.32204 7.33565 8.27147 7.45365L7.53703 9.16734C7.42825 9.42115 7.13431 9.53873 6.8805 9.42995C6.76249 9.37938 6.66846 9.28535 6.61788 9.16734L5.88345 7.45365C5.83287 7.33565 5.73884 7.24162 5.62084 7.19104L3.90715 6.45661C3.65334 6.34783 3.53576 6.05389 3.64454 5.80007C3.69511 5.68207 3.78914 5.58804 3.90715 5.53746L5.62084 4.80302C5.73884 4.75245 5.83287 4.65842 5.88345 4.54041L6.61788 2.82673C6.72666 2.57291 7.0206 2.45534 7.27442 2.56412Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _performance!!
+    }
+
+private var _performance: ImageVector? = null

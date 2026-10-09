@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Inbox: ImageVector
+    get() {
+        if (_inbox != null) {
+            return _inbox!!
+        }
+        _inbox =
+            materialIcon(name = "AiFilled.Inbox") {
+            addPath(
+                pathData = PathParser().parsePathString("M5.024 3.783C5.07336 3.56094 5.19697 3.36234 5.3744 3.21999C5.55184 3.07764 5.77252 3.00004 6 3H18C18.2275 3.00004 18.4482 3.07764 18.6256 3.21999C18.803 3.36234 18.9266 3.56094 18.976 3.783L20.802 12H16.558C16.1695 12.0009 15.7898 12.1155 15.4657 12.3296C15.1416 12.5437 14.8872 12.848 14.734 13.205C14.5035 13.7388 14.1218 14.1934 13.636 14.5128C13.1501 14.8322 12.5814 15.0024 12 15.0024C11.4186 15.0024 10.8499 14.8322 10.364 14.5128C9.8782 14.1934 9.49649 13.7388 9.266 13.205C9.11276 12.848 8.8584 12.5437 8.53428 12.3296C8.21016 12.1155 7.83046 12.0009 7.442 12H3.198L5.024 3.783ZM3 14V19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H19C19.5304 21 20.0391 20.7893 20.4142 20.4142C20.7893 20.0391 21 19.5304 21 19V14H16.57C16.1847 14.8922 15.5466 15.6521 14.7345 16.1859C13.9224 16.7198 12.9718 17.0043 12 17.0043C11.0282 17.0043 10.0776 16.7198 9.26547 16.1859C8.45338 15.6521 7.81533 14.8922 7.43 14H3ZM8 7C8 6.73478 8.10536 6.48043 8.29289 6.29289C8.48043 6.10536 8.73478 6 9 6H15C15.2652 6 15.5196 6.10536 15.7071 6.29289C15.8946 6.48043 16 6.73478 16 7C16 7.26522 15.8946 7.51957 15.7071 7.70711C15.5196 7.89464 15.2652 8 15 8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7ZM8 9C7.73478 9 7.48043 9.10536 7.29289 9.29289C7.10536 9.48043 7 9.73478 7 10C7 10.2652 7.10536 10.5196 7.29289 10.7071C7.48043 10.8946 7.73478 11 8 11H16C16.2652 11 16.5196 10.8946 16.7071 10.7071C16.8946 10.5196 17 10.2652 17 10C17 9.73478 16.8946 9.48043 16.7071 9.29289C16.5196 9.10536 16.2652 9 16 9H8Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _inbox!!
+    }
+
+private var _inbox: ImageVector? = null

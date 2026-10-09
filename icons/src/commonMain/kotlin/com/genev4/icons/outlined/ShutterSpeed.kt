@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.ShutterSpeed: ImageVector
+    get() {
+        if (_shutterSpeed != null) {
+            return _shutterSpeed!!
+        }
+        _shutterSpeed =
+            materialIcon(name = "Outlined.ShutterSpeed") {
+            addPath(
+                pathData = PathParser().parsePathString("M15.0001 3H9.00012V1H15.0001V3Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M18.364 19.364C14.8492 22.8787 9.15076 22.8787 5.63604 19.364C2.12132 15.8492 2.12132 10.1508 5.63604 6.63604C8.91169 3.36039 14.0841 3.13758 17.6178 5.96762L19.0708 4.51465L20.485 5.92886L19.0321 7.3818C21.8624 10.9155 21.6397 16.0882 18.364 19.364ZM9.40009 19.5012C8.54461 19.1596 7.74291 18.6424 7.05025 17.9497C6.19782 17.0973 5.6112 16.0797 5.29039 15H11.9989L9.40009 19.5012ZM16.3302 18.5008C14.6131 19.856 12.4079 20.2924 10.3764 19.8101L13.7313 13.9994L16.3302 18.5008ZM18.9286 12C19.2226 14.0481 18.6084 16.2016 17.0859 17.8098L13.7317 12H18.9286ZM14.598 6.49805C15.4542 6.83969 16.2566 7.35709 16.9497 8.05025C17.8022 8.90268 18.3888 9.92026 18.7096 11H11.9988L14.598 6.49805ZM7.66927 7.49961C9.38586 6.14458 11.5904 5.70784 13.6215 6.1894L10.2672 11.9993L7.66927 7.49961ZM6.91358 8.19073L10.2676 14H5.07137C4.77741 11.9521 5.39148 9.79887 6.91358 8.19073Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _shutterSpeed!!
+    }
+
+private var _shutterSpeed: ImageVector? = null

@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.NoSound: ImageVector
+    get() {
+        if (_noSound != null) {
+            return _noSound!!
+        }
+        _noSound =
+            materialIcon(name = "Filled.NoSound") {
+            addPath(
+                pathData = PathParser().parsePathString("M12.8043 4.22025C12.9314 4.39231 13 4.60059 13 4.81452V19.85C13 20.4023 12.5523 20.85 12 20.85C11.7861 20.85 11.5778 20.7814 11.4057 20.6543L6.233 16.8315L4 16.8323C2.89543 16.8323 2 15.9368 2 14.8323V9.83226C2 8.72769 2.89543 7.83226 4 7.83226L6.233 7.83145L11.4057 4.01025C11.8499 3.68204 12.4761 3.77607 12.8043 4.22025ZM21.0923 8.32402L18.4985 10.9179L15.9063 8.32573L14.4921 9.73994L17.0843 12.3321L14.4936 14.9228L15.9078 16.337L18.4985 13.7463L21.0902 16.3381L22.5045 14.9239L19.9127 12.3321L22.5066 9.73823L21.0923 8.32402Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _noSound!!
+    }
+
+private var _noSound: ImageVector? = null

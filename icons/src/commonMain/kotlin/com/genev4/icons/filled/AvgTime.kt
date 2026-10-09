@@ -1,0 +1,47 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.AvgTime: ImageVector
+    get() {
+        if (_avgTime != null) {
+            return _avgTime!!
+        }
+        _avgTime =
+            materialIcon(name = "Filled.AvgTime") {
+            addPath(
+                pathData = PathParser().parsePathString("M15.0001 2.99963H9.00012V0.999634H15.0001V2.99963Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M17.6178 5.9672L19.0708 4.51416L20.485 5.92837L19.032 7.38136C20.1239 8.74454 20.7614 10.3516 20.9446 11.9996H16.6182L14.8945 8.55242C14.7252 8.21364 14.3789 7.99963 14.0001 7.99963C13.6214 7.99963 13.2751 8.21364 13.1057 8.55242L10.0001 14.7636L8.89455 12.5524C8.72516 12.2136 8.37889 11.9996 8.00012 11.9996H3.05539C3.27321 10.04 4.13343 8.13828 5.63604 6.63567C8.91167 3.36004 14.0841 3.13722 17.6178 5.9672Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M5.63604 19.3636C9.15076 22.8783 14.8492 22.8783 18.364 19.3636C19.8666 17.861 20.7268 15.9592 20.9446 13.9996H16.0001C15.6214 13.9996 15.2751 13.7856 15.1057 13.4468L14.0001 11.2357L10.8945 17.4468C10.7252 17.7856 10.3789 17.9996 10.0001 17.9996C9.62135 17.9996 9.27509 17.7856 9.10569 17.4468L7.38209 13.9996H3.05539C3.27321 15.9592 4.13343 17.861 5.63604 19.3636Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M3.00012 13.0466V12.9526C2.99996 12.984 2.99996 13.0153 3.00012 13.0466Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _avgTime!!
+    }
+
+private var _avgTime: ImageVector? = null

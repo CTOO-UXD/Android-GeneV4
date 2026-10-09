@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.VideoGeneration: ImageVector
+    get() {
+        if (_videoGeneration != null) {
+            return _videoGeneration!!
+        }
+        _videoGeneration =
+            materialIcon(name = "AiOutlined.VideoGeneration") {
+            addPath(
+                pathData = PathParser().parsePathString("M4.3143 20.5353L3.65917 18.8974C3.55752 18.6433 3.35618 18.442 3.10208 18.3403L1.46424 17.6852C1.18385 17.5731 0.999998 17.3015 0.999998 16.9995C0.999998 16.6975 1.18385 16.426 1.46423 16.3138L3.10208 15.6587C3.35618 15.557 3.55752 15.3557 3.65917 15.1016L4.3143 13.4638C4.42646 13.1834 4.69802 12.9995 5 12.9995C5.30198 12.9995 5.57354 13.1834 5.68569 13.4638L6.34083 15.1016C6.44247 15.3557 6.64381 15.557 6.89792 15.6587L8.53576 16.3138C8.81614 16.426 9 16.6975 9 16.9995C9 17.3015 8.81614 17.5731 8.53576 17.6852L6.89792 18.3403C6.64381 18.442 6.44247 18.6433 6.34083 18.8974L5.68569 20.5353C5.57354 20.8157 5.30198 20.9995 5 20.9995C4.69801 20.9995 4.42645 20.8157 4.3143 20.5353Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M18 20C20.2091 20 22 18.2091 22 16L22 8C22 5.79087 20.2091 4 18 4L6 4C3.79086 4 2 5.79086 2 8L2 11.8027C2.60738 11.4513 3.28208 11.2034 4 11.083L4 8C4 6.89543 4.89543 6 6 6L18 6C19.1046 6 20 6.89543 20 8L20 16C20 17.1046 19.1046 18 18 18L10.917 18C10.7966 18.7179 10.5487 19.3926 10.1973 20L18 20Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M14.625 11.35C15.125 11.6387 15.125 12.3604 14.625 12.649L11.25 14.5976C10.75 14.8863 10.125 14.5254 10.125 13.9481L10.125 10.051C10.125 9.47361 10.75 9.11276 11.25 9.40144L14.625 11.35Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _videoGeneration!!
+    }
+
+private var _videoGeneration: ImageVector? = null

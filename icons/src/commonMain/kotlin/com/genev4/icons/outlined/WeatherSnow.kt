@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.WeatherSnow: ImageVector
+    get() {
+        if (_weatherSnow != null) {
+            return _weatherSnow!!
+        }
+        _weatherSnow =
+            materialIcon(name = "Outlined.WeatherSnow") {
+            addPath(
+                pathData = PathParser().parsePathString("M4.18279 17.5861L2.91 16.3134L6.223 13H2V11H6.223L2.91 7.68665L4.18279 6.41386L8.769 11H11V8.768L6.41386 4.18279L7.68665 2.91L11 6.223V2H13V6.223L16.3134 2.91L17.5861 4.18279L13 8.768V11H15.23L19.8161 6.41386L21.0889 7.68665L17.775 11H22V13H17.775L21.0889 16.3134L19.8161 17.5861L15.23 13H13V15.23L17.5861 19.8161L16.3134 21.0889L13 17.776V22H11V17.774L7.68665 21.0889L6.41386 19.8161L11 15.228V13H8.767L4.18279 17.5861Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _weatherSnow!!
+    }
+
+private var _weatherSnow: ImageVector? = null

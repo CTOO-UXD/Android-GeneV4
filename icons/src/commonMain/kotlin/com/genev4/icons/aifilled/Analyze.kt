@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Analyze: ImageVector
+    get() {
+        if (_analyze != null) {
+            return _analyze!!
+        }
+        _analyze =
+            materialIcon(name = "AiFilled.Analyze") {
+            addPath(
+                pathData = PathParser().parsePathString("M4.62602 8.878C5.0248 7.92756 5.60572 7.06434 6.33602 6.337C7.06366 5.60659 7.92722 5.02567 8.87802 4.627C10.8375 3.81293 13.0378 3.79822 15.008 4.586C15.0278 5.23347 15.2991 5.84776 15.7644 6.29846C16.2296 6.74917 16.8522 7.00082 17.5 7C18.886 7 20 5.886 20 4.5C20 3.114 18.886 2 17.5 2C16.811 2 16.188 2.276 15.737 2.725C13.306 1.752 10.514 1.767 8.10202 2.784C6.91202 3.284 5.84202 4.004 4.92202 4.923C3.9931 5.8522 3.25679 6.95569 2.75536 8.17014C2.25393 9.38459 1.99724 10.6861 2.00002 12H4.00002C4.00002 10.914 4.21102 9.864 4.62602 8.878ZM19.373 15.122C18.972 16.074 18.396 16.93 17.663 17.663C16.93 18.396 16.074 18.972 15.121 19.373C13.1615 20.1871 10.9612 20.2018 8.99102 19.414C8.97126 18.7667 8.70008 18.1526 8.23502 17.7019C7.76997 17.2512 7.14762 16.9994 6.50002 17C5.11402 17 4.00002 18.114 4.00002 19.5C4.00002 20.886 5.11402 22 6.50002 22C7.18902 22 7.81202 21.724 8.26302 21.275C9.45078 21.7537 10.7194 21.9998 12 22C13.9666 22.0042 15.8907 21.4272 17.5305 20.3416C19.1703 19.256 20.4528 17.7101 21.217 15.898C21.7363 14.6642 22.0026 13.3386 22 12H20C20.0023 13.0722 19.7891 14.1339 19.373 15.122Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M11.9999 7.46201C9.49791 7.46201 7.46191 9.49801 7.46191 12C7.46191 14.502 9.49791 16.538 11.9999 16.538C14.5019 16.538 16.5379 14.502 16.5379 12C16.5379 9.49801 14.5019 7.46201 11.9999 7.46201Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _analyze!!
+    }
+
+private var _analyze: ImageVector? = null

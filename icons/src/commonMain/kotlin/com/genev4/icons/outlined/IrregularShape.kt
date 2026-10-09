@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.IrregularShape: ImageVector
+    get() {
+        if (_irregularShape != null) {
+            return _irregularShape!!
+        }
+        _irregularShape =
+            materialIcon(name = "Outlined.IrregularShape") {
+            addPath(
+                pathData = PathParser().parsePathString("M7 3H9V5H7C5.89543 5 5 5.89543 5 7V9H3V7C3 4.79086 4.79086 3 7 3ZM19 7V9H21V7C21 4.79086 19.2091 3 17 3H15V5H17C18.1046 5 19 5.89543 19 7ZM17 19H15V21H17C19.2091 21 21 19.2091 21 17V15H19V17C19 18.1046 18.1046 19 17 19ZM5 17V15H3V17C3 19.2091 4.79086 21 7 21H9V19H7C5.89543 19 5 18.1046 5 17ZM14.0401 5.39258L14.9684 7.16408C14.8093 7.24745 14.6565 7.34128 14.5108 7.44493C13.1606 8.40542 12.5298 10.1137 12.9659 11.7412C13.62 14.182 12.6741 16.7439 10.6485 18.1848C10.4292 18.3408 10.1993 18.482 9.95992 18.6074L9.0316 16.8359C9.19069 16.7526 9.34347 16.6587 9.48919 16.5551C10.8394 15.5946 11.4702 13.8863 11.0341 12.2588C10.38 9.81795 11.3259 7.25609 13.3515 5.81519C13.5708 5.65922 13.8007 5.518 14.0401 5.39258Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _irregularShape!!
+    }
+
+private var _irregularShape: ImageVector? = null

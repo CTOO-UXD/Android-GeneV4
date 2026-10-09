@@ -53,6 +53,7 @@ configurations.configureEach {
 
 dependencies {
     implementation(project(":library"))
+    implementation(project(":icons"))
     implementation(libs.activity.compose)
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)

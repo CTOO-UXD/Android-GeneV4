@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.PersonOff: ImageVector
+    get() {
+        if (_personOff != null) {
+            return _personOff!!
+        }
+        _personOff =
+            materialIcon(name = "Outlined.PersonOff") {
+            addPath(
+                pathData = PathParser().parsePathString("M14.6755 10.7247C14.4423 10.8727 14.196 11.0019 13.9388 11.1102L12.3125 9.48392C13.8225 9.32763 15 8.05132 15 6.5C15 4.84315 13.6568 3.5 12 3.5C10.4487 3.5 9.17236 4.6775 9.01607 6.18749L7.38978 4.5612C8.14705 2.76267 9.92606 1.5 12 1.5C14.7614 1.5 17 3.73858 17 6.5C17 8.27728 16.0727 9.83798 14.6755 10.7247Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M15.958 13.1294C18.376 14.019 19.6593 15.7329 20.3247 17.4961L15.958 13.1294Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M9.83737 12.6655L0.686279 3.5144L2.10049 2.10019L21.8995 21.8992L20.4853 23.3134L18.6719 21.5H4.99999C3.89542 21.5 2.97994 20.5993 3.15235 19.5083C3.55507 16.9599 4.91491 13.8436 9.01439 12.8332C9.27729 12.7684 9.55146 12.7123 9.83737 12.6655ZM11.6757 14.5038C9.08066 14.5655 7.62553 15.3679 6.76047 16.2482C5.89109 17.1329 5.41596 18.3024 5.18411 19.5H16.6719L11.6757 14.5038Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _personOff!!
+    }
+
+private var _personOff: ImageVector? = null

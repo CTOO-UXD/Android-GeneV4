@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.BatteryError: ImageVector
+    get() {
+        if (_batteryError != null) {
+            return _batteryError!!
+        }
+        _batteryError =
+            materialIcon(name = "Outlined.BatteryError") {
+            addPath(
+                pathData = PathParser().parsePathString("M10.5 1.99951C9.94771 1.99951 9.5 2.44723 9.5 2.99951V3.49951H14.5V2.99951C14.5 2.44723 14.0523 1.99951 13.5 1.99951H10.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M6 5.99951C6 4.89494 6.89543 3.99951 8 3.99951H16C17.1046 3.99951 18 4.89494 18 5.99951V12.0825C17.6748 12.0279 17.3407 11.9995 17 11.9995C16.6593 11.9995 16.3252 12.0279 16 12.0825V5.99951H8V19.9995H11.3414C11.6048 20.7448 12.0113 21.4224 12.5278 21.9995H8C6.89543 21.9995 6 21.1041 6 19.9995V5.99951Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M19.1213 14.4641L17 16.5854L14.8787 14.4641L13.4645 15.8783L15.5858 17.9996L13.4645 20.1209L14.8787 21.5352L17 19.4138L19.1213 21.5352L20.5355 20.1209L18.4142 17.9996L20.5355 15.8783L19.1213 14.4641Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _batteryError!!
+    }
+
+private var _batteryError: ImageVector? = null

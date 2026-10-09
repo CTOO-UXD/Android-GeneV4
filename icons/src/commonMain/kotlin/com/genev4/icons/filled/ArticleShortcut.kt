@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.ArticleShortcut: ImageVector
+    get() {
+        if (_articleShortcut != null) {
+            return _articleShortcut!!
+        }
+        _articleShortcut =
+            materialIcon(name = "Filled.ArticleShortcut") {
+            addPath(
+                pathData = PathParser().parsePathString("M2.99988 7C2.99988 4.79086 4.79074 3 6.99988 3H15.9999L20.9999 8V17C20.9999 19.2091 19.209 21 16.9999 21L10.4999 20.9996V17H16.9999V15H10.4999V13H16.9999V11L10.4999 10.9996C10.4999 10.1712 9.82831 9.49963 8.99988 9.49963H2.99988V7ZM18.9999 9H14.9999V5H15.1715L18.9999 8.82843V9ZM6.99988 9H11.9999V7H6.99988V9Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M2.99988 12.9996H5.52625C3.96901 13.7793 2.8999 15.3896 2.8999 17.2496C2.8999 19.873 5.02655 21.9996 7.6499 21.9996V19.9996C6.13112 19.9996 4.8999 18.7684 4.8999 17.2496C4.8999 15.9548 5.79482 14.869 6.99988 14.5769V16.9996H8.99988V10.9996H2.99988V12.9996Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _articleShortcut!!
+    }
+
+private var _articleShortcut: ImageVector? = null

@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.WeatherRain: ImageVector
+    get() {
+        if (_weatherRain != null) {
+            return _weatherRain!!
+        }
+        _weatherRain =
+            materialIcon(name = "Filled.WeatherRain") {
+            addPath(
+                pathData = PathParser().parsePathString("M4.97472 18.2858C2.67916 17.6245 1 15.5084 1 13C1 10.1944 3.10073 7.87942 5.81506 7.54223C6.85843 5.16241 9.23508 3.5 12 3.5C15.1326 3.5 17.7669 5.63399 18.5283 8.52757C21.0414 8.79146 23 10.917 23 13.5C23 16.1017 21.0129 18.2393 18.4736 18.4779L19.1095 17.4085C19.3807 16.9526 19.4596 16.4076 19.3289 15.8935C19.1982 15.3795 18.8687 14.9383 18.4128 14.6672L16.6938 13.6449C15.8416 13.1381 14.7655 13.3376 14.1457 14.0704L13.3221 13.5925C12.8633 13.3263 12.3176 13.2533 11.8049 13.3895C11.4287 13.4894 11.0929 13.6961 10.8356 13.9803L10.0543 13.5262C9.09935 12.9712 7.87522 13.2954 7.32017 14.2504L4.97472 18.2858ZM9.04942 15.2554L9.04932 15.2554L8.0443 16.9845L7.53968 17.8527L7.16347 18.5H7.16361L6.53484 19.5818L8.26399 20.5868L10.7786 16.2603L9.04949 15.2553L9.04942 15.2554ZM12.3185 15.3225L12.3184 15.3224L11.5231 16.6932L11.3147 17.0523L10.8116 17.9195L10.4748 18.5H10.4749L9.80802 19.6494L11.5379 20.6531L14.0485 16.3261L12.3186 15.3224L12.3185 15.3225ZM15.6716 15.364L15.6715 15.3639L14.8297 16.7795L14.6493 17.0829L14.1547 17.9145L13.8065 18.5H13.8067L13.1326 19.6334L14.8516 20.6557L17.3907 16.3861L15.6717 15.3639L15.6716 15.364Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _weatherRain!!
+    }
+
+private var _weatherRain: ImageVector? = null

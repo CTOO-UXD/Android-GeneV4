@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Moo: ImageVector
+    get() {
+        if (_moo != null) {
+            return _moo!!
+        }
+        _moo =
+            materialIcon(name = "Filled.Moo") {
+            addPath(
+                pathData = PathParser().parsePathString("M7.73975 4.16895C8.4301 4.16895 8.98975 3.6093 8.98975 2.91895C8.98975 2.22859 8.4301 1.66895 7.73975 1.66895C7.04939 1.66895 6.48975 2.22859 6.48975 2.91895C6.48975 3.6093 7.04939 4.16895 7.73975 4.16895ZM17.0087 4.20463C17.699 4.20463 18.2587 3.64499 18.2587 2.95463C18.2587 2.26428 17.699 1.70463 17.0087 1.70463C16.3183 1.70463 15.7587 2.26428 15.7587 2.95463C15.7587 3.64499 16.3183 4.20463 17.0087 4.20463ZM21.3222 18.4789L22.6285 20.4469C19.4507 21.5563 15.69 22.4946 12.2069 22.4458C8.72 22.3969 4.93762 21.4091 1.82886 20.1695L3.30823 18.1149L3.45419 16.7416C3.69429 14.5327 3.90355 12.9328 4.08407 11.9314L4.11414 11.7687C4.74925 8.42182 6.05452 4.99804 7.73325 4.99804C8.65223 4.99804 9.39822 5.53808 10.0265 6.52337L10.1602 6.74389L10.3446 6.6937C10.7466 6.5949 11.1749 6.53624 11.6286 6.51673L11.9736 6.50942C12.6085 6.50942 13.2437 6.58141 13.878 6.72468L14.1292 6.78689L14.1627 6.71991C14.7622 5.55499 15.4471 4.89303 16.332 4.82308L16.4902 4.81689C18.1359 4.81689 19.7558 8.12371 20.4221 11.5872C20.7734 13.4127 21.0622 15.5829 21.2896 18.1L21.3222 18.4789ZM15.7737 13.4653C15.7376 14.1547 15.2612 14.6902 14.7097 14.6613C14.1581 14.6324 13.7403 14.0501 13.7765 13.3606C13.8126 12.6712 14.289 12.1358 14.8405 12.1647C15.392 12.1936 15.8099 12.7759 15.7737 13.4653ZM9.28031 14.6761C9.83226 14.6568 10.2602 14.0819 10.2361 13.3919C10.212 12.702 9.74501 12.1583 9.19306 12.1776C8.64112 12.1969 8.2132 12.7718 8.2373 13.4617C8.26139 14.1517 8.72836 14.6953 9.28031 14.6761Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _moo!!
+    }
+
+private var _moo: ImageVector? = null

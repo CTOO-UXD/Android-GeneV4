@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.HandBack: ImageVector
+    get() {
+        if (_handBack != null) {
+            return _handBack!!
+        }
+        _handBack =
+            materialIcon(name = "Outlined.HandBack") {
+            addPath(
+                pathData = PathParser().parsePathString("M20.0001 6C20.5523 6 21.0001 6.44772 21.0001 7V14C21.0001 16.3193 20.0712 18.4216 18.5652 19.9552C18.5499 19.9741 18.5329 19.9925 18.515 20.0104C18.3326 20.1928 18.1424 20.3652 17.9453 20.5276C16.4701 21.7589 14.5716 22.5 12.5001 22.5C10.1189 22.5583 7.71209 21.7295 5.99295 20.0104C3.97274 17.9902 2.83661 14.8416 2.50373 10.9666C2.45646 10.4163 2.86421 9.93192 3.41447 9.88465C3.96473 9.83738 4.44912 10.2451 4.49639 10.7954C4.7926 14.2435 5.77385 16.9629 7.40717 18.5962C9.80211 20.9911 14.0471 21.1265 16.6512 19.0023C18.0862 17.8099 19.0001 16.0117 19.0001 14V7C19.0001 6.44772 19.4478 6 20.0001 6ZM8.00456 3.5C8.28789 3.5 8.52539 3.59583 8.71706 3.7875C8.90873 3.97917 9.00456 4.21667 9.00456 4.5L9.00445 14H7.00006L7.00456 4.5C7.00456 4.21667 7.10039 3.97917 7.29206 3.7875C7.48373 3.59583 7.72122 3.5 8.00456 3.5ZM12.0046 1.5C12.2879 1.5 12.5254 1.59583 12.7171 1.7875C12.9087 1.97917 13.0046 2.21667 13.0046 2.5V12.5H11.0046V2.5C11.0046 2.21667 11.1004 1.97917 11.2921 1.7875C11.4837 1.59583 11.7212 1.5 12.0046 1.5ZM16.0046 2.5C16.2879 2.5 16.5254 2.59583 16.7171 2.7875C16.9087 2.97917 17.0046 3.21667 17.0046 3.5V12.5H15.0046V3.5C15.0046 3.21667 15.1004 2.97917 15.2921 2.7875C15.4837 2.59583 15.7212 2.5 16.0046 2.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _handBack!!
+    }
+
+private var _handBack: ImageVector? = null

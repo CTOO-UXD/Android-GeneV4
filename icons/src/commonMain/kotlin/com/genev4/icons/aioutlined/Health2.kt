@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Health2: ImageVector
+    get() {
+        if (_health2 != null) {
+            return _health2!!
+        }
+        _health2 =
+            materialIcon(name = "AiOutlined.Health2") {
+            addPath(
+                pathData = PathParser().parsePathString("M18.7172 13.2836C17.6825 13.1365 16.685 12.665 15.8891 11.8691L10.7029 6.68299L10.6413 6.62599C8.97536 5.08381 6.37203 5.12269 4.75212 6.7426C3.13298 8.36174 3.09337 10.9634 4.63331 12.6294L4.69138 12.6923L12 20.0009L18.7172 13.2836ZM19.2478 6.7426C20.4594 7.95422 20.7866 9.716 20.2292 11.2242C19.2212 11.5038 18.0957 11.2474 17.3033 10.4549L13.4193 6.5709C15.0872 5.08498 17.6474 5.14222 19.2478 6.7426ZM12.0034 5.15508C12.0023 5.15615 12.0011 5.15722 12 5.15829C9.54849 2.88899 5.7206 2.94569 3.33791 5.32839C0.956335 7.70996 0.898566 11.5354 3.1646 13.987L3.16113 13.9904L10.8107 21.6401C11.4675 22.2968 12.5324 22.2968 13.1892 21.6401L20.8388 13.9904L20.8353 13.987C21.154 13.6422 21.4267 13.2703 21.6535 12.879C21.6719 12.8473 21.69 12.8154 21.7078 12.7834C21.9823 12.2896 22.1849 11.7665 22.3154 11.2295C22.3157 11.2281 22.316 11.2267 22.3164 11.2254M22.3164 11.2254C22.443 10.7025 22.5014 10.1664 22.4915 9.63141C22.4908 9.5918 22.4897 9.5522 22.4882 9.51261C22.4313 7.99237 21.8226 6.48895 20.662 5.32839C18.2804 2.94681 14.4551 2.88904 12.0034 5.15508").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _health2!!
+    }
+
+private var _health2: ImageVector? = null

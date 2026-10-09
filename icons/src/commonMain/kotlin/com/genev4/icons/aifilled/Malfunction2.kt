@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Malfunction2: ImageVector
+    get() {
+        if (_malfunction2 != null) {
+            return _malfunction2!!
+        }
+        _malfunction2 =
+            materialIcon(name = "AiFilled.Malfunction2") {
+            addPath(
+                pathData = PathParser().parsePathString("M7 19H17V21H7V19Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M19 3C20.1046 3 21 3.89543 21 5V16C21 17.1046 20.1046 18 19 18H5C3.89543 18 3 17.1046 3 16V5C3 3.89543 3.89543 3 5 3H19ZM12.2207 6.73926C12.1019 6.61068 11.8981 6.61068 11.7793 6.73926L9.00098 9.74707C8.82424 9.93926 8.96035 10.25 9.22168 10.25H11V14.5H13V10.25H14.7783C15.0397 10.25 15.1758 9.93925 14.999 9.74707L12.2207 6.73926Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _malfunction2!!
+    }
+
+private var _malfunction2: ImageVector? = null

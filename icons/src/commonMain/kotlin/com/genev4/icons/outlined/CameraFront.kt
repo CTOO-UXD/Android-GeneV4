@@ -1,0 +1,47 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.CameraFront: ImageVector
+    get() {
+        if (_cameraFront != null) {
+            return _cameraFront!!
+        }
+        _cameraFront =
+            materialIcon(name = "Outlined.CameraFront") {
+            addPath(
+                pathData = PathParser().parsePathString("M15 7.99951C15 9.65637 13.6569 10.9995 12 10.9995C10.3431 10.9995 9 9.65637 9 7.99951C9 6.34266 10.3431 4.99951 12 4.99951C13.6569 4.99951 15 6.34266 15 7.99951ZM13 7.99951C13 8.5518 12.5523 8.99951 12 8.99951C11.4477 8.99951 11 8.5518 11 7.99951C11 7.44723 11.4477 6.99951 12 6.99951C12.5523 6.99951 13 7.44723 13 7.99951Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M5 16.9995V3.99951C5 2.89494 5.89543 1.99951 7 1.99951H17C18.1046 1.99951 19 2.89494 19 3.99951V16.9995H17C17 16.9995 16.7912 15.8721 15.6057 14.9995C14.8573 14.4487 13.7198 13.9995 12 13.9995C10.2801 13.9995 9.14264 14.4487 8.3943 14.9995C7.21433 15.868 7.00196 16.989 7 16.9994L5 16.9995ZM7 3.99951H17V13.5493C15.8794 12.647 14.2567 11.9995 12 11.9995C9.74331 11.9995 8.12056 12.647 7 13.5493V3.99951Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M9.58475 17.9978L5.00024 17.9978V19.9978L9.58494 19.9978L8.46307 21.1191L9.87693 22.5336L12.7069 19.705C12.8946 19.5175 13 19.263 13 18.9977C13 18.7324 12.8946 18.478 12.7069 18.2904L9.87689 15.4622L8.46311 16.8768L9.58475 17.9978Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M14 19.9995V17.9995H19V19.9995H14Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _cameraFront!!
+    }
+
+private var _cameraFront: ImageVector? = null

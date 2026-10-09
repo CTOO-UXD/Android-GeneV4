@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.HandGesture: ImageVector
+    get() {
+        if (_handGesture != null) {
+            return _handGesture!!
+        }
+        _handGesture =
+            materialIcon(name = "Filled.HandGesture") {
+            addPath(
+                pathData = PathParser().parsePathString("M19 1.09961V2.64453C20.1289 2.9805 21.0191 3.8707 21.3551 4.99959H22.9C22.5023 3.04046 20.9591 1.49729 19 1.09961Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M6 22.9996C3.23858 22.9996 1 20.761 1 17.9996H2.5C2.5 19.9326 4.067 21.4996 6 21.4996V22.9996Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M12 1.5C12.5523 1.5 13 1.94772 13 2.5V11.7502H15V3.5C15 2.94772 15.4477 2.5 16 2.5C16.5523 2.5 17 2.94772 17 3.5V11.7984L19 11.9329V7C19 6.44772 19.4477 6 20 6C20.5522 6 21 6.44772 21 7V14C21 15.6963 20.4404 17.8086 19.0182 19.5152C17.5676 21.2559 15.2798 22.5 12 22.5C8.59246 22.5 6.30163 20.7652 4.8438 18.4744C3.41505 16.2292 2.76409 13.4325 2.50608 11.1104C2.44509 10.5615 2.84063 10.0671 3.38953 10.0061C3.57861 9.98511 3.76122 10.0183 3.92187 10.0932C3.94798 10.1048 3.97594 10.1192 4.00571 10.1372C4.08446 10.1835 4.15661 10.2403 4.22001 10.306C4.32863 10.4103 4.45186 10.5556 4.58865 10.7572C4.89332 11.2063 5.09432 11.685 5.28317 12.1348C5.46076 12.5578 5.62761 12.9552 5.85982 13.2784C6.302 13.8937 6.90894 13.9038 6.99997 13.9017V4.5C6.99997 3.94772 7.44768 3.5 7.99997 3.5C8.55225 3.5 8.99997 3.94772 8.99997 4.5V11.9997L11 11.857V2.5C11 1.94772 11.4477 1.5 12 1.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _handGesture!!
+    }
+
+private var _handGesture: ImageVector? = null

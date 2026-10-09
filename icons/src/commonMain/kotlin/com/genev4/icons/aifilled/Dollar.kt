@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Dollar: ImageVector
+    get() {
+        if (_dollar != null) {
+            return _dollar!!
+        }
+        _dollar =
+            materialIcon(name = "AiFilled.Dollar") {
+            addPath(
+                pathData = PathParser().parsePathString("M19 2C19.7956 2 20.5585 2.3163 21.1211 2.87891C21.6837 3.44152 22 4.20435 22 5V19C22 19.7956 21.6837 20.5585 21.1211 21.1211C20.5585 21.6837 19.7956 22 19 22H5C4.20435 22 3.44152 21.6837 2.87891 21.1211C2.3163 20.5585 2 19.7956 2 19V5C2 4.20435 2.3163 3.44152 2.87891 2.87891C3.44152 2.3163 4.20435 2 5 2H19ZM11 5V7C10.2044 7 9.44152 7.3163 8.87891 7.87891C8.3163 8.44152 8 9.20435 8 10C8 10.7956 8.3163 11.5585 8.87891 12.1211C9.44152 12.6837 10.2044 13 11 13H13C13.2652 13 13.5195 13.1054 13.707 13.293C13.8946 13.4805 14 13.7348 14 14C14 14.2652 13.8946 14.5195 13.707 14.707C13.5195 14.8946 13.2652 15 13 15H8V17H11V19H13V17C13.7956 17 14.5585 16.6837 15.1211 16.1211C15.6837 15.5585 16 14.7956 16 14C16 13.2044 15.6837 12.4415 15.1211 11.8789C14.5585 11.3163 13.7956 11 13 11H11C10.7348 11 10.4805 10.8946 10.293 10.707C10.1054 10.5195 10 10.2652 10 10C10 9.73478 10.1054 9.4805 10.293 9.29297C10.4805 9.10543 10.7348 9 11 9H16V7H13V5H11Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _dollar!!
+    }
+
+private var _dollar: ImageVector? = null

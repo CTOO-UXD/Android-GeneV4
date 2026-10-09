@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.SentimentExcited: ImageVector
+    get() {
+        if (_sentimentExcited != null) {
+            return _sentimentExcited!!
+        }
+        _sentimentExcited =
+            materialIcon(name = "Filled.SentimentExcited") {
+            addPath(
+                pathData = PathParser().parsePathString("M8 12V14C8 15.1 8.39167 16.0417 9.175 16.825C9.95833 17.6083 10.9 18 12 18C13.1 18 14.0417 17.6083 14.825 16.825C15.6083 16.0417 16 15.1 16 14V12H8ZM12 16.5C11.3 16.5 10.7083 16.2583 10.225 15.775C9.74167 15.2917 9.5 14.7 9.5 14V13.5H14.5V14C14.5 14.7 14.2583 15.2917 13.775 15.775C13.2917 16.2583 12.7 16.5 12 16.5ZM8 7C7.36667 7 6.80417 7.22917 6.3125 7.6875C5.82083 8.14583 5.475 8.775 5.275 9.575L6.725 9.925C6.825 9.49167 6.99167 9.14583 7.225 8.8875C7.45833 8.62917 7.71667 8.5 8 8.5C8.28333 8.5 8.54167 8.62917 8.775 8.8875C9.00833 9.14583 9.175 9.49167 9.275 9.925L10.725 9.575C10.525 8.775 10.1792 8.14583 9.6875 7.6875C9.19583 7.22917 8.63333 7 8 7ZM16.005 7C15.3717 7 14.8092 7.22917 14.3175 7.6875C13.8258 8.14583 13.48 8.775 13.28 9.575L14.73 9.925C14.83 9.49167 14.9967 9.14583 15.23 8.8875C15.4633 8.62917 15.7217 8.5 16.005 8.5C16.2883 8.5 16.5467 8.62917 16.78 8.8875C17.0133 9.14583 17.18 9.49167 17.28 9.925L18.73 9.575C18.53 8.775 18.1842 8.14583 17.6925 7.6875C17.2008 7.22917 16.6383 7 16.005 7ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _sentimentExcited!!
+    }
+
+private var _sentimentExcited: ImageVector? = null

@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.MarkChatRead: ImageVector
+    get() {
+        if (_markChatRead != null) {
+            return _markChatRead!!
+        }
+        _markChatRead =
+            materialIcon(name = "Filled.MarkChatRead") {
+            addPath(
+                pathData = PathParser().parsePathString("M20 4C21.1046 4 22 4.89543 22 6V13.5283C20.9385 12.5781 19.5368 12 18 12C17.6576 12 17.3219 12.0289 16.9951 12.084C16.9971 12.0564 17 12.0285 17 12C17 11.7167 16.9046 11.4788 16.7129 11.2871C16.5212 11.0954 16.2833 11 16 11C15.7167 11 15.4788 11.0954 15.2871 11.2871C15.0954 11.4788 15 11.7167 15 12C15 12.2619 15.0823 12.4844 15.2461 12.668C14.9185 12.8375 14.6082 13.036 14.3193 13.2607C12.9079 14.3585 12 16.0734 12 18C12 18.7014 12.1216 19.3743 12.3428 20H7.02246L2 23V6C2 4.89543 2.89543 4 4 4H20ZM22.502 16.1768L17.9277 20.751C17.5372 21.1412 16.9041 21.1413 16.5137 20.751L13.6816 17.9189L15.0957 16.5049L17.2207 18.6299L21.0879 14.7617L22.502 16.1768ZM8 11C7.71667 11 7.47878 11.0954 7.28711 11.2871C7.09544 11.4788 7 11.7167 7 12C7 12.2833 7.09544 12.5212 7.28711 12.7129C7.47878 12.9046 7.71667 13 8 13C8.28333 13 8.52122 12.9046 8.71289 12.7129C8.90456 12.5212 9 12.2833 9 12C9 11.7167 8.90456 11.4788 8.71289 11.2871C8.52122 11.0954 8.28333 11 8 11ZM12 11C11.7167 11 11.4788 11.0954 11.2871 11.2871C11.0954 11.4788 11 11.7167 11 12C11 12.2833 11.0954 12.5212 11.2871 12.7129C11.4788 12.9046 11.7167 13 12 13C12.2833 13 12.5212 12.9046 12.7129 12.7129C12.9046 12.5212 13 12.2833 13 12C13 11.7167 12.9046 11.4788 12.7129 11.2871C12.5212 11.0954 12.2833 11 12 11Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _markChatRead!!
+    }
+
+private var _markChatRead: ImageVector? = null

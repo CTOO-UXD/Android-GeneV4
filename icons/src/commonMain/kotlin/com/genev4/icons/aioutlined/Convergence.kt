@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Convergence: ImageVector
+    get() {
+        if (_convergence != null) {
+            return _convergence!!
+        }
+        _convergence =
+            materialIcon(name = "AiOutlined.Convergence") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 4.12243C14.2452 4.12243 16.0654 5.94258 16.0654 8.18785C16.0654 8.74119 15.9554 9.26711 15.7563 9.74632C14.0884 9.92496 12.5121 10.7882 11.4719 12.2194C10.1921 12.0535 9.09808 11.2924 8.47751 10.2193C8.1324 9.62243 7.93458 8.92977 7.93458 8.18785C7.93458 5.94258 9.75473 4.12243 12 4.12243ZM17.8578 9.88769C18.0143 9.34762 18.0981 8.77709 18.0981 8.18785C18.0981 4.81995 15.3679 2.08972 12 2.08972C8.63209 2.08972 5.90187 4.81995 5.90187 8.18785C5.90187 8.77711 5.98571 9.34767 6.14223 9.88775C5.59632 10.0222 5.06035 10.2349 4.55009 10.5295C1.63339 12.2135 0.634062 15.943 2.31801 18.8597C4.00197 21.7764 7.73152 22.7757 10.6482 21.0918C11.1585 20.7972 11.6107 20.4393 12 20.0338C12.3895 20.4393 12.8416 20.7971 13.3518 21.0917C16.2685 22.7756 19.998 21.7763 21.682 18.8596C23.3659 15.943 22.3666 12.2133 19.4499 10.5294C18.9397 10.2348 18.4037 10.0222 17.8578 9.88769ZM13.1732 18.2846C13.8525 16.7509 13.8932 14.9539 13.1738 13.3375C13.9574 12.312 15.1634 11.7451 16.4031 11.7443C17.0924 11.7439 17.7911 11.9189 18.4335 12.2898C20.378 13.4124 21.0443 15.8989 19.9216 17.8432C18.7989 19.7877 16.3126 20.454 14.3681 19.3313C13.889 19.0547 13.4887 18.6966 13.1732 18.2846ZM11.3545 14.2524C11.8508 15.4437 11.7387 16.7717 11.1195 17.8457C10.7752 18.4429 10.2743 18.9604 9.63186 19.3314C7.6874 20.4541 5.20103 19.7878 4.0784 17.8433C2.95576 15.8989 3.62198 13.4125 5.56644 12.2899C6.04562 12.0132 6.55608 11.8455 7.0706 11.7783C8.05928 13.1335 9.59505 14.0671 11.3545 14.2524Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _convergence!!
+    }
+
+private var _convergence: ImageVector? = null

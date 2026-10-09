@@ -1,0 +1,47 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.AddLink: ImageVector
+    get() {
+        if (_addLink != null) {
+            return _addLink!!
+        }
+        _addLink =
+            materialIcon(name = "Outlined.AddLink") {
+            addPath(
+                pathData = PathParser().parsePathString("M19.6235 11.9089C18.9733 11.6675 18.2699 11.5356 17.5356 11.5356C17.417 11.5356 17.2991 11.5391 17.1822 11.5459L17.8995 10.8285C19.4616 9.26645 19.4616 6.73379 17.8995 5.1717C16.3374 3.6096 13.8047 3.6096 12.2426 5.1717L10.1213 7.29302L8.70711 5.8788L10.8284 3.75748C13.1716 1.41434 16.9706 1.41434 19.3137 3.75748C21.5486 5.99235 21.6518 9.55163 19.6235 11.9089Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M5.87868 8.70723L3.75736 10.8285C1.41421 13.1717 1.41421 16.9707 3.75736 19.3138C5.99227 21.5487 9.55163 21.652 11.9089 19.6235C11.6675 18.9733 11.5356 18.2699 11.5356 17.5356C11.5356 17.417 11.5391 17.2991 11.5459 17.1822L10.8284 17.8996C9.26633 19.4617 6.73367 19.4617 5.17157 17.8996C3.60948 16.3375 3.60948 13.8049 5.17157 12.2428L7.29289 10.1214L5.87868 8.70723Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M7.29289 14.3641L8.70711 15.7783L15.7782 8.70723L14.364 7.29302L7.29289 14.3641Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M16.5356 13.5356V16.5356H13.5356V18.5356H16.5356V21.5356H18.5356V18.5356H21.5356V16.5356H18.5356V13.5356H16.5356Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _addLink!!
+    }
+
+private var _addLink: ImageVector? = null

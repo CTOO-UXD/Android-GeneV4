@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.PayAttention: ImageVector
+    get() {
+        if (_payAttention != null) {
+            return _payAttention!!
+        }
+        _payAttention =
+            materialIcon(name = "Filled.PayAttention") {
+            addPath(
+                pathData = PathParser().parsePathString("M17.5007 2.3286L16.5489 4.54829L14.3292 5.50012L14.2766 5.52583C13.891 5.73935 13.9086 6.31837 14.3292 6.49866L16.5489 7.45048C16.5489 7.45048 17.0874 8.8224 17.5007 9.67018L17.5264 9.72276C17.74 10.1084 18.319 10.0908 18.4993 9.67018L19.4507 7.4501L21.6708 6.49866L21.7234 6.47294C22.109 6.25943 22.0914 5.6804 21.6708 5.50012L19.4507 4.54868L18.4993 2.3286C18.3111 1.88965 17.6889 1.88965 17.5007 2.3286Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M7 2.99939H13.9996C13.3719 3.83505 13 4.87378 13 5.99939C13 6.34186 13.0344 6.67628 13.1 6.99939H7V8.99939H13.9996C14.9118 10.2138 16.3642 10.9994 18 10.9994C19.1256 10.9994 20.1643 10.6274 21 9.99976V16.9994C21 19.2085 19.2091 20.9994 17 20.9994H7C4.79086 20.9994 3 19.2085 3 16.9994V6.99939C3 4.79025 4.79086 2.99939 7 2.99939ZM7 12.9994H17V10.9994H7V12.9994ZM7 16.9994H17V14.9994H7V16.9994Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _payAttention!!
+    }
+
+private var _payAttention: ImageVector? = null

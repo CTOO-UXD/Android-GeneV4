@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Inbox: ImageVector
+    get() {
+        if (_inbox != null) {
+            return _inbox!!
+        }
+        _inbox =
+            materialIcon(name = "AiOutlined.Inbox") {
+            addPath(
+                pathData = PathParser().parsePathString("M19 14H16.5693C16.1843 14.891 15.5472 15.65 14.7363 16.1836C13.924 16.718 12.9724 17.0029 12 17.0029C11.0276 17.0029 10.076 16.718 9.26367 16.1836C8.45278 15.65 7.81574 14.891 7.43066 14H5V19H19V14ZM5.24707 12H7.44141C7.78146 12.0007 8.11491 12.0884 8.41016 12.2539L8.53418 12.3301L8.65234 12.4141C8.91999 12.6205 9.13155 12.8921 9.26562 13.2041L9.3584 13.4004C9.59235 13.8498 9.93803 14.2329 10.3633 14.5127C10.8493 14.8324 11.4183 15.0029 12 15.0029C12.5817 15.0029 13.1507 14.8324 13.6367 14.5127C14.1226 14.193 14.5041 13.7382 14.7344 13.2041C14.8876 12.8476 15.1421 12.544 15.4658 12.3301L15.5898 12.2539C15.8851 12.0884 16.2185 12.0007 16.5586 12H18.7529L17.1973 5H6.80273L5.24707 12ZM16 9C16.5523 9 17 9.44772 17 10C17 10.5523 16.5523 11 16 11H8C7.44772 11 7 10.5523 7 10C7 9.44772 7.44772 9 8 9H16ZM15 6C15.5523 6 16 6.44772 16 7C16 7.55228 15.5523 8 15 8H9C8.44772 8 8 7.55228 8 7C8 6.44772 8.44772 6 9 6H15ZM21 19C21 19.5304 20.7891 20.039 20.4141 20.4141C20.039 20.7891 19.5304 21 19 21H5C4.46957 21 3.96101 20.7891 3.58594 20.4141C3.21087 20.039 3 19.5304 3 19V13C3 12.9271 3.00764 12.8544 3.02344 12.7832L5.02344 3.7832C5.12511 3.32567 5.5313 3 6 3H18C18.4687 3 18.8749 3.32567 18.9766 3.7832L20.9766 12.7832C20.9924 12.8544 21 12.9271 21 13V19Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _inbox!!
+    }
+
+private var _inbox: ImageVector? = null

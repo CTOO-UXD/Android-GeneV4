@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.KeyboardPin: ImageVector
+    get() {
+        if (_keyboardPin != null) {
+            return _keyboardPin!!
+        }
+        _keyboardPin =
+            materialIcon(name = "Outlined.KeyboardPin") {
+            addPath(
+                pathData = PathParser().parsePathString("M19.2758 12.5231L23.5184 16.7658L22.4578 17.8264L21.75 17.1191L19.9829 18.8871C19.5924 19.2776 19.5924 19.9108 19.9829 20.3013L19.2758 21.0084L17.684 19.4171L14.5687 22.5335L13.508 21.4729L16.624 18.3561L15.0331 16.7658L15.7402 16.0587C16.1308 16.4492 16.7639 16.4492 17.1545 16.0587L18.922 14.2901L18.2151 13.5838L19.2758 12.5231ZM20 4C21.1046 4 22 4.89543 22 6L22.0009 13.5286C21.4238 13.0118 20.746 12.6052 20.0007 12.3417L20 6H4V18H12C12 18.7015 12.1204 19.3749 12.3417 20.0007L4 20C2.89543 20 2 19.1046 2 18V6C2 4.89543 2.89543 4 4 4H20ZM19.9829 15.3516L18.2151 17.1193C18.137 17.1974 18.055 17.2693 17.9698 17.3349L17.8255 17.4368L18.604 18.2153L18.6129 18.202C18.6723 18.1137 18.7379 18.0283 18.8098 17.9464L18.9222 17.8264L20.69 16.0587L19.9829 15.3516ZM12.8027 15C12.4513 15.6075 12.2034 16.2822 12.0829 17.0002L8 17V15L12.8027 15ZM7 11V13H5V11H7ZM11 11V13H9V11H11ZM15 11L15 12.8027C14.892 12.8652 14.7861 12.9309 14.6825 12.9998L13 13V11H15ZM19 11L19.0008 12.0831C18.6753 12.0284 18.341 12 18 12C17.6594 12 17.3253 12.0284 17.0002 12.0829L17 11H19ZM7 8V10H5V8H7ZM11 8V10H9V8H11ZM15 8V10H13V8H15ZM19 8V10H17V8H19Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _keyboardPin!!
+    }
+
+private var _keyboardPin: ImageVector? = null

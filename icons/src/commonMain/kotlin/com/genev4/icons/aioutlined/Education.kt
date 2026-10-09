@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aioutlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiOutlined.Education: ImageVector
+    get() {
+        if (_education != null) {
+            return _education!!
+        }
+        _education =
+            materialIcon(name = "AiOutlined.Education") {
+            addPath(
+                pathData = PathParser().parsePathString("M22 8.49947V13.4995M14.217 3.49947C13.5242 3.17061 12.7669 3 12 3C11.2331 3 10.4758 3.17061 9.78301 3.49947L3.50003 6.7458C1.99999 7.5 2 9.5 3.50003 10.4718L9.78201 13.4995C10.475 13.8285 11.2324 13.9992 11.9995 13.9992C12.7666 13.9992 13.5241 13.8285 14.217 13.4995L20.908 10.3625C22.364 9.68047 22.364 7.31847 20.908 6.63647L14.217 3.49947Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M5 11.499V16.624C5 19.542 9.694 20.999 12 20.999C14.306 20.999 19 19.542 19 16.624V11.499").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _education!!
+    }
+
+private var _education: ImageVector? = null

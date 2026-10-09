@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.AppPermissions: ImageVector
+    get() {
+        if (_appPermissions != null) {
+            return _appPermissions!!
+        }
+        _appPermissions =
+            materialIcon(name = "Filled.AppPermissions") {
+            addPath(
+                pathData = PathParser().parsePathString("M17 12.5C18.7949 12.5 20.25 13.9551 20.25 15.75C20.25 17.1831 19.3224 18.3996 18.0348 18.8318L18.034 20H19V21.5H18.034L18.0343 22.5H16.0343L16.034 18.854C14.7108 18.4427 13.75 17.2086 13.75 15.75C13.75 13.9551 15.2051 12.5 17 12.5ZM9 13C10.1046 13 11 13.8954 11 15V19C11 20.1046 10.1046 21 9 21H5C3.89543 21 3 20.1046 3 19V15C3 13.8954 3.89543 13 5 13H9ZM17 14.5C16.3096 14.5 15.75 15.0596 15.75 15.75C15.75 16.4404 16.3096 17 17 17C17.6904 17 18.25 16.4404 18.25 15.75C18.25 15.0596 17.6904 14.5 17 14.5ZM9 3C10.1046 3 11 3.89543 11 5V9C11 10.1046 10.1046 11 9 11H5C3.89543 11 3 10.1046 3 9V5C3 3.89543 3.89543 3 5 3H9ZM19 3C20.1046 3 21 3.89543 21 5V9C21 10.1046 20.1046 11 19 11H15C13.8954 11 13 10.1046 13 9V5C13 3.89543 13.8954 3 15 3H19Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _appPermissions!!
+    }
+
+private var _appPermissions: ImageVector? = null

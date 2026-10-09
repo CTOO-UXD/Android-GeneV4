@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Pdf: ImageVector
+    get() {
+        if (_pdf != null) {
+            return _pdf!!
+        }
+        _pdf =
+            materialIcon(name = "Outlined.Pdf") {
+            addPath(
+                pathData = PathParser().parsePathString("M6.00002 18C6.00002 19.1046 6.89545 20 8.00002 20H16C17.1046 20 18 19.1046 18 18H20C20 20.2091 18.2092 22 16 22H8.00002C5.79088 22 4.00002 20.2091 4.00002 18H6.00002ZM6.96002 11.3C7.42402 11.3 7.82802 11.3827 8.17202 11.548C8.51602 11.7133 8.78136 11.948 8.96802 12.252C9.15469 12.556 9.24802 12.916 9.24802 13.332C9.24802 13.7427 9.15469 14.1013 8.96802 14.408C8.78136 14.7147 8.51602 14.9493 8.17202 15.112C7.82802 15.2747 7.42402 15.356 6.96002 15.356H6.21602V16.9H5.00002V11.3H6.96002ZM12.088 11.3C12.6587 11.3 13.164 11.416 13.604 11.648C14.044 11.88 14.3854 12.2067 14.628 12.628C14.8707 13.0493 14.992 13.54 14.992 14.1C14.992 14.66 14.8707 15.1507 14.628 15.572C14.3854 15.9933 14.044 16.32 13.604 16.552C13.164 16.784 12.6587 16.9 12.088 16.9H10.016V11.3H12.088ZM19.544 11.3V12.34H17.104V13.82H19.224V14.86H17.104V16.9H15.888V11.3H19.544ZM12.032 12.364H11.232V15.836H12.032C12.56 15.836 12.98 15.68 13.292 15.368C13.604 15.056 13.76 14.6333 13.76 14.1C13.76 13.5667 13.6027 13.144 13.288 12.832C12.9734 12.52 12.5547 12.364 12.032 12.364ZM6.89602 12.356H6.21602V14.3H6.89602C7.25869 14.3 7.53602 14.216 7.72802 14.048C7.92002 13.88 8.01602 13.6413 8.01602 13.332C8.01602 13.0173 7.92002 12.776 7.72802 12.608C7.53602 12.44 7.25869 12.356 6.89602 12.356ZM16 2L20 6L19.999 10H17.999L18 7H16C15.4477 7 15 6.55228 15 6V4H8.00002C6.89545 4 6.00002 4.89543 6.00002 6L5.99902 10H3.99902L4.00002 6C4.00002 3.79086 5.79088 2 8.00002 2H16Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _pdf!!
+    }
+
+private var _pdf: ImageVector? = null

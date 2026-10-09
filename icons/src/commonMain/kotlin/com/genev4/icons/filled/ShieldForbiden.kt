@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.ShieldForbiden: ImageVector
+    get() {
+        if (_shieldForbiden != null) {
+            return _shieldForbiden!!
+        }
+        _shieldForbiden =
+            materialIcon(name = "Filled.ShieldForbiden") {
+            addPath(
+                pathData = PathParser().parsePathString("M4.56841 4.87279C3.9233 5.13013 3.45789 5.70373 3.33898 6.38801C3.18766 7.25875 3.02637 8.47036 3.02637 9.67844C3.02637 17.409 8.8954 20.7591 11.1943 21.7709C11.7076 21.9968 12.2923 21.9968 12.8056 21.7709C15.1045 20.7591 20.9735 17.409 20.9735 9.67844C20.9735 8.49098 20.81 7.26878 20.6577 6.38814C20.5392 5.70321 20.0736 5.12892 19.428 4.87138L12.741 2.20387C12.2652 2.01407 11.7347 2.01407 11.2589 2.20387L4.56841 4.87279ZM12 14.1998C13.4912 14.1998 14.7 12.9909 14.7 11.4998C14.7 11.0829 14.6055 10.6882 14.4369 10.3357L10.8359 13.9366C11.1884 14.1053 11.5832 14.1998 12 14.1998ZM13.1641 9.06289L9.56313 12.6638C9.39446 12.3114 9.3 11.9166 9.3 11.4998C9.3 10.0086 10.5088 8.79976 12 8.79976C12.4168 8.79976 12.8116 8.89421 13.1641 9.06289ZM12 15.9998C14.4853 15.9998 16.5 13.985 16.5 11.4998C16.5 9.01447 14.4853 6.99976 12 6.99976C9.51472 6.99976 7.5 9.01447 7.5 11.4998C7.5 13.985 9.51472 15.9998 12 15.9998Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _shieldForbiden!!
+    }
+
+private var _shieldForbiden: ImageVector? = null

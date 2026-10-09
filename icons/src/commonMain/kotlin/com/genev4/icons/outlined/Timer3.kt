@@ -1,0 +1,47 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Timer3: ImageVector
+    get() {
+        if (_timer3 != null) {
+            return _timer3!!
+        }
+        _timer3 =
+            materialIcon(name = "Outlined.Timer3") {
+            addPath(
+                pathData = PathParser().parsePathString("M7.05025 17.9497C9.78392 20.6834 14.2161 20.6834 16.9497 17.9497C19.6834 15.2161 19.6834 10.7839 16.9497 8.05025C14.2161 5.31658 9.78392 5.31658 7.05025 8.05025C4.31658 10.7839 4.31658 15.2161 7.05025 17.9497ZM5.63604 19.364C9.15076 22.8787 14.8492 22.8787 18.364 19.364C21.8787 15.8492 21.8787 10.1508 18.364 6.63604C14.8492 3.12132 9.15076 3.12132 5.63604 6.63604C2.12132 10.1508 2.12132 15.8492 5.63604 19.364Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M17.41 6.17546L19.0708 4.51457L20.4851 5.92879L18.8242 7.58968L17.41 6.17546Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M15.0001 3H9.00012V1H15.0001V3Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M9.36889 10.1603C9.92585 9.55997 10.7613 9.2634 11.8752 9.27064C11.8825 9.27064 11.8969 9.27064 11.9186 9.27064C12.83 9.2851 13.5498 9.51657 14.0778 9.96504C14.519 10.3412 14.7396 10.815 14.7396 11.3864C14.7396 11.8204 14.6456 12.1712 14.4575 12.4388C14.3635 12.569 14.2767 12.6703 14.1971 12.7426C14.1248 12.8077 14.0091 12.8945 13.8499 13.003C14.1971 13.1694 14.4756 13.4009 14.6854 13.6974C14.9024 13.994 15.0109 14.3412 15.0109 14.739C15.0109 15.2815 14.8771 15.7155 14.6094 16.041C14.3346 16.381 13.9874 16.6378 13.5678 16.8114C13.0687 17.0212 12.5443 17.126 11.9946 17.126C11.9729 17.126 11.9512 17.126 11.9295 17.126C10.8011 17.1116 9.82097 16.8403 8.98914 16.3123L9.66184 14.9669C10.0814 15.2345 10.4503 15.4154 10.7685 15.5094C11.0868 15.5962 11.4304 15.6432 11.7993 15.6504C11.8138 15.6504 11.8282 15.6504 11.8427 15.6504C12.2261 15.6504 12.5371 15.5853 12.7758 15.4551C13.0651 15.296 13.217 15.0645 13.2315 14.7607C13.246 14.4425 13.1519 14.1965 12.9494 14.0229C12.7324 13.8421 12.3273 13.7481 11.7342 13.7408C11.727 13.7408 11.6763 13.7408 11.5823 13.7408C11.4955 13.7408 11.434 13.7408 11.3978 13.7408C11.2966 13.7408 11.1736 13.7408 11.0289 13.7408V12.5473C11.1881 12.5473 11.3436 12.5473 11.4955 12.5473C11.9874 12.5546 12.3816 12.4425 12.6781 12.211C12.8951 12.0446 13 11.8168 12.9928 11.5274C12.9928 11.2309 12.8951 11.003 12.6998 10.8439C12.4756 10.6558 12.1827 10.5618 11.821 10.5618C11.1555 10.5618 10.6022 10.7462 10.1609 11.1151L9.36889 10.1603Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _timer3!!
+    }
+
+private var _timer3: ImageVector? = null

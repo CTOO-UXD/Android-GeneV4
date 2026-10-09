@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Sql: ImageVector
+    get() {
+        if (_sql != null) {
+            return _sql!!
+        }
+        _sql =
+            materialIcon(name = "AiFilled.Sql") {
+            addPath(
+                pathData = PathParser().parsePathString("M22 8.6668V12.0001C22 14.7616 17.5229 17.0001 12 17.0001C6.47716 17.0001 2 14.7616 2 12.0001V8.6668C2 11.4282 6.47716 13.6668 12 13.6668C17.5229 13.6668 22 11.4282 22 8.6668ZM2 14.2224C2 16.9838 6.47716 19.2224 12 19.2224C17.5229 19.2224 22 16.9838 22 14.2224V17.5557C22 20.3171 17.5229 22.5557 12 22.5557C6.47716 22.5557 2 20.3171 2 17.5557V14.2224ZM12 11.4446C6.47716 11.4446 2 9.206 2 6.44458C2 3.68316 6.47716 1.44458 12 1.44458C17.5229 1.44458 22 3.68316 22 6.44458C22 9.206 17.5229 11.4446 12 11.4446Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _sql!!
+    }
+
+private var _sql: ImageVector? = null

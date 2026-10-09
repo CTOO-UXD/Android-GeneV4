@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Rmb: ImageVector
+    get() {
+        if (_rmb != null) {
+            return _rmb!!
+        }
+        _rmb =
+            materialIcon(name = "Filled.Rmb") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM14.2001 6.41599L15.8087 7.60443L13.6695 10.5H15.5V12.5H13V13.5H15.5V15.5H13V18H11V15.5H8.5V13.5H11V12.5H8.5V10.5H10.3305L8.19127 7.60443L9.79988 6.41599L12 9.39394L14.2001 6.41599Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _rmb!!
+    }
+
+private var _rmb: ImageVector? = null

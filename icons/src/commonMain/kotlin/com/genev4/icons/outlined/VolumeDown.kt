@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.VolumeDown: ImageVector
+    get() {
+        if (_volumeDown != null) {
+            return _volumeDown!!
+        }
+        _volumeDown =
+            materialIcon(name = "Outlined.VolumeDown") {
+            addPath(
+                pathData = PathParser().parsePathString("M15 4.48249C15 4.26856 14.9314 4.06027 14.8043 3.88822C14.4761 3.44404 13.8499 3.35001 13.4057 3.67822L8.233 7.49942L6 7.50023C4.89543 7.50023 4 8.39566 4 9.50023V14.5002C4 15.6048 4.89543 16.5002 6 16.5002L8.233 16.4994L13.4057 20.3222C13.5778 20.4494 13.7861 20.518 14 20.518C14.5523 20.518 15 20.0703 15 19.518V4.48249ZM13 6.46342V17.5354L8.89151 14.4992L6 14.5002V9.50023L8.89194 9.49918L13 6.46342ZM18.2426 7.73978C20.5858 10.0829 20.5858 13.8819 18.2426 16.2251L16.8284 14.8108C18.3905 13.2487 18.3905 10.7161 16.8284 9.15399L18.2426 7.73978Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _volumeDown!!
+    }
+
+private var _volumeDown: ImageVector? = null

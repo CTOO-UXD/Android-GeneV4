@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Ripple: ImageVector
+    get() {
+        if (_ripple != null) {
+            return _ripple!!
+        }
+        _ripple =
+            materialIcon(name = "Filled.Ripple") {
+            addPath(
+                pathData = PathParser().parsePathString("M6.85703 1.65234L8.43941 2.87548C6.03944 5.98035 5.20637 9.51051 6.17869 12.6908C7.37317 16.5978 11.1295 19.3995 16.1304 20.1863L15.8196 22.162C10.1118 21.264 5.70306 17.9757 4.26608 13.2756C3.09189 9.43496 4.08096 5.24378 6.85703 1.65234ZM10.9969 2.91197L12.4278 4.30929C10.1941 6.5967 9.30605 9.23876 10.0039 11.5213C11.0507 14.9453 15.5101 16.958 20.8379 16.3013L21.0826 18.2863C14.8892 19.0497 9.46582 16.6019 8.09129 12.1061C7.15793 9.05318 8.29062 5.68333 10.9969 2.91197ZM16.1486 3.84422L17.1733 5.56178C14.6643 7.05862 13.4108 8.98372 13.8291 10.3519C14.3122 11.9318 17.0329 12.8451 20.5009 12.3271C20.7786 12.2856 21.0583 12.2353 21.3391 12.1761L21.7513 14.1332C21.4319 14.2005 21.1132 14.2578 20.7964 14.3051C16.4699 14.9514 12.7636 13.7073 11.9165 10.9366C11.1666 8.48389 12.942 5.75725 16.1486 3.84422Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _ripple!!
+    }
+
+private var _ripple: ImageVector? = null

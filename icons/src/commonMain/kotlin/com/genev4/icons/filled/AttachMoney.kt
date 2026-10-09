@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.AttachMoney: ImageVector
+    get() {
+        if (_attachMoney != null) {
+            return _attachMoney!!
+        }
+        _attachMoney =
+            materialIcon(name = "Filled.AttachMoney") {
+            addPath(
+                pathData = PathParser().parsePathString("M11 2.99963H13V5.0285C13.5204 5.07171 14.0347 5.16342 14.543 5.30363C15.2903 5.5063 15.93 5.79763 16.462 6.17763L15.74 8.09663C15.1953 7.75463 14.619 7.49497 14.011 7.31763C13.4157 7.1403 12.8393 7.05163 12.282 7.05163C11.37 7.05163 10.686 7.2163 10.23 7.54563C9.78667 7.87497 9.565 8.31197 9.565 8.85663C9.565 9.23663 9.69167 9.54697 9.945 9.78763C10.211 10.0283 10.5403 10.2183 10.933 10.3576C11.3257 10.497 11.8577 10.6553 12.529 10.8326C13.4537 11.0606 14.2137 11.3013 14.809 11.5546C15.417 11.7953 15.93 12.169 16.348 12.6756C16.766 13.1823 16.975 13.8663 16.975 14.7276C16.975 15.4623 16.785 16.1273 16.405 16.7226C16.0377 17.318 15.474 17.793 14.714 18.1476C14.2161 18.38 13.6447 18.5362 13 18.6164V20.9996H11V18.6342C10.3615 18.5706 9.73746 18.4401 9.128 18.2426C8.22867 17.9513 7.51933 17.565 7 17.0836L7.798 15.1646C8.30467 15.5953 8.93167 15.95 9.679 16.2286C10.4263 16.4946 11.1737 16.6276 11.921 16.6276C12.8457 16.6276 13.536 16.4693 13.992 16.1526C14.4607 15.836 14.695 15.418 14.695 14.8986C14.695 14.5186 14.5683 14.2083 14.315 13.9676C14.0617 13.7143 13.7387 13.518 13.346 13.3786C12.9533 13.2393 12.415 13.081 11.731 12.9036C10.781 12.663 10.0083 12.4223 9.413 12.1816C8.83033 11.941 8.32367 11.5673 7.893 11.0606C7.475 10.5413 7.266 9.84463 7.266 8.97063C7.266 8.23597 7.44967 7.57097 7.817 6.97563C8.197 6.36763 8.767 5.8863 9.527 5.53163C9.96365 5.32787 10.4546 5.18263 11 5.09594V2.99963Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _attachMoney!!
+    }
+
+private var _attachMoney: ImageVector? = null

@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Nfc: ImageVector
+    get() {
+        if (_nfc != null) {
+            return _nfc!!
+        }
+        _nfc =
+            materialIcon(name = "Outlined.Nfc") {
+            addPath(
+                pathData = PathParser().parsePathString("M17 5H15.6803C16.4555 6.32031 16.9001 7.85824 16.9001 9.5V10.6411V16.3272C16.9001 17.9308 14.9612 18.7339 13.8273 17.6L11.0001 14.7728V12.2272L15.1001 16.3272V10.6411V9.5C15.1001 7.79203 14.497 6.22492 13.4922 5H7C5.89543 5 5 5.89543 5 7V17C5 18.1046 5.89543 19 7 19H8.31972C7.54446 17.6797 7.09992 16.1418 7.09992 14.5V13.3589L7.09992 7.67279C7.09992 6.06916 9.03878 5.26607 10.1727 6.4L13 9.22724V11.7728L8.89992 7.67279L8.89992 13.3589V14.5C8.89992 16.208 9.503 17.7751 10.5078 19H17C18.1046 19 19 18.1046 19 17V7C19 5.89543 18.1046 5 17 5ZM13.1389 21H17C19.2091 21 21 19.2091 21 17V7C21 4.79086 19.2091 3 17 3H14.0796H10.8611H7C4.79086 3 3 4.79086 3 7V17C3 19.2091 4.79086 21 7 21H9.9204H13.1389Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _nfc!!
+    }
+
+private var _nfc: ImageVector? = null

@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.Folder: ImageVector
+    get() {
+        if (_folder != null) {
+            return _folder!!
+        }
+        _folder =
+            materialIcon(name = "Outlined.Folder") {
+            addPath(
+                pathData = PathParser().parsePathString("M10 3L13 5H18C20.2091 5 22 6.79086 22 9V16C22 18.2091 20.2091 20 18 20H6C3.79086 20 2 18.2091 2 16V7C2 4.79086 3.79086 3 6 3H10ZM9.394 5H6C4.89543 5 4 5.89543 4 7V9H20C20 7.89543 19.1046 7 18 7H12.3944L9.394 5ZM20 11H4V16C4 17.1046 4.89543 18 6 18H18C19.1046 18 20 17.1046 20 16V11Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _folder!!
+    }
+
+private var _folder: ImageVector? = null

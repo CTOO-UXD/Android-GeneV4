@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 AI icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_ai_icons.py
+ */
+
+package com.genev4.icons.aifilled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.AiFilled.Wrench: ImageVector
+    get() {
+        if (_wrench != null) {
+            return _wrench!!
+        }
+        _wrench =
+            materialIcon(name = "AiFilled.Wrench") {
+            addPath(
+                pathData = PathParser().parsePathString("M19.2488 6.87221C19.4896 6.63146 19.8367 6.52969 20.1693 6.60221C20.502 6.67474 20.775 6.91221 20.8937 7.23129C21.8179 9.71627 21.2828 12.6245 19.2827 14.6248C17.3074 16.6001 14.4472 17.1462 11.9817 16.269L7.96898 20.2817C6.7974 21.4533 4.89791 21.4533 3.72634 20.2817C2.55476 19.1101 2.55476 17.2106 3.72634 16.039L7.73903 12.0264C6.86184 9.56086 7.4079 6.70062 9.38319 4.72534C11.38 2.72875 14.2816 2.19203 16.7636 3.10949C17.0833 3.22767 17.3211 3.50092 17.3941 3.83386C17.4669 4.16665 17.3649 4.51341 17.1241 4.75434L14.768 7.11044C14.1825 7.69617 14.1825 8.64605 14.768 9.23176C15.3537 9.81746 16.3035 9.81728 16.8893 9.23176L19.2488 6.87221Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _wrench!!
+    }
+
+private var _wrench: ImageVector? = null

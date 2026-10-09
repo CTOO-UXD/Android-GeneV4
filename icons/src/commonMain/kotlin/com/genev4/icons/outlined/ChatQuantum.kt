@@ -1,0 +1,47 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.ChatQuantum: ImageVector
+    get() {
+        if (_chatQuantum != null) {
+            return _chatQuantum!!
+        }
+        _chatQuantum =
+            materialIcon(name = "Outlined.ChatQuantum") {
+            addPath(
+                pathData = PathParser().parsePathString("M7.75662 10.4546C8.442 10.4546 8.9976 10.9973 8.9976 11.6667C8.9976 12.3362 8.442 12.8788 7.75662 12.8788C7.07125 12.8788 6.51564 12.3362 6.51564 11.6667C6.51564 10.9973 7.07125 10.4546 7.75662 10.4546Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M11.7278 10.4546C12.4131 10.4546 12.9687 10.9973 12.9687 11.6667C12.9687 12.3362 12.4131 12.8788 11.7278 12.8788C11.0424 12.8788 10.4868 12.3362 10.4868 11.6667C10.4868 10.9973 11.0424 10.4546 11.7278 10.4546Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M15.6989 10.4546C16.3843 10.4546 16.9399 10.9973 16.9399 11.6667C16.9399 12.3362 16.3843 12.8788 15.6989 12.8788C15.0135 12.8788 14.4579 12.3362 14.4579 11.6667C14.4579 10.9973 15.0135 10.4546 15.6989 10.4546Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M19.3944 11.645C19.3944 7.42846 15.954 4.00006 11.6975 4.00006C7.44089 4.00006 4.0005 7.42846 4.00049 11.645C4.00049 15.8616 7.44088 19.29 11.6975 19.29C12.8668 19.29 13.8236 19.2347 14.6625 19.187C15.4855 19.1401 16.2421 19.0967 16.9367 19.1374C17.6535 19.1795 18.3349 19.3115 19.0323 19.6263C19.7219 19.9376 20.3777 20.4054 21.0762 21.0565L19.7126 22.5194C19.1191 21.9662 18.6422 21.6445 18.2094 21.4492C17.7844 21.2573 17.3536 21.1653 16.8196 21.134C16.2633 21.1014 15.6303 21.1351 14.7762 21.1837C13.9378 21.2314 12.9298 21.29 11.6975 21.29C6.34763 21.29 2.00049 16.9774 2.00049 11.645C2.0005 6.3126 6.34764 2.00006 11.6975 2.00006C17.0473 2.00006 21.3944 6.3126 21.3944 11.645C21.3944 14.3506 20.3075 17.0258 17.7745 19.2303L16.4615 17.7217C18.5642 15.8916 19.3944 13.764 19.3944 11.645Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _chatQuantum!!
+    }
+
+private var _chatQuantum: ImageVector? = null

@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.WifiProtectedSetup: ImageVector
+    get() {
+        if (_wifiProtectedSetup != null) {
+            return _wifiProtectedSetup!!
+        }
+        _wifiProtectedSetup =
+            materialIcon(name = "Filled.WifiProtectedSetup") {
+            addPath(
+                pathData = PathParser().parsePathString("M15.6749 17.75C15.9582 17.2 16.1749 16.6208 16.3249 16.0125C16.4749 15.4042 16.5499 14.775 16.5499 14.125C16.5499 12.7917 16.2582 11.5708 15.6749 10.4625C15.3169 9.78245 14.8806 9.17299 14.3658 8.63412L12.707 10.2929C12.077 10.9229 10.9999 10.4767 10.9999 9.58579V3C10.9999 2.44772 11.4476 2 11.9999 2H18.5857C19.4766 2 19.9228 3.07714 19.2928 3.70711L17.6701 5.32978C18.1 5.86703 18.4682 6.4571 18.7749 7.1C19.2915 8.18333 19.5499 9.35833 19.5499 10.625C19.5499 12.1417 19.1957 13.5167 18.4874 14.75C17.779 15.9833 16.8415 16.9833 15.6749 17.75Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M9.64102 15.3589C9.13337 14.8217 8.69882 14.2146 8.33735 13.5375C7.74569 12.4292 7.44985 11.2083 7.44985 9.875C7.44985 9.225 7.52902 8.59583 7.68735 7.9875C7.84569 7.37917 8.06652 6.8 8.34985 6.25C7.16652 7.01667 6.22069 8.01667 5.51235 9.25C4.80402 10.4833 4.44985 11.8583 4.44985 13.375C4.44985 14.6417 4.70402 15.8167 5.21235 16.9C5.51549 17.546 5.88531 18.1387 6.32181 18.6781L4.70701 20.2929C4.07704 20.9229 4.52321 22 5.41411 22H11.9999C12.5522 22 12.9999 21.5523 12.9999 21L12.9999 14.4142C12.9999 13.5233 11.9228 13.0771 11.2928 13.7071L9.64102 15.3589Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _wifiProtectedSetup!!
+    }
+
+private var _wifiProtectedSetup: ImageVector? = null

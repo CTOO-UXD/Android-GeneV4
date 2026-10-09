@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.WorldTimeClock: ImageVector
+    get() {
+        if (_worldTimeClock != null) {
+            return _worldTimeClock!!
+        }
+        _worldTimeClock =
+            materialIcon(name = "Filled.WorldTimeClock") {
+            addPath(
+                pathData = PathParser().parsePathString("M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM6.54095 6.88256C6.46214 6.70547 6.35661 6.56455 6.23486 6.4534C7.69029 4.94103 9.73518 4 11.9999 4C13.119 4 14.1845 4.2298 15.1516 4.64478L15.1515 4.64484C14.5983 5.01815 13.8395 5.54727 13.5747 5.91C13.5418 5.95501 13.5056 6.04488 13.4608 6.15629C13.3209 6.50372 13.0967 7.06062 12.6254 7.11976C12.4636 7.14006 12.247 7.12612 12.0174 7.11134L12.0173 7.11134L12.0117 7.11097C11.3902 7.07058 10.5399 7.01606 10.2677 7.75495C10.0949 8.2232 10.0645 9.49445 10.6236 10.1543C10.7131 10.2597 10.7304 10.4547 10.6696 10.6735C10.5897 10.9608 10.4283 11.1356 10.378 11.1717C10.2816 11.1163 10.0893 10.8931 9.95904 10.7412C9.6452 10.3765 9.25371 9.92233 8.74763 9.78176C8.56976 9.73253 8.37482 9.6915 8.18483 9.65151L8.16514 9.64736C7.61606 9.53227 6.99409 9.40134 6.84958 9.09302C6.74415 8.86735 6.74454 8.55597 6.74495 8.22765V8.22764C6.74495 7.8112 6.74495 7.34029 6.54095 6.88256ZM18.2563 16.9859L18.2562 16.9863C17.4158 18.0393 16.3152 18.8754 15.0518 19.3973L15.0518 19.3972C15.1668 18.6467 14.9145 17.9266 14.8113 17.6746C14.5817 17.115 13.8238 16.1582 12.5586 14.8308C12.2209 14.4758 12.2426 14.2035 12.3633 13.3943L12.3772 13.3029C12.4592 12.7486 12.5968 12.4209 14.4619 12.1248C15.4092 11.9746 15.6587 12.3535 16.004 12.8777C16.0422 12.9358 16.0804 12.9928 16.1195 13.0499C16.4467 13.5285 16.6894 13.6388 17.055 13.8051L17.0579 13.8064C17.2224 13.881 17.4277 13.9751 17.7028 14.1314C18.3548 14.504 18.3548 14.9247 18.3548 15.8472V15.9518C18.3548 16.3434 18.3165 16.6872 18.2563 16.9859Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _worldTimeClock!!
+    }
+
+private var _worldTimeClock: ImageVector? = null

@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.SecureFolder: ImageVector
+    get() {
+        if (_secureFolder != null) {
+            return _secureFolder!!
+        }
+        _secureFolder =
+            materialIcon(name = "Outlined.SecureFolder") {
+            addPath(
+                pathData = PathParser().parsePathString("M17 3C19.2091 3 21 4.79086 21 7V17C21 19.14 19.3194 20.8879 17.2061 20.9951L17 21H7L6.79395 20.9951C4.7488 20.8913 3.10865 19.2512 3.00488 17.2061L3 17V7C3 4.79086 4.79086 3 7 3H17ZM7 5C5.89543 5 5 5.89543 5 7V17C5 18.1046 5.89543 19 7 19H17C18.1046 19 19 18.1046 19 17V7C19 5.89543 18.1046 5 17 5H7ZM12 8.5C13.1046 8.5 14 9.39543 14 10.5C14 11.3161 13.5104 12.0162 12.8096 12.3271L14 15.5H10L11.1895 12.3271C10.4891 12.016 10 11.3158 10 10.5C10 9.39543 10.8954 8.5 12 8.5Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _secureFolder!!
+    }
+
+private var _secureFolder: ImageVector? = null

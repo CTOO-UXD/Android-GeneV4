@@ -1,0 +1,37 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Earphone: ImageVector
+    get() {
+        if (_earphone != null) {
+            return _earphone!!
+        }
+        _earphone =
+            materialIcon(name = "Filled.Earphone") {
+            addPath(
+                pathData = PathParser().parsePathString("M15.8 4.38613C14.4265 3.30444 12.789 2.54298 11 2.21434C9.8628 2.00542 8.64806 1.93329 7.5 2.06784C4.9661 2.36479 3 4.51925 3 7.13292C3 8.00057 3.21667 8.81763 3.59886 9.53292C3.67318 9.67201 3.75123 9.80896 3.8293 9.94595C3.90663 10.0816 3.98398 10.2174 4.05774 10.3552L4.21099 10.6419C4.4058 11.0064 4.59985 11.3695 4.79487 11.7286L10.0034 21.3216C10.8622 22.9033 12.8406 23.4893 14.4223 22.6305C16.004 21.7717 16.59 19.7933 15.7313 18.2116L13.5479 14.1903C12.8988 14.1179 12.2718 13.9725 11.6753 13.7624C12.1767 13.6931 12.6641 13.58 13.1335 13.4271L13.1288 13.4186C14.1095 13.0999 15.012 12.6078 15.8 11.9785V4.38613Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M21 8.20504C21 11.2914 19.0926 11.9456 16.7002 11.9787V4.4314C19.0926 4.46447 21 5.11869 21 8.20504Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _earphone!!
+    }
+
+private var _earphone: ImageVector? = null

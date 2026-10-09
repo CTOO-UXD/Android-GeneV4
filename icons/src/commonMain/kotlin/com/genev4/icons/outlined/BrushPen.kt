@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.BrushPen: ImageVector
+    get() {
+        if (_brushPen != null) {
+            return _brushPen!!
+        }
+        _brushPen =
+            materialIcon(name = "Outlined.BrushPen") {
+            addPath(
+                pathData = PathParser().parsePathString("M22.0092 10.757C22.7903 9.97593 22.7903 8.7096 22.0092 7.92856L16.0474 1.96675C15.9849 1.90424 15.9183 1.84595 15.8481 1.79225C14.9707 1.12128 13.7155 1.28864 13.0445 2.16606L10.7213 5.31284C10.4969 5.60626 10.4582 5.98868 10.5952 6.31142C9.54318 6.69459 8.5549 7.22195 7.63281 7.89241C5.28088 9.60251 3.56608 12.0088 3.10791 14.7371L3.059 15.066C2.83082 16.8276 2.16629 18.6209 1.0564 20.4492L0.24292 21.7892L1.80097 21.962C5.32305 22.3527 8.66694 21.8652 11.8151 20.4998C14.7055 19.2462 16.7178 16.8688 17.8422 13.4373C18.1209 13.498 18.4221 13.439 18.6631 13.2547L21.8099 10.9315C21.8801 10.8778 21.9467 10.8195 22.0092 10.757ZM16.1819 12.0007L16.1264 12.2085C15.2091 15.46 13.5106 17.5844 11.0193 18.6649L10.5717 18.8519C8.97102 19.4951 7.3168 19.8881 5.60593 20.0311C6.2382 19.4271 6.7686 18.663 7.25619 17.732C7.52549 17.2178 7.68935 16.7492 7.88582 16.0268L8.07256 15.3476L8.14684 15.109L6.72281 14.6376C6.70788 14.6827 6.69321 14.7285 6.67858 14.7754L6.58983 15.0761L6.37607 15.8569C6.23371 16.3546 6.10931 16.6887 5.92738 17.0361C5.32126 18.1934 4.67871 19.0001 3.81137 19.5207C4.38137 18.2706 4.77025 17.0216 4.97598 15.7742L5.04243 15.3229C5.33514 13.0631 6.77422 10.9895 8.80898 9.51001L9.12676 9.28778C9.9819 8.71313 10.8991 8.28194 11.8814 7.99279L12.1104 7.9292L16.1819 12.0007ZM12.8411 5.83154L14.6488 3.36533L20.6106 9.32714L18.1433 11.1323L12.8411 5.83154Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _brushPen!!
+    }
+
+private var _brushPen: ImageVector? = null

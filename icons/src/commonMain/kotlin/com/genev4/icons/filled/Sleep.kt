@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.Sleep: ImageVector
+    get() {
+        if (_sleep != null) {
+            return _sleep!!
+        }
+        _sleep =
+            materialIcon(name = "Filled.Sleep") {
+            addPath(
+                pathData = PathParser().parsePathString("M15.933 2.80311C14.7258 2.28619 13.3963 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 10.7983 21.788 9.64604 21.3994 8.57867L17.3173 9.27275C16.5172 9.40879 15.7142 9.04785 15.2849 8.35916C15.0744 8.02156 14.9742 7.63803 14.9825 7.25716L13.9441 7.56511L13.9323 7.56863L13.9203 7.572L13.2646 7.75766L12.1749 3.90895L12.8187 3.72667L15.933 2.80311ZM5 11.5C5 12.8807 6.34315 14 8 14C9.65685 14 11 12.8807 11 11.5H9.5C9.5 11.8078 9.09612 12.5 8 12.5C6.90388 12.5 6.5 11.8078 6.5 11.5H5ZM13 11.5C13 12.8807 14.3431 14 16 14C17.6569 14 19 12.8807 19 11.5H17.5C17.5 11.8078 17.0961 12.5 16 12.5C14.9039 12.5 14.5 11.8078 14.5 11.5H13ZM20.0848 4.27675C20.2721 4.01668 20.2735 3.6663 20.0882 3.40478C19.9029 3.14325 19.5719 3.02839 19.2644 3.11891L13.3819 4.85085L13.8056 6.28978L17.5883 5.17606L16.3733 6.86269C16.1955 7.10963 16.1844 7.43958 16.3454 7.69784C16.5065 7.9561 16.8076 8.09146 17.1076 8.04044L22.448 7.13241L22.1966 5.65364L18.6597 6.255L20.0848 4.27675Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _sleep!!
+    }
+
+private var _sleep: ImageVector? = null

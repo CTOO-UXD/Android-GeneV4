@@ -1,0 +1,32 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.filled
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Filled.WeatherPartlyNightThunerstorms: ImageVector
+    get() {
+        if (_weatherPartlyNightThunerstorms != null) {
+            return _weatherPartlyNightThunerstorms!!
+        }
+        _weatherPartlyNightThunerstorms =
+            materialIcon(name = "Filled.WeatherPartlyNightThunerstorms") {
+            addPath(
+                pathData = PathParser().parsePathString("M8.52955 3.57575C8.45535 3.91059 8.35451 4.24031 8.22705 4.561C7.87812 5.43891 7.34448 6.22115 6.67533 6.86067C6.04256 7.46541 5.28653 7.94452 4.44716 8.25616C4.15991 8.36281 3.86596 8.44836 3.56807 8.51284C4.10308 9.03152 4.80284 9.38047 5.58022 9.47448C5.05636 9.79971 4.58219 10.1973 4.17168 10.6533C2.86986 10.1401 1.83521 9.09635 1.33408 7.78849C1.20413 7.44934 1.51851 7.13021 1.88106 7.15186C2.57343 7.1932 3.27387 7.09173 3.92507 6.84995C4.56956 6.61067 5.15133 6.2423 5.63896 5.77627C6.15469 5.28337 6.56513 4.68122 6.83311 4.00698C7.10066 3.33383 7.21648 2.60404 7.17702 1.88208C7.1572 1.51943 7.47789 1.20665 7.81638 1.33829C9.66086 2.05563 10.9743 3.83608 11.0042 5.92709C10.4479 6.12381 9.92183 6.38426 9.43477 6.69955C9.48063 6.4735 9.5047 6.23955 9.5047 5.99997C9.5047 5.06014 9.13404 4.20539 8.52955 3.57575ZM9 19.5C6.51472 19.5 4.5 17.4853 4.5 15C4.5 12.6528 6.29705 10.7253 8.59035 10.5184C9.49732 8.72756 11.3553 7.5 13.5 7.5C16.0215 7.5 18.1466 9.19677 18.796 11.5108C20.8669 11.6623 22.5 13.3904 22.5 15.5C22.5 17.7091 20.7091 19.5 18.5 19.5H17.8572C18.008 19.13 18.0471 18.7171 17.9583 18.3144C17.8085 17.6352 17.3167 17.0826 16.6594 16.8551L16.594 16.8324L16.9236 15.6877C17.1731 14.8212 16.812 13.895 16.0419 13.4261C15.2718 12.9571 14.2832 13.0614 13.6279 13.6808L9.63303 17.4567C9.10386 17.9568 8.88832 18.705 9.07032 19.4101C9.07813 19.4403 9.08663 19.4703 9.09578 19.5H9ZM11.0068 18.9102L15.0017 15.1343L14.1472 18.1019L16.0052 18.745L12.1666 22.4468L12.9563 19.412L11.0068 18.9102Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            }
+        return _weatherPartlyNightThunerstorms!!
+    }
+
+private var _weatherPartlyNightThunerstorms: ImageVector? = null

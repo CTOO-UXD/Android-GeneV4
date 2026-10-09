@@ -59,8 +59,16 @@ import com.genev4.FilledTonalIconButton
 import com.genev4.FilterChip
 import com.genev4.FloatingActionButton
 import com.genev4.HorizontalDivider
+import com.genev4.Icon
 import com.genev4.IconButton
 import com.genev4.InputChip
+import com.genev4.icons.Icons as GeneIcons
+import com.genev4.icons.aifilled.Globe
+import com.genev4.icons.aioutlined.Globe as GlobeOutlined
+import com.genev4.icons.filled.AccountCircle
+import com.genev4.icons.filled.Icon123
+import com.genev4.icons.outlined.AccountCircle as AccountCircleOutlined
+import com.genev4.icons.outlined.Icon123 as Icon123Outlined
 import com.genev4.LargeFloatingActionButton
 import com.genev4.LinearProgressIndicator
 import com.genev4.ListItem
@@ -205,6 +213,18 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                         FilledIconButton(onClick = {}) { Text("填") }
                         FilledTonalIconButton(onClick = {}) { Text("调") }
                         OutlinedIconButton(onClick = {}) { Text("边") }
+                    }
+                }
+            }
+            item {
+                Section("Gene 图标") {
+                    Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                        Icon(GeneIcons.Filled.AccountCircle, contentDescription = "account")
+                        Icon(GeneIcons.Outlined.AccountCircleOutlined, contentDescription = "account outlined")
+                        Icon(GeneIcons.Filled.Icon123, contentDescription = "123")
+                        Icon(GeneIcons.Outlined.Icon123Outlined, contentDescription = "123 outlined")
+                        Icon(GeneIcons.AiFilled.Globe, contentDescription = "globe")
+                        Icon(GeneIcons.AiOutlined.GlobeOutlined, contentDescription = "globe outlined")
                     }
                 }
             }

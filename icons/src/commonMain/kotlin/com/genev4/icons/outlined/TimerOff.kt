@@ -1,0 +1,42 @@
+/*
+ * Generated from Material-3 Gene4.0 Standard icons. Do not edit by hand.
+ * Re-run: python tools/generate-icons/generate_icons.py
+ */
+
+package com.genev4.icons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.PathParser
+import com.genev4.icons.Icons
+import com.genev4.icons.materialIcon
+
+public val Icons.Outlined.TimerOff: ImageVector
+    get() {
+        if (_timerOff != null) {
+            return _timerOff!!
+        }
+        _timerOff =
+            materialIcon(name = "Outlined.TimerOff") {
+            addPath(
+                pathData = PathParser().parsePathString("M9 3H15V1H9V3Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M17.3847 20.2128C13.8598 22.8513 8.84028 22.5683 5.63592 19.364C2.43156 16.1596 2.1486 11.1401 4.78706 7.61519L1.39355 4.22168L2.80777 2.80747L21.1925 21.1922L19.7783 22.6065L17.3847 20.2128ZM6.22035 9.04847C4.35213 11.7743 4.62873 15.5283 7.05013 17.9497C9.47154 20.3712 13.2256 20.6477 15.9514 18.7795C12.467 15.2952 9.71364 12.5418 6.22035 9.04847Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.EvenOdd,
+            )
+            addPath(
+                pathData = PathParser().parsePathString("M16.9496 8.05025C19.0046 10.1052 19.5148 13.1201 18.4802 15.6516L19.9852 17.1567C21.6037 14.0495 21.286 10.1959 19.032 7.3818L20.4849 5.92886L19.0707 4.51465L17.6177 5.96762C14.8036 3.7139 10.9503 3.39624 7.84321 5.01467L9.34825 6.5197C11.8798 5.48508 14.8946 5.99526 16.9496 8.05025Z").toNodes(),
+                fill = SolidColor(Color.Black),
+                pathFillType = PathFillType.NonZero,
+            )
+            }
+        return _timerOff!!
+    }
+
+private var _timerOff: ImageVector? = null
