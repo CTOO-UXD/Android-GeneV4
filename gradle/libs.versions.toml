@@ -3,7 +3,9 @@ agp = "8.5.2"
 kotlin = "2.0.21"
 compileSdk = "34"
 minSdk = "21"
-libraryVersion = "0.2.1"
+# Maven coordinates for :library and :icons (can diverge). Docs sync from these.
+libraryVersion = "0.2.0"
+iconsVersion = "0.2.1"
 
 # Pinned to androidx.compose.material3:material3-android:1.4.0 POM
 composeFoundation = "1.8.1"

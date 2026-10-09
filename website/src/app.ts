@@ -32,11 +32,20 @@ export class Genev4App extends LitElement {
   @state() private path = '/'
   @state() private drawer = false
   @state() private themeOpen = false
+  @state() private iconsReady = false
 
   connectedCallback() {
     super.connectedCallback()
     this.path = normalizePath(window.location.pathname)
     window.addEventListener('popstate', this.onPop)
+    this.ensureIcons()
+  }
+
+  private ensureIcons() {
+    if (this.path !== '/icons' || this.iconsReady) return
+    void import('./icons-page').then(() => {
+      this.iconsReady = true
+    })
   }
 
   disconnectedCallback() {
@@ -47,6 +56,7 @@ export class Genev4App extends LitElement {
   private onPop = () => {
     this.path = normalizePath(window.location.pathname)
     this.drawer = false
+    this.ensureIcons()
   }
 
   private go(path: string, event?: Event) {
@@ -59,6 +69,7 @@ export class Genev4App extends LitElement {
     history.pushState({}, '', href(next === '/' ? '' : next))
     this.path = next
     this.drawer = false
+    this.ensureIcons()
     window.scrollTo({ top: 0 })
     const pane = this.renderRoot?.querySelector('.pane.content-pane .scroll-wrapper')
     if (pane instanceof HTMLElement) pane.scrollTop = 0
@@ -118,6 +129,9 @@ export class Genev4App extends LitElement {
             <md-filled-button href=${href('/getting-started')} @click=${(e: Event) => this.go('/getting-started', e)}>
               Quick start
             </md-filled-button>
+            <md-outlined-button href=${href('/icons')} @click=${(e: Event) => this.go('/icons', e)}>
+              Icons
+            </md-outlined-button>
             <md-outlined-button href=${href('/components/button')} @click=${(e: Event) => this.go('/components/button', e)}>
               Browse components
             </md-outlined-button>
@@ -178,7 +192,8 @@ export class Genev4App extends LitElement {
 
   render() {
     const home = this.path === '/'
-    const doc = home ? null : this.renderDoc()
+    const iconsPage = this.path === '/icons'
+    const doc = home || iconsPage ? null : this.renderDoc()
     const hasToc = !!(doc && doc.toc.length)
 
     return html`
@@ -267,7 +282,15 @@ export class Genev4App extends LitElement {
 
           <div class="pane content-pane">
             <div class="scroll-wrapper">
-              <div class="content-inner">${home ? this.renderHome() : doc!.body}</div>
+              <div class="content-inner">
+                ${home
+                  ? this.renderHome()
+                  : iconsPage
+                    ? this.iconsReady
+                      ? html`<genev4-icons-page></genev4-icons-page>`
+                      : html`<p>正在加载图标…</p>`
+                    : doc!.body}
+              </div>
             </div>
           </div>
         </div>

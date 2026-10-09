@@ -12,6 +12,10 @@ export const navGroups: NavGroup[] = [
     ],
   },
   {
+    title: 'Icons',
+    items: [{ title: '图标', en: 'Icons', path: '/icons' }],
+  },
+  {
     title: 'Components',
     items: [
       { title: '概览', en: 'Overview', path: '/components/' },

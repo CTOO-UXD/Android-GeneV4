@@ -7,7 +7,7 @@ Separate from `:library` (same split as Material Icons Extended vs Material3).
 ## Usage
 
 ```kotlin
-implementation("io.github.ctoo-uxd:genev4-icons:0.2.0")
+implementation("io.github.ctoo-uxd:genev4-icons:0.2.1")
 // 本仓库：implementation(project(":icons"))
 
 Icon(

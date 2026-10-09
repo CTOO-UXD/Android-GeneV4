@@ -2,7 +2,7 @@
 
 包名 `com.genev4`。从首页网格进入单个组件，或从左侧导航浏览。每页顺序：**Types**（真机截图）→ **Usage** → **Spec** → **API**。
 
-先读 [快速开始](/getting-started)，保证界面包在 `MaterialTheme` 内。
+先读 [快速开始](/getting-started)，保证界面包在 `MaterialTheme` 内。图标全集在 [Icons](/icons)。
 
 ## 已文档化
 

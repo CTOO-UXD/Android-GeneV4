@@ -6,7 +6,7 @@
 
 ```kotlin
 implementation("io.github.ctoo-uxd:genev4:0.2.0")
-implementation("io.github.ctoo-uxd:genev4-icons:0.2.0")
+implementation("io.github.ctoo-uxd:genev4-icons:0.2.1")
 ```
 
 Kotlin 包名仍是 `com.genev4`。图标在另一个包里，包名是 `com.genev4.icons`。Maven `groupId` 都是 `io.github.ctoo-uxd`。
@@ -68,19 +68,19 @@ gradlew.bat :icons:publishToMavenCentral
 ```kotlin
 repositories { mavenCentral() }
 implementation("io.github.ctoo-uxd:genev4:0.2.0")
-implementation("io.github.ctoo-uxd:genev4-icons:0.2.0")
+implementation("io.github.ctoo-uxd:genev4-icons:0.2.1")
 ```
 
-图标用法：`Icons.Filled.AccountCircle`、`Icons.Outlined.AccountCircle`（`com.genev4.icons.Icons`）。
+图标用法：`Icons.Filled.AccountCircle`、`Icons.Outlined.AccountCircle`、`Icons.AiFilled.Globe`（`com.genev4.icons.Icons`）。
 
 ## 6. 以后更新（不能覆盖旧版本）
 
 Maven Central 上 版本 一旦 PUBLISHED 就永久存在，改代码后必须升版本。
 
-1. 改 `gradle/libs.versions.toml` 里的 `libraryVersion`
-2. README / 本文档里的坐标版本一并改掉。
-3. 先本地验证：`gradlew.bat :library:publishToMavenLocal` 和 `gradlew.bat :icons:publishToMavenLocal`
-4. 再上传：`gradlew.bat :library:publishToMavenCentral` 和 `gradlew.bat :icons:publishToMavenCentral`
-5. 到 [Deployments](https://central.sonatype.com/publishing/deployments) 等 VALIDATED，点 Publish。等变成 PUBLISHED、`repo1.maven.org` 上能打开该版本，别人才拉得到。
+1. 只改 `gradle/libs.versions.toml`：发组件库改 `libraryVersion`，发图标改 `iconsVersion`。文档和 README 的版本号由 `website` 的 `versions:sync` 自动填，不用手改。
+2. 先本地验证：`gradlew.bat :library:publishToMavenLocal` 和/或 `gradlew.bat :icons:publishToMavenLocal`
+3. 再上传对应的 `publishToMavenCentral`
+4. 到 [Deployments](https://central.sonatype.com/publishing/deployments) 等 VALIDATED，点 Publish。等变成 PUBLISHED、`repo1.maven.org` 上能打开该版本，别人才拉得到。
+5. 推送后 Docs 工作流会跑 `docs:build`，站点上的依赖坐标跟着变成新版本。
 
 不要对同一个版本再跑一遍发布。Token 和 GPG 仍用本机用户环境变量或 `~/.gradle/gradle.properties`，不要写进仓库。

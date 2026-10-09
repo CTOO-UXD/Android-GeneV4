@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "io.github.ctoo-uxd"
-version = libs.versions.libraryVersion.get()
+version = libs.versions.iconsVersion.get()
 
 kotlin {
     androidTarget {
@@ -59,7 +59,7 @@ configurations.configureEach {
 }
 
 mavenPublishing {
-    coordinates("io.github.ctoo-uxd", "genev4-icons", libs.versions.libraryVersion.get())
+    coordinates("io.github.ctoo-uxd", "genev4-icons", libs.versions.iconsVersion.get())
     publishToMavenCentral()
     pom {
         name.set("GeneV4 Icons")

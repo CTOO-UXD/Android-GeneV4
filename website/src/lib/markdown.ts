@@ -1,5 +1,12 @@
 import MarkdownIt from 'markdown-it'
 import { basePath } from '../nav'
+import { ICONS_VERSION, LIBRARY_VERSION } from './versions'
+
+function applyVersions(source: string): string {
+  return source
+    .replaceAll('{{LIBRARY_VERSION}}', LIBRARY_VERSION)
+    .replaceAll('{{ICONS_VERSION}}', ICONS_VERSION)
+}
 
 export type TocItem = { id: string; text: string; level: number }
 
@@ -91,7 +98,7 @@ export function renderMarkdown(
 ): { html: string; toc: TocItem[]; title: string } {
   const toc: TocItem[] = []
   let title = ''
-  const tokens = md.parse(source, {})
+  const tokens = md.parse(applyVersions(source), {})
 
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i]

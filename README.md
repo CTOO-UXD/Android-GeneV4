@@ -70,7 +70,8 @@ gradlew.bat :catalog:assembleDebug
 
 ```kotlin
 implementation("io.github.ctoo-uxd:genev4:0.2.0")
-// 或本仓库：implementation(project(":library"))
+implementation("io.github.ctoo-uxd:genev4-icons:0.2.1")
+// 或本仓库：implementation(project(":library"))、implementation(project(":icons"))
 ```
 
 主题入口为 `com.genev4.MaterialTheme`。

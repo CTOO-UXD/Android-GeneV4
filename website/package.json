@@ -4,8 +4,9 @@
   "type": "module",
   "scripts": {
     "tokens:sync": "node scripts/sync-tokens-from-kotlin.mjs",
-    "docs:dev": "npm run tokens:sync && vite",
-    "docs:build": "npm run tokens:sync && vite build",
+    "versions:sync": "node scripts/sync-versions.mjs",
+    "docs:dev": "npm run versions:sync && npm run tokens:sync && vite",
+    "docs:build": "npm run versions:sync && npm run tokens:sync && vite build",
     "docs:preview": "vite preview"
   },
   "dependencies": {
