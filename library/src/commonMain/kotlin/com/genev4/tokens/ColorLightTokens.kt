@@ -53,12 +53,12 @@ internal object ColorLightTokens {
     val SecondaryContainer = PaletteTokens.Secondary90
     val SecondaryFixed = PaletteTokens.Secondary90
     val SecondaryFixedDim = PaletteTokens.Secondary80
-    val Surface = PaletteTokens.Neutral98
-    val SurfaceBright = PaletteTokens.Neutral98
-    val SurfaceContainer = PaletteTokens.Neutral94
+    val Surface = PaletteTokens.Neutral100
+    val SurfaceBright = PaletteTokens.Neutral100
+    val SurfaceContainer = PaletteTokens.Neutral98
     val SurfaceContainerHigh = PaletteTokens.Neutral92
-    val SurfaceContainerHighest = PaletteTokens.Neutral90
-    val SurfaceContainerLow = PaletteTokens.Neutral96
+    val SurfaceContainerHighest = PaletteTokens.Neutral95
+    val SurfaceContainerLow = PaletteTokens.Neutral99
     val SurfaceContainerLowest = PaletteTokens.Neutral100
     val SurfaceDim = PaletteTokens.Neutral87
     val SurfaceTint = Primary

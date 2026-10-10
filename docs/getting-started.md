@@ -24,13 +24,6 @@ dependencies {
 }
 ```
 
-本仓库内联调试：
-
-```kotlin
-implementation(project(":library"))
-implementation(project(":icons"))
-```
-
 要求：`minSdk` ≥ 21，工程已启用 Jetpack Compose。
 
 ## 2. 包一层 MaterialTheme
