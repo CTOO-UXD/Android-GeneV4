@@ -3,6 +3,7 @@ package com.genev4.catalog
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
 import com.android.ide.common.rendering.api.SessionParams.RenderingMode
+import com.genev4.catalog.docs.AiInputDocsDemo
 import com.genev4.catalog.docs.AppBarDocsDemo
 import com.genev4.catalog.docs.BottomSheetDocsDemo
 import com.genev4.catalog.docs.ButtonDocsDemo
@@ -57,6 +58,17 @@ class DocsSnapshots {
     fun card() {
         paparazzi.snapshot(name = "card") {
             DocsTheme { CardDocsDemo() }
+        }
+    }
+
+    @Test
+    fun aiInput() {
+        // Bottom bar and container states together are taller than a Pixel 5 frame.
+        paparazzi.unsafeUpdateConfig(
+            deviceConfig = DeviceConfig.PIXEL_5.copy(softButtons = false, screenHeight = 4800),
+        )
+        paparazzi.snapshot(name = "ai-input") {
+            DocsTheme { AiInputDocsDemo() }
         }
     }
 

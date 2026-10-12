@@ -17,6 +17,11 @@ set APP_HOME=%DIRNAME%
 @rem Resolve any "." and ".." in APP_HOME to make it shorter.
 for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
 
+@rem This project keeps a JDK 17 for Gradle 8.7. Use it for this script only.
+if exist "%APP_HOME%\.jdk\jdk-17.0.20.1+1\bin\java.exe" (
+    set "JAVA_HOME=%APP_HOME%\.jdk\jdk-17.0.20.1+1"
+)
+
 set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
 
 if defined JAVA_HOME goto findJavaFromJavaHome

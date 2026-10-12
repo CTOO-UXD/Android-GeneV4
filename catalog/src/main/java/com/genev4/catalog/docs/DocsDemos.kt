@@ -21,6 +21,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.unit.dp
+import com.genev4.AiInput
+import com.genev4.AiInputFileAttachment
+import com.genev4.AiInputLayout
+import com.genev4.AiInputPhase
 import com.genev4.AlertDialog
 import com.genev4.AssistChip
 import com.genev4.Badge
@@ -143,6 +147,87 @@ fun CardDocsDemo(modifier: Modifier = Modifier) {
         }
         OutlinedCard(modifier = Modifier.fillMaxWidth()) {
             Text("描边卡片", modifier = Modifier.padding(16.dp))
+        }
+    }
+}
+
+@Composable
+fun AiInputDocsDemo(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier.padding(16.dp).width(600.dp),
+        verticalArrangement = Arrangement.spacedBy(24.dp),
+    ) {
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            AiInput(
+                value = "",
+                onValueChange = {},
+                onSend = {},
+                layout = AiInputLayout.BottomBar,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            AiInput(
+                value = "This is input text",
+                onValueChange = {},
+                onSend = {},
+                layout = AiInputLayout.BottomBar,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            AiInput(
+                value = "",
+                onValueChange = {},
+                onSend = {},
+                phase = AiInputPhase.Listening,
+                layout = AiInputLayout.BottomBar,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            AiInput(
+                value = "Help me find travel inspiration for Italy on a budget.",
+                onValueChange = {},
+                onSend = {},
+                onStop = {},
+                phase = AiInputPhase.Thinking,
+                layout = AiInputLayout.BottomBar,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        }
+        Column(
+            modifier = Modifier.width(360.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            AiInput(
+                value = "",
+                onValueChange = {},
+                onSend = {},
+                layout = AiInputLayout.Container,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            AiInput(
+                value = "This is input text",
+                onValueChange = {},
+                onSend = {},
+                layout = AiInputLayout.Container,
+                modifier = Modifier.fillMaxWidth(),
+                attachments = {
+                    AiInputFileAttachment(name = "File Name", type = "File Type", onRemove = {})
+                },
+            )
+            AiInput(
+                value = "",
+                onValueChange = {},
+                onSend = {},
+                phase = AiInputPhase.Listening,
+                layout = AiInputLayout.Container,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            AiInput(
+                value = "Help me find travel inspiration for Italy on a budget.",
+                onValueChange = {},
+                onSend = {},
+                onStop = {},
+                phase = AiInputPhase.Thinking,
+                layout = AiInputLayout.Container,
+                modifier = Modifier.fillMaxWidth(),
+            )
         }
     }
 }

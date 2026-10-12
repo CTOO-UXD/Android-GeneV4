@@ -86,6 +86,12 @@ APP_BASE_NAME=${0##*/}
 # Discard cd standard output in case $CDPATH is set (https://github.com/gradle/gradle/issues/25036)
 APP_HOME=$( cd "${APP_HOME:-./}" > /dev/null && pwd -P ) || exit
 
+# This project keeps a JDK 17 for Gradle 8.7. Use it for this script only.
+if [ -x "$APP_HOME/.jdk/jdk-17.0.20.1+1/bin/java" ] ; then
+    JAVA_HOME=$APP_HOME/.jdk/jdk-17.0.20.1+1
+    export JAVA_HOME
+fi
+
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD=maximum
 

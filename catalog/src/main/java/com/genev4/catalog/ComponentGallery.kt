@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.input.rememberTextFieldState
@@ -30,6 +31,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.PopupProperties
+import com.genev4.AiInput
+import com.genev4.AiInputFile
+import com.genev4.AiInputLayout
+import com.genev4.AiInputPhase
 import com.genev4.AssistChip
 import com.genev4.BadgedBox
 import com.genev4.Badge
@@ -333,6 +338,20 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                 }
             }
             item {
+                Section("AI 输入") {
+                    Text("底栏 · BottomBar", style = MaterialTheme.typography.labelLarge)
+                    AiInputDemo(
+                        layout = AiInputLayout.BottomBar,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    Text("容器 · Container", style = MaterialTheme.typography.labelLarge)
+                    AiInputDemo(
+                        layout = AiInputLayout.Container,
+                        modifier = Modifier.fillMaxWidth().widthIn(max = 374.dp),
+                    )
+                }
+            }
+            item {
                 Section("下拉") {
                     Box {
                         OutlinedButton(onClick = { menu = true }) { Text("打开菜单") }
@@ -592,6 +611,29 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
             }
         }
     }
+}
+
+@Composable
+private fun AiInputDemo(layout: AiInputLayout, modifier: Modifier = Modifier) {
+    var text by remember { mutableStateOf("") }
+    var phase by remember { mutableStateOf(AiInputPhase.Text) }
+    var files by remember { mutableStateOf(emptyList<AiInputFile>()) }
+    AiInput(
+        value = text,
+        onValueChange = { text = it },
+        onSend = { phase = AiInputPhase.Thinking },
+        onStop = { phase = AiInputPhase.Text },
+        onClear = { text = "" },
+        onMicClick = {
+            phase =
+                if (phase == AiInputPhase.Listening) AiInputPhase.Text else AiInputPhase.Listening
+        },
+        phase = phase,
+        layout = layout,
+        files = files,
+        onFilesChange = { files = it },
+        modifier = modifier,
+    )
 }
 
 @Composable
