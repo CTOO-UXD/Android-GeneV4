@@ -79,6 +79,17 @@ export class Genev4App extends LitElement {
     const target = event.target as HTMLElement | null
     if (!target) return
 
+    const toggle = target.closest('[data-code-toggle]') as HTMLElement | null
+    if (toggle) {
+      const panel = toggle.closest('.code-panel')
+      if (panel) {
+        const collapsed = panel.classList.toggle('is-collapsed')
+        toggle.setAttribute('aria-expanded', String(!collapsed))
+        toggle.setAttribute('aria-label', collapsed ? '展开' : '收起')
+      }
+      return
+    }
+
     const copy = target.closest('[data-copy]') as HTMLElement | null
     if (copy) {
       const panel = copy.closest('.code-panel')
@@ -821,6 +832,42 @@ export class Genev4App extends LitElement {
       align-items: center;
       justify-content: space-between;
       padding: 4px 8px 0 14px;
+    }
+
+    .doc .code-actions {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .doc .code-toggle {
+      border: 0;
+      background: transparent;
+      color: var(--md-sys-color-on-surface-variant);
+      font: inherit;
+      font-size: var(--catalog-label-s-font-size);
+      cursor: pointer;
+      padding: 8px 10px;
+    }
+
+    .doc .code-panel .label-closed {
+      display: none;
+    }
+
+    .doc .code-panel.is-collapsed .label-open {
+      display: none;
+    }
+
+    .doc .code-panel.is-collapsed .label-closed {
+      display: inline;
+    }
+
+    .doc .code-panel.is-collapsed .code-body {
+      display: none;
+    }
+
+    .doc .code-panel.is-collapsed .code-toolbar {
+      padding-bottom: 4px;
     }
 
     .doc .code-lang {

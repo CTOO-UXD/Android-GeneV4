@@ -41,6 +41,7 @@ export const navGroups: NavGroup[] = [
       { title: '下拉刷新', en: 'PullToRefresh', path: '/components/pull-to-refresh' },
       { title: '提示', en: 'Tooltip', path: '/components/tooltip' },
       { title: '对话框', en: 'Dialog', path: '/components/dialog' },
+      { title: '模态', en: 'Modal', path: '/components/modal' },
       { title: '提示条', en: 'Snackbar', path: '/components/snackbar' },
       { title: '底部菜单', en: 'BottomSheet', path: '/components/bottom-sheet' },
       { title: '日期', en: 'DatePicker', path: '/components/date-picker' },
@@ -75,6 +76,7 @@ export const docFiles: Record<string, string> = {
   '/components/pull-to-refresh': 'components/pull-to-refresh.md',
   '/components/tooltip': 'components/tooltip.md',
   '/components/dialog': 'components/dialog.md',
+  '/components/modal': 'components/modal.md',
   '/components/snackbar': 'components/snackbar.md',
   '/components/bottom-sheet': 'components/bottom-sheet.md',
   '/components/date-picker': 'components/date-picker.md',
@@ -89,6 +91,8 @@ export const componentSource: Record<string, string> = {
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Card.kt',
   '/components/dialog':
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/AlertDialog.kt',
+  '/components/modal':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Modal.kt',
   '/components/navigation-bar':
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/NavigationBar.kt',
   '/components/scaffold':

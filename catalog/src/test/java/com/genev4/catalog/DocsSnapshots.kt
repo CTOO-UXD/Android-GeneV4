@@ -17,6 +17,10 @@ import com.genev4.catalog.docs.FabDocsDemo
 import com.genev4.catalog.docs.IconButtonDocsDemo
 import com.genev4.catalog.docs.ListDocsDemo
 import com.genev4.catalog.docs.MenuDocsDemo
+import com.genev4.catalog.docs.ModalDefaultDocsDemo
+import com.genev4.catalog.docs.ModalHeroDocsDemo
+import com.genev4.catalog.docs.ModalLoadingDocsDemo
+import com.genev4.catalog.docs.ModalTourDocsDemo
 import com.genev4.catalog.docs.NavigationBarDocsDemo
 import com.genev4.catalog.docs.NavigationRailDocsDemo
 import com.genev4.catalog.docs.PullToRefreshDocsDemo
@@ -125,4 +129,36 @@ class DocsSnapshots {
     @Test fun pullToRefresh() = paparazzi.snapshot(name = "pull-to-refresh") { DocsTheme { PullToRefreshDocsDemo() } }
     @Test fun tooltip() = paparazzi.snapshot(name = "tooltip") { DocsTheme { TooltipDocsDemo() } }
     @Test fun bottomSheet() = paparazzi.snapshot(name = "bottom-sheet") { DocsTheme { BottomSheetDocsDemo() } }
+
+    @Test
+    fun modalDefault() {
+        // Narrow 448dp + Wide 640dp + gaps; Pixel 5 density ≈ 2.625.
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 3400, screenHeight = 6200))
+        paparazzi.snapshot(name = "modal-default") { DocsTheme { ModalDefaultDocsDemo() } }
+    }
+
+    @Test
+    fun modalLoading() {
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 1600, screenHeight = 4200))
+        paparazzi.snapshot(name = "modal-loading") { DocsTheme { ModalLoadingDocsDemo() } }
+    }
+
+    @Test
+    fun modalHero() {
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 1200, screenHeight = 2200))
+        paparazzi.snapshot(name = "modal-hero") { DocsTheme { ModalHeroDocsDemo() } }
+    }
+
+    @Test
+    fun modalTour() {
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 2800, screenHeight = 4200))
+        paparazzi.snapshot(name = "modal-tour") { DocsTheme { ModalTourDocsDemo() } }
+    }
 }
+
+private fun modalDevice(screenWidth: Int, screenHeight: Int) =
+    DeviceConfig.PIXEL_5.copy(
+        softButtons = false,
+        screenWidth = screenWidth,
+        screenHeight = screenHeight,
+    )

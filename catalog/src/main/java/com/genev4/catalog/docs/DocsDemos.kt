@@ -59,7 +59,18 @@ import com.genev4.LargeFloatingActionButton
 import com.genev4.LinearProgressIndicator
 import com.genev4.ListItem
 import com.genev4.BottomSheetDefaults
+import com.genev4.FeatureTourCard
+import com.genev4.HeroModalCard
+import com.genev4.HeroModalSize
+import com.genev4.LoadingModalCard
+import com.genev4.LoadingModalSize
 import com.genev4.MaterialTheme
+import com.genev4.ModalCard
+import com.genev4.ModalCaretAlign
+import com.genev4.ModalCaretSide
+import com.genev4.ModalDefaults
+import com.genev4.ModalVariant
+import com.genev4.ModalWidth
 import com.genev4.MenuDefaults
 import com.genev4.MultiChoiceSegmentedButtonRow
 import com.genev4.NavigationDrawerItem
@@ -691,6 +702,262 @@ fun TooltipDocsDemo(modifier: Modifier = Modifier) {
             Text("长按或悬停", modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp))
         }
         Button(onClick = {}) { Text("带提示的按钮") }
+    }
+}
+
+@Composable
+fun ModalDefaultDocsDemo(modifier: Modifier = Modifier) {
+    Row(
+        modifier.padding(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(48.dp),
+    ) {
+        Column(verticalArrangement = Arrangement.spacedBy(24.dp)) {
+            modalDocsColumn(ModalWidth.Narrow)
+        }
+        Column(verticalArrangement = Arrangement.spacedBy(24.dp)) {
+            modalDocsColumn(ModalWidth.Wide)
+        }
+    }
+}
+
+@Composable
+private fun modalDocsColumn(width: ModalWidth) {
+    ModalDocsCard(
+        variant = ModalVariant.Neutral,
+        width = width,
+        title = "保存更改？",
+        body = "未保存的内容会留在这台设备上。",
+        confirm = "保存",
+        showClose = false,
+        showCancel = true,
+    )
+    ModalDocsCard(
+        variant = ModalVariant.System,
+        width = width,
+        title = "更新可用",
+        body = "新版本包含日历和导航的修复。",
+        confirm = "更新",
+        showClose = false,
+        showCancel = true,
+    )
+    ModalDocsCard(
+        variant = ModalVariant.Informational,
+        width = width,
+        title = "同步日历",
+        body = "只会更新这一台设备上的行程。",
+        confirm = "同步",
+        showClose = true,
+        tertiary = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Checkbox(checked = false, onCheckedChange = {})
+                Text("不再提醒")
+            }
+        },
+    )
+    ModalDocsCard(
+        variant = ModalVariant.Success,
+        width = width,
+        title = "已发送",
+        body = "对方会在行程里看到这次邀请。",
+        confirm = "完成",
+        showClose = true,
+    )
+    ModalDocsCard(
+        variant = ModalVariant.Error,
+        width = width,
+        title = "无法连接",
+        body = "检查网络后再试一次。",
+        confirm = "重试",
+        showClose = true,
+        tertiary = {
+            ModalDefaults.TextAction(onClick = {}) { Text("更多详情") }
+        },
+    )
+    ModalDocsCard(
+        variant = ModalVariant.Destructive,
+        width = width,
+        title = "删除行程？",
+        body = "删除后无法恢复。",
+        confirm = "删除",
+        showClose = false,
+        showCancel = true,
+    )
+}
+
+@Composable
+fun ModalLoadingDocsDemo(modifier: Modifier = Modifier) {
+    Column(
+        modifier.padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(32.dp),
+    ) {
+        LoadingModalCard(
+            modifier = Modifier.width(460.dp),
+            size = LoadingModalSize.Large,
+            elevated = true,
+            title = { Text("正在同步") },
+            text = { Text("请稍等，行程马上就好。") },
+            cancelButton = { Button(onClick = {}) { Text("取消") } },
+        )
+        LoadingModalCard(
+            modifier = Modifier.width(460.dp),
+            size = LoadingModalSize.Large,
+            elevated = false,
+            title = { Text("正在同步") },
+            text = { Text("请稍等，行程马上就好。") },
+        )
+        LoadingModalCard(
+            modifier = Modifier.width(320.dp),
+            size = LoadingModalSize.Medium,
+            elevated = true,
+            title = { Text("正在上传") },
+            text = { Text("文件会保存在这台设备上。") },
+            cancelButton = { Button(onClick = {}) { Text("取消") } },
+        )
+        LoadingModalCard(
+            modifier = Modifier.width(320.dp),
+            size = LoadingModalSize.Medium,
+            elevated = false,
+            title = { Text("正在上传") },
+            text = { Text("文件会保存在这台设备上。") },
+        )
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(32.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            LoadingModalCard(size = LoadingModalSize.Small, elevated = true)
+            LoadingModalCard(size = LoadingModalSize.Small, elevated = false)
+        }
+    }
+}
+
+@Composable
+fun ModalHeroDocsDemo(modifier: Modifier = Modifier) {
+    Box(modifier.padding(16.dp)) {
+        ModalDocsHeroCard(HeroModalSize.Mobile, 316.dp)
+    }
+}
+
+@Composable
+fun ModalTourDocsDemo(modifier: Modifier = Modifier) {
+    Row(
+        modifier.padding(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(48.dp),
+        verticalAlignment = Alignment.Top,
+    ) {
+        ModalDocsTourColumn(
+            label = "文字按钮",
+            iconAction = false,
+            tours = listOf(
+                Triple(ModalCaretSide.Start, ModalCaretAlign.Center, 1),
+                Triple(ModalCaretSide.Top, ModalCaretAlign.Start, 2),
+            ),
+        )
+        ModalDocsTourColumn(
+            label = "图标按钮",
+            iconAction = true,
+            tours = listOf(
+                Triple(ModalCaretSide.End, ModalCaretAlign.Start, 2),
+                Triple(ModalCaretSide.Bottom, ModalCaretAlign.End, 3),
+            ),
+        )
+    }
+}
+
+@Composable
+private fun ModalDocsTourColumn(
+    label: String,
+    iconAction: Boolean,
+    tours: List<Triple<ModalCaretSide, ModalCaretAlign, Int>>,
+) {
+    Column(verticalArrangement = Arrangement.spacedBy(32.dp)) {
+        Text(label, style = MaterialTheme.typography.titleMedium)
+        tours.forEach { (side, align, step) ->
+            ModalDocsTour(side, align, step, iconAction)
+        }
+    }
+}
+
+@Composable
+private fun ModalDocsCard(
+    variant: ModalVariant,
+    width: ModalWidth,
+    title: String,
+    body: String,
+    confirm: String,
+    showClose: Boolean,
+    showCancel: Boolean = false,
+    tertiary: (@Composable () -> Unit)? = null,
+) {
+    ModalCard(
+        modifier = Modifier.width(if (width == ModalWidth.Narrow) 448.dp else 640.dp),
+        width = width,
+        variant = variant,
+        showClose = showClose,
+        title = { Text(title) },
+        text = { Text(body) },
+        confirmButton = {
+            ModalDefaults.ConfirmButton(onClick = {}, variant = variant) { Text(confirm) }
+        },
+        dismissButton = if (showCancel) {
+            { ModalDefaults.TextAction(onClick = {}) { Text("取消") } }
+        } else {
+            null
+        },
+        tertiaryButton = tertiary,
+    )
+}
+
+@Composable
+private fun ModalDocsHeroCard(size: HeroModalSize, width: androidx.compose.ui.unit.Dp) {
+    HeroModalCard(
+        hero = { ModalDocsHero() },
+        title = { Text("认识新的行程") },
+        text = { Text("把一天的安排收在同一张卡片里。") },
+        modifier = Modifier.width(width),
+        size = size,
+        centered = false,
+        confirmButton = { Button(onClick = {}, modifier = Modifier.fillMaxWidth()) { Text("开始") } },
+        dismissButton = {
+            TextButton(onClick = {}, modifier = Modifier.fillMaxWidth()) { Text("稍后") }
+        },
+    )
+}
+
+@Composable
+private fun ModalDocsTour(
+    caretSide: ModalCaretSide,
+    caretAlign: ModalCaretAlign,
+    step: Int,
+    iconAction: Boolean,
+) {
+    FeatureTourCard(
+        title = { Text("从这里添加行程") },
+        text = { Text("左右滑可以看到下一步。") },
+        hero = { ModalDocsHero() },
+        modifier = Modifier.width(420.dp),
+        caretSide = caretSide,
+        caretAlign = caretAlign,
+        step = step,
+        stepCount = 3,
+        confirmButton = if (iconAction) {
+            { ModalDefaults.TourActionButton(onClick = {}) }
+        } else {
+            { Button(onClick = {}) { Text("知道了") } }
+        },
+    )
+}
+
+@Composable
+private fun ModalDocsHero() {
+    Box(
+        Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            "Feature",
+            color = MaterialTheme.colorScheme.onPrimaryContainer,
+            style = MaterialTheme.typography.titleLarge,
+        )
     }
 }
 

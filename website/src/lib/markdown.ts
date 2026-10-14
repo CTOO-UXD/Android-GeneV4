@@ -24,7 +24,9 @@ const md = new MarkdownIt({
   highlight(str, lang) {
     const escaped = md.utils.escapeHtml(str)
     const label = lang ? `<span class="code-lang">${md.utils.escapeHtml(lang)}</span>` : ''
-    return `<div class="code-panel"><div class="code-toolbar">${label}<md-icon-button class="copy-btn" data-copy aria-label="复制"><md-icon>content_copy</md-icon></md-icon-button></div><pre class="code-body"><code>${escaped}</code></pre></div>`
+    const toggle =
+      '<button type="button" class="code-toggle" data-code-toggle aria-expanded="true" aria-label="收起"><span class="label-open">收起</span><span class="label-closed">展开</span></button>'
+    return `<div class="code-panel"><div class="code-toolbar">${label}<div class="code-actions">${toggle}<md-icon-button class="copy-btn" data-copy aria-label="复制"><md-icon>content_copy</md-icon></md-icon-button></div></div><pre class="code-body"><code>${escaped}</code></pre></div>`
   },
 })
 
@@ -51,8 +53,13 @@ function promoteDemos(html: string): string {
   if (/<h2 id="types">Types<\/h2>[\s\S]*?<figure class="demo-frame">/.test(cleaned)) {
     return cleaned.replace(
       /<h2 id="types">Types<\/h2>([\s\S]*?)(?=<h2\b|$)/,
-      (_m, body) =>
-        `<section class="types-block"><h2 id="types">Types</h2>${body.trim()}</section>`,
+      (_m, body) => {
+        const folded = body
+          .replaceAll('class="code-panel"', 'class="code-panel is-collapsed"')
+          .replaceAll('aria-expanded="true"', 'aria-expanded="false"')
+          .replaceAll('aria-label="收起"', 'aria-label="展开"')
+        return `<section class="types-block"><h2 id="types">Types</h2>${folded.trim()}</section>`
+      },
     )
   }
 

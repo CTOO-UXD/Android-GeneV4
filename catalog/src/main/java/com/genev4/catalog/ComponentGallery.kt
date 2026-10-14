@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -77,8 +78,17 @@ import com.genev4.icons.outlined.Icon123 as Icon123Outlined
 import com.genev4.LargeFloatingActionButton
 import com.genev4.LinearProgressIndicator
 import com.genev4.ListItem
+import com.genev4.FeatureTour
+import com.genev4.HeroModal
+import com.genev4.LoadingModal
 import com.genev4.MaterialTheme
+import com.genev4.Modal
 import com.genev4.ModalBottomSheet
+import com.genev4.ModalCard
+import com.genev4.ModalCaretSide
+import com.genev4.ModalDefaults
+import com.genev4.ModalVariant
+import com.genev4.ModalWidth
 import com.genev4.ModalDrawerSheet
 import com.genev4.ModalNavigationDrawer
 import com.genev4.MultiChoiceSegmentedButtonRow
@@ -152,6 +162,10 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
     var search by remember { mutableStateOf("") }
     var searchActive by remember { mutableStateOf(false) }
     var sheet by remember { mutableStateOf(false) }
+    var confirmModal by remember { mutableStateOf(false) }
+    var loadingModal by remember { mutableStateOf(false) }
+    var heroModal by remember { mutableStateOf(false) }
+    var tourModal by remember { mutableStateOf(false) }
     var refreshing by remember { mutableStateOf(false) }
     var rail by remember { mutableIntStateOf(0) }
     var shortBar by remember { mutableIntStateOf(0) }
@@ -570,6 +584,31 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                 }
             }
             item {
+                Section("模态") {
+                    ModalCard(
+                        modifier = Modifier.fillMaxWidth(),
+                        variant = ModalVariant.Informational,
+                        title = { Text("同步日历？") },
+                        text = { Text("只会更新这一台设备上的行程。") },
+                        confirmButton = {
+                            ModalDefaults.ConfirmButton(
+                                onClick = {},
+                                variant = ModalVariant.Informational,
+                            ) { Text("同步") }
+                        },
+                        dismissButton = {
+                            ModalDefaults.TextAction(onClick = {}) { Text("以后再说") }
+                        },
+                    )
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Button(onClick = { confirmModal = true }) { Text("确认") }
+                        Button(onClick = { loadingModal = true }) { Text("加载") }
+                        Button(onClick = { heroModal = true }) { Text("Hero") }
+                        Button(onClick = { tourModal = true }) { Text("引导") }
+                    }
+                }
+            }
+            item {
                 Section("提示、对话框、底部菜单") {
                     TooltipBox(
                         positionProvider = TooltipDefaults.rememberTooltipPositionProvider(
@@ -599,6 +638,75 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
         }
     }
 
+    if (confirmModal) {
+        Modal(
+            onDismissRequest = { confirmModal = false },
+            variant = ModalVariant.Destructive,
+            width = ModalWidth.Narrow,
+            showClose = false,
+            title = { Text("删除行程？") },
+            text = { Text("删除后无法恢复。") },
+            confirmButton = {
+                ModalDefaults.ConfirmButton(
+                    onClick = { confirmModal = false },
+                    variant = ModalVariant.Destructive,
+                ) { Text("删除") }
+            },
+            dismissButton = {
+                ModalDefaults.TextAction(onClick = { confirmModal = false }) { Text("取消") }
+            },
+        )
+    }
+    if (loadingModal) {
+        LoadingModal(
+            onDismissRequest = { loadingModal = false },
+            title = { Text("正在同步") },
+            text = { Text("请稍等，行程马上就好。") },
+            cancelButton = {
+                Button(onClick = { loadingModal = false }) { Text("取消") }
+            },
+        )
+    }
+    if (heroModal) {
+        HeroModal(
+            onDismissRequest = { heroModal = false },
+            hero = {
+                Box(
+                    Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primaryContainer),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text("Feature", color = MaterialTheme.colorScheme.onPrimaryContainer)
+                }
+            },
+            title = { Text("认识新的行程") },
+            text = { Text("把一天的安排收在同一张卡片里。") },
+            confirmButton = {
+                Button(onClick = { heroModal = false }) { Text("开始") }
+            },
+            dismissButton = {
+                TextButton(onClick = { heroModal = false }) { Text("稍后") }
+            },
+        )
+    }
+    if (tourModal) {
+        FeatureTour(
+            onDismissRequest = { tourModal = false },
+            hero = {
+                Box(
+                    Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primaryContainer),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text("Feature", color = MaterialTheme.colorScheme.onPrimaryContainer)
+                }
+            },
+            title = { Text("从这里添加行程") },
+            text = { Text("左右滑可以看到下一步。") },
+            caretSide = ModalCaretSide.Start,
+            confirmButton = {
+                Button(onClick = { tourModal = false }) { Text("知道了") }
+            },
+        )
+    }
     if (sheet) {
         ModalBottomSheet(
             onDismissRequest = { sheet = false },

@@ -28,6 +28,7 @@
 - [PullToRefresh](/components/pull-to-refresh) — 下拉刷新
 - [Tooltip](/components/tooltip) — 短说明
 - [Dialog](/components/dialog) — AlertDialog
+- [Modal](/components/modal) — 确认 / 加载 / Hero / 功能引导
 - [Snackbar](/components/snackbar) — 短时反馈
 - [BottomSheet](/components/bottom-sheet) — 底部菜单
 - [DatePicker](/components/date-picker) — 日期
