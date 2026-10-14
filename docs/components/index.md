@@ -12,6 +12,7 @@
 - [Chip](/components/chip) — 辅助 / 筛选 / 输入 / 建议
 - [SegmentedButton](/components/segmented-button) — 单选 / 多选
 - [TextField](/components/text-field) — 填充 / 描边 / 密码
+- [TextInput](/components/text-input) — 单行 / 多行 / 行内操作
 - [Search](/components/search) — 停靠搜索
 - [AiInput](/components/ai-input) — 对话输入
 - [Menu](/components/menu) — 菜单 / 暴露式下拉

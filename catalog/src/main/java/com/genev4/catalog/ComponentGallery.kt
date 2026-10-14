@@ -118,9 +118,12 @@ import com.genev4.SuggestionChip
 import com.genev4.SwipeToDismissBox
 import com.genev4.Switch
 import com.genev4.Tab
+import com.genev4.ActionInput
 import com.genev4.Text
+import com.genev4.TextArea
 import com.genev4.TextButton
 import com.genev4.TextField
+import com.genev4.TextInput
 import com.genev4.TimePicker
 import com.genev4.TooltipAnchorPosition
 import com.genev4.TooltipBox
@@ -142,6 +145,11 @@ import kotlinx.coroutines.launch
 fun ComponentGallery(modifier: Modifier = Modifier) {
     var filled by remember { mutableStateOf("") }
     var outlined by remember { mutableStateOf("") }
+    var textInput by remember { mutableStateOf("") }
+    var textArea by remember { mutableStateOf("") }
+    var actionInput by remember { mutableStateOf("") }
+    var city by remember { mutableStateOf("") }
+    var cityMenu by remember { mutableStateOf(false) }
     val password = rememberTextFieldState()
     val outlinedPassword = rememberTextFieldState()
     var checked by remember { mutableStateOf(true) }
@@ -326,6 +334,61 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                     OutlinedSecureTextField(
                         state = outlinedPassword,
                         label = { Text("描边密码") },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
+            }
+            item {
+                Section("文本输入") {
+                    TextInput(
+                        value = textInput,
+                        onValueChange = { textInput = it },
+                        label = "姓名",
+                        placeholder = "怎么称呼",
+                        isError = textInput == "error",
+                        supportingText =
+                            if (textInput == "error") "校验失败提示" else "输入 error 查看错误态",
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    Box {
+                        TextInput(
+                            value = city,
+                            onValueChange = { city = it },
+                            label = "城市",
+                            showDropdown = true,
+                            dropdownExpanded = cityMenu,
+                            onDropdownClick = { cityMenu = !cityMenu },
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                        DropdownMenu(
+                            expanded = cityMenu,
+                            onDismissRequest = { cityMenu = false },
+                            properties = PopupProperties(focusable = true),
+                        ) {
+                            listOf("杭州", "上海", "北京").forEach { option ->
+                                DropdownMenuItem(
+                                    text = { Text(option) },
+                                    onClick = {
+                                        city = option
+                                        cityMenu = false
+                                    },
+                                )
+                            }
+                        }
+                    }
+                    TextArea(
+                        value = textArea,
+                        onValueChange = { textArea = it },
+                        label = "备注",
+                        placeholder = "行程说明",
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    ActionInput(
+                        value = actionInput,
+                        onValueChange = { actionInput = it },
+                        onAction = { actionInput = "" },
+                        label = "发送",
+                        placeholder = "写一句",
                         modifier = Modifier.fillMaxWidth(),
                     )
                 }

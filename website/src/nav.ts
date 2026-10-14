@@ -25,6 +25,7 @@ export const navGroups: NavGroup[] = [
       { title: '纸片', en: 'Chip', path: '/components/chip' },
       { title: '分段按钮', en: 'SegmentedButton', path: '/components/segmented-button' },
       { title: '输入框', en: 'TextField', path: '/components/text-field' },
+      { title: '文本输入', en: 'TextInput', path: '/components/text-input' },
       { title: '搜索', en: 'Search', path: '/components/search' },
       { title: 'AI 输入', en: 'AiInput', path: '/components/ai-input' },
       { title: '菜单', en: 'Menu', path: '/components/menu' },
@@ -60,6 +61,7 @@ export const docFiles: Record<string, string> = {
   '/components/chip': 'components/chip.md',
   '/components/segmented-button': 'components/segmented-button.md',
   '/components/text-field': 'components/text-field.md',
+  '/components/text-input': 'components/text-input.md',
   '/components/search': 'components/search.md',
   '/components/ai-input': 'components/ai-input.md',
   '/components/menu': 'components/menu.md',
@@ -101,6 +103,8 @@ export const componentSource: Record<string, string> = {
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Snackbar.kt',
   '/components/text-field':
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/TextField.kt',
+  '/components/text-input':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/TextInput.kt',
   '/components/icon-button':
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/IconButton.kt',
   '/components/fab':

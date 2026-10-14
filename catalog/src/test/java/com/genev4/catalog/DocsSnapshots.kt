@@ -31,7 +31,10 @@ import com.genev4.catalog.docs.SelectionDocsDemo
 import com.genev4.catalog.docs.SliderDocsDemo
 import com.genev4.catalog.docs.SnackbarDocsDemo
 import com.genev4.catalog.docs.TabsDocsDemo
+import com.genev4.catalog.docs.ActionInputDocsDemo
+import com.genev4.catalog.docs.TextAreaDocsDemo
 import com.genev4.catalog.docs.TextFieldDocsDemo
+import com.genev4.catalog.docs.TextInputDocsDemo
 import com.genev4.catalog.docs.TimePickerDocsDemo
 import com.genev4.catalog.docs.TooltipDocsDemo
 import org.junit.Rule
@@ -80,6 +83,27 @@ class DocsSnapshots {
     fun textField() {
         paparazzi.snapshot(name = "text-field") {
             DocsTheme { TextFieldDocsDemo() }
+        }
+    }
+
+    @Test
+    fun textInput() {
+        paparazzi.snapshot(name = "text-input") {
+            DocsTheme { TextInputDocsDemo() }
+        }
+    }
+
+    @Test
+    fun textArea() {
+        paparazzi.snapshot(name = "text-area") {
+            DocsTheme { TextAreaDocsDemo() }
+        }
+    }
+
+    @Test
+    fun actionInput() {
+        paparazzi.snapshot(name = "action-input") {
+            DocsTheme { ActionInputDocsDemo() }
         }
     }
 

@@ -103,8 +103,11 @@ import com.genev4.SwipeToDismissBox
 import com.genev4.SuggestionChip
 import com.genev4.Switch
 import com.genev4.Tab
+import com.genev4.ActionInput
 import com.genev4.Text
+import com.genev4.TextArea
 import com.genev4.TextButton
+import com.genev4.TextInput
 import com.genev4.TooltipDefaults
 import com.genev4.TextField
 import com.genev4.TimePicker
@@ -272,6 +275,121 @@ fun TextFieldDocsDemo(modifier: Modifier = Modifier) {
         OutlinedSecureTextField(
             state = rememberTextFieldState(),
             label = { Text("描边密码") },
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun TextInputDocsDemo(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier.padding(16.dp).width(332.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        TextInput(value = "", onValueChange = {}, label = "姓名", modifier = Modifier.fillMaxWidth())
+        TextInput(
+            value = "",
+            onValueChange = {},
+            label = "邮箱",
+            placeholder = "name@example.com",
+            modifier = Modifier.fillMaxWidth(),
+        )
+        TextInput(
+            value = "杭州",
+            onValueChange = {},
+            label = "城市",
+            modifier = Modifier.fillMaxWidth(),
+        )
+        TextInput(
+            value = "error",
+            onValueChange = {},
+            label = "姓名",
+            isError = true,
+            supportingText = "校验失败提示",
+            modifier = Modifier.fillMaxWidth(),
+        )
+        TextInput(
+            value = "",
+            onValueChange = {},
+            label = "备注",
+            supportingText = "选填",
+            modifier = Modifier.fillMaxWidth(),
+        )
+        TextInput(
+            value = "杭州",
+            onValueChange = {},
+            label = "城市",
+            showDropdown = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        TextInput(
+            value = "已停用",
+            onValueChange = {},
+            label = "姓名",
+            enabled = false,
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun TextAreaDocsDemo(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier.padding(16.dp).width(332.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        TextArea(value = "", onValueChange = {}, label = "备注", modifier = Modifier.fillMaxWidth())
+        TextArea(
+            value = "周六出发，周日晚上回来。想走一趟不赶路的线路。",
+            onValueChange = {},
+            label = "备注",
+            modifier = Modifier.fillMaxWidth(),
+        )
+        TextArea(
+            value = "",
+            onValueChange = {},
+            showLabel = false,
+            placeholder = "写一段说明",
+            modifier = Modifier.fillMaxWidth(),
+        )
+        TextArea(
+            value = "",
+            onValueChange = {},
+            label = "备注",
+            isError = true,
+            supportingText = "请填写备注",
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun ActionInputDocsDemo(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier.padding(16.dp).width(332.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        ActionInput(
+            value = "",
+            onValueChange = {},
+            onAction = {},
+            label = "发送",
+            modifier = Modifier.fillMaxWidth(),
+        )
+        ActionInput(
+            value = "你好",
+            onValueChange = {},
+            onAction = {},
+            label = "发送",
+            modifier = Modifier.fillMaxWidth(),
+        )
+        ActionInput(
+            value = "error",
+            onValueChange = {},
+            onAction = {},
+            label = "发送",
+            isError = true,
+            supportingText = "发送失败",
             modifier = Modifier.fillMaxWidth(),
         )
     }
