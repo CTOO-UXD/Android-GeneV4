@@ -28,6 +28,12 @@ import com.genev4.catalog.docs.ScaffoldDocsDemo
 import com.genev4.catalog.docs.SearchDocsDemo
 import com.genev4.catalog.docs.SegmentedButtonDocsDemo
 import com.genev4.catalog.docs.SelectionDocsDemo
+import com.genev4.catalog.docs.ProcessStepperHorizontalEmptyDocsDemo
+import com.genev4.catalog.docs.ProcessStepperHorizontalIconDocsDemo
+import com.genev4.catalog.docs.ProcessStepperHorizontalNumberDocsDemo
+import com.genev4.catalog.docs.ProcessStepperVerticalEmptyDocsDemo
+import com.genev4.catalog.docs.ProcessStepperVerticalIconDocsDemo
+import com.genev4.catalog.docs.ProcessStepperVerticalNumberDocsDemo
 import com.genev4.catalog.docs.SliderDocsDemo
 import com.genev4.catalog.docs.SnackbarDocsDemo
 import com.genev4.catalog.docs.TabsDocsDemo
@@ -141,6 +147,36 @@ class DocsSnapshots {
     @Test fun segmentedButton() = paparazzi.snapshot(name = "segmented-button") { DocsTheme { SegmentedButtonDocsDemo() } }
     @Test fun selection() = paparazzi.snapshot(name = "selection") { DocsTheme { SelectionDocsDemo() } }
     @Test fun slider() = paparazzi.snapshot(name = "slider") { DocsTheme { SliderDocsDemo() } }
+    @Test
+    fun processStepperHorizontalNumber() =
+        paparazzi.snapshot(name = "process-stepper-horizontal-number") {
+            DocsTheme { ProcessStepperHorizontalNumberDocsDemo() }
+        }
+    @Test
+    fun processStepperHorizontalIcon() =
+        paparazzi.snapshot(name = "process-stepper-horizontal-icon") {
+            DocsTheme { ProcessStepperHorizontalIconDocsDemo() }
+        }
+    @Test
+    fun processStepperHorizontalEmpty() =
+        paparazzi.snapshot(name = "process-stepper-horizontal-empty") {
+            DocsTheme { ProcessStepperHorizontalEmptyDocsDemo() }
+        }
+    @Test
+    fun processStepperVerticalNumber() =
+        paparazzi.snapshot(name = "process-stepper-vertical-number") {
+            DocsTheme { ProcessStepperVerticalNumberDocsDemo() }
+        }
+    @Test
+    fun processStepperVerticalIcon() =
+        paparazzi.snapshot(name = "process-stepper-vertical-icon") {
+            DocsTheme { ProcessStepperVerticalIconDocsDemo() }
+        }
+    @Test
+    fun processStepperVerticalEmpty() =
+        paparazzi.snapshot(name = "process-stepper-vertical-empty") {
+            DocsTheme { ProcessStepperVerticalEmptyDocsDemo() }
+        }
     @Test fun list() = paparazzi.snapshot(name = "list") { DocsTheme { ListDocsDemo() } }
     @Test fun tabs() = paparazzi.snapshot(name = "tabs") { DocsTheme { TabsDocsDemo() } }
     @Test fun navigationRail() = paparazzi.snapshot(name = "navigation-rail") { DocsTheme { NavigationRailDocsDemo() } }

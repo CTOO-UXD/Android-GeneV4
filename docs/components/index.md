@@ -18,6 +18,7 @@
 - [Menu](/components/menu) — 菜单 / 暴露式下拉
 - [Selection](/components/selection) — 复选 / 开关 / 单选
 - [Slider](/components/slider) — 滑条 / 区间 / 进度
+- [ProcessStepper](/components/process-stepper) — 横排 / 竖排，数字 / 图标 / 空心
 - [Card](/components/card) — 填充 / 抬升 / 描边
 - [List](/components/list) — 列表行 / 徽章 / 分割线 / 滑动
 - [Tabs](/components/tabs) — 主标签 / 次标签

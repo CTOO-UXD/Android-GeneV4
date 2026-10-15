@@ -72,7 +72,11 @@ import com.genev4.icons.Icons as GeneIcons
 import com.genev4.icons.aifilled.Globe
 import com.genev4.icons.aioutlined.Globe as GlobeOutlined
 import com.genev4.icons.filled.AccountCircle
+import com.genev4.icons.filled.Favorite
+import com.genev4.icons.filled.Home
 import com.genev4.icons.filled.Icon123
+import com.genev4.icons.filled.Search
+import com.genev4.icons.filled.Settings
 import com.genev4.icons.outlined.AccountCircle as AccountCircleOutlined
 import com.genev4.icons.outlined.Icon123 as Icon123Outlined
 import com.genev4.LargeFloatingActionButton
@@ -111,6 +115,11 @@ import com.genev4.SegmentedButtonDefaults
 import com.genev4.ShortNavigationBar
 import com.genev4.ShortNavigationBarItem
 import com.genev4.SingleChoiceSegmentedButtonRow
+import com.genev4.ProcessStep
+import com.genev4.ProcessStepState
+import com.genev4.ProcessStepType
+import com.genev4.ProcessStepper
+import com.genev4.ProcessStepperOrientation
 import com.genev4.Slider
 import com.genev4.SmallFloatingActionButton
 import com.genev4.Snackbar
@@ -157,6 +166,7 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
     var switched by remember { mutableStateOf(true) }
     var radio by remember { mutableIntStateOf(0) }
     var slider by remember { mutableFloatStateOf(0.45f) }
+    var processStep by remember { mutableIntStateOf(1) }
     var range by remember { mutableStateOf(0.2f..0.7f) }
     var filter by remember { mutableStateOf(true) }
     var inputChip by remember { mutableStateOf(true) }
@@ -510,6 +520,51 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                     LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
                     CircularProgressIndicator(progress = { slider })
                     CircularProgressIndicator()
+                }
+            }
+            item {
+                Section("步骤") {
+                    val labels = listOf("填写", "确认", "支付", "完成")
+                    val icons =
+                        listOf(
+                            GeneIcons.Filled.Home,
+                            GeneIcons.Filled.Search,
+                            GeneIcons.Filled.Favorite,
+                            GeneIcons.Filled.Settings,
+                        )
+                    val steps =
+                        labels.mapIndexed { index, label ->
+                            ProcessStep(
+                                label = label,
+                                state =
+                                    when {
+                                        index < processStep -> ProcessStepState.Complete
+                                        index == processStep -> ProcessStepState.InProgress
+                                        else -> ProcessStepState.Enabled
+                                    },
+                                icon = icons[index],
+                            )
+                        }
+                    ProcessStepper(steps = steps, modifier = Modifier.fillMaxWidth())
+                    Row {
+                        TextButton(
+                            onClick = { if (processStep > 0) processStep -= 1 },
+                            enabled = processStep > 0,
+                        ) {
+                            Text("上一步")
+                        }
+                        TextButton(
+                            onClick = { if (processStep < labels.lastIndex) processStep += 1 },
+                            enabled = processStep < labels.lastIndex,
+                        ) {
+                            Text("下一步")
+                        }
+                    }
+                    ProcessStepper(
+                        steps = steps,
+                        orientation = ProcessStepperOrientation.Vertical,
+                        type = ProcessStepType.Icon,
+                    )
                 }
             }
             item {

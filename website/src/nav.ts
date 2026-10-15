@@ -31,6 +31,7 @@ export const navGroups: NavGroup[] = [
       { title: '菜单', en: 'Menu', path: '/components/menu' },
       { title: '选择', en: 'Selection', path: '/components/selection' },
       { title: '滑条', en: 'Slider', path: '/components/slider' },
+      { title: '步骤', en: 'ProcessStepper', path: '/components/process-stepper' },
       { title: '卡片', en: 'Card', path: '/components/card' },
       { title: '列表', en: 'List', path: '/components/list' },
       { title: '标签页', en: 'Tabs', path: '/components/tabs' },
@@ -67,6 +68,7 @@ export const docFiles: Record<string, string> = {
   '/components/menu': 'components/menu.md',
   '/components/selection': 'components/selection.md',
   '/components/slider': 'components/slider.md',
+  '/components/process-stepper': 'components/process-stepper.md',
   '/components/card': 'components/card.md',
   '/components/list': 'components/list.md',
   '/components/tabs': 'components/tabs.md',
@@ -123,6 +125,8 @@ export const componentSource: Record<string, string> = {
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Checkbox.kt',
   '/components/slider':
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Slider.kt',
+  '/components/process-stepper':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/ProcessStepper.kt',
   '/components/list':
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/ListItem.kt',
   '/components/tabs':

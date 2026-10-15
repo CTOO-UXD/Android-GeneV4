@@ -112,6 +112,11 @@ import com.genev4.SuggestionChip
 import com.genev4.Switch
 import com.genev4.Tab
 import com.genev4.ActionInput
+import com.genev4.ProcessStep
+import com.genev4.ProcessStepState
+import com.genev4.ProcessStepType
+import com.genev4.ProcessStepper
+import com.genev4.ProcessStepperOrientation
 import com.genev4.Text
 import com.genev4.TextArea
 import com.genev4.TextButton
@@ -124,6 +129,11 @@ import com.genev4.TriStateCheckbox
 import com.genev4.VerticalDivider
 import com.genev4.carousel.HorizontalMultiBrowseCarousel
 import com.genev4.carousel.rememberCarouselState
+import com.genev4.icons.Icons
+import com.genev4.icons.filled.Favorite
+import com.genev4.icons.filled.Home
+import com.genev4.icons.filled.Search
+import com.genev4.icons.filled.Settings
 import com.genev4.lightColorScheme
 import com.genev4.pulltorefresh.PullToRefreshBox
 import com.genev4.rememberDatePickerState
@@ -1142,5 +1152,137 @@ fun BottomSheetDocsDemo(modifier: Modifier = Modifier) {
                 }
             }
         }
+    }
+}
+
+private fun docsProcessSteps(): List<ProcessStep> {
+    val labels = listOf("填写", "确认", "支付", "完成")
+    val icons =
+        listOf(Icons.Filled.Home, Icons.Filled.Search, Icons.Filled.Favorite, Icons.Filled.Settings)
+    return labels.mapIndexed { index, label ->
+        ProcessStep(
+            label = label,
+            state =
+                when (index) {
+                    0 -> ProcessStepState.Complete
+                    1 -> ProcessStepState.InProgress
+                    labels.lastIndex -> ProcessStepState.Disabled
+                    else -> ProcessStepState.Enabled
+                },
+            icon = icons[index],
+        )
+    }
+}
+
+@Composable
+fun ProcessStepperHorizontalNumberDocsDemo(modifier: Modifier = Modifier) {
+    Column(
+        modifier.padding(16.dp).fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(24.dp),
+    ) {
+        ProcessStepper(steps = docsProcessSteps(), modifier = Modifier.fillMaxWidth())
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            showLabels = false,
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun ProcessStepperHorizontalIconDocsDemo(modifier: Modifier = Modifier) {
+    Column(
+        modifier.padding(16.dp).fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(24.dp),
+    ) {
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            type = ProcessStepType.Icon,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            type = ProcessStepType.Icon,
+            showLabels = false,
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun ProcessStepperHorizontalEmptyDocsDemo(modifier: Modifier = Modifier) {
+    Column(
+        modifier.padding(16.dp).fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(24.dp),
+    ) {
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            type = ProcessStepType.Empty,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            type = ProcessStepType.Empty,
+            showLabels = false,
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun ProcessStepperVerticalNumberDocsDemo(modifier: Modifier = Modifier) {
+    Row(
+        modifier.padding(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(32.dp),
+    ) {
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            orientation = ProcessStepperOrientation.Vertical,
+        )
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            orientation = ProcessStepperOrientation.Vertical,
+            showLabels = false,
+        )
+    }
+}
+
+@Composable
+fun ProcessStepperVerticalIconDocsDemo(modifier: Modifier = Modifier) {
+    Row(
+        modifier.padding(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(32.dp),
+    ) {
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            orientation = ProcessStepperOrientation.Vertical,
+            type = ProcessStepType.Icon,
+        )
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            orientation = ProcessStepperOrientation.Vertical,
+            type = ProcessStepType.Icon,
+            showLabels = false,
+        )
+    }
+}
+
+@Composable
+fun ProcessStepperVerticalEmptyDocsDemo(modifier: Modifier = Modifier) {
+    Row(
+        modifier.padding(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(32.dp),
+    ) {
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            orientation = ProcessStepperOrientation.Vertical,
+            type = ProcessStepType.Empty,
+        )
+        ProcessStepper(
+            steps = docsProcessSteps(),
+            orientation = ProcessStepperOrientation.Vertical,
+            type = ProcessStepType.Empty,
+            showLabels = false,
+        )
     }
 }
