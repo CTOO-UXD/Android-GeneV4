@@ -98,40 +98,6 @@ SearchBar(
 
 ## Usage
 
-```kotlin
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
-import com.genev4.SearchBar
-import com.genev4.SearchBarLayout
-import com.genev4.SearchResult
-
-var query by remember { mutableStateOf("") }
-val suggestions = listOf("西湖", "灵隐", "九溪")
-val matches =
-    if (query.isBlank()) {
-        emptyList()
-    } else {
-        suggestions.filter { it.contains(query) }.mapIndexed { index, label ->
-            SearchResult(label, selected = index == 0)
-        }
-    }
-
-SearchBar(
-    value = query,
-    onValueChange = { query = it },
-    onSearch = { /* 用 query 搜索 */ },
-    onMicClick = { /* 打开语音 */ },
-    layout = SearchBarLayout.Default, // 窄屏用 Mobile
-    results = matches,
-    onResultClick = { query = matches[it].label },
-    modifier = Modifier.fillMaxWidth(),
-)
-```
-
 页面外层包一层 `MaterialTheme`，见 [快速开始](/getting-started)。需要有限宽度，组件会铺满，最宽 908dp。
 
 ## Spec
@@ -139,14 +105,14 @@ SearchBar(
 | 项 | 宽屏 `Default` | 窄屏 `Mobile` |
 |---|---|---|
 | 外壳 | 圆角 32，内边距 8，`surface` 70% | 圆角 32，内边距 4，`surface` 80% |
-| 输入区 | 圆角 24，最低 48，`surface` 80% | 同一层里，最低 48 |
+| 输入区 | 圆角 24，最低 48，`surface` 80% | 圆角 24，最低 48，`surface` 80% |
 | 条高 | 空内容 64 | 空内容 56 |
 | 最宽 | 908 | 随父级，示意宽 362 |
 | 放大镜 | 24，左侧内边距 12 | 同左 |
 | 文字 | 14 / 20，字距 0.25。占位 `onSurfaceVariant`，输入 `onSurface` | 同左 |
-| 空内容尾部 | 40 麦克风 | 40 麦克风，再加 40 提交，间距 8 |
+| 空内容尾部 | 40 麦克风，图标是描边 | 40 麦克风，再加 40 提交，间距 8 |
 | 有文字尾部 | 40 清除，底色 `surfaceContainerHigh` | 40 清除，再加 40 提交 |
-| 提交 | 48，在输入区外面，间距 12。空内容跟外壳同色，有文字为 `primary` | 40，在输入区里面 |
+| 提交 | 48，在输入区外面，间距 12。空内容跟输入区同色，有文字为 `primary` | 40，在输入区里面，空内容不另铺底 |
 | 结果 | 留在外壳里，间距 4 | 单独卡片，圆角 16，`surfaceBright`，间距 8 |
 | 结果行 | 最低 48，圆角 12，左右 12。选中行 `primaryContainer`，字重 Semibold | 同左 |
 

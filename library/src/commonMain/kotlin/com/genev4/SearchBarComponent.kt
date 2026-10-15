@@ -65,9 +65,12 @@ import androidx.compose.ui.unit.sp
  * [SearchBarLayout.Mobile] keeps the microphone and a 40dp submit button inside the field, and
  * draws results as a separate card underneath.
  *
- * An empty field shows the microphone. Text replaces it with clear, and turns submit from the
- * translucent circle to [ColorScheme.primary]. The shell uses a translucent [ColorScheme.surface]
- * in place of the design's backdrop blur. Give this a bounded width; it fills that width up to 908dp.
+ * An empty field shows an outlined microphone with no extra circle. Text replaces it with clear,
+ * and turns submit to [ColorScheme.primary]. Both layouts paint a shell, then an 80% field on top
+ * of it. The wide shell is 70% and its empty submit uses the field fill, because that button sits
+ * on the shell. The narrow shell is 80% and its empty submit stays inside the field. Common code
+ * has no backdrop blur, so both layers are [ColorScheme.surface]. Give this a bounded width; it
+ * fills that width up to 908dp.
  *
  * @param value the input text to be shown in the field
  * @param onValueChange the callback that is triggered when the input service updates the text
@@ -98,8 +101,14 @@ fun SearchBar(
 ) {
     val scheme = MaterialTheme.colorScheme
     val hasText = value.isNotEmpty()
-    val blur = scheme.surface.copy(alpha = SearchBarMetrics.ShellAlpha)
-    val blurHigh = scheme.surface.copy(alpha = SearchBarMetrics.FieldAlpha)
+    // Both layouts stack a shell and an 80% field. Wide shell is 70%; narrow shell is 80%.
+    // The microphone stays clear so it does not stack a third circle on the field. Idle submit
+    // on the wide bar uses the field fill, because it sits on the shell rather than inside the field.
+    val shell =
+        scheme.surface.copy(
+            alpha = if (layout == SearchBarLayout.Mobile) SearchBarMetrics.FieldAlpha else SearchBarMetrics.ShellAlpha,
+        )
+    val field = scheme.surface.copy(alpha = SearchBarMetrics.FieldAlpha)
     val textStyle =
         MaterialTheme.typography.bodyMedium.copy(
             fontWeight = FontWeight.Normal,
@@ -127,21 +136,20 @@ fun SearchBar(
                 enabled = enabled,
                 modifier =
                     Modifier.fillMaxWidth()
-                        .qtSurface(SearchBarMetrics.ShellShape, blurHigh, SearchBarMetrics.ShellElevation)
+                        .qtSurface(SearchBarMetrics.ShellShape, shell, SearchBarMetrics.ShellElevation)
                         .padding(SearchBarMetrics.MobilePadding)
-                        .qtSurface(SearchBarMetrics.FieldShape, blurHigh, 0.dp),
+                        .background(field, SearchBarMetrics.FieldShape),
                 trailing = {
                     SearchBarSideButton(
                         hasText = hasText,
                         enabled = enabled,
-                        idleContainer = blurHigh,
                         onMicClick = onMicClick,
                         onClear = clear,
                     )
                     SearchBarSubmitButton(
                         hasText = hasText,
                         enabled = enabled,
-                        idleContainer = blurHigh,
+                        idleContainer = Color.Transparent,
                         size = SearchBarMetrics.MobileSubmitSize,
                         onSearch = onSearch,
                     )
@@ -169,7 +177,7 @@ fun SearchBar(
     } else {
         Column(
             root
-                .qtSurface(SearchBarMetrics.ShellShape, blur, SearchBarMetrics.ShellElevation)
+                .qtSurface(SearchBarMetrics.ShellShape, shell, SearchBarMetrics.ShellElevation)
                 .padding(SearchBarMetrics.ShellPadding),
             verticalArrangement = Arrangement.spacedBy(SearchBarMetrics.ResultsGap),
         ) {
@@ -187,14 +195,11 @@ fun SearchBar(
                     placeholderColor = scheme.onSurfaceVariant,
                     cursorColor = scheme.primary,
                     enabled = enabled,
-                    modifier =
-                        Modifier.weight(1f)
-                            .qtSurface(SearchBarMetrics.FieldShape, blurHigh, 0.dp),
+                    modifier = Modifier.weight(1f).background(field, SearchBarMetrics.FieldShape),
                     trailing = {
                         SearchBarSideButton(
                             hasText = hasText,
                             enabled = enabled,
-                            idleContainer = blurHigh,
                             onMicClick = onMicClick,
                             onClear = clear,
                         )
@@ -203,7 +208,7 @@ fun SearchBar(
                 SearchBarSubmitButton(
                     hasText = hasText,
                     enabled = enabled,
-                    idleContainer = blurHigh,
+                    idleContainer = field,
                     size = SearchBarMetrics.SubmitSize,
                     onSearch = onSearch,
                 )
@@ -262,7 +267,7 @@ private object SearchBarMetrics {
     val SubmitSize = 48.dp
     val MobileSubmitSize = 40.dp
     val IconSize = 24.dp
-    val ShellElevation = 4.dp
+    val ShellElevation = 2.dp
     val MenuElevation = 3.dp
     const val ShellAlpha = 0.7f
     const val FieldAlpha = 0.8f
@@ -341,7 +346,6 @@ private fun SearchBarField(
 private fun SearchBarSideButton(
     hasText: Boolean,
     enabled: Boolean,
-    idleContainer: Color,
     onMicClick: () -> Unit,
     onClear: () -> Unit,
 ) {
@@ -360,7 +364,7 @@ private fun SearchBarSideButton(
         SearchBarIconButton(
             icon = SearchBarIcons.Mic,
             contentDescription = "Microphone",
-            container = idleContainer,
+            container = Color.Transparent,
             content = scheme.onSurface,
             size = SearchBarMetrics.SideButtonSize,
             enabled = enabled,
@@ -484,7 +488,7 @@ private object SearchBarIcons {
     val Mic: ImageVector =
         icon(
             "SearchBar.Mic",
-            "M6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12H20C20 16.0793 16.9468 19.4455 13.001 19.938L13 22H11L11 19.9381C7.05371 19.446 4 16.0796 4 12H6ZM12 2C14.2091 2 16 3.79086 16 6V12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12V6C8 3.79086 9.79086 2 12 2Z",
+            "M6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12H20C20 16.0793 16.9468 19.4455 13.001 19.938L13 22H11L11 19.9381C7.05371 19.446 4 16.0796 4 12H6ZM12 2C14.2091 2 16 3.79086 16 6V12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12V6C8 3.79086 9.79086 2 12 2ZM12 4C10.8954 4 10 4.89543 10 6V12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12V6C14 4.89543 13.1046 4 12 4Z",
         )
     val Close: ImageVector =
         icon(
