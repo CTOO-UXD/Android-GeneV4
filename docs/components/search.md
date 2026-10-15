@@ -1,6 +1,6 @@
 # Search
 
-停靠在内容上方的搜索条。展开后在尾部 lambda 里放结果列表。
+停靠在内容上方的搜索条。展开后在尾部 lambda 里放结果列表。记忆和知识库里的搜索用 [Search Bar](/components/search-bar)。
 
 ## Types
 

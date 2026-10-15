@@ -14,6 +14,7 @@
 - [TextField](/components/text-field) — 填充 / 描边 / 密码
 - [TextInput](/components/text-input) — 单行 / 多行 / 行内操作
 - [Search](/components/search) — 停靠搜索
+- [Search Bar](/components/search-bar) — 宽屏 / 窄屏，空内容 / 有结果
 - [AiInput](/components/ai-input) — 对话输入
 - [Menu](/components/menu) — 菜单 / 暴露式下拉
 - [Selection](/components/selection) — 复选 / 开关 / 单选

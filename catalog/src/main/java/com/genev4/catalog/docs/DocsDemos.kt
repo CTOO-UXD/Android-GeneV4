@@ -22,8 +22,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
@@ -93,6 +95,9 @@ import com.genev4.OutlinedSecureTextField
 import com.genev4.OutlinedTextField
 import com.genev4.PermanentDrawerSheet
 import com.genev4.PrimaryTabRow
+import com.genev4.SearchBar
+import com.genev4.SearchBarLayout
+import com.genev4.SearchResult
 import com.genev4.RadioButton
 import com.genev4.RangeSlider
 import com.genev4.Scaffold
@@ -952,6 +957,21 @@ private fun modalDocsColumn(width: ModalWidth) {
 }
 
 @Composable
+fun ModalCatalogDocsDemo(modifier: Modifier = Modifier) {
+    Box(modifier.padding(16.dp)) {
+        ModalDocsCard(
+            variant = ModalVariant.Neutral,
+            width = ModalWidth.Narrow,
+            title = "保存更改？",
+            body = "未保存的内容会留在这台设备上。",
+            confirm = "保存",
+            showClose = false,
+            showCancel = true,
+        )
+    }
+}
+
+@Composable
 fun ModalLoadingDocsDemo(modifier: Modifier = Modifier) {
     Column(
         modifier.padding(16.dp),
@@ -1263,6 +1283,73 @@ fun ProcessStepperVerticalIconDocsDemo(modifier: Modifier = Modifier) {
             orientation = ProcessStepperOrientation.Vertical,
             type = ProcessStepType.Icon,
             showLabels = false,
+        )
+    }
+}
+
+private val SearchBarCanvas = Color(0xFFE6DFF5)
+
+private fun docsQtResults(): List<SearchResult> =
+    listOf(
+        SearchResult("Menu item", selected = true),
+        SearchResult("Menu item"),
+        SearchResult("Menu item"),
+        SearchResult("Menu item"),
+    )
+
+@Composable
+private fun SearchBarStage(width: Dp, content: @Composable () -> Unit) {
+    Box(Modifier.width(width).background(SearchBarCanvas).padding(20.dp)) { content() }
+}
+
+@Composable
+fun SearchBarDefaultDocsDemo(modifier: Modifier = Modifier) {
+    SearchBarStage(480.dp) {
+        SearchBar(
+            value = "",
+            onValueChange = {},
+            onSearch = {},
+            modifier = modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun SearchBarDefaultResultsDocsDemo(modifier: Modifier = Modifier) {
+    SearchBarStage(520.dp) {
+        SearchBar(
+            value = "This is input text",
+            onValueChange = {},
+            onSearch = {},
+            results = docsQtResults(),
+            modifier = modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun SearchBarMobileDocsDemo(modifier: Modifier = Modifier) {
+    SearchBarStage(402.dp) {
+        SearchBar(
+            value = "",
+            onValueChange = {},
+            onSearch = {},
+            layout = SearchBarLayout.Mobile,
+            modifier = modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+fun SearchBarMobileResultsDocsDemo(modifier: Modifier = Modifier) {
+    SearchBarStage(402.dp) {
+        SearchBar(
+            value = "This is input text",
+            onValueChange = {},
+            onSearch = {},
+            layout = SearchBarLayout.Mobile,
+            results = docsQtResults(),
+            modifier = modifier.fillMaxWidth(),
         )
     }
 }

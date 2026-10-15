@@ -17,6 +17,7 @@ import com.genev4.catalog.docs.FabDocsDemo
 import com.genev4.catalog.docs.IconButtonDocsDemo
 import com.genev4.catalog.docs.ListDocsDemo
 import com.genev4.catalog.docs.MenuDocsDemo
+import com.genev4.catalog.docs.ModalCatalogDocsDemo
 import com.genev4.catalog.docs.ModalDefaultDocsDemo
 import com.genev4.catalog.docs.ModalHeroDocsDemo
 import com.genev4.catalog.docs.ModalLoadingDocsDemo
@@ -25,6 +26,10 @@ import com.genev4.catalog.docs.NavigationBarDocsDemo
 import com.genev4.catalog.docs.NavigationRailDocsDemo
 import com.genev4.catalog.docs.PullToRefreshDocsDemo
 import com.genev4.catalog.docs.ScaffoldDocsDemo
+import com.genev4.catalog.docs.SearchBarDefaultDocsDemo
+import com.genev4.catalog.docs.SearchBarDefaultResultsDocsDemo
+import com.genev4.catalog.docs.SearchBarMobileDocsDemo
+import com.genev4.catalog.docs.SearchBarMobileResultsDocsDemo
 import com.genev4.catalog.docs.SearchDocsDemo
 import com.genev4.catalog.docs.SegmentedButtonDocsDemo
 import com.genev4.catalog.docs.SelectionDocsDemo
@@ -148,6 +153,12 @@ class DocsSnapshots {
     @Test fun selection() = paparazzi.snapshot(name = "selection") { DocsTheme { SelectionDocsDemo() } }
     @Test fun slider() = paparazzi.snapshot(name = "slider") { DocsTheme { SliderDocsDemo() } }
     @Test
+    fun processStepper() =
+        paparazzi.snapshot(name = "process-stepper") {
+            DocsTheme { ProcessStepperHorizontalNumberDocsDemo() }
+        }
+
+    @Test
     fun processStepperHorizontalNumber() =
         paparazzi.snapshot(name = "process-stepper-horizontal-number") {
             DocsTheme { ProcessStepperHorizontalNumberDocsDemo() }
@@ -183,12 +194,34 @@ class DocsSnapshots {
     @Test fun appBar() = paparazzi.snapshot(name = "app-bar") { DocsTheme { AppBarDocsDemo() } }
     @Test fun menu() = paparazzi.snapshot(name = "menu") { DocsTheme { MenuDocsDemo() } }
     @Test fun search() = paparazzi.snapshot(name = "search") { DocsTheme { SearchDocsDemo() } }
+
+    @Test
+    fun searchBar() = paparazzi.snapshot(name = "search-bar") { DocsTheme { SearchBarDefaultDocsDemo() } }
+
+    @Test
+    fun searchBarDefaultResults() =
+        paparazzi.snapshot(name = "search-bar-default-results") {
+            DocsTheme { SearchBarDefaultResultsDocsDemo() }
+        }
+
+    @Test
+    fun searchBarMobile() =
+        paparazzi.snapshot(name = "search-bar-mobile") { DocsTheme { SearchBarMobileDocsDemo() } }
+
+    @Test
+    fun searchBarMobileResults() =
+        paparazzi.snapshot(name = "search-bar-mobile-results") {
+            DocsTheme { SearchBarMobileResultsDocsDemo() }
+        }
     @Test fun datePicker() = paparazzi.snapshot(name = "date-picker") { DocsTheme { DatePickerDocsDemo() } }
     @Test fun timePicker() = paparazzi.snapshot(name = "time-picker") { DocsTheme { TimePickerDocsDemo() } }
     @Test fun carousel() = paparazzi.snapshot(name = "carousel") { DocsTheme { CarouselDocsDemo() } }
     @Test fun pullToRefresh() = paparazzi.snapshot(name = "pull-to-refresh") { DocsTheme { PullToRefreshDocsDemo() } }
     @Test fun tooltip() = paparazzi.snapshot(name = "tooltip") { DocsTheme { TooltipDocsDemo() } }
     @Test fun bottomSheet() = paparazzi.snapshot(name = "bottom-sheet") { DocsTheme { BottomSheetDocsDemo() } }
+
+    @Test
+    fun modal() = paparazzi.snapshot(name = "modal") { DocsTheme { ModalCatalogDocsDemo() } }
 
     @Test
     fun modalDefault() {

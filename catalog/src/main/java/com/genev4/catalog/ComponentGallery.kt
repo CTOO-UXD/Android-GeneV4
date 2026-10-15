@@ -106,6 +106,9 @@ import com.genev4.OutlinedSecureTextField
 import com.genev4.OutlinedTextField
 import com.genev4.PlainTooltip
 import com.genev4.PrimaryTabRow
+import com.genev4.SearchBar
+import com.genev4.SearchBarLayout
+import com.genev4.SearchResult
 import com.genev4.RadioButton
 import com.genev4.RangeSlider
 import com.genev4.SecondaryTabRow
@@ -179,6 +182,8 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
     var exposedValue by remember { mutableStateOf("杭州") }
     var search by remember { mutableStateOf("") }
     var searchActive by remember { mutableStateOf(false) }
+    var qtSearch by remember { mutableStateOf("") }
+    var qtSearchMobile by remember { mutableStateOf("") }
     var sheet by remember { mutableStateOf(false) }
     var confirmModal by remember { mutableStateOf(false) }
     var loadingModal by remember { mutableStateOf(false) }
@@ -422,6 +427,32 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                             )
                         }
                     }
+                }
+            }
+            item {
+                Section("搜索条") {
+                    val suggestions = listOf("西湖", "灵隐", "九溪", "河坊街")
+                    val wideMatches = qtSearchMatches(suggestions, qtSearch)
+                    val narrowMatches = qtSearchMatches(suggestions, qtSearchMobile)
+                    Text("宽屏 · Default", style = MaterialTheme.typography.labelLarge)
+                    SearchBar(
+                        value = qtSearch,
+                        onValueChange = { qtSearch = it },
+                        onSearch = {},
+                        results = wideMatches,
+                        onResultClick = { qtSearch = wideMatches[it].label },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    Text("窄屏 · Mobile", style = MaterialTheme.typography.labelLarge)
+                    SearchBar(
+                        value = qtSearchMobile,
+                        onValueChange = { qtSearchMobile = it },
+                        onSearch = {},
+                        layout = SearchBarLayout.Mobile,
+                        results = narrowMatches,
+                        onResultClick = { qtSearchMobile = narrowMatches[it].label },
+                        modifier = Modifier.fillMaxWidth().widthIn(max = 362.dp),
+                    )
                 }
             }
             item {
@@ -836,6 +867,13 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                 Button(onClick = { sheet = false }, modifier = Modifier.fillMaxWidth()) { Text("知道了") }
             }
         }
+    }
+}
+
+private fun qtSearchMatches(suggestions: List<String>, query: String): List<SearchResult> {
+    if (query.isBlank()) return emptyList()
+    return suggestions.filter { it.contains(query) }.mapIndexed { index, label ->
+        SearchResult(label = label, selected = index == 0)
     }
 }
 
