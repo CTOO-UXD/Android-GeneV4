@@ -55,7 +55,8 @@ import androidx.compose.ui.unit.sp
  *
  * The connector after a step follows that step's [ProcessStepState]: 3dp after [ProcessStepState.Complete],
  * 1dp after [ProcessStepState.InProgress] and [ProcessStepState.Enabled], and 1dp in
- * [ColorScheme.outline] after [ProcessStepState.Disabled]. The last step has no connector.
+ * [ColorScheme.outline] after [ProcessStepState.Disabled]. Each end of the line stops 4dp short of
+ * the node. The last step has no connector.
  * Horizontal layout needs a bounded width.
  *
  * @param steps steps in order. An empty list draws nothing
@@ -181,7 +182,8 @@ private fun VerticalStepper(
                 ) {
                     val thickness = connectorThickness(step.state)
                     Box(
-                        Modifier.width(thickness)
+                        Modifier.padding(vertical = ConnectorGap)
+                            .width(thickness)
                             .fillMaxHeight()
                             .background(connectorColor(step.state))
                     )
@@ -245,6 +247,7 @@ private fun StepNode(step: ProcessStep, index: Int, type: ProcessStepType) {
 private fun StepConnector(state: ProcessStepState, modifier: Modifier) {
     Box(
         modifier
+            .padding(horizontal = ConnectorGap)
             .height(connectorThickness(state))
             .background(connectorColor(state))
     )
@@ -338,5 +341,6 @@ private val EmptyDot = 12.dp
 private val LabelGap = 8.dp
 private val LabelEnd = 16.dp
 private val ConnectorMin = 32.dp
+private val ConnectorGap = 4.dp
 private val CompletedConnector = 3.dp
 private val ActiveConnector = 1.dp
