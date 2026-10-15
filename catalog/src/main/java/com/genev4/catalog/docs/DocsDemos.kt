@@ -8,6 +8,9 @@ import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.FocusInteraction
+import androidx.compose.foundation.interaction.Interaction
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -17,10 +20,15 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.channels.BufferOverflow
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import com.genev4.AiInput
 import com.genev4.AiInputFileAttachment
 import com.genev4.AiInputLayout
@@ -280,8 +288,33 @@ fun TextFieldDocsDemo(modifier: Modifier = Modifier) {
     }
 }
 
+/** Seeds a focused interaction immediately so Paparazzi captures the Active / clear chrome. */
+@Composable
+private fun rememberDocsFocusedInteraction(): MutableInteractionSource =
+    remember {
+        object : MutableInteractionSource {
+            private val focus = FocusInteraction.Focus()
+            private val flow =
+                MutableSharedFlow<Interaction>(
+                    replay = 1,
+                    extraBufferCapacity = 16,
+                    onBufferOverflow = BufferOverflow.DROP_OLDEST,
+                ).also { it.tryEmit(focus) }
+
+            override val interactions: Flow<Interaction> = flow.asSharedFlow()
+
+            override suspend fun emit(interaction: Interaction) {
+                flow.emit(interaction)
+            }
+
+            override fun tryEmit(interaction: Interaction): Boolean = flow.tryEmit(interaction)
+        }
+    }
+
 @Composable
 fun TextInputDocsDemo(modifier: Modifier = Modifier) {
+    val focused = rememberDocsFocusedInteraction()
+    val focusedError = rememberDocsFocusedInteraction()
     Column(
         modifier = modifier.padding(16.dp).width(332.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -298,14 +331,16 @@ fun TextInputDocsDemo(modifier: Modifier = Modifier) {
             value = "杭州",
             onValueChange = {},
             label = "城市",
+            interactionSource = focused,
             modifier = Modifier.fillMaxWidth(),
         )
         TextInput(
-            value = "error",
+            value = "",
             onValueChange = {},
             label = "姓名",
             isError = true,
             supportingText = "校验失败提示",
+            interactionSource = focusedError,
             modifier = Modifier.fillMaxWidth(),
         )
         TextInput(
@@ -365,6 +400,8 @@ fun TextAreaDocsDemo(modifier: Modifier = Modifier) {
 
 @Composable
 fun ActionInputDocsDemo(modifier: Modifier = Modifier) {
+    val focused = rememberDocsFocusedInteraction()
+    val focusedError = rememberDocsFocusedInteraction()
     Column(
         modifier = modifier.padding(16.dp).width(332.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -381,15 +418,17 @@ fun ActionInputDocsDemo(modifier: Modifier = Modifier) {
             onValueChange = {},
             onAction = {},
             label = "发送",
+            interactionSource = focused,
             modifier = Modifier.fillMaxWidth(),
         )
         ActionInput(
-            value = "error",
+            value = "",
             onValueChange = {},
             onAction = {},
             label = "发送",
             isError = true,
             supportingText = "发送失败",
+            interactionSource = focusedError,
             modifier = Modifier.fillMaxWidth(),
         )
     }

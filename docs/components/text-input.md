@@ -8,7 +8,7 @@ Material 的填充和描边输入仍然是 [TextField](/components/text-field)�
 
 ### 单行
 
-从上到下：空标签、placeholder、已填写、错误、辅助说明、下拉、禁用。
+从上到下：空标签、placeholder、聚焦已填写（带清除）、聚焦错误（带清除）、辅助说明、下拉、禁用。清除图标只在聚焦时出现。
 
 ![单行](/components/text-input.png)
 
@@ -61,7 +61,7 @@ TextArea(
 
 ### 行内操作
 
-从上到下：空内容（按钮禁用）、已填写（按钮可点）、错误。
+从上到下：空内容（发送禁用）、聚焦已填写（清除 + 描边发送）、聚焦错误（清除 + 红色描边发送）。
 
 ![行内操作](/components/action-input.png)
 
@@ -96,7 +96,8 @@ ActionInput(
 | 行内操作 | `ActionInput` | 写一句就提交 |
 | 错误 | `isError = true` + `supportingText` | 校验失败，带错误图标 |
 | 辅助说明 | `supportingText` | 框下方的说明 |
-| 清除 | `showClear`（默认开） | 聚焦后出现，点一下清空 |
+| 清除 | `showClear`（默认开） | 聚焦后出现灰色 ×，点一下清空 |
+| 发送 | `ActionInput` | 描边纸飞机；错误时红色 |
 | 下拉 | `showDropdown` | 箭头。展开、聚焦或按下时朝上 |
 | 隐藏标签 | `TextArea(showLabel = false)` | 多行框不要标签 |
 | 禁用 | `enabled = false` | 整块淡到 38% |

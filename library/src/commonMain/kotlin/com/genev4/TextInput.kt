@@ -328,7 +328,9 @@ private fun GeneInput(
             hovered -> PaletteTokens.Primary80.copy(alpha = HoverOverlayAlpha)
             else -> Color.Transparent
         }
-    val iconTint = if (isError) scheme.error else scheme.onSurface
+    val clearTint = scheme.onSurface
+    val trailingTint = if (isError) scheme.error else scheme.onSurface
+    val actionTint = if (isError) scheme.error else scheme.primary
     val shape = TextInputShape
     val bodyLarge = MaterialTheme.typography.bodyLarge
     val bodySmall = MaterialTheme.typography.bodySmall
@@ -420,7 +422,7 @@ private fun GeneInput(
                         TrailingIcon(
                             icon = TextInputIcons.Cancel,
                             contentDescription = "Clear",
-                            tint = iconTint,
+                            tint = clearTint,
                             onClick = {
                                 onValueChange("")
                                 onClear?.invoke()
@@ -432,7 +434,7 @@ private fun GeneInput(
                         TrailingIcon(
                             icon = if (expanded) TextInputIcons.ArrowDropUp else TextInputIcons.ArrowDropDown,
                             contentDescription = "Dropdown",
-                            tint = iconTint,
+                            tint = trailingTint,
                             onClick = onDropdownClick,
                             enabled = enabled,
                         )
@@ -441,10 +443,11 @@ private fun GeneInput(
                         TrailingIcon(
                             icon = TextInputIcons.Send,
                             contentDescription = "Send",
-                            tint = scheme.primary,
+                            tint = actionTint,
                             onClick = onAction,
                             enabled = enabled && actionEnabled,
-                            dimmed = enabled && !actionEnabled,
+                            // Empty + unfocused stays muted; Active keeps full color like the spec.
+                            dimmed = enabled && !actionEnabled && !focused,
                             buttonSize = ActionButtonSize,
                         )
                     }
@@ -572,8 +575,8 @@ private object TextInputIcons {
     }
     val Send: ImageVector by lazy {
         icon(
-            "Filled.Send",
-            "M4.39827 3.60715C4.27259 3.55257 4.13702 3.52441 4 3.52441C3.44772 3.52441 3 3.97213 3 4.52441V10V10.0275L12.0737 12L3 13.9726V14V19.4756C3 19.6127 3.02816 19.7482 3.08273 19.8739C3.30269 20.3805 3.89168 20.6129 4.39827 20.3929L21.6154 12.9173C21.8479 12.8163 22.0334 12.6308 22.1344 12.3983C22.3543 11.8917 22.122 11.3027 21.6154 11.0828L4.39827 3.60715Z",
+            "Outlined.Send",
+            "M4.42627 3.52441C4.56329 3.52441 4.69886 3.55257 4.82454 3.60715L22.0416 11.0828C22.5482 11.3027 22.7806 11.8917 22.5606 12.3983C22.4597 12.6308 22.2742 12.8163 22.0416 12.9173L4.82454 20.3929C4.31795 20.6129 3.72896 20.3805 3.509 19.8739C3.45443 19.7482 3.42627 19.6127 3.42627 19.4756V14V10V4.52441C3.42627 3.97213 3.87398 3.52441 4.42627 3.52441ZM5.42627 13.5556L12.4263 12L5.42627 10.4445V6.04802L19.1313 12L5.42627 17.951V13.5556Z",
         )
     }
 }
