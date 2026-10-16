@@ -46,6 +46,10 @@ import com.genev4.Checkbox
 import com.genev4.CircularProgressIndicator
 import com.genev4.DatePicker
 import com.genev4.DockedSearchBar
+import com.genev4.Menus
+import com.genev4.MenusGroup
+import com.genev4.MenusItem
+import com.genev4.MenusTheme
 import com.genev4.DrawerValue
 import com.genev4.DropdownMenu
 import com.genev4.DropdownMenuItem
@@ -76,6 +80,7 @@ import com.genev4.icons.filled.Favorite
 import com.genev4.icons.filled.Home
 import com.genev4.icons.filled.Icon123
 import com.genev4.icons.filled.Search
+import com.genev4.MenusIcons
 import com.genev4.icons.filled.Settings
 import com.genev4.icons.outlined.AccountCircle as AccountCircleOutlined
 import com.genev4.icons.outlined.Icon123 as Icon123Outlined
@@ -178,6 +183,7 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
     var tab by remember { mutableIntStateOf(0) }
     var secondaryTab by remember { mutableIntStateOf(1) }
     var menu by remember { mutableStateOf(false) }
+    var menusPick by remember { mutableIntStateOf(1) }
     var exposed by remember { mutableStateOf(false) }
     var exposedValue by remember { mutableStateOf("杭州") }
     var search by remember { mutableStateOf("") }
@@ -506,6 +512,56 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                             }
                         }
                     }
+                }
+            }
+            item {
+                Section("菜单组") {
+                    Text("Standard · 两组", style = MaterialTheme.typography.labelLarge)
+                    Menus(
+                        groups =
+                            listOf(
+                                MenusGroup(
+                                    items =
+                                        listOf("编辑", "分享", "复制").mapIndexed { index, label ->
+                                            MenusItem(
+                                                text = label,
+                                                selected = index == menusPick,
+                                                trailing = if (index == menusPick) MenusIcons.Check else MenusIcons.Caret,
+                                                onClick = { menusPick = index },
+                                            )
+                                        },
+                                ),
+                                MenusGroup(
+                                    items =
+                                        listOf("归档", "删除").map { label ->
+                                            MenusItem(
+                                                text = label,
+                                                trailing = MenusIcons.Caret,
+                                            )
+                                        },
+                                ),
+                            ),
+                        modifier = Modifier.widthIn(max = 208.dp),
+                    )
+                    Text("Vibrant · 一组", style = MaterialTheme.typography.labelLarge)
+                    Menus(
+                        groups =
+                            listOf(
+                                MenusGroup(
+                                    label = "最近",
+                                    items =
+                                        listOf("西湖", "灵隐", "九溪").map { label ->
+                                            MenusItem(
+                                                text = label,
+                                                leading = MenusIcons.Star,
+                                                trailing = MenusIcons.Caret,
+                                            )
+                                        },
+                                ),
+                            ),
+                        theme = MenusTheme.Vibrant,
+                        modifier = Modifier.widthIn(max = 208.dp),
+                    )
                 }
             }
             item {

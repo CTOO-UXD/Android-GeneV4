@@ -63,6 +63,7 @@ import com.genev4.FilledTonalIconButton
 import com.genev4.FilterChip
 import com.genev4.FloatingActionButton
 import com.genev4.HorizontalDivider
+import com.genev4.Icon
 import com.genev4.IconButton
 import com.genev4.InputChip
 import com.genev4.LargeFloatingActionButton
@@ -95,6 +96,11 @@ import com.genev4.OutlinedSecureTextField
 import com.genev4.OutlinedTextField
 import com.genev4.PermanentDrawerSheet
 import com.genev4.PrimaryTabRow
+import com.genev4.Menus
+import com.genev4.MenusGroup
+import com.genev4.MenusIcons
+import com.genev4.MenusItem
+import com.genev4.MenusTheme
 import com.genev4.SearchBar
 import com.genev4.SearchBarLayout
 import com.genev4.SearchResult
@@ -135,6 +141,7 @@ import com.genev4.VerticalDivider
 import com.genev4.carousel.HorizontalMultiBrowseCarousel
 import com.genev4.carousel.rememberCarouselState
 import com.genev4.icons.Icons
+import com.genev4.icons.filled.Close
 import com.genev4.icons.filled.Favorite
 import com.genev4.icons.filled.Home
 import com.genev4.icons.filled.Search
@@ -1353,6 +1360,204 @@ fun SearchBarMobileResultsDocsDemo(modifier: Modifier = Modifier) {
         )
     }
 }
+
+private val MenusCanvas = Color(0xFFE7E4EA)
+
+@Composable
+private fun MenusStage(content: @Composable () -> Unit) {
+    Box(Modifier.background(MenusCanvas).padding(24.dp)) { content() }
+}
+
+private fun docsMenusRows(count: Int, selected: Int = -1): List<MenusItem> =
+    List(count) { index ->
+        MenusItem(
+            text = "Label",
+            selected = index == selected,
+            leading = if (selected == index) MenusIcons.StarFilled else MenusIcons.Star,
+            trailing = if (index == selected) MenusIcons.Check else MenusIcons.Caret,
+        )
+    }
+
+@Composable
+fun MenusDocsDemo(modifier: Modifier = Modifier) {
+    MenusStage {
+        Menus(
+            groups = listOf(MenusGroup(items = docsMenusRows(6))),
+            modifier = modifier.width(208.dp),
+        )
+    }
+}
+
+@Composable
+fun MenusGroupsDocsDemo(modifier: Modifier = Modifier) {
+    MenusStage {
+        Menus(
+            groups =
+                listOf(
+                    MenusGroup(items = docsMenusPlain(3, selected = 1)),
+                    MenusGroup(items = docsMenusPlain(2)),
+                ),
+            modifier = modifier.width(208.dp),
+        )
+    }
+}
+
+private fun docsMenusPlain(count: Int, selected: Int = -1): List<MenusItem> =
+    List(count) { index ->
+        MenusItem(
+            text = "Label",
+            selected = index == selected,
+            trailing = if (index == selected) MenusIcons.Check else MenusIcons.Caret,
+        )
+    }
+
+@Composable
+fun MenusVibrantDocsDemo(modifier: Modifier = Modifier) {
+    MenusStage {
+        Menus(
+            groups =
+                listOf(
+                    MenusGroup(items = docsMenusRows(4)),
+                    MenusGroup(items = docsMenusRows(4)),
+                ),
+            theme = MenusTheme.Vibrant,
+            modifier = modifier.width(208.dp),
+        )
+    }
+}
+
+/** Text field and search field anchors from the Gene Menu board. */
+@Composable
+fun MenusUsageFieldsDocsDemo(modifier: Modifier = Modifier) {
+    val focused = rememberDocsFocusedInteraction()
+    val searchFocused = rememberDocsFocusedInteraction()
+    MenusStage {
+        Row(
+            modifier = modifier,
+            horizontalArrangement = Arrangement.spacedBy(24.dp),
+            verticalAlignment = Alignment.Top,
+        ) {
+            Column(
+                modifier = Modifier.width(208.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                OutlinedTextField(
+                    value = "Input",
+                    onValueChange = {},
+                    label = { Text("Label") },
+                    trailingIcon = {
+                        Icon(Icons.Filled.Close, contentDescription = null)
+                    },
+                    interactionSource = focused,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                Menus(
+                    groups = listOf(MenusGroup(items = docsMenusCheckRows(8, selected = 2))),
+                    maxHeight = 196.dp,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+            Column(
+                modifier = Modifier.width(208.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                OutlinedTextField(
+                    value = "Input",
+                    onValueChange = {},
+                    label = { Text("Label") },
+                    leadingIcon = {
+                        Icon(Icons.Filled.Search, contentDescription = null)
+                    },
+                    trailingIcon = {
+                        Icon(Icons.Filled.Close, contentDescription = null)
+                    },
+                    interactionSource = searchFocused,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                Menus(
+                    groups =
+                        listOf(
+                            MenusGroup(
+                                items =
+                                    List(4) { index ->
+                                        MenusItem(
+                                            text = "Label",
+                                            selected = index == 2,
+                                            leading = if (index == 2) MenusIcons.StarFilled else MenusIcons.Star,
+                                        )
+                                    },
+                            ),
+                        ),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+        }
+    }
+}
+
+/** Tonal button and icon button anchors from the Gene Menu board. */
+@Composable
+fun MenusUsageAnchorsDocsDemo(modifier: Modifier = Modifier) {
+    MenusStage {
+        Row(
+            modifier = modifier,
+            horizontalArrangement = Arrangement.spacedBy(24.dp),
+            verticalAlignment = Alignment.Top,
+        ) {
+            Column(
+                modifier = Modifier.width(208.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                FilledTonalButton(onClick = {}) {
+                    Icon(MenusIcons.Star, contentDescription = null)
+                    Text("Label")
+                }
+                Menus(
+                    groups =
+                        listOf(
+                            MenusGroup(
+                                items =
+                                    List(4) {
+                                        MenusItem(
+                                            text = "Label",
+                                            leading = MenusIcons.Star,
+                                            trailing = MenusIcons.Caret,
+                                        )
+                                    },
+                            ),
+                        ),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+            Column(
+                modifier = Modifier.width(208.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                FilledIconButton(onClick = {}) {
+                    Icon(MenusIcons.Star, contentDescription = null)
+                }
+                Menus(
+                    groups =
+                        listOf(
+                            MenusGroup(items = docsMenusPlain(3, selected = 1)),
+                            MenusGroup(items = docsMenusPlain(2)),
+                        ),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+        }
+    }
+}
+
+private fun docsMenusCheckRows(count: Int, selected: Int = -1): List<MenusItem> =
+    List(count) { index ->
+        MenusItem(
+            text = "Label",
+            selected = index == selected,
+            leading = if (index == selected) MenusIcons.Check else null,
+            indent = index != selected,
+        )
+    }
 
 @Composable
 fun ProcessStepperVerticalEmptyDocsDemo(modifier: Modifier = Modifier) {

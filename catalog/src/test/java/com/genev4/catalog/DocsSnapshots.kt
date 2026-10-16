@@ -17,6 +17,11 @@ import com.genev4.catalog.docs.FabDocsDemo
 import com.genev4.catalog.docs.IconButtonDocsDemo
 import com.genev4.catalog.docs.ListDocsDemo
 import com.genev4.catalog.docs.MenuDocsDemo
+import com.genev4.catalog.docs.MenusDocsDemo
+import com.genev4.catalog.docs.MenusGroupsDocsDemo
+import com.genev4.catalog.docs.MenusUsageAnchorsDocsDemo
+import com.genev4.catalog.docs.MenusUsageFieldsDocsDemo
+import com.genev4.catalog.docs.MenusVibrantDocsDemo
 import com.genev4.catalog.docs.ModalCatalogDocsDemo
 import com.genev4.catalog.docs.ModalDefaultDocsDemo
 import com.genev4.catalog.docs.ModalHeroDocsDemo
@@ -193,6 +198,31 @@ class DocsSnapshots {
     @Test fun navigationRail() = paparazzi.snapshot(name = "navigation-rail") { DocsTheme { NavigationRailDocsDemo() } }
     @Test fun appBar() = paparazzi.snapshot(name = "app-bar") { DocsTheme { AppBarDocsDemo() } }
     @Test fun menu() = paparazzi.snapshot(name = "menu") { DocsTheme { MenuDocsDemo() } }
+
+    @Test
+    fun menus() = paparazzi.snapshot(name = "menus") { DocsTheme { MenusDocsDemo() } }
+
+    @Test
+    fun menusGroups() = paparazzi.snapshot(name = "menus-groups") { DocsTheme { MenusGroupsDocsDemo() } }
+
+    @Test
+    fun menusVibrant() = paparazzi.snapshot(name = "menus-vibrant") { DocsTheme { MenusVibrantDocsDemo() } }
+
+    @Test
+    fun menusUsageFields() {
+        // Two 208dp anchors plus padding are wider than Pixel 5.
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 1800, screenHeight = 1600))
+        paparazzi.snapshot(name = "menus-usage") { DocsTheme { MenusUsageFieldsDocsDemo() } }
+    }
+
+    @Test
+    fun menusUsageAnchors() {
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 1800, screenHeight = 1600))
+        paparazzi.snapshot(name = "menus-usage-anchors") {
+            DocsTheme { MenusUsageAnchorsDocsDemo() }
+        }
+    }
+
     @Test fun search() = paparazzi.snapshot(name = "search") { DocsTheme { SearchDocsDemo() } }
 
     @Test

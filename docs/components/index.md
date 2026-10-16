@@ -17,6 +17,7 @@
 - [Search Bar](/components/search-bar) — 宽屏 / 窄屏，空内容 / 有结果
 - [AiInput](/components/ai-input) — 对话输入
 - [Menu](/components/menu) — 菜单 / 暴露式下拉
+- [Menus](/components/menus) — Standard / Vibrant，一组 / 多组
 - [Selection](/components/selection) — 复选 / 开关 / 单选
 - [Slider](/components/slider) — 滑条 / 区间 / 进度
 - [ProcessStepper](/components/process-stepper) — 横排 / 竖排，数字 / 图标 / 空心
