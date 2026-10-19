@@ -6,35 +6,35 @@
 
 ## 已文档化
 
+- [AiInput](/components/ai-input) — 对话输入
+- [Alert Banner](/components/alert-banner) — 页面内常驻提示
+- [Menus](/components/menus) — Standard / Vibrant，一组 / 多组
+- [Modal](/components/modal) — 确认 / 加载 / Hero / 功能引导
+- [ProcessStepper](/components/process-stepper) — 横排 / 竖排，数字 / 图标 / 空心
+- [Search Bar](/components/search-bar) — 宽屏 / 窄屏，空内容 / 有结果
+- [TextInput](/components/text-input) — 单行 / 多行 / 行内操作
 - [Button](/components/button) — 填充 / 色调 / 描边 / 文字 / 抬升
 - [IconButton](/components/icon-button) — 标准 / 填充 / 色调 / 描边
 - [FAB](/components/fab) — 小 / 默认 / 大 / 扩展
-- [Chip](/components/chip) — 辅助 / 筛选 / 输入 / 建议
 - [SegmentedButton](/components/segmented-button) — 单选 / 多选
 - [TextField](/components/text-field) — 填充 / 描边 / 密码
-- [TextInput](/components/text-input) — 单行 / 多行 / 行内操作
 - [Search](/components/search) — 停靠搜索
-- [Search Bar](/components/search-bar) — 宽屏 / 窄屏，空内容 / 有结果
-- [AiInput](/components/ai-input) — 对话输入
-- [Menu](/components/menu) — 菜单 / 暴露式下拉
-- [Menus](/components/menus) — Standard / Vibrant，一组 / 多组
 - [Selection](/components/selection) — 复选 / 开关 / 单选
+- [Chip](/components/chip) — 辅助 / 筛选 / 输入 / 建议
 - [Slider](/components/slider) — 滑条 / 区间 / 进度
-- [ProcessStepper](/components/process-stepper) — 横排 / 竖排，数字 / 图标 / 空心
-- [Card](/components/card) — 填充 / 抬升 / 描边
-- [List](/components/list) — 列表行 / 徽章 / 分割线 / 滑动
-- [Tabs](/components/tabs) — 主标签 / 次标签
-- [NavigationBar](/components/navigation-bar) — 底部导航
-- [NavigationRail](/components/navigation-rail) — 侧栏 / 短底栏 / 抽屉
-- [AppBar](/components/app-bar) — 顶栏 / 底栏
-- [Scaffold](/components/scaffold) — 页面骨架
-- [Carousel](/components/carousel) — 横向多览
-- [PullToRefresh](/components/pull-to-refresh) — 下拉刷新
-- [Tooltip](/components/tooltip) — 短说明
-- [Dialog](/components/dialog) — AlertDialog
-- [Modal](/components/modal) — 确认 / 加载 / Hero / 功能引导
-- [Alert Banner](/components/alert-banner) — 页面内常驻提示
-- [Snackbar](/components/snackbar) — 短时反馈
-- [BottomSheet](/components/bottom-sheet) — 底部菜单
+- [Menu](/components/menu) — 菜单 / 暴露式下拉
 - [DatePicker](/components/date-picker) — 日期
 - [TimePicker](/components/time-picker) — 时间
+- [AppBar](/components/app-bar) — 顶栏 / 底栏
+- [NavigationBar](/components/navigation-bar) — 底部导航
+- [NavigationRail](/components/navigation-rail) — 侧栏 / 短底栏 / 抽屉
+- [Tabs](/components/tabs) — 主标签 / 次标签
+- [Scaffold](/components/scaffold) — 页面骨架
+- [Card](/components/card) — 填充 / 抬升 / 描边
+- [List](/components/list) — 列表行 / 徽章 / 分割线 / 滑动
+- [Carousel](/components/carousel) — 横向多览
+- [PullToRefresh](/components/pull-to-refresh) — 下拉刷新
+- [Dialog](/components/dialog) — AlertDialog
+- [BottomSheet](/components/bottom-sheet) — 底部菜单
+- [Snackbar](/components/snackbar) — 短时反馈
+- [Tooltip](/components/tooltip) — 短说明
