@@ -1,6 +1,6 @@
 # Snackbar
 
-底部短时提示，用于操作结果反馈（已保存、网络错误等）。通常配合 `SnackbarHost` + `Scaffold`。
+底部短时提示，用于操作结果反馈（已保存、网络错误等）。通常配合 `SnackbarHost` + `Scaffold`。需要留在页面里、点关闭才消失的横幅用 [Alert Banner](/components/alert-banner)。
 
 ## Types
 

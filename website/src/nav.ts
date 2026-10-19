@@ -46,6 +46,7 @@ export const navGroups: NavGroup[] = [
       { title: '提示', en: 'Tooltip', path: '/components/tooltip' },
       { title: '对话框', en: 'Dialog', path: '/components/dialog' },
       { title: '模态', en: 'Modal', path: '/components/modal' },
+      { title: '警示条', en: 'Alert Banner', path: '/components/alert-banner' },
       { title: '提示条', en: 'Snackbar', path: '/components/snackbar' },
       { title: '底部菜单', en: 'BottomSheet', path: '/components/bottom-sheet' },
       { title: '日期', en: 'DatePicker', path: '/components/date-picker' },
@@ -85,6 +86,7 @@ export const docFiles: Record<string, string> = {
   '/components/tooltip': 'components/tooltip.md',
   '/components/dialog': 'components/dialog.md',
   '/components/modal': 'components/modal.md',
+  '/components/alert-banner': 'components/alert-banner.md',
   '/components/snackbar': 'components/snackbar.md',
   '/components/bottom-sheet': 'components/bottom-sheet.md',
   '/components/date-picker': 'components/date-picker.md',
@@ -105,6 +107,8 @@ export const componentSource: Record<string, string> = {
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/NavigationBar.kt',
   '/components/scaffold':
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Scaffold.kt',
+  '/components/alert-banner':
+    'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/AlertBanner.kt',
   '/components/snackbar':
     'https://github.com/CTOO-UXD/Android-GeneV4/blob/main/library/src/commonMain/kotlin/com/genev4/Snackbar.kt',
   '/components/text-field':

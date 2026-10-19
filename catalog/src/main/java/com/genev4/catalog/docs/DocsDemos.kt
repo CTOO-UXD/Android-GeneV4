@@ -20,7 +20,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Modifier
@@ -35,6 +38,9 @@ import com.genev4.AiInput
 import com.genev4.AiInputFileAttachment
 import com.genev4.AiInputLayout
 import com.genev4.AiInputPhase
+import com.genev4.AlertBanner
+import com.genev4.AlertBannerDefaults
+import com.genev4.AlertBannerScheme
 import com.genev4.AlertDialog
 import com.genev4.AssistChip
 import com.genev4.Badge
@@ -1558,6 +1564,84 @@ private fun docsMenusCheckRows(count: Int, selected: Int = -1): List<MenusItem> 
             indent = index != selected,
         )
     }
+
+private val AlertBannerCanvas = Color(0xFFE7E4EA)
+
+@Composable
+private fun AlertBannerStage(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    Column(
+        modifier.background(AlertBannerCanvas).padding(24.dp).width(740.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        content()
+    }
+}
+
+@Composable
+private fun DocsAlertBanner(
+    scheme: AlertBannerScheme,
+    elevated: Boolean = false,
+    title: String,
+    checkbox: @Composable (() -> Unit)? = null,
+    secondary: Boolean = false,
+) {
+    AlertBanner(
+        onClose = {},
+        modifier = Modifier.fillMaxWidth(),
+        scheme = scheme,
+        elevated = elevated,
+        title = { Text(title) },
+        text = { Text("Alert banner message") },
+        checkbox = checkbox,
+        primaryButton = {
+            AlertBannerDefaults.PrimaryButton(onClick = {}, scheme = scheme) { Text("Label") }
+        },
+        secondaryButton =
+            if (secondary) {
+                { AlertBannerDefaults.SecondaryButton(onClick = {}) { Text("Label") } }
+            } else {
+                null
+            },
+    )
+}
+
+@Composable
+fun AlertBannerDocsDemo(modifier: Modifier = Modifier) {
+    AlertBannerStage(modifier) {
+        DocsAlertBanner(AlertBannerScheme.Default, title = "Alert Label")
+        DocsAlertBanner(AlertBannerScheme.Informational, title = "Alert Label")
+        DocsAlertBanner(AlertBannerScheme.Success, title = "Success!")
+        DocsAlertBanner(AlertBannerScheme.Warning, title = "Warning:")
+        DocsAlertBanner(AlertBannerScheme.Error, title = "Error:")
+    }
+}
+
+@Composable
+fun AlertBannerElevatedDocsDemo(modifier: Modifier = Modifier) {
+    AlertBannerStage(modifier) {
+        DocsAlertBanner(AlertBannerScheme.Default, elevated = true, title = "Alert Label")
+        DocsAlertBanner(AlertBannerScheme.Informational, elevated = true, title = "Alert Label")
+    }
+}
+
+@Composable
+fun AlertBannerOptionsDocsDemo(modifier: Modifier = Modifier) {
+    var hide by remember { mutableStateOf(false) }
+    AlertBannerStage(modifier) {
+        DocsAlertBanner(
+            scheme = AlertBannerScheme.Default,
+            title = "Alert Label",
+            secondary = true,
+            checkbox = {
+                AlertBannerDefaults.Checkbox(
+                    checked = hide,
+                    onCheckedChange = { hide = it },
+                    label = "Don't show this again",
+                )
+            },
+        )
+    }
+}
 
 @Composable
 fun ProcessStepperVerticalEmptyDocsDemo(modifier: Modifier = Modifier) {

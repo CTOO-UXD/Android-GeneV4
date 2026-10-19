@@ -130,6 +130,9 @@ import com.genev4.ProcessStepper
 import com.genev4.ProcessStepperOrientation
 import com.genev4.Slider
 import com.genev4.SmallFloatingActionButton
+import com.genev4.AlertBanner
+import com.genev4.AlertBannerDefaults
+import com.genev4.AlertBannerScheme
 import com.genev4.Snackbar
 import com.genev4.SuggestionChip
 import com.genev4.SwipeToDismissBox
@@ -811,6 +814,36 @@ fun ComponentGallery(modifier: Modifier = Modifier) {
                         Button(onClick = { heroModal = true }) { Text("Hero") }
                         Button(onClick = { tourModal = true }) { Text("引导") }
                     }
+                }
+            }
+            item {
+                Section("警示条") {
+                    AlertBanner(
+                        onClose = {},
+                        modifier = Modifier.fillMaxWidth(),
+                        title = { Text("行程有更新") },
+                        text = { Text("有一段路线需要重新确认。") },
+                        primaryButton = {
+                            AlertBannerDefaults.PrimaryButton(
+                                onClick = {},
+                                scheme = AlertBannerScheme.Default,
+                            ) { Text("查看") }
+                        },
+                    )
+                    AlertBanner(
+                        onClose = {},
+                        modifier = Modifier.fillMaxWidth(),
+                        scheme = AlertBannerScheme.Error,
+                        elevated = true,
+                        title = { Text("同步失败") },
+                        text = { Text("网络中断，稍后再试。") },
+                        primaryButton = {
+                            AlertBannerDefaults.PrimaryButton(
+                                onClick = {},
+                                scheme = AlertBannerScheme.Error,
+                            ) { Text("重试") }
+                        },
+                    )
                 }
             }
             item {

@@ -3,6 +3,9 @@ package com.genev4.catalog
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
 import com.android.ide.common.rendering.api.SessionParams.RenderingMode
+import com.genev4.catalog.docs.AlertBannerDocsDemo
+import com.genev4.catalog.docs.AlertBannerElevatedDocsDemo
+import com.genev4.catalog.docs.AlertBannerOptionsDocsDemo
 import com.genev4.catalog.docs.AiInputDocsDemo
 import com.genev4.catalog.docs.AppBarDocsDemo
 import com.genev4.catalog.docs.BottomSheetDocsDemo
@@ -247,6 +250,28 @@ class DocsSnapshots {
     @Test fun timePicker() = paparazzi.snapshot(name = "time-picker") { DocsTheme { TimePickerDocsDemo() } }
     @Test fun carousel() = paparazzi.snapshot(name = "carousel") { DocsTheme { CarouselDocsDemo() } }
     @Test fun pullToRefresh() = paparazzi.snapshot(name = "pull-to-refresh") { DocsTheme { PullToRefreshDocsDemo() } }
+    @Test
+    fun alertBanner() {
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 2400, screenHeight = 3200))
+        paparazzi.snapshot(name = "alert-banner") { DocsTheme { AlertBannerDocsDemo() } }
+    }
+
+    @Test
+    fun alertBannerElevated() {
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 2400, screenHeight = 3200))
+        paparazzi.snapshot(name = "alert-banner-elevated") {
+            DocsTheme { AlertBannerElevatedDocsDemo() }
+        }
+    }
+
+    @Test
+    fun alertBannerOptions() {
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 2400, screenHeight = 3200))
+        paparazzi.snapshot(name = "alert-banner-options") {
+            DocsTheme { AlertBannerOptionsDocsDemo() }
+        }
+    }
+
     @Test fun tooltip() = paparazzi.snapshot(name = "tooltip") { DocsTheme { TooltipDocsDemo() } }
     @Test fun bottomSheet() = paparazzi.snapshot(name = "bottom-sheet") { DocsTheme { BottomSheetDocsDemo() } }
 
