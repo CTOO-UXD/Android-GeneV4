@@ -34,8 +34,10 @@ import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import androidx.compose.ui.graphics.painter.ColorPainter
 import com.genev4.AiInput
-import com.genev4.AiInputFileAttachment
+import com.genev4.AiInputFile
+import com.genev4.AiInputImageAttachment
 import com.genev4.AiInputLayout
 import com.genev4.AiInputPhase
 import com.genev4.AlertBanner
@@ -201,84 +203,171 @@ fun CardDocsDemo(modifier: Modifier = Modifier) {
     }
 }
 
+private val AiInputSampleFiles =
+    listOf(
+        AiInputFile("file-1", "File Name", "File Type"),
+        AiInputFile("file-2", "File Name", "File Type"),
+        AiInputFile("file-3", "File Name", "File Type"),
+        AiInputFile("file-4", "File Name", "File Type"),
+    )
+
+private const val AiInputLongText =
+    "Help me find travel inspiration for Italy on a budget. I will be traveling with three adults and two children. We are looking for good food, good times and good scenery. Help me find travel inspiration for Italy on a budget. I will be traveling with three adults and two children. We are looking for good food, good times and good scenery."
+
+private const val AiInputThinkingText =
+    "Help me find travel inspiration for Italy on a budget. I will be traveling with three adults and two children."
+
 @Composable
 fun AiInputDocsDemo(modifier: Modifier = Modifier) {
+    AiInputDocsColumn(modifier, 720.dp) {
+        AiInputDocsField(layout = AiInputLayout.BottomBar)
+        AiInputDocsField(value = "This is input text", layout = AiInputLayout.BottomBar)
+        AiInputDocsField(
+            value = AiInputThinkingText,
+            phase = AiInputPhase.Thinking,
+            layout = AiInputLayout.BottomBar,
+        )
+    }
+}
+
+@Composable
+fun AiInputContainerDocsDemo(modifier: Modifier = Modifier) {
+    AiInputDocsColumn(modifier, 360.dp) {
+        AiInputDocsField(layout = AiInputLayout.Container)
+        AiInputDocsField(value = "This is input text", layout = AiInputLayout.Container)
+        AiInputDocsField(
+            value = AiInputThinkingText,
+            phase = AiInputPhase.Thinking,
+            layout = AiInputLayout.Container,
+        )
+    }
+}
+
+@Composable
+fun AiInputListeningDocsDemo(modifier: Modifier = Modifier) {
+    AiInputDocsColumn(modifier, 720.dp) {
+        AiInputDocsField(phase = AiInputPhase.Listening, layout = AiInputLayout.BottomBar)
+        AiInputDocsField(
+            value = "This is input text",
+            phase = AiInputPhase.Listening,
+            layout = AiInputLayout.BottomBar,
+        )
+        AiInputDocsField(
+            value = AiInputLongText,
+            phase = AiInputPhase.Listening,
+            layout = AiInputLayout.BottomBar,
+        )
+    }
+}
+
+@Composable
+fun AiInputContainerListeningDocsDemo(modifier: Modifier = Modifier) {
+    AiInputDocsColumn(modifier, 360.dp) {
+        AiInputDocsField(phase = AiInputPhase.Listening, layout = AiInputLayout.Container)
+        AiInputDocsField(
+            value = "This is input text",
+            phase = AiInputPhase.Listening,
+            layout = AiInputLayout.Container,
+        )
+        AiInputDocsField(
+            value = AiInputLongText,
+            phase = AiInputPhase.Listening,
+            layout = AiInputLayout.Container,
+        )
+    }
+}
+
+@Composable
+fun AiInputAttachmentsDocsDemo(modifier: Modifier = Modifier) {
+    AiInputDocsColumn(modifier, 720.dp) {
+        AiInputDocsField(
+            value = "This is input text",
+            layout = AiInputLayout.BottomBar,
+            files = AiInputSampleFiles,
+        )
+        AiInputDocsField(
+            value = "This is input text",
+            layout = AiInputLayout.BottomBar,
+            images = true,
+        )
+        AiInputDocsField(value = AiInputLongText, layout = AiInputLayout.BottomBar)
+        AiInputDocsField(
+            value = AiInputLongText,
+            layout = AiInputLayout.BottomBar,
+            files = AiInputSampleFiles,
+        )
+    }
+}
+
+@Composable
+fun AiInputContainerAttachmentsDocsDemo(modifier: Modifier = Modifier) {
+    AiInputDocsColumn(modifier, 360.dp) {
+        AiInputDocsField(
+            value = "This is input text",
+            layout = AiInputLayout.Container,
+            files = AiInputSampleFiles,
+        )
+        AiInputDocsField(
+            value = "This is input text",
+            layout = AiInputLayout.Container,
+            images = true,
+        )
+        AiInputDocsField(value = AiInputLongText, layout = AiInputLayout.Container)
+        AiInputDocsField(
+            value = AiInputLongText,
+            layout = AiInputLayout.Container,
+            files = AiInputSampleFiles,
+        )
+    }
+}
+
+@Composable
+private fun AiInputDocsColumn(
+    modifier: Modifier,
+    width: Dp,
+    content: @Composable () -> Unit,
+) {
     Column(
-        modifier = modifier.padding(16.dp).width(600.dp),
-        verticalArrangement = Arrangement.spacedBy(24.dp),
-    ) {
-        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            AiInput(
-                value = "",
-                onValueChange = {},
-                onSend = {},
-                layout = AiInputLayout.BottomBar,
-                modifier = Modifier.fillMaxWidth(),
-            )
-            AiInput(
-                value = "This is input text",
-                onValueChange = {},
-                onSend = {},
-                layout = AiInputLayout.BottomBar,
-                modifier = Modifier.fillMaxWidth(),
-            )
-            AiInput(
-                value = "",
-                onValueChange = {},
-                onSend = {},
-                phase = AiInputPhase.Listening,
-                layout = AiInputLayout.BottomBar,
-                modifier = Modifier.fillMaxWidth(),
-            )
-            AiInput(
-                value = "Help me find travel inspiration for Italy on a budget.",
-                onValueChange = {},
-                onSend = {},
-                onStop = {},
-                phase = AiInputPhase.Thinking,
-                layout = AiInputLayout.BottomBar,
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
-        Column(
-            modifier = Modifier.width(360.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            AiInput(
-                value = "",
-                onValueChange = {},
-                onSend = {},
-                layout = AiInputLayout.Container,
-                modifier = Modifier.fillMaxWidth(),
-            )
-            AiInput(
-                value = "This is input text",
-                onValueChange = {},
-                onSend = {},
-                layout = AiInputLayout.Container,
-                modifier = Modifier.fillMaxWidth(),
-                attachments = {
-                    AiInputFileAttachment(name = "File Name", type = "File Type", onRemove = {})
-                },
-            )
-            AiInput(
-                value = "",
-                onValueChange = {},
-                onSend = {},
-                phase = AiInputPhase.Listening,
-                layout = AiInputLayout.Container,
-                modifier = Modifier.fillMaxWidth(),
-            )
-            AiInput(
-                value = "Help me find travel inspiration for Italy on a budget.",
-                onValueChange = {},
-                onSend = {},
-                onStop = {},
-                phase = AiInputPhase.Thinking,
-                layout = AiInputLayout.Container,
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
+        modifier = modifier.padding(16.dp).width(width),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+        content = { content() },
+    )
+}
+
+@Composable
+private fun AiInputDocsField(
+    layout: AiInputLayout,
+    value: String = "",
+    phase: AiInputPhase = AiInputPhase.Text,
+    files: List<AiInputFile> = emptyList(),
+    images: Boolean = false,
+) {
+    AiInput(
+        value = value,
+        onValueChange = {},
+        onSend = {},
+        onStop = {},
+        phase = phase,
+        layout = layout,
+        files = files,
+        attachments =
+            if (images) {
+                { AiInputDocsImages() }
+            } else {
+                null
+            },
+        modifier = Modifier.fillMaxWidth(),
+    )
+}
+
+@Composable
+private fun AiInputDocsImages() {
+    listOf(0xFF8EB4FF, 0xFFC4B5FD, 0xFFF5C4D4, 0xFFB7E4C7).forEach { color ->
+        AiInputImageAttachment(
+            painter = ColorPainter(Color(color)),
+            contentDescription = null,
+            onRemove = {},
+        )
     }
 }
 

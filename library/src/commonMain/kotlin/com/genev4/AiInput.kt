@@ -41,8 +41,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -53,6 +55,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.CornerRadius
@@ -68,6 +71,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -75,7 +79,9 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.genev4.internal.rememberAiInputFilePicker
 
 /**
@@ -134,7 +140,8 @@ enum class AiInputPhase {
  * @param placeholder shown when [value] is empty and [phase] is [AiInputPhase.Text]
  * @param listeningPlaceholder shown when [value] is empty and [phase] is [AiInputPhase.Listening]
  * @param disclaimer caption under the field. Null hides it
- * @param maxLines the maximum number of text lines before the text is ellipsized
+ * @param maxLines how many lines stay visible before the field scrolls. [AiInputPhase.Thinking]
+ *   stays on one line and ellipsizes
  * @param files files shown as chips when using the built-in picker
  * @param onFilesChange when non-null, the + button opens the system picker and reports the new list
  * @param attachmentMimeTypes MIME types accepted by the built-in picker
@@ -183,6 +190,7 @@ fun AiInput(
     val containerLayout = layout == AiInputLayout.Container
     val textReadOnly = readOnly || phase != AiInputPhase.Text
     val placeholderText = if (listening) listeningPlaceholder else placeholder
+    val textMaxLines = if (thinking) 1 else maxLines
     val textStyle =
         MaterialTheme.typography.bodyMedium.merge(TextStyle(color = colors.textColor))
     val launchFilePicker =
@@ -245,7 +253,7 @@ fun AiInput(
                             placeholder = placeholderText,
                             placeholderColor = colors.placeholderColor,
                             cursorColor = colors.cursorColor,
-                            maxLines = maxLines,
+                            maxLines = textMaxLines,
                             contentPadding = PaddingValues(0.dp),
                             fieldMinHeight = AiInputDefaults.ContainerTextMinHeight,
                             onSend = { if (canSend) onSend() },
@@ -297,7 +305,7 @@ fun AiInput(
                                 placeholder = placeholderText,
                                 placeholderColor = colors.placeholderColor,
                                 cursorColor = colors.cursorColor,
-                                maxLines = maxLines,
+                                maxLines = textMaxLines,
                                 contentPadding = PaddingValues(vertical = 14.dp),
                                 fieldMinHeight = 0.dp,
                                 onSend = { if (canSend) onSend() },
@@ -424,8 +432,9 @@ fun AiInputImageAttachment(
         )
         AiInputRemoveButton(
             onClick = onRemove,
-            iconSize = 20.dp,
-            modifier = Modifier.align(Alignment.TopEnd).padding(8.dp),
+            iconSize = 12.dp,
+            buttonSize = 20.dp,
+            modifier = Modifier.align(Alignment.TopEnd).padding(4.dp),
         )
     }
 }
@@ -516,7 +525,8 @@ class AiInputColors(
 
 /** Default measurements and colors for [AiInput]. */
 object AiInputDefaults {
-    val ContainerShape = RoundedCornerShape(24.dp)
+    val ContainerCorner = 24.dp
+    val ContainerShape = RoundedCornerShape(ContainerCorner)
     val FieldMinHeight = 48.dp
     val ContainerTextMinHeight = 32.dp
     val SendButtonSize = 48.dp
@@ -596,11 +606,17 @@ private fun AiInputCard(
                 .drawBehind {
                     if (showFocus) {
                         val outset = 4.dp.toPx()
+                        val corner =
+                            if (shape is RoundedCornerShape) {
+                                shape.topStart.toPx(Size(size.width, size.height), this)
+                            } else {
+                                AiInputDefaults.ContainerCorner.toPx()
+                            }
                         drawRoundRect(
                             color = colors.focusIndicatorColor,
                             topLeft = Offset(-outset, -outset),
                             size = Size(size.width + outset * 2, size.height + outset * 2),
-                            cornerRadius = CornerRadius(16.dp.toPx()),
+                            cornerRadius = CornerRadius(corner + outset),
                             style = Stroke(width = 2.dp.toPx()),
                         )
                     }
@@ -644,18 +660,38 @@ private fun AiInputText(
     suggestion: (@Composable () -> Unit)?,
     modifier: Modifier = Modifier,
 ) {
+    val scrollable = maxLines > 1
+    val scroll = rememberScrollState()
+    val density = LocalDensity.current
+    val lineHeight = textStyle.lineHeight.let { if (it == TextUnit.Unspecified) 20.sp else it }
+    val maxFieldHeight =
+        contentPadding.calculateTopPadding() +
+            contentPadding.calculateBottomPadding() +
+            with(density) { lineHeight.toDp() } * maxLines +
+            16.dp
+    val overflows = scrollable && scroll.maxValue > 8f * density.density
+    Box(modifier.then(if (scrollable) Modifier.clipToBounds() else Modifier)) {
     BasicTextField(
         value = value,
         onValueChange = onValueChange,
-        modifier = modifier,
+        modifier =
+            Modifier.fillMaxWidth()
+                .then(
+                    if (scrollable) {
+                        Modifier.heightIn(max = maxFieldHeight).verticalScroll(scroll)
+                    } else {
+                        Modifier
+                    },
+                )
+                .padding(end = if (overflows) 12.dp else 0.dp),
         enabled = enabled,
         readOnly = readOnly,
         textStyle = textStyle,
         cursorBrush = SolidColor(cursorColor),
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Send),
         keyboardActions = KeyboardActions(onSend = { onSend() }),
-        singleLine = maxLines == 1,
-        maxLines = maxLines,
+        singleLine = !scrollable,
+        maxLines = if (scrollable) Int.MAX_VALUE else 1,
         interactionSource = interactionSource,
         decorationBox = { innerTextField ->
             Row(
@@ -684,6 +720,19 @@ private fun AiInputText(
             }
         },
     )
+        if (overflows) {
+            Box(
+                Modifier.align(Alignment.CenterEnd)
+                    .padding(end = 2.dp)
+                    .width(4.dp)
+                    .height(32.dp)
+                    .background(
+                        MaterialTheme.colorScheme.outline,
+                        RoundedCornerShape(50),
+                    ),
+            )
+        }
+    }
 }
 
 @Composable
@@ -836,11 +885,12 @@ private fun AiInputRemoveButton(
     onClick: () -> Unit,
     iconSize: Dp,
     modifier: Modifier = Modifier,
+    buttonSize: Dp = 32.dp,
 ) {
     Box(
         modifier =
             modifier
-                .size(32.dp)
+                .size(buttonSize)
                 .clip(CircleShape)
                 .background(MaterialTheme.colorScheme.secondaryContainer)
                 .clickable(onClick = onClick, role = Role.Button),

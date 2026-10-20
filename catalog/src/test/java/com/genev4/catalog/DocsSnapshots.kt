@@ -1,12 +1,18 @@
 package com.genev4.catalog
 
+import androidx.compose.runtime.Composable
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
 import com.android.ide.common.rendering.api.SessionParams.RenderingMode
 import com.genev4.catalog.docs.AlertBannerDocsDemo
 import com.genev4.catalog.docs.AlertBannerElevatedDocsDemo
 import com.genev4.catalog.docs.AlertBannerOptionsDocsDemo
+import com.genev4.catalog.docs.AiInputAttachmentsDocsDemo
+import com.genev4.catalog.docs.AiInputContainerAttachmentsDocsDemo
+import com.genev4.catalog.docs.AiInputContainerDocsDemo
+import com.genev4.catalog.docs.AiInputContainerListeningDocsDemo
 import com.genev4.catalog.docs.AiInputDocsDemo
+import com.genev4.catalog.docs.AiInputListeningDocsDemo
 import com.genev4.catalog.docs.AppBarDocsDemo
 import com.genev4.catalog.docs.BottomSheetDocsDemo
 import com.genev4.catalog.docs.ButtonDocsDemo
@@ -88,14 +94,28 @@ class DocsSnapshots {
     }
 
     @Test
-    fun aiInput() {
-        // Bottom bar and container states together are taller than a Pixel 5 frame.
-        paparazzi.unsafeUpdateConfig(
-            deviceConfig = DeviceConfig.PIXEL_5.copy(softButtons = false, screenHeight = 4800),
-        )
-        paparazzi.snapshot(name = "ai-input") {
-            DocsTheme { AiInputDocsDemo() }
-        }
+    fun aiInput() = aiInputShot("ai-input") { AiInputDocsDemo() }
+
+    @Test
+    fun aiInputContainer() = aiInputShot("ai-input-container") { AiInputContainerDocsDemo() }
+
+    @Test
+    fun aiInputListening() = aiInputShot("ai-input-listening") { AiInputListeningDocsDemo() }
+
+    @Test
+    fun aiInputContainerListening() =
+        aiInputShot("ai-input-container-listening") { AiInputContainerListeningDocsDemo() }
+
+    @Test
+    fun aiInputAttachments() = aiInputShot("ai-input-attachments") { AiInputAttachmentsDocsDemo() }
+
+    @Test
+    fun aiInputContainerAttachments() =
+        aiInputShot("ai-input-container-attachments") { AiInputContainerAttachmentsDocsDemo() }
+
+    private fun aiInputShot(name: String, content: @Composable () -> Unit) {
+        paparazzi.unsafeUpdateConfig(modalDevice(screenWidth = 2400, screenHeight = 4200))
+        paparazzi.snapshot(name = name) { DocsTheme { content() } }
     }
 
     @Test
